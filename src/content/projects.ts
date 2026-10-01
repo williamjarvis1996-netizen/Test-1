@@ -251,20 +251,7 @@ export const projects: Project[] = [
     image: 'images/vidi-guides.webp',
     description: [
       'Four years leading content and production at Vidi Guides, a platform producing podcast-style self-guided audio walking tours triggered by GPS and available offline. Oversaw the creation of 100+ immersive travel podcasts and location-based audio tours across London (Brixton, Soho, Kew Gardens, Covent Garden, Westminster), Paris, Cambridge, Oxford, Edinburgh, Stonehenge, Stratford-upon-Avon, and Vimy Ridge.',
-      'Clients included Walt Disney, Hilton Hotels, Lonely Planet, and Culture Trip. The role spanned scripting, voice casting, location research, and production management across dozens of simultaneous tours in multiple cities. Vidi Guides was founded by Marius Nigond in 2019 and has since evolved into iWander, an AI-powered travel companion named a PhocusWire Hot 25 Travel Startup for 2025.',
-    ],
-  },
-  {
-    slug: 'disney-magic-kingdom',
-    title: 'Disney Magic Kingdom Immersive Tour',
-    client: 'Walt Disney',
-    category: 'immersive',
-    year: '2021',
-    role: 'Content Producer',
-    num: '16',
-    image: 'images/disney-magic-kingdom.webp',
-    description: [
-      'Immersive audio guide to Walt Disney World\'s Magic Kingdom, produced for Vidi Guides. A GPS-triggered audio tour guiding visitors through the park, with location-aware narration that responds to where you are rather than what you tap. One of the flagship productions from Will\'s time at Vidi Guides, produced directly for Disney\'s parks division.',
+      'Clients included Walt Disney, Hilton Hotels, Lonely Planet, and Culture Trip. The role spanned scripting, voice casting, location research, and production management across dozens of simultaneous tours in multiple cities. A flagship production was the immersive audio guide to Walt Disney World\'s Magic Kingdom, a GPS-triggered tour produced directly for Disney\'s parks division with location-aware narration that responds to where you are rather than what you tap. Vidi Guides was founded by Marius Nigond in 2019 and has since evolved into iWander, an AI-powered travel companion named a PhocusWire Hot 25 Travel Startup for 2025.',
     ],
   },
 ];
