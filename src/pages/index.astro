@@ -2,7 +2,15 @@
 import Base from '../layouts/Base.astro';
 import { projects } from '../content/projects';
 
-const featured = projects.filter(p => p.featured);
+const allFeatured = projects.filter(p => p.featured);
+const hamilton = allFeatured.filter(p => p.client?.includes('Hamilton'));
+const others = allFeatured.filter(p => !p.client?.includes('Hamilton'));
+const featured: typeof allFeatured = [];
+let hi = 0, oi = 0;
+while (hi < hamilton.length || oi < others.length) {
+  if (oi < others.length) featured.push(others[oi++]);
+  if (hi < hamilton.length) featured.push(hamilton[hi++]);
+}
 ---
 
 <Base title="Will Jarvis | Creative Producer & Screenwriter">
@@ -245,7 +253,7 @@ const featured = projects.filter(p => p.featured);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: clamp(0.5rem, 1vw, 1rem);
+    gap: clamp(0.25rem, 0.5vw, 0.5rem);
     position: relative;
     z-index: 2;
   }
@@ -260,10 +268,10 @@ const featured = projects.filter(p => p.featured);
   .name-line {
     display: block;
     font-family: var(--font-display);
-    font-size: clamp(5rem, 18vw, 22rem);
+    font-size: clamp(6rem, 20vw, 26rem);
     text-transform: uppercase;
     color: var(--color-fg);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
   }
 
   /* ---- Image strip ---- */
@@ -289,13 +297,13 @@ const featured = projects.filter(p => p.featured);
   }
 
   .strip-item {
-    flex: 0 0 280px;
+    flex: 0 0 320px;
     border-right: 1px solid var(--color-border);
     cursor: pointer;
   }
 
   .strip-img {
-    aspect-ratio: 5 / 4;
+    aspect-ratio: 4 / 3;
     background: var(--color-bg-muted);
     display: flex;
     align-items: center;
@@ -369,10 +377,10 @@ const featured = projects.filter(p => p.featured);
   .disc-line {
     display: block;
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 9vw, 11rem);
+    font-size: clamp(3rem, 10vw, 13rem);
     text-transform: uppercase;
     color: var(--color-fg);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
   }
 
   .amp {
