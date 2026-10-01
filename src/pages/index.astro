@@ -144,7 +144,8 @@ while (hi < hamilton.length || oi < others.length) {
     display: block;
     width: 80px;
     height: 1px;
-    background: var(--color-border);
+    background: var(--color-fg);
+    opacity: 0.4;
   }
 
   .label-link {
@@ -234,25 +235,25 @@ while (hi < hamilton.length || oi < others.length) {
   .cross-tl {
     top: 22%;
     left: 15%;
-    opacity: 0.5;
+    opacity: 0.75;
   }
 
   .cross-tr {
     top: 22%;
     left: 33%;
-    opacity: 0.5;
+    opacity: 0.75;
   }
 
   .cross-bl {
     bottom: 22%;
     left: 15%;
-    opacity: 0.5;
+    opacity: 0.75;
   }
 
   .cross-br {
     bottom: 22%;
     left: 33%;
-    opacity: 0.5;
+    opacity: 0.75;
   }
 
   /* ---- Main content flow ---- */
@@ -306,7 +307,7 @@ while (hi < hamilton.length || oi < others.length) {
   }
 
   .strip-item {
-    flex: 0 0 300px;
+    flex: 0 0 260px;
     cursor: pointer;
   }
 
@@ -523,7 +524,7 @@ while (hi < hamilton.length || oi < others.length) {
     }
 
     .strip-item {
-      flex: 0 0 240px;
+      flex: 0 0 200px;
     }
 
     .clients-list span {
