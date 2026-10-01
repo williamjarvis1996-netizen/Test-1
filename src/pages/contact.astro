@@ -4,8 +4,10 @@ import Base from '../layouts/Base.astro';
 
 <Base title="Contact | Will Jarvis">
   <section class="contact-page">
+    <div class="contact-glow"></div>
     <div class="container">
       <div class="contact-content">
+        <p class="contact-label">Contact</p>
         <h1>Get in touch</h1>
         <p class="contact-intro">
           Available for branded content production, creative direction,
@@ -15,7 +17,7 @@ import Base from '../layouts/Base.astro';
         <div class="contact-methods">
           <div class="contact-block">
             <h3>Email</h3>
-            <a href="mailto:williamjarvis1996@gmail.com">williamjarvis1996@gmail.com</a>
+            <a href="mailto:williamjarvis1996@gmail.com" class="contact-email">williamjarvis1996@gmail.com</a>
           </div>
 
           <div class="contact-block">
@@ -43,16 +45,60 @@ import Base from '../layouts/Base.astro';
     display: flex;
     align-items: center;
     padding-top: var(--header-height);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-glow {
+    position: absolute;
+    bottom: -10%;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(200, 164, 90, 0.06) 0%, transparent 70%);
+    pointer-events: none;
   }
 
   .contact-content {
     max-width: 560px;
     padding: var(--space-xl) 0;
+    position: relative;
+  }
+
+  .contact-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+    font-weight: 500;
   }
 
   .contact-content h1 {
     color: var(--color-white);
     margin-bottom: var(--space-sm);
+  }
+
+  .contact-email {
+    position: relative;
+    display: inline-block;
+  }
+
+  .contact-email::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-email:hover::after {
+    transform: scaleX(1);
   }
 
   .contact-intro {

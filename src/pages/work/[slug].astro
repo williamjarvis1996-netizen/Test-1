@@ -20,10 +20,12 @@ const { project } = Astro.props;
 <Base title={`${project.title} | Will Jarvis`} description={project.description}>
   <article class="project-detail">
     <div class="project-hero">
+      <div class="project-hero-grain"></div>
       {project.image ? (
         <img src={project.image} alt={project.title} class="project-hero-image" />
       ) : (
         <div class="project-hero-placeholder">
+          <div class="project-hero-glow"></div>
           <div class="container">
             <span class="project-hero-badge">{categories[project.category]}</span>
           </div>
@@ -32,7 +34,7 @@ const { project } = Astro.props;
     </div>
 
     <div class="container">
-      <header class="project-header">
+      <header class="project-header animate-in" style="--delay: 0.15s">
         <div class="project-meta">
           {project.client && <span>{project.client}</span>}
           <span>{project.year}</span>
@@ -42,7 +44,7 @@ const { project } = Astro.props;
         <p class="project-role">{project.role}</p>
       </header>
 
-      <div class="project-body">
+      <div class="project-body animate-in" style="--delay: 0.3s">
         <p class="project-description">{project.description}</p>
 
         {project.longDescription && (
@@ -92,6 +94,21 @@ const { project } = Astro.props;
     padding-top: var(--header-height);
   }
 
+  .project-hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-hero-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
   .project-hero-placeholder {
     width: 100%;
     aspect-ratio: 21 / 9;
@@ -99,12 +116,38 @@ const { project } = Astro.props;
     display: flex;
     align-items: flex-end;
     padding-bottom: var(--space-md);
+    position: relative;
+  }
+
+  .project-hero-glow {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 300px;
+    background: radial-gradient(ellipse, rgba(200, 164, 90, 0.06) 0%, transparent 70%);
+    pointer-events: none;
   }
 
   .project-hero-image {
     width: 100%;
     aspect-ratio: 21 / 9;
     object-fit: cover;
+  }
+
+  .animate-in {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--delay, 0s);
+  }
+
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .project-hero-badge {
@@ -225,9 +268,29 @@ const { project } = Astro.props;
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.06em;
+    position: relative;
+    display: inline-block;
+  }
+
+  .project-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
   }
 
   .project-nav a:hover {
     color: var(--color-accent);
+  }
+
+  .project-nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 </style>

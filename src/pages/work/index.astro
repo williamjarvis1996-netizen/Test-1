@@ -8,9 +8,11 @@ const categoryKeys = Object.keys(categories) as (keyof typeof categories)[];
 
 <Base title="Work | Will Jarvis">
   <section class="work-hero">
+    <div class="work-grain"></div>
     <div class="container">
-      <h1>Work</h1>
-      <p class="work-intro">
+      <p class="work-label animate-in" style="--delay: 0.1s">Portfolio</p>
+      <h1 class="animate-in" style="--delay: 0.2s">Work</h1>
+      <p class="work-intro animate-in" style="--delay: 0.35s">
         Branded content, short film, scripted television, theatre and immersive.
       </p>
     </div>
@@ -46,6 +48,40 @@ const categoryKeys = Object.keys(categories) as (keyof typeof categories)[];
   .work-hero {
     padding-top: calc(var(--header-height) + var(--space-xl));
     padding-bottom: var(--space-lg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .work-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px;
+    pointer-events: none;
+  }
+
+  .work-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+    font-weight: 500;
+  }
+
+  .animate-in {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--delay, 0s);
+  }
+
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .work-hero h1 {
