@@ -30,6 +30,7 @@ export const projects: Project[] = [
     year: '2026',
     role: 'Producer',
     num: '01',
+    image: '/images/hamilton-in-the-midst-of-it.webp',
     description: [
       'Festive campaign for Hamilton Watches built around the chaos of Christmas morning. The film uses a top-down, locked-on-the-watch POV to follow three characters through the mayhem of the day: Dan in the kitchen battling biscuit dough and flour clouds, Maya navigating a wrapping disaster at the dining table, and Frank holding court in the living room while his granddaughter Ellie tears through the house around him. Three Hamilton watches (the Khaki Field Mecca, the American Classic Cushion, and the Khaki Field Murph) anchor each storyline, always in frame, always on the wrist.',
       'Shot over three days at a manor house in Hertfordshire. The production ran a Sony FX3 with Cooke SP3 primes as the main camera package, alongside a VMI Ember high-speed camera for slow-motion hero moments: flour erupting from a bowl, a catch in mid-air. Match-cut transitions stitch the three worlds together (whisk to volume peak, dough to wrapping paper, TV cut-to-black to icing grab), keeping the film moving at the frantic, playful pace of Christmas itself. One of the 15-second social cuts was shot natively on iPhone, mounted alongside the main camera for its rawer texture.',
