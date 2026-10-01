@@ -4,7 +4,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Creative Producer and Writer. Branded content, film, TV development, theatre and immersive.' } = Astro.props;
+const { title, description = 'Creative Producer & Screenwriter. Branded content, film, TV development, theatre and immersive.' } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,13 +16,13 @@ const { title, description = 'Creative Producer and Writer. Branded content, fil
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
     <header class="site-header">
       <nav class="container nav">
-        <a href="/" class="nav-logo">Will Jarvis</a>
+        <a href="/" class="nav-logo">WJ</a>
         <ul class="nav-links">
           <li><a href="/work" class="nav-link">Work</a></li>
           <li><a href="/about" class="nav-link">About</a></li>
@@ -64,8 +64,7 @@ const { title, description = 'Creative Producer and Writer. Branded content, fil
     right: 0;
     z-index: 100;
     height: var(--header-height);
-    background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(12px);
+    background: var(--color-bg);
     border-bottom: 1px solid var(--color-border);
   }
 
@@ -78,10 +77,10 @@ const { title, description = 'Creative Producer and Writer. Branded content, fil
 
   .nav-logo {
     font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-white);
-    letter-spacing: -0.01em;
+    font-size: 1.5rem;
+    color: var(--color-fg);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
   }
 
   .nav-logo:hover {
@@ -95,16 +94,16 @@ const { title, description = 'Creative Producer and Writer. Branded content, fil
   }
 
   .nav-link {
-    font-size: 0.875rem;
-    font-weight: 400;
-    color: var(--color-text-muted);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--color-fg-muted);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     transition: color 0.2s ease;
   }
 
   .nav-link:hover {
-    color: var(--color-white);
+    color: var(--color-fg);
   }
 
   .nav-toggle {
@@ -119,15 +118,15 @@ const { title, description = 'Creative Producer and Writer. Branded content, fil
 
   .nav-toggle span {
     display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--color-white);
+    width: 22px;
+    height: 1.5px;
+    background: var(--color-fg);
     transition: transform 0.3s ease;
   }
 
   .site-footer {
     border-top: 1px solid var(--color-border);
-    padding: var(--space-md) 0;
+    padding: var(--space-sm) 0;
   }
 
   .footer-inner {
@@ -137,8 +136,10 @@ const { title, description = 'Creative Producer and Writer. Branded content, fil
   }
 
   .footer-text {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
+    font-size: 0.6875rem;
+    color: var(--color-fg-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
   }
 
   .footer-links {
@@ -147,12 +148,14 @@ const { title, description = 'Creative Producer and Writer. Branded content, fil
   }
 
   .footer-links a {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
+    font-size: 0.6875rem;
+    color: var(--color-fg-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
   }
 
   .footer-links a:hover {
-    color: var(--color-white);
+    color: var(--color-accent);
   }
 
   @media (max-width: 767px) {
@@ -168,6 +171,7 @@ const { title, description = 'Creative Producer and Writer. Branded content, fil
       align-items: center;
       justify-content: center;
       gap: var(--space-lg);
+      z-index: 99;
     }
 
     .nav-links.open {
@@ -175,7 +179,9 @@ const { title, description = 'Creative Producer and Writer. Branded content, fil
     }
 
     .nav-link {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
+      letter-spacing: 0.08em;
+      color: var(--color-fg);
     }
 
     .nav-toggle {
@@ -184,7 +190,7 @@ const { title, description = 'Creative Producer and Writer. Branded content, fil
 
     .footer-inner {
       flex-direction: column;
-      gap: var(--space-sm);
+      gap: var(--space-xs);
       text-align: center;
     }
   }

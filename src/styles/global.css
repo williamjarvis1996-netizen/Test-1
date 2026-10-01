@@ -1,15 +1,13 @@
 :root {
-  --color-bg: #0a0a0a;
-  --color-bg-elevated: #141414;
-  --color-bg-card: #1a1a1a;
-  --color-text: #f0f0f0;
-  --color-text-muted: #888888;
-  --color-accent: #c8a45a;
-  --color-accent-hover: #dbb96e;
-  --color-border: #2a2a2a;
-  --color-white: #ffffff;
+  --color-bg: #ffffff;
+  --color-bg-muted: #f2f2f2;
+  --color-fg: #0a0a0a;
+  --color-fg-muted: #666;
+  --color-accent: #e63946;
+  --color-border: #ddd;
+  --color-marker: #bbb;
 
-  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Archivo Black', 'Arial Black', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
   --space-xs: 0.5rem;
@@ -18,8 +16,8 @@
   --space-lg: 4rem;
   --space-xl: 8rem;
 
-  --max-width: 1200px;
-  --header-height: 72px;
+  --max-width: 1400px;
+  --header-height: 56px;
 }
 
 *, *::before, *::after {
@@ -38,19 +36,19 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
-  color: var(--color-text);
+  color: var(--color-fg);
   line-height: 1.6;
   min-height: 100vh;
 }
 
 a {
-  color: var(--color-accent);
+  color: inherit;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-accent);
 }
 
 img {
@@ -60,22 +58,31 @@ img {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.15;
+  font-family: var(--font-body);
+  font-weight: 700;
+  line-height: 1.1;
   letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .container {
@@ -89,8 +96,8 @@ h3 {
   padding: var(--space-xl) 0;
 }
 
-.section + .section {
-  border-top: 1px solid var(--color-border);
+.accent {
+  color: var(--color-accent);
 }
 
 .visually-hidden {
@@ -105,5 +112,19 @@ h3 {
 @media (min-width: 768px) {
   .container {
     padding: 0 var(--space-md);
+  }
+}
+
+.animate-in {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

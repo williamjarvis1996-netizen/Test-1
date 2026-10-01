@@ -4,31 +4,27 @@ import Base from '../layouts/Base.astro';
 
 <Base title="About | Will Jarvis">
   <section class="about-hero">
-    <div class="about-grain"></div>
-    <div class="container about-grid">
-      <div class="about-photo">
-        <div class="photo-placeholder">
-          <div class="photo-frame"></div>
-          <span>Photo</span>
-        </div>
-      </div>
-      <div class="about-content">
-        <p class="about-label">About</p>
-        <h1>Will Jarvis</h1>
-        <p class="about-lead">
-          Creative Producer and writer based in Hackney, London.
-          Story-first thinker with a focus on interactivity, human connection,
-          neurodivergence, social structures, and grounded sci-fi.
-        </p>
-      </div>
+    <div class="container">
+      <p class="about-label animate-in" style="--delay: 0.1s">About</p>
+      <h1 class="animate-in" style="--delay: 0.2s">Will Jarvis</h1>
+      <p class="about-lead animate-in" style="--delay: 0.35s">
+        Creative Producer and Screenwriter based in Hackney, London.
+        Story-first thinker with a focus on interactivity, human connection,
+        neurodivergence, social structures, and grounded sci-fi.
+      </p>
     </div>
   </section>
 
-  <section class="about-bio section">
+  <section class="about-content">
     <div class="container">
-      <div class="bio-columns">
-        <div class="bio-main">
-          <h2>Background</h2>
+      <div class="content-grid">
+        <div class="about-photo animate-in" style="--delay: 0.4s">
+          <div class="photo-placeholder">
+            <span>Photo</span>
+          </div>
+        </div>
+
+        <div class="about-bio animate-in" style="--delay: 0.45s">
           <p>
             Currently a Creative Producer at RD Content, an award-winning global
             branded content agency and Cannes Production Company of the Year.
@@ -58,41 +54,45 @@ import Base from '../layouts/Base.astro';
             Festival 2025).
           </p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="bio-sidebar">
-          <div class="sidebar-block">
-            <h3>Education</h3>
-            <ul>
-              <li>
-                <strong>Royal Central School of Speech & Drama</strong><br />
-                MA Writing for Stage & Broadcast Media, High Merit
-              </li>
-              <li>
-                <strong>University of Exeter</strong><br />
-                BA English Literature & Drama, 2:1<br />
-                1st Class Honours in English Research Dissertation
-              </li>
-            </ul>
-          </div>
+  <section class="about-details">
+    <div class="container">
+      <div class="details-grid">
+        <div class="detail-block animate-in" style="--delay: 0.5s">
+          <h3>Education</h3>
+          <ul>
+            <li>
+              <strong>Royal Central School of Speech & Drama</strong><br />
+              MA Writing for Stage & Broadcast Media, High Merit
+            </li>
+            <li>
+              <strong>University of Exeter</strong><br />
+              BA English Literature & Drama, 2:1<br />
+              1st Class Honours in English Research Dissertation
+            </li>
+          </ul>
+        </div>
 
-          <div class="sidebar-block">
-            <h3>Recognition</h3>
-            <ul>
-              <li>London Library Emerging Writer</li>
-              <li>Rob Knox Film Festival, Jury Award for Best Performance (Aortic)</li>
-              <li>Brain Drain optioned by Fandango Productions</li>
-              <li>University of Exeter Award for Outstanding Achievements</li>
-            </ul>
-          </div>
+        <div class="detail-block animate-in" style="--delay: 0.55s">
+          <h3>Recognition</h3>
+          <ul>
+            <li>London Library Emerging Writer</li>
+            <li>Rob Knox Film Festival, Jury Award for Best Performance (Aortic)</li>
+            <li>Brain Drain optioned by Fandango Productions</li>
+            <li>University of Exeter Award for Outstanding Achievements</li>
+          </ul>
+        </div>
 
-          <div class="sidebar-block">
-            <h3>Links</h3>
-            <ul class="links-list">
-              <li><a href="https://www.imdb.com/name/nm15210832/" target="_blank" rel="noopener">IMDb</a></li>
-              <li><a href="https://www.linkedin.com/in/will-t-jarvis/" target="_blank" rel="noopener">LinkedIn</a></li>
-              <li><a href="https://www.instagram.com/willjarvis1996/" target="_blank" rel="noopener">Instagram</a></li>
-            </ul>
-          </div>
+        <div class="detail-block animate-in" style="--delay: 0.6s">
+          <h3>Links</h3>
+          <ul class="links-list">
+            <li><a href="https://www.imdb.com/name/nm15210832/" target="_blank" rel="noopener">IMDb &rarr;</a></li>
+            <li><a href="https://www.linkedin.com/in/will-t-jarvis/" target="_blank" rel="noopener">LinkedIn &rarr;</a></li>
+            <li><a href="https://www.instagram.com/willjarvis1996/" target="_blank" rel="noopener">Instagram &rarr;</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -103,119 +103,105 @@ import Base from '../layouts/Base.astro';
   .about-hero {
     padding-top: calc(var(--header-height) + var(--space-xl));
     padding-bottom: var(--space-lg);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .about-grain {
-    position: absolute;
-    inset: 0;
-    opacity: 0.025;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-size: 200px;
-    pointer-events: none;
-  }
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-    align-items: center;
-    position: relative;
-  }
-
-  .photo-placeholder {
-    aspect-ratio: 3 / 4;
-    max-width: 360px;
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-text-muted);
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .photo-frame {
-    position: absolute;
-    inset: 8px;
-    border: 1px solid rgba(200, 164, 90, 0.15);
-    pointer-events: none;
   }
 
   .about-label {
-    font-size: 0.875rem;
+    font-size: 0.6875rem;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
     color: var(--color-accent);
     margin-bottom: var(--space-xs);
-    font-weight: 500;
+    font-weight: 600;
   }
 
-  .about-content h1 {
-    color: var(--color-white);
+  .about-hero h1 {
     margin-bottom: var(--space-sm);
   }
 
   .about-lead {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.7;
-    color: var(--color-text-muted);
+    color: var(--color-fg-muted);
     max-width: 560px;
   }
 
-  .bio-columns {
+  .about-content {
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .content-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-lg);
   }
 
-  .bio-main h2 {
-    margin-bottom: var(--space-md);
-    color: var(--color-white);
+  .photo-placeholder {
+    aspect-ratio: 3 / 4;
+    max-width: 320px;
+    background: var(--color-bg-muted);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-marker);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 500;
   }
 
-  .bio-main p {
-    color: var(--color-text);
+  .about-bio p {
+    color: var(--color-fg);
     line-height: 1.8;
     margin-bottom: var(--space-sm);
+    font-size: 0.9375rem;
   }
 
-  .sidebar-block {
-    margin-bottom: var(--space-md);
+  .about-details {
+    padding: var(--space-lg) 0 var(--space-xl);
   }
 
-  .sidebar-block h3 {
-    font-size: 0.8125rem;
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .detail-block h3 {
+    font-size: 0.6875rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+    color: var(--color-fg-muted);
     margin-bottom: var(--space-sm);
     padding-bottom: var(--space-xs);
     border-bottom: 1px solid var(--color-border);
+    font-weight: 600;
   }
 
-  .sidebar-block ul {
+  .detail-block ul {
     list-style: none;
   }
 
-  .sidebar-block li {
+  .detail-block li {
     padding: var(--space-xs) 0;
-    color: var(--color-text);
-    font-size: 0.9375rem;
+    color: var(--color-fg);
+    font-size: 0.875rem;
     line-height: 1.5;
   }
 
-  .sidebar-block li + li {
+  .detail-block li + li {
     border-top: 1px solid var(--color-border);
   }
 
+  .detail-block li strong {
+    font-weight: 600;
+  }
+
   .links-list a {
-    color: var(--color-text);
+    color: var(--color-fg);
+    font-weight: 500;
+    transition: color 0.2s ease;
   }
 
   .links-list a:hover {
@@ -223,12 +209,12 @@ import Base from '../layouts/Base.astro';
   }
 
   @media (min-width: 768px) {
-    .about-grid {
-      grid-template-columns: 1fr 1.5fr;
+    .content-grid {
+      grid-template-columns: 280px 1fr;
     }
 
-    .bio-columns {
-      grid-template-columns: 2fr 1fr;
+    .details-grid {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 </style>
