@@ -1,0 +1,201 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="About | Will Jarvis">
+  <section class="about-hero">
+    <div class="container about-grid">
+      <div class="about-photo">
+        <div class="photo-placeholder">
+          <span>Photo</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <h1>About</h1>
+        <p class="about-lead">
+          Creative Producer and writer based in Hackney, London.
+          Story-first thinker with a focus on interactivity, human connection,
+          neurodivergence, social structures, and grounded sci-fi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-bio section">
+    <div class="container">
+      <div class="bio-columns">
+        <div class="bio-main">
+          <h2>Background</h2>
+          <p>
+            Currently a Creative Producer at RD Content, an award-winning global
+            branded content agency and Cannes Production Company of the Year.
+            Leading end-to-end production across Sport, Commercial, Gaming, and
+            Finance verticals with budgets from &#163;50k to &#163;500k across
+            Europe, North America, and Asia.
+          </p>
+          <p>
+            Before RD, spent four years as Head of Content and Production at
+            Vidi Guides, overseeing 100+ immersive travel podcasts with
+            partnerships including Walt Disney, Hilton Hotels, Lonely Planet,
+            and Culture Trip.
+          </p>
+          <p>
+            As a writer, developing scripted television with production
+            companies, broadcasters, and streamers including Netflix, ITV, and
+            Hager Moss. Break A Leg (dark comedy thriller) and Brain Drain
+            (apocalyptic adventure comedy, optioned by Fandango Productions)
+            are both in active development.
+          </p>
+          <p>
+            Co-founded Distracted Rat Productions in 2019, producing new
+            writing festivals and radio play series during lockdown. Writer
+            and director of short film Dinner, Diamonds and Death (in
+            post-production, targeting Sundance London) and co-producer of
+            Aortic (Jury Award for Best Performance, Rob Knox London Film
+            Festival 2025).
+          </p>
+        </div>
+
+        <div class="bio-sidebar">
+          <div class="sidebar-block">
+            <h3>Education</h3>
+            <ul>
+              <li>
+                <strong>Royal Central School of Speech & Drama</strong><br />
+                MA Writing for Stage & Broadcast Media, High Merit
+              </li>
+              <li>
+                <strong>University of Exeter</strong><br />
+                BA English Literature & Drama, 2:1<br />
+                1st Class Honours in English Research Dissertation
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block">
+            <h3>Recognition</h3>
+            <ul>
+              <li>London Library Emerging Writer</li>
+              <li>Rob Knox Film Festival, Jury Award for Best Performance (Aortic)</li>
+              <li>Brain Drain optioned by Fandango Productions</li>
+              <li>University of Exeter Award for Outstanding Achievements</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block">
+            <h3>Links</h3>
+            <ul class="links-list">
+              <li><a href="https://www.imdb.com/name/nm15210832/" target="_blank" rel="noopener">IMDb</a></li>
+              <li><a href="https://www.linkedin.com/in/will-t-jarvis/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/willjarvis1996/" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .about-hero {
+    padding-top: calc(var(--header-height) + var(--space-xl));
+    padding-bottom: var(--space-lg);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  .photo-placeholder {
+    aspect-ratio: 3 / 4;
+    max-width: 360px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .about-content h1 {
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .about-lead {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    max-width: 560px;
+  }
+
+  .bio-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .bio-main h2 {
+    margin-bottom: var(--space-md);
+    color: var(--color-white);
+  }
+
+  .bio-main p {
+    color: var(--color-text);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .sidebar-block {
+    margin-bottom: var(--space-md);
+  }
+
+  .sidebar-block h3 {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .sidebar-block ul {
+    list-style: none;
+  }
+
+  .sidebar-block li {
+    padding: var(--space-xs) 0;
+    color: var(--color-text);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .sidebar-block li + li {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .links-list a {
+    color: var(--color-text);
+  }
+
+  .links-list a:hover {
+    color: var(--color-accent);
+  }
+
+  @media (min-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr 1.5fr;
+    }
+
+    .bio-columns {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+</style>

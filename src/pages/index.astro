@@ -1,0 +1,213 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { getFeaturedProjects } from '../content/projects';
+
+const featured = getFeaturedProjects();
+---
+
+<Base title="Will Jarvis | Creative Producer & Writer">
+  <section class="hero">
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <p class="hero-label">Creative Producer & Writer</p>
+        <h1 class="hero-title">Stories that<br />move people.</h1>
+        <p class="hero-sub">
+          Branded content, short film, scripted TV, theatre and immersive.
+          Currently at RD Content, London.
+        </p>
+        <div class="hero-cta">
+          <a href="/work" class="btn btn-primary">View work</a>
+          <a href="/about" class="btn btn-ghost">About me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Selected Work</h2>
+        <a href="/work" class="section-link">View all &rarr;</a>
+      </div>
+      <div class="project-grid">
+        {featured.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="clients section">
+    <div class="container">
+      <h2 class="visually-hidden">Clients</h2>
+      <p class="clients-label">Selected clients</p>
+      <div class="clients-list">
+        <span>Formula 1</span>
+        <span>Manchester City FC</span>
+        <span>Booking.com</span>
+        <span>Morgan Stanley</span>
+        <span>Hamilton Watches</span>
+        <span>Aramco</span>
+        <span>DAMAC Properties</span>
+        <span>Revolut</span>
+        <span>Chelsea FC</span>
+        <span>Walt Disney</span>
+        <span>Hilton Hotels</span>
+        <span>Lonely Planet</span>
+        <span>Netflix</span>
+        <span>ITV</span>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--header-height);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(200, 164, 90, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .hero-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+  }
+
+  .hero-title {
+    margin-bottom: var(--space-md);
+    color: var(--color-white);
+  }
+
+  .hero-sub {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 520px;
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .btn-primary {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-accent-hover);
+    color: var(--color-bg);
+  }
+
+  .btn-ghost {
+    border-color: var(--color-border);
+    color: var(--color-text-muted);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--color-text-muted);
+    color: var(--color-white);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-link {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .section-link:hover {
+    color: var(--color-accent);
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .clients-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+    text-align: center;
+  }
+
+  .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm) var(--space-md);
+  }
+
+  .clients-list span {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
+  }
+
+  .clients-list span:hover {
+    color: var(--color-white);
+  }
+
+  @media (min-width: 640px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .project-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .clients-list span {
+      font-size: 1.125rem;
+    }
+  }
+</style>

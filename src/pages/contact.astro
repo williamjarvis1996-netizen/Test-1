@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Contact | Will Jarvis">
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-content">
+        <h1>Get in touch</h1>
+        <p class="contact-intro">
+          Available for branded content production, creative direction,
+          scripted development, and freelance writing.
+        </p>
+
+        <div class="contact-methods">
+          <div class="contact-block">
+            <h3>Email</h3>
+            <a href="mailto:williamjarvis1996@gmail.com">williamjarvis1996@gmail.com</a>
+          </div>
+
+          <div class="contact-block">
+            <h3>Elsewhere</h3>
+            <ul>
+              <li><a href="https://www.imdb.com/name/nm15210832/" target="_blank" rel="noopener">IMDb</a></li>
+              <li><a href="https://www.linkedin.com/in/will-t-jarvis/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/willjarvis1996/" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+
+          <div class="contact-block">
+            <h3>Based in</h3>
+            <p>Hackney, London</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .contact-page {
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    padding-top: var(--header-height);
+  }
+
+  .contact-content {
+    max-width: 560px;
+    padding: var(--space-xl) 0;
+  }
+
+  .contact-content h1 {
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .contact-intro {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .contact-block h3 {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+  }
+
+  .contact-block a {
+    color: var(--color-white);
+    font-size: 1.125rem;
+  }
+
+  .contact-block a:hover {
+    color: var(--color-accent);
+  }
+
+  .contact-block p {
+    color: var(--color-text);
+    font-size: 1.125rem;
+  }
+
+  .contact-block ul {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  .contact-block ul a {
+    font-size: 1rem;
+  }
+</style>

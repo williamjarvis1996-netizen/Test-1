@@ -1,0 +1,148 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { projects, categories } from '../../content/projects';
+
+const categoryKeys = Object.keys(categories) as (keyof typeof categories)[];
+---
+
+<Base title="Work | Will Jarvis">
+  <section class="work-hero">
+    <div class="container">
+      <h1>Work</h1>
+      <p class="work-intro">
+        Branded content, short film, scripted television, theatre and immersive.
+      </p>
+    </div>
+  </section>
+
+  <section class="work-filters">
+    <div class="container">
+      <div class="filter-bar" role="tablist">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        {categoryKeys.map((key) => (
+          <button class="filter-btn" data-filter={key} role="tab" aria-selected="false">
+            {categories[key]}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="work-grid section">
+    <div class="container">
+      <div class="project-grid" id="project-grid">
+        {projects.map((project) => (
+          <div class="project-item" data-category={project.category}>
+            <ProjectCard project={project} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .work-hero {
+    padding-top: calc(var(--header-height) + var(--space-xl));
+    padding-bottom: var(--space-lg);
+  }
+
+  .work-hero h1 {
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .work-intro {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 520px;
+  }
+
+  .work-filters {
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .filter-btn {
+    background: none;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--color-text-muted);
+    color: var(--color-white);
+  }
+
+  .filter-btn.active {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .project-item {
+    transition: opacity 0.3s ease;
+  }
+
+  .project-item.hidden {
+    display: none;
+  }
+
+  @media (min-width: 640px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .project-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.project-item');
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = (btn as HTMLElement).dataset.filter;
+
+      buttons.forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      items.forEach((item) => {
+        const el = item as HTMLElement;
+        if (filter === 'all' || el.dataset.category === filter) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
