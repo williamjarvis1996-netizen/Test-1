@@ -221,6 +221,7 @@ export const projects: Project[] = [
     year: '2021',
     role: 'Writer / Creative Producer',
     num: '13',
+    image: '/images/the-emoji-project.webp',
     description: [
       'Sold-out anthology of new writing at Camden Fringe, performed at the Hen and Chickens Theatre across three nights in August 2021. Produced by Distracted Rat Productions.',
       'An intergenerational collection of short plays and scenes, each written in response to a single emoji. Writers ranged in age from 11 to 75. The show covered the absurd, the political, and everything between. Reviewers described it as making "you giggle and think in the same breath."',
