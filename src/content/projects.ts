@@ -2,7 +2,7 @@ export interface Project {
   slug: string;
   title: string;
   client?: string;
-  category: 'branded' | 'film' | 'tv' | 'theatre' | 'immersive';
+  category: 'branded' | 'film' | 'tv' | 'theatre' | 'digital';
   year: string;
   role: string;
   description: string[];
@@ -17,8 +17,8 @@ export const categories = {
   branded: 'Branded Content',
   film: 'Film',
   tv: 'TV Development',
-  theatre: 'Theatre & Audio',
-  immersive: 'Immersive & Digital',
+  theatre: 'Theatre & Immersive',
+  digital: 'Digital Media',
 } as const;
 
 export const projects: Project[] = [
@@ -231,7 +231,7 @@ export const projects: Project[] = [
   {
     slug: 'remote-radioplays',
     title: 'Remote Radioplays',
-    category: 'theatre',
+    category: 'digital',
     year: '2020-2021',
     role: 'Writer / Producer / Performer',
     num: '14',
@@ -244,7 +244,7 @@ export const projects: Project[] = [
   {
     slug: 'vidi-guides',
     title: 'Vidi Guides',
-    category: 'immersive',
+    category: 'digital',
     year: '2020-2024',
     role: 'Head of Content & Production',
     num: '15',
