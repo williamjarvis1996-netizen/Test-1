@@ -30,21 +30,37 @@ const featured = projects.filter(p => p.featured);
       <span class="cross cross-1">+</span>
       <span class="cross cross-2">+</span>
       <span class="cross cross-3">+</span>
+      <span class="cross cross-4">+</span>
     </div>
 
     <div class="hero-bottom container animate-in" style="--delay: 0.7s">
       <span>Hackney, London</span>
-      <span>RD Content</span>
-      <span id="hero-year">2026</span>
+      <span id="hero-clock"></span>
+      <span>2026</span>
     </div>
   </section>
 
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Branded Content</span><span class="marquee-sep">+</span>
+      <span>Short Film</span><span class="marquee-sep">+</span>
+      <span>Scripted TV</span><span class="marquee-sep">+</span>
+      <span>Theatre</span><span class="marquee-sep">+</span>
+      <span>Immersive</span><span class="marquee-sep">+</span>
+      <span>Branded Content</span><span class="marquee-sep">+</span>
+      <span>Short Film</span><span class="marquee-sep">+</span>
+      <span>Scripted TV</span><span class="marquee-sep">+</span>
+      <span>Theatre</span><span class="marquee-sep">+</span>
+      <span>Immersive</span><span class="marquee-sep">+</span>
+    </div>
+  </div>
+
   <section class="image-strip">
     <div class="strip-track">
-      {featured.map((p, i) => (
+      {[...featured, ...featured].map((p, i) => (
         <a href={`/work/${p.slug}`} class="strip-item">
           <div class="strip-inner">
-            <span class="strip-number">{String(i + 1).padStart(2, '0')}</span>
+            <span class="strip-number">{String((i % featured.length) + 1).padStart(2, '0')}</span>
             <span class="strip-title">{p.title}</span>
             <span class="strip-client">{p.client || p.role}</span>
           </div>
@@ -53,25 +69,34 @@ const featured = projects.filter(p => p.featured);
     </div>
   </section>
 
-  <section class="clients section">
+  <section class="clients">
     <div class="container">
       <p class="clients-label">Selected clients</p>
       <div class="clients-list">
-        <span>Formula 1</span>
-        <span>Manchester City FC</span>
-        <span>Booking.com</span>
-        <span>Morgan Stanley</span>
-        <span>Hamilton Watches</span>
-        <span>Aramco</span>
-        <span>DAMAC Properties</span>
-        <span>Revolut</span>
-        <span>Chelsea FC</span>
-        <span>Walt Disney</span>
-        <span>Hilton Hotels</span>
-        <span>Lonely Planet</span>
-        <span>Netflix</span>
-        <span>ITV</span>
+        <span class="reveal">Formula 1</span>
+        <span class="reveal">Manchester City FC</span>
+        <span class="reveal">Booking.com</span>
+        <span class="reveal">Morgan Stanley</span>
+        <span class="reveal">Hamilton Watches</span>
+        <span class="reveal">Aramco</span>
+        <span class="reveal">DAMAC Properties</span>
+        <span class="reveal">Revolut</span>
+        <span class="reveal">Chelsea FC</span>
+        <span class="reveal">Walt Disney</span>
+        <span class="reveal">Hilton Hotels</span>
+        <span class="reveal">Lonely Planet</span>
+        <span class="reveal">Netflix</span>
+        <span class="reveal">ITV</span>
       </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <a href="/contact" class="cta-link animate-in" style="--delay: 0s">
+        <span>Let's work together</span>
+        <span class="cta-arrow">&rarr;</span>
+      </a>
     </div>
   </section>
 </Base>
@@ -129,6 +154,7 @@ const featured = projects.filter(p => p.featured);
     text-transform: uppercase;
   }
 
+  /* Vertical element */
   .hero-vertical {
     position: absolute;
     right: var(--space-md);
@@ -140,7 +166,7 @@ const featured = projects.filter(p => p.featured);
   }
 
   .vertical-line {
-    width: 1px;
+    width: 2px;
     height: 100%;
     background: var(--color-accent);
   }
@@ -148,15 +174,16 @@ const featured = projects.filter(p => p.featured);
   .vertical-text {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-size: 0.5625rem;
+    font-size: 0.625rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.25em;
-    color: var(--color-marker);
+    color: var(--color-fg-muted);
     white-space: nowrap;
     align-self: flex-end;
   }
 
+  /* Animated crosses */
   .hero-crosses {
     position: absolute;
     inset: 0;
@@ -166,16 +193,45 @@ const featured = projects.filter(p => p.featured);
 
   .cross {
     position: absolute;
-    font-size: 1.5rem;
     font-weight: 200;
     color: var(--color-border);
     line-height: 1;
     font-family: var(--font-body);
   }
 
-  .cross-1 { top: 22%; right: 18%; }
-  .cross-2 { bottom: 35%; left: 6%; }
-  .cross-3 { bottom: 20%; right: 40%; }
+  .cross-1 {
+    top: 18%; right: 14%;
+    font-size: 1.75rem;
+    animation: cross-drift-1 10s ease-in-out infinite alternate;
+  }
+  .cross-2 {
+    bottom: 38%; left: 5%;
+    font-size: 1.25rem;
+    animation: cross-drift-2 14s ease-in-out infinite alternate;
+  }
+  .cross-3 {
+    bottom: 18%; right: 38%;
+    font-size: 1.5rem;
+    animation: cross-drift-3 12s ease-in-out infinite alternate;
+  }
+  .cross-4 {
+    top: 50%; right: 26%;
+    font-size: 1rem;
+    animation: cross-drift-1 16s ease-in-out infinite alternate-reverse;
+  }
+
+  @keyframes cross-drift-1 {
+    0% { transform: rotate(0deg); opacity: 0.4; }
+    100% { transform: rotate(90deg) translate(6px, -4px); opacity: 0.2; }
+  }
+  @keyframes cross-drift-2 {
+    0% { transform: rotate(0deg); opacity: 0.3; }
+    100% { transform: rotate(-45deg) translate(-4px, 6px); opacity: 0.15; }
+  }
+  @keyframes cross-drift-3 {
+    0% { transform: rotate(0deg); opacity: 0.35; }
+    100% { transform: rotate(60deg) translate(5px, 3px); opacity: 0.18; }
+  }
 
   .hero-bottom {
     position: absolute;
@@ -188,23 +244,62 @@ const featured = projects.filter(p => p.featured);
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--color-fg-muted);
+    font-variant-numeric: tabular-nums;
   }
 
-  .image-strip {
-    border-top: 1px solid var(--color-border);
+  /* Marquee */
+  .marquee {
+    overflow: hidden;
+    padding: var(--space-sm) 0;
     border-bottom: 1px solid var(--color-border);
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
   }
 
-  .image-strip::-webkit-scrollbar {
-    display: none;
+  .marquee-track {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    white-space: nowrap;
+    width: max-content;
+    animation: marquee-scroll 28s linear infinite;
+  }
+
+  .marquee-track span {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    text-transform: uppercase;
+    color: var(--color-fg);
+    flex-shrink: 0;
+  }
+
+  .marquee-sep {
+    color: var(--color-accent) !important;
+    font-size: clamp(1.25rem, 2.5vw, 2rem) !important;
+  }
+
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Image strip */
+  .image-strip {
+    border-bottom: 1px solid var(--color-border);
+    overflow: hidden;
   }
 
   .strip-track {
     display: flex;
     min-width: max-content;
+    animation: strip-scroll 50s linear infinite;
+  }
+
+  .strip-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes strip-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 
   .strip-item {
@@ -249,8 +344,9 @@ const featured = projects.filter(p => p.featured);
     letter-spacing: 0.04em;
   }
 
+  /* Clients */
   .clients {
-    padding: var(--space-xl) 0;
+    padding: var(--space-xl) 0 var(--space-lg);
   }
 
   .clients-label {
@@ -274,12 +370,53 @@ const featured = projects.filter(p => p.featured);
     font-size: 0.9375rem;
     color: var(--color-fg-muted);
     padding: 0.375rem var(--space-sm);
-    transition: color 0.2s ease;
+    transition: color 0.3s ease, transform 0.3s ease, opacity 0.5s ease;
     letter-spacing: 0.01em;
   }
 
   .clients-list span:hover {
     color: var(--color-accent);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* CTA */
+  .cta {
+    padding: var(--space-lg) 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    color: var(--color-fg);
+    transition: color 0.2s ease;
+    line-height: 1;
+  }
+
+  .cta-link:hover {
+    color: var(--color-accent);
+  }
+
+  .cta-arrow {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    font-size: 0.65em;
+  }
+
+  .cta-link:hover .cta-arrow {
+    transform: translateX(12px);
   }
 
   @media (max-width: 767px) {
@@ -300,3 +437,35 @@ const featured = projects.filter(p => p.featured);
     }
   }
 </style>
+
+<script>
+  const clock = document.getElementById('hero-clock');
+  if (clock) {
+    function tick() {
+      const now = new Date();
+      clock!.textContent = now.toLocaleTimeString('en-GB', {
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+      });
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          const siblings = Array.from(el.parentElement?.querySelectorAll('.reveal') || []);
+          const idx = siblings.indexOf(el);
+          el.style.transitionDelay = `${idx * 0.05}s`;
+          el.classList.add('visible');
+          observer.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+  );
+  reveals.forEach((el) => observer.observe(el));
+</script>

@@ -135,14 +135,36 @@ const categoryKeys = Object.keys(categories) as (keyof typeof categories)[];
     grid-template-columns: 3rem 1fr 2fr 5rem 1fr 1.5rem;
     gap: 0 var(--space-sm);
     align-items: baseline;
-    padding: 0.875rem 0;
+    padding: 0.875rem 0.75rem;
+    margin: 0 -0.75rem;
     border-bottom: 1px solid var(--color-border);
     transition: color 0.15s ease;
     color: var(--color-fg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-row::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .project-row:hover::before {
+    transform: scaleX(1);
+  }
+
+  .project-row > * {
+    position: relative;
+    z-index: 1;
   }
 
   .project-row:hover {
-    color: var(--color-accent);
+    color: #fff;
   }
 
   .project-row.hidden {
@@ -157,7 +179,7 @@ const categoryKeys = Object.keys(categories) as (keyof typeof categories)[];
   }
 
   .project-row:hover .row-num {
-    color: var(--color-accent);
+    color: #fff;
   }
 
   .row-client {
@@ -213,8 +235,8 @@ const categoryKeys = Object.keys(categories) as (keyof typeof categories)[];
   }
 
   .project-row:hover .row-arrow {
-    color: var(--color-accent);
-    transform: translateX(3px);
+    color: #fff;
+    transform: translateX(4px);
   }
 
   @media (max-width: 1023px) {
@@ -239,7 +261,7 @@ const categoryKeys = Object.keys(categories) as (keyof typeof categories)[];
 
     .project-row {
       grid-template-columns: 2rem 1fr 1.5rem;
-      padding: 0.75rem 0;
+      padding: 0.75rem 0.5rem;
     }
 
     .row-client,
