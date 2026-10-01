@@ -45,7 +45,7 @@ while (hi < hamilton.length || oi < others.length) {
                 ) : (
                   <span class="strip-num">{String((i % featured.length) + 1).padStart(2, '0')}</span>
                 )}
-                <span class="strip-title">{p.title}</span>
+                <span class="strip-title"><span>{p.title}</span></span>
               </div>
             </a>
           ))}
@@ -313,9 +313,32 @@ while (hi < hamilton.length || oi < others.length) {
     line-height: 1.4;
   }
 
+  .strip-title span {
+    background: var(--color-accent);
+    padding: 0.35em 0.75em;
+    line-height: 1.4;
+  }
+
   .strip-item:hover .strip-title {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .hero-strip.dragging .strip-track {
+    animation-play-state: paused;
+    cursor: grabbing;
+  }
+
+  .hero-strip {
+    cursor: grab;
+  }
+
+  .hero-strip.dragging {
+    cursor: grabbing;
+  }
+
+  .hero-strip.dragging .strip-item {
+    pointer-events: none;
   }
 
   /* ---- Discipline text ---- */
@@ -478,4 +501,66 @@ while (hi < hamilton.length || oi < others.length) {
     { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
   );
   reveals.forEach((el) => observer.observe(el));
+
+  const strip = document.querySelector('.hero-strip') as HTMLElement;
+  const track = document.querySelector('.strip-track') as HTMLElement;
+  if (strip && track) {
+    let dragging = false;
+    let startX = 0;
+    let scrollStart = 0;
+    let hasMoved = false;
+
+    function getTranslateX(): number {
+      const style = getComputedStyle(track);
+      const matrix = new DOMMatrix(style.transform);
+      return matrix.m41;
+    }
+
+    strip.addEventListener('mousedown', (e) => {
+      dragging = true;
+      hasMoved = false;
+      startX = e.clientX;
+      scrollStart = getTranslateX();
+      track.style.transform = `translateX(${scrollStart}px)`;
+      strip.classList.add('dragging');
+      e.preventDefault();
+    });
+
+    strip.addEventListener('touchstart', (e) => {
+      dragging = true;
+      hasMoved = false;
+      startX = e.touches[0].clientX;
+      scrollStart = getTranslateX();
+      track.style.transform = `translateX(${scrollStart}px)`;
+      strip.classList.add('dragging');
+    }, { passive: true });
+
+    function onMove(clientX: number) {
+      if (!dragging) return;
+      const dx = clientX - startX;
+      if (Math.abs(dx) > 3) hasMoved = true;
+      const half = track.scrollWidth / 2;
+      let pos = scrollStart + dx;
+      if (pos > 0) pos -= half;
+      if (pos < -half) pos += half;
+      track.style.transform = `translateX(${pos}px)`;
+    }
+
+    window.addEventListener('mousemove', (e) => onMove(e.clientX));
+    window.addEventListener('touchmove', (e) => onMove(e.touches[0].clientX));
+
+    function onEnd() {
+      if (!dragging) return;
+      dragging = false;
+      strip.classList.remove('dragging');
+      track.style.transform = '';
+    }
+
+    window.addEventListener('mouseup', onEnd);
+    window.addEventListener('touchend', onEnd);
+
+    strip.addEventListener('click', (e) => {
+      if (hasMoved) e.preventDefault();
+    }, true);
+  }
 </script>
