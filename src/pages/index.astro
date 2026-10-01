@@ -5,6 +5,7 @@ import { projects } from '../content/projects';
 const withImages = projects.filter(p => p.image);
 const hamilton = withImages.filter(p => p.client?.includes('Hamilton'));
 const others = withImages.filter(p => !p.client?.includes('Hamilton'));
+const base = import.meta.env.BASE_URL;
 const featured: typeof withImages = [];
 let hi = 0, oi = 0;
 while (hi < hamilton.length || oi < others.length) {
@@ -37,10 +38,10 @@ while (hi < hamilton.length || oi < others.length) {
       <div class="hero-strip">
         <div class="strip-track">
           {[...featured, ...featured].map((p, i) => (
-            <a href={`/work/${p.slug}`} class="strip-item">
+            <a href={`${base}/work/${p.slug}`} class="strip-item">
               <div class="strip-img">
                 {p.image ? (
-                  <img src={p.image} alt={p.title} class="strip-photo" loading="lazy" />
+                  <img src={`${base}/${p.image}`} alt={p.title} class="strip-photo" loading="lazy" />
                 ) : (
                   <span class="strip-num">{String((i % featured.length) + 1).padStart(2, '0')}</span>
                 )}
@@ -89,7 +90,7 @@ while (hi < hamilton.length || oi < others.length) {
 
   <section class="cta">
     <div class="container">
-      <a href="/contact" class="cta-link animate-in" style="--delay: 0s">
+      <a href={`${base}/contact`} class="cta-link animate-in" style="--delay: 0s">
         <span>Let's work together</span>
         <span class="cta-arrow">&rarr;</span>
       </a>

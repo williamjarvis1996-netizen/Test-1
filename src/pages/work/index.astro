@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { projects, categories } from '../../content/projects';
 
+const base = import.meta.env.BASE_URL;
 const categoryKeys = Object.keys(categories) as (keyof typeof categories)[];
 const grouped = categoryKeys.map((key) => ({
   key,
@@ -32,10 +33,10 @@ const grouped = categoryKeys.map((key) => ({
         <div class="container">
           <div class="project-grid">
             {group.items.map((project, i) => (
-              <a href={`/work/${project.slug}`} class={`project-card ${i === 0 && group.items.length > 2 ? 'card-wide' : ''}`}>
+              <a href={`${base}/work/${project.slug}`} class={`project-card ${i === 0 && group.items.length > 2 ? 'card-wide' : ''}`}>
                 <div class="card-img">
                   {project.image ? (
-                    <img src={project.image} alt={project.title} class="card-photo" loading="lazy" />
+                    <img src={`${base}/${project.image}`} alt={project.title} class="card-photo" loading="lazy" />
                   ) : (
                     <span class="card-num">{project.num}</span>
                   )}

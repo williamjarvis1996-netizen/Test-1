@@ -30,7 +30,7 @@ export const projects: Project[] = [
     year: '2026',
     role: 'Producer',
     num: '01',
-    image: '/images/hamilton-in-the-midst-of-it.webp',
+    image: 'images/hamilton-in-the-midst-of-it.webp',
     description: [
       'Festive campaign for Hamilton Watches built around the chaos of Christmas morning. The film uses a top-down, locked-on-the-watch POV to follow three characters through the mayhem of the day: Dan in the kitchen battling biscuit dough and flour clouds, Maya navigating a wrapping disaster at the dining table, and Frank holding court in the living room while his granddaughter Ellie tears through the house around him. Three Hamilton watches (the Khaki Field Mecca, the American Classic Cushion, and the Khaki Field Murph) anchor each storyline, always in frame, always on the wrist.',
       'Shot over three days at a manor house in Hertfordshire. The production ran a Sony FX3 with Cooke SP3 primes as the main camera package, alongside a VMI Ember high-speed camera for slow-motion hero moments: flour erupting from a bowl, a catch in mid-air. Match-cut transitions stitch the three worlds together (whisk to volume peak, dough to wrapping paper, TV cut-to-black to icing grab), keeping the film moving at the frantic, playful pace of Christmas itself. One of the 15-second social cuts was shot natively on iPhone, mounted alongside the main camera for its rawer texture.',
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     year: '2025',
     role: 'Producer',
     num: '02',
-    image: '/images/hamilton-into-the-wild.webp',
+    image: 'images/hamilton-into-the-wild.webp',
     video: 'https://www.youtube.com/watch?v=Rl0pLkaWXs4',
     description: [
       'Three-part branded content series for the Hamilton Khaki Field. The films follow the watch out of the city and into the Welsh countryside, leaning into the Khaki Field\'s military heritage and its identity as an outdoor watch built for rough terrain.',
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     year: '2025',
     role: 'Producer',
     num: '03',
-    image: '/images/hamilton-power-up.webp',
+    image: 'images/hamilton-power-up.webp',
     video: 'https://www.youtube.com/watch?v=aKi2dFwtTxo',
     description: [
       'Launch film for the Hamilton Khaki Field Power Reserve, the first model in the Khaki Field line to feature a power reserve indicator on the dial. The film introduced the top-down, locked-on-the-wrist visual language that became the creative foundation for the later "In The Midst Of It" festive campaign.',
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     year: '2026',
     role: 'Producer',
     num: '04',
-    image: '/images/fora-at-five.webp',
+    image: 'images/fora-at-five.webp',
     video: 'https://www.youtube.com/watch?v=DxAVfx8Igeo',
     description: [
       'Hero brand film marking Fora Travel\'s fifth anniversary. The film tells the story of Alexia, an Italian-American woman who brings her elderly parents Rosa and Marco back to Palermo for their 50th wedding anniversary. Their Fora travel advisor Tess curates the trip from her desk in London, pulling strings to arrange a private vow renewal in the church where Rosa and Marco were married half a century earlier. The story builds from the advisor\'s first video call with Alexia, through a week of discovery across Sicily, to the final scene: Marco waiting at the altar in his wedding suit as Alexia produces a key to a locked church door.',
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     year: '2025',
     role: 'Producer',
     num: '05',
-    image: '/images/chelsea-damac.webp',
+    image: 'images/chelsea-damac.webp',
     video: 'https://www.youtube.com/watch?v=5o_azlXU-xc',
     description: [
       'Partnership campaign for Chelsea Residences by DAMAC Properties, a Chelsea FC-branded residential development in Dubai. The second shoot in a two-part production, delivering three ads: "Matchday in the Sky," a concept built around a floating football pitch suspended above the clouds by hot air balloon, where players pass the ball before it rolls off the edge and they skydive toward the residences below; and two "Metaverse" comedy spots, green-screen films in which players wearing VR headsets experience the development\'s amenities from their locker room.',
@@ -113,7 +113,7 @@ export const projects: Project[] = [
     year: '2025',
     role: 'Producer',
     num: '06',
-    image: '/images/booking-traveller-review-awards.webp',
+    image: 'images/booking-traveller-review-awards.webp',
     video: 'https://www.youtube.com/watch?v=A6IfbTf06PU',
     description: [
       'Hero film for Booking.com\'s annual Traveller Review Awards, a global campaign celebrating the accommodation partners recognised by millions of traveller reviews across the platform. The campaign, titled "Where Hospitality Begins," positions the partners themselves as the subject of the film: the people behind the properties, the hospitality that earns the reviews, the work that keeps guests coming back. Multi-day shoot with full post-production.',
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     year: '2026',
     role: 'Producer',
     num: '07',
-    image: '/images/mcfc-ohana.webp',
+    image: 'images/mcfc-ohana.webp',
     video: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw',
     description: [
       'Launch film for Ohana Development\'s Manchester City-branded residential project in Abu Dhabi. The film features Manchester City players and blends live-action footage with 3D-rendered architectural environments and virtual production sequences, positioning the development within the global Manchester City brand.',
@@ -161,7 +161,7 @@ export const projects: Project[] = [
     year: '2024',
     role: 'Writer / Co-Producer',
     num: '09',
-    image: '/images/aortic.webp',
+    image: 'images/aortic.webp',
     description: [
       'Short film. Nestled inside the broom closet of a quiet hospital, Jack musters the courage to leave a heartfelt voice note to an old friend. The film blurs the lines between past and present, moving between the comforting glow of nostalgia and the unyielding light of the here and now. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
       'Co-produced with Niamh Marie Smith. Shot in November 2023. Macauley Keeper plays Jack in the lead role.',
@@ -221,7 +221,7 @@ export const projects: Project[] = [
     year: '2021',
     role: 'Writer / Creative Producer',
     num: '13',
-    image: '/images/the-emoji-project.webp',
+    image: 'images/the-emoji-project.webp',
     description: [
       'Sold-out anthology of new writing at Camden Fringe, performed at the Hen and Chickens Theatre across three nights in August 2021. Produced by Distracted Rat Productions.',
       'An intergenerational collection of short plays and scenes, each written in response to a single emoji. Writers ranged in age from 11 to 75. The show covered the absurd, the political, and everything between. Reviewers described it as making "you giggle and think in the same breath."',
@@ -248,7 +248,7 @@ export const projects: Project[] = [
     year: '2020-2024',
     role: 'Head of Content & Production',
     num: '15',
-    image: '/images/vidi-guides.webp',
+    image: 'images/vidi-guides.webp',
     description: [
       'Four years leading content and production at Vidi Guides, a platform producing podcast-style self-guided audio walking tours triggered by GPS and available offline. Oversaw the creation of 100+ immersive travel podcasts and location-based audio tours across London (Brixton, Soho, Kew Gardens, Covent Garden, Westminster), Paris, Cambridge, Oxford, Edinburgh, Stonehenge, Stratford-upon-Avon, and Vimy Ridge.',
       'Clients included Walt Disney, Hilton Hotels, Lonely Planet, and Culture Trip. The role spanned scripting, voice casting, location research, and production management across dozens of simultaneous tours in multiple cities. Vidi Guides was founded by Marius Nigond in 2019 and has since evolved into iWander, an AI-powered travel companion named a PhocusWire Hot 25 Travel Startup for 2025.',
@@ -262,7 +262,7 @@ export const projects: Project[] = [
     year: '2021',
     role: 'Content Producer',
     num: '16',
-    image: '/images/disney-magic-kingdom.webp',
+    image: 'images/disney-magic-kingdom.webp',
     description: [
       'Immersive audio guide to Walt Disney World\'s Magic Kingdom, produced for Vidi Guides. A GPS-triggered audio tour guiding visitors through the park, with location-aware narration that responds to where you are rather than what you tap. One of the flagship productions from Will\'s time at Vidi Guides, produced directly for Disney\'s parks division.',
     ],
