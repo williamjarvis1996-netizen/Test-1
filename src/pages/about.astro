@@ -11,9 +11,7 @@ import Base from '../layouts/Base.astro';
 
     <div class="hero-content">
       <div class="hero-photo animate-in" style="--delay: 0.2s">
-        <div class="photo-placeholder">
-          <span>Photo</span>
-        </div>
+        <img src="/images/portrait.webp" alt="Will Jarvis" class="portrait" />
       </div>
 
       <div class="hero-intro animate-in" style="--delay: 0.35s">
@@ -166,20 +164,10 @@ import Base from '../layouts/Base.astro';
     padding: var(--space-lg);
   }
 
-  .photo-placeholder {
+  .portrait {
     width: 100%;
     max-width: 500px;
-    aspect-ratio: 3 / 4;
-    background: var(--color-bg-muted);
-    border: 1px solid var(--color-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-marker);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 500;
+    object-fit: cover;
   }
 
   .hero-intro {
@@ -370,7 +358,7 @@ import Base from '../layouts/Base.astro';
       padding: var(--space-md);
     }
 
-    .photo-placeholder {
+    .portrait {
       max-width: 300px;
     }
 
