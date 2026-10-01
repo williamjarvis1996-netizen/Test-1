@@ -133,6 +133,8 @@ export const projects: Project[] = [
     year: '2026',
     role: 'Producer',
     num: '07',
+    image: '/images/mcfc-ohana.webp',
+    video: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw',
     description: [
       'Launch film for Ohana Development\'s Manchester City-branded residential project in Abu Dhabi. The film features Manchester City players and blends live-action footage with 3D-rendered architectural environments and virtual production sequences, positioning the development within the global Manchester City brand.',
       'The production combined three distinct shoot phases: location work at Manchester City\'s training facilities in Manchester, live-action sequences on the ground in Abu Dhabi, and a virtual production day on an LED volume stage. 3D animated renders of the development were supplied by the client and composited into the final film alongside the live-action footage, building a seamless bridge between real and virtual environments. The result is a film that moves between the energy of the football club and the ambition of the development, connecting the two brands through the players who link them.',
