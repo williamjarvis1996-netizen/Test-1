@@ -15,24 +15,27 @@ while (hi < hamilton.length || oi < others.length) {
 
 <Base title="Will Jarvis | Creative Producer & Script Writer">
   <section class="hero">
-    <div class="hero-label hero-label-left animate-in" style="--delay: 0.1s">
+    <div class="hero-label hero-label-top animate-in" style="--delay: 0.1s">
       <span class="label-text">Based in London</span>
       <span class="label-rule"></span>
     </div>
 
+    <div class="hero-vertical animate-in" style="--delay: 0.6s">
+      <div class="vert-line"></div>
+      <div class="vert-text">Story-first thinker with a focus on human connection</div>
+    </div>
+
     <div class="hero-crosses" aria-hidden="true">
-      <span class="cross cross-1"></span>
-      <span class="cross cross-2"></span>
-      <span class="cross cross-3"></span>
+      <span class="cross cross-tl"></span>
+      <span class="cross cross-tr"></span>
+      <span class="cross cross-bl"></span>
+      <span class="cross cross-br"></span>
     </div>
 
     <div class="hero-content">
       <div class="hero-name">
         <span class="name-line animate-in" style="--delay: 0.2s">Will</span>
         <span class="name-line animate-in" style="--delay: 0.35s">Jarvis</span>
-      </div>
-      <div class="hero-subtitle animate-in" style="--delay: 0.45s">
-        Creative Producer & Script Writer
       </div>
 
       <div class="hero-strip">
@@ -51,9 +54,15 @@ while (hi < hamilton.length || oi < others.length) {
           ))}
         </div>
       </div>
+
+      <div class="hero-discipline animate-in" style="--delay: 0.5s">
+        <span class="disc-line">Creative</span>
+        <span class="disc-line">Producer <span class="amp">&</span></span>
+        <span class="disc-line">Script Writer</span>
+      </div>
     </div>
 
-    <div class="hero-label hero-label-right animate-in" style="--delay: 0.6s">
+    <div class="hero-label hero-label-bottom animate-in" style="--delay: 0.65s">
       <a href="/work" class="label-link">Selected Work <span>&rarr;</span></a>
     </div>
 
@@ -103,7 +112,7 @@ while (hi < hamilton.length || oi < others.length) {
     padding-top: var(--header-height);
   }
 
-  /* ---- Labels with rules ---- */
+  /* ---- Labels ---- */
   .hero-label {
     position: absolute;
     z-index: 4;
@@ -112,13 +121,13 @@ while (hi < hamilton.length || oi < others.length) {
     gap: var(--space-sm);
   }
 
-  .hero-label-left {
+  .hero-label-top {
     top: calc(var(--header-height) + var(--space-md));
     left: var(--space-md);
   }
 
-  .hero-label-right {
-    bottom: calc(var(--space-md) + 2rem);
+  .hero-label-bottom {
+    bottom: var(--space-md);
     right: var(--space-md);
   }
 
@@ -152,7 +161,42 @@ while (hi < hamilton.length || oi < others.length) {
     color: var(--color-fg);
   }
 
-  /* ---- Crosshairs ---- */
+  /* ---- Vertical spine ---- */
+  .hero-vertical {
+    position: absolute;
+    left: 38%;
+    top: calc(var(--header-height) + var(--space-sm));
+    bottom: var(--space-sm);
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .vert-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--color-fg);
+    opacity: 0.15;
+  }
+
+  .vert-text {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-fg-muted);
+    white-space: nowrap;
+    opacity: 0.6;
+  }
+
+  /* ---- Crosshairs in a 2x2 grid ---- */
   .hero-crosses {
     position: absolute;
     inset: 0;
@@ -162,8 +206,8 @@ while (hi < hamilton.length || oi < others.length) {
 
   .cross {
     position: absolute;
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
   }
 
   .cross::before,
@@ -187,22 +231,28 @@ while (hi < hamilton.length || oi < others.length) {
     transform: translateY(-50%);
   }
 
-  .cross-1 {
-    top: 12%;
-    left: 42%;
-    opacity: 0.6;
-  }
-
-  .cross-2 {
-    bottom: 32%;
-    left: 6%;
+  .cross-tl {
+    top: 22%;
+    left: 15%;
     opacity: 0.5;
   }
 
-  .cross-3 {
+  .cross-tr {
     top: 22%;
-    left: 14%;
-    opacity: 0.55;
+    left: 33%;
+    opacity: 0.5;
+  }
+
+  .cross-bl {
+    bottom: 22%;
+    left: 15%;
+    opacity: 0.5;
+  }
+
+  .cross-br {
+    bottom: 22%;
+    left: 33%;
+    opacity: 0.5;
   }
 
   /* ---- Main content flow ---- */
@@ -211,7 +261,7 @@ while (hi < hamilton.length || oi < others.length) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: clamp(0.25rem, 0.5vw, 0.5rem);
+    gap: clamp(0.25rem, 0.5vw, 0.75rem);
     position: relative;
     z-index: 2;
   }
@@ -226,21 +276,10 @@ while (hi < hamilton.length || oi < others.length) {
   .name-line {
     display: block;
     font-family: var(--font-display);
-    font-size: clamp(4.5rem, 15vw, 18rem);
+    font-size: clamp(5rem, 15vw, 18rem);
     text-transform: uppercase;
     color: var(--color-fg);
     letter-spacing: -0.03em;
-  }
-
-  .hero-subtitle {
-    text-align: right;
-    padding: 0 var(--space-md);
-    font-size: 0.6875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--color-fg-muted);
-    font-weight: 600;
-    margin-top: 0.25rem;
   }
 
   /* ---- Image strip ---- */
@@ -252,7 +291,7 @@ while (hi < hamilton.length || oi < others.length) {
 
   .strip-track {
     display: flex;
-    gap: var(--space-sm);
+    gap: 6px;
     min-width: max-content;
     animation: strip-scroll 45s linear infinite;
   }
@@ -267,7 +306,7 @@ while (hi < hamilton.length || oi < others.length) {
   }
 
   .strip-item {
-    flex: 0 0 340px;
+    flex: 0 0 300px;
     cursor: pointer;
   }
 
@@ -334,6 +373,26 @@ while (hi < hamilton.length || oi < others.length) {
   .strip-item:hover .strip-title {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* ---- Discipline text ---- */
+  .hero-discipline {
+    text-align: right;
+    padding: 0 var(--space-md);
+    line-height: 0.9;
+  }
+
+  .disc-line {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 8vw, 10rem);
+    text-transform: uppercase;
+    color: var(--color-fg);
+    letter-spacing: -0.02em;
+  }
+
+  .amp {
+    color: var(--color-accent);
   }
 
   /* ---- Bottom-left ---- */
@@ -438,14 +497,24 @@ while (hi < hamilton.length || oi < others.length) {
   }
 
   /* ---- Responsive ---- */
+  @media (max-width: 1023px) {
+    .hero-vertical {
+      left: 12%;
+    }
+  }
+
   @media (max-width: 767px) {
+    .hero-vertical {
+      display: none;
+    }
+
     .hero-crosses {
       display: none;
     }
 
-    .hero-label-right {
+    .hero-label-bottom {
       position: static;
-      padding: 0 var(--space-sm);
+      padding: var(--space-sm) var(--space-sm) 0;
       justify-content: flex-end;
     }
 
@@ -454,7 +523,7 @@ while (hi < hamilton.length || oi < others.length) {
     }
 
     .strip-item {
-      flex: 0 0 260px;
+      flex: 0 0 240px;
     }
 
     .clients-list span {
