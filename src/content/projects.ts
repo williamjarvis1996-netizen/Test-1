@@ -97,6 +97,8 @@ export const projects: Project[] = [
     year: '2025',
     role: 'Producer',
     num: '05',
+    image: '/images/chelsea-damac.webp',
+    video: 'https://www.youtube.com/watch?v=5o_azlXU-xc',
     description: [
       'Partnership campaign for Chelsea Residences by DAMAC Properties, a Chelsea FC-branded residential development in Dubai. The second shoot in a two-part production, delivering three ads: "Matchday in the Sky," a concept built around a floating football pitch suspended above the clouds by hot air balloon, where players pass the ball before it rolls off the edge and they skydive toward the residences below; and two "Metaverse" comedy spots, green-screen films in which players wearing VR headsets experience the development\'s amenities from their locker room.',
       'Shot at Brooklands Studio over two days (pre-light and build on Day 1, main shoot on Day 2). The production ran two units simultaneously: Unit A (director Elliot Simpson, DOP James Parsons) handling the platform build for the Matchday concept with football-talented body doubles, and Unit B (director Sam McMullen, DOP Akilan Shiyyali) shooting the green-screen Metaverse films. Chelsea FC players Robert Sanchez, Cole Palmer, and Jamie Gittens each had 15-minute windows on shoot day, with all three appearing together in each Metaverse spot. VFX by FocusFrame.',
