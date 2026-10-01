@@ -17,12 +17,7 @@ while (hi < hamilton.length || oi < others.length) {
   <section class="hero">
     <div class="hero-meta animate-in" style="--delay: 0.1s">
       <div class="meta-block">
-        <span class="meta-label">Based in</span>
-        <span class="meta-val">Hackney, London</span>
-      </div>
-      <div class="meta-block">
-        <span class="meta-label">Time Check</span>
-        <span class="meta-val" id="hero-clock">00:00:00</span>
+        <span class="meta-val">Based in London</span>
       </div>
     </div>
 
@@ -283,6 +278,7 @@ while (hi < hamilton.length || oi < others.length) {
 
   .strip-track {
     display: flex;
+    gap: var(--space-sm);
     min-width: max-content;
     animation: strip-scroll 45s linear infinite;
   }
@@ -297,13 +293,12 @@ while (hi < hamilton.length || oi < others.length) {
   }
 
   .strip-item {
-    flex: 0 0 320px;
-    border-right: 1px solid var(--color-border);
+    flex: 0 0 340px;
     cursor: pointer;
   }
 
   .strip-img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     background: var(--color-bg-muted);
     display: flex;
     align-items: center;
@@ -513,7 +508,7 @@ while (hi < hamilton.length || oi < others.length) {
     }
 
     .strip-item {
-      flex: 0 0 220px;
+      flex: 0 0 260px;
     }
 
     .clients-list span {
@@ -523,18 +518,6 @@ while (hi < hamilton.length || oi < others.length) {
 </style>
 
 <script>
-  const clock = document.getElementById('hero-clock');
-  if (clock) {
-    function tick() {
-      const now = new Date();
-      clock!.textContent = now.toLocaleTimeString('en-GB', {
-        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
-      });
-    }
-    tick();
-    setInterval(tick, 1000);
-  }
-
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(
     (entries) => {
