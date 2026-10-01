@@ -58,9 +58,6 @@ while (hi < hamilton.length || oi < others.length) {
       </div>
     </div>
 
-    <div class="hero-label hero-label-bottom animate-in" style="--delay: 0.65s">
-      <a href="/work" class="label-link">Selected Work <span>&rarr;</span></a>
-    </div>
 
     <div class="hero-foot animate-in" style="--delay: 0.7s">
       <span class="foot-rule"></span>
@@ -122,10 +119,6 @@ while (hi < hamilton.length || oi < others.length) {
     left: var(--space-md);
   }
 
-  .hero-label-bottom {
-    bottom: var(--space-md);
-    right: var(--space-md);
-  }
 
   .label-text {
     font-size: 0.625rem;
@@ -144,19 +137,6 @@ while (hi < hamilton.length || oi < others.length) {
     opacity: 0.4;
   }
 
-  .label-link {
-    font-size: 0.625rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--color-fg-muted);
-    font-weight: 600;
-    white-space: nowrap;
-    transition: color 0.2s ease;
-  }
-
-  .label-link:hover {
-    color: var(--color-fg);
-  }
 
   /* ---- Crosshairs in a 2x2 grid ---- */
   .hero-crosses {
@@ -463,12 +443,6 @@ while (hi < hamilton.length || oi < others.length) {
   @media (max-width: 767px) {
     .hero-crosses {
       display: none;
-    }
-
-    .hero-label-bottom {
-      position: static;
-      padding: var(--space-sm) var(--space-sm) 0;
-      justify-content: flex-end;
     }
 
     .hero-foot {
