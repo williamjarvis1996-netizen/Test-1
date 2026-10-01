@@ -2,18 +2,15 @@
 import Base from '../layouts/Base.astro';
 import { projects } from '../content/projects';
 
-const allFeatured = projects.filter(p => p.featured);
-const withImages = allFeatured.filter(p => p.image);
-const withoutImages = allFeatured.filter(p => !p.image);
+const withImages = projects.filter(p => p.image);
 const hamilton = withImages.filter(p => p.client?.includes('Hamilton'));
 const others = withImages.filter(p => !p.client?.includes('Hamilton'));
-const featured: typeof allFeatured = [];
+const featured: typeof withImages = [];
 let hi = 0, oi = 0;
 while (hi < hamilton.length || oi < others.length) {
   if (oi < others.length) featured.push(others[oi++]);
   if (hi < hamilton.length) featured.push(hamilton[hi++]);
 }
-featured.push(...withoutImages);
 ---
 
 <Base title="Will Jarvis | Creative Producer & Script Writer">
