@@ -562,5 +562,35 @@ while (hi < hamilton.length || oi < others.length) {
     strip.addEventListener('click', (e) => {
       if (hasMoved) e.preventDefault();
     }, true);
+
+    let wheelOffset = 0;
+    let wheeling = false;
+    let wheelTimer: ReturnType<typeof setTimeout>;
+
+    strip.addEventListener('wheel', (e) => {
+      const dx = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (Math.abs(dx) < 1) return;
+      e.preventDefault();
+
+      if (!wheeling) {
+        wheeling = true;
+        wheelOffset = getTranslateX();
+        track.style.transform = `translateX(${wheelOffset}px)`;
+        strip.classList.add('dragging');
+      }
+
+      const half = track.scrollWidth / 2;
+      wheelOffset -= dx;
+      if (wheelOffset > 0) wheelOffset -= half;
+      if (wheelOffset < -half) wheelOffset += half;
+      track.style.transform = `translateX(${wheelOffset}px)`;
+
+      clearTimeout(wheelTimer);
+      wheelTimer = setTimeout(() => {
+        wheeling = false;
+        strip.classList.remove('dragging');
+        track.style.transform = '';
+      }, 150);
+    }, { passive: false });
   }
 </script>
