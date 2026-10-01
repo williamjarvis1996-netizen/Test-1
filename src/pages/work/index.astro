@@ -34,7 +34,11 @@ const grouped = categoryKeys.map((key) => ({
             {group.items.map((project, i) => (
               <a href={`/work/${project.slug}`} class={`project-card ${i === 0 && group.items.length > 2 ? 'card-wide' : ''}`}>
                 <div class="card-img">
-                  <span class="card-num">{project.num}</span>
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} class="card-photo" loading="lazy" />
+                  ) : (
+                    <span class="card-num">{project.num}</span>
+                  )}
                   <div class="card-overlay">
                     <span class="overlay-role">{project.role}</span>
                     <span class="overlay-arrow">&rarr;</span>
@@ -143,6 +147,19 @@ const grouped = categoryKeys.map((key) => ({
 
   .project-card:hover .card-img {
     background: var(--color-fg);
+  }
+
+  .card-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .project-card:hover .card-photo {
+    transform: scale(1.03);
   }
 
   .card-num {
