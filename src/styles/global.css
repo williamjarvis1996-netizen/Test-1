@@ -3,7 +3,7 @@
   --color-bg-muted: #f2f2f2;
   --color-fg: #0a0a0a;
   --color-fg-muted: #666;
-  --color-accent: #e63946;
+  --color-accent: #d62828;
   --color-border: #ddd;
   --color-marker: #bbb;
 
@@ -118,7 +118,7 @@ h3 {
 .animate-in {
   opacity: 0;
   transform: translateY(24px);
-  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   animation-delay: var(--delay, 0s);
 }
 

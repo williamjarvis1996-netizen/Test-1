@@ -42,6 +42,7 @@ const featured = projects.filter(p => p.featured);
             <a href={`/work/${p.slug}`} class="strip-item">
               <div class="strip-img">
                 <span class="strip-num">{String((i % featured.length) + 1).padStart(2, '0')}</span>
+                <span class="strip-title">{p.title}</span>
               </div>
             </a>
           ))}
@@ -149,20 +150,20 @@ const featured = projects.filter(p => p.featured);
     left: 0;
     top: 0;
     bottom: 0;
-    width: 2px;
+    width: 3px;
     background: var(--color-accent);
   }
 
   .vert-text {
     position: absolute;
-    left: 10px;
+    left: 12px;
     bottom: 0;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     color: var(--color-fg-muted);
     white-space: nowrap;
   }
@@ -177,8 +178,8 @@ const featured = projects.filter(p => p.featured);
 
   .cross {
     position: absolute;
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
   }
 
   .cross::before,
@@ -240,7 +241,7 @@ const featured = projects.filter(p => p.featured);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: clamp(0.75rem, 1.5vw, 1.5rem);
+    gap: clamp(0.5rem, 1vw, 1rem);
     position: relative;
     z-index: 2;
   }
@@ -249,16 +250,16 @@ const featured = projects.filter(p => p.featured);
   .hero-name {
     text-align: right;
     padding: 0 var(--space-md);
-    line-height: 0.88;
+    line-height: 0.85;
   }
 
   .name-line {
     display: block;
     font-family: var(--font-display);
-    font-size: clamp(4rem, 16vw, 20rem);
+    font-size: clamp(5rem, 18vw, 22rem);
     text-transform: uppercase;
     color: var(--color-fg);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
   }
 
   /* ---- Image strip ---- */
@@ -284,13 +285,9 @@ const featured = projects.filter(p => p.featured);
   }
 
   .strip-item {
-    flex: 0 0 260px;
+    flex: 0 0 280px;
     border-right: 1px solid var(--color-border);
-    transition: opacity 0.2s ease;
-  }
-
-  .strip-item:hover {
-    opacity: 0.7;
+    cursor: pointer;
   }
 
   .strip-img {
@@ -299,6 +296,13 @@ const featured = projects.filter(p => p.featured);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s ease;
+  }
+
+  .strip-item:hover .strip-img {
+    background: var(--color-fg);
   }
 
   .strip-num {
@@ -306,22 +310,52 @@ const featured = projects.filter(p => p.featured);
     font-size: 2.5rem;
     color: var(--color-border);
     letter-spacing: 0.02em;
+    transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .strip-item:hover .strip-num {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .strip-title {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-bg);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease 0.05s, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
+    padding: var(--space-sm);
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .strip-item:hover .strip-title {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   /* ---- Discipline text ---- */
   .hero-discipline {
     text-align: right;
     padding: 0 var(--space-md);
-    line-height: 0.92;
+    line-height: 0.88;
   }
 
   .disc-line {
     display: block;
     font-family: var(--font-display);
-    font-size: clamp(2rem, 8vw, 10rem);
+    font-size: clamp(2.5rem, 9vw, 11rem);
     text-transform: uppercase;
     color: var(--color-fg);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .amp {
@@ -454,7 +488,7 @@ const featured = projects.filter(p => p.featured);
     }
 
     .strip-item {
-      flex: 0 0 200px;
+      flex: 0 0 220px;
     }
 
     .clients-list span {
