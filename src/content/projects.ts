@@ -262,6 +262,7 @@ export const projects: Project[] = [
     year: '2021',
     role: 'Content Producer',
     num: '16',
+    image: '/images/disney-magic-kingdom.webp',
     description: [
       'Immersive audio guide to Walt Disney World\'s Magic Kingdom, produced for Vidi Guides. A GPS-triggered audio tour guiding visitors through the park, with location-aware narration that responds to where you are rather than what you tap. One of the flagship productions from Will\'s time at Vidi Guides, produced directly for Disney\'s parks division.',
     ],
