@@ -8,6 +8,7 @@ export interface Project {
   description: string[];
   awards?: string[];
   image?: string;
+  video?: string;
   featured?: boolean;
   num: string;
 }
@@ -45,6 +46,7 @@ export const projects: Project[] = [
     role: 'Producer',
     num: '02',
     image: '/images/hamilton-into-the-wild.webp',
+    video: 'https://www.youtube.com/watch?v=Rl0pLkaWXs4',
     description: [
       'Three-part branded content series for the Hamilton Khaki Field. The films follow the watch out of the city and into the Welsh countryside, leaning into the Khaki Field\'s military heritage and its identity as an outdoor watch built for rough terrain.',
       'Shot on location in Wales over two days with director Ron Mulvey and DOP Angus Steele. The series tracks the watch through landscapes that echo the Khaki Field\'s origins as a tool for soldiers and explorers, moving from urban environments into open country. Published as a three-part series across Hamilton\'s Instagram and YouTube channels.',
@@ -60,6 +62,7 @@ export const projects: Project[] = [
     role: 'Producer',
     num: '03',
     image: '/images/hamilton-power-up.webp',
+    video: 'https://www.youtube.com/watch?v=aKi2dFwtTxo',
     description: [
       'Launch film for the Hamilton Khaki Field Power Reserve, the first model in the Khaki Field line to feature a power reserve indicator on the dial. The film introduced the top-down, locked-on-the-wrist visual language that became the creative foundation for the later "In The Midst Of It" festive campaign.',
     ],
@@ -77,6 +80,8 @@ export const projects: Project[] = [
     year: '2026',
     role: 'Producer',
     num: '04',
+    image: '/images/fora-at-five.webp',
+    video: 'https://www.youtube.com/watch?v=DxAVfx8Igeo',
     description: [
       'Hero brand film marking Fora Travel\'s fifth anniversary. The film tells the story of Alexia, an Italian-American woman who brings her elderly parents Rosa and Marco back to Palermo for their 50th wedding anniversary. Their Fora travel advisor Tess curates the trip from her desk in London, pulling strings to arrange a private vow renewal in the church where Rosa and Marco were married half a century earlier. The story builds from the advisor\'s first video call with Alexia, through a week of discovery across Sicily, to the final scene: Marco waiting at the altar in his wedding suit as Alexia produces a key to a locked church door.',
       'Production spanned two countries. The London shoot (7 May) captured the advisor sequences with Sakira Vel as Tess. The Sicily shoot ran three days across Palermo (12-14 May) with a local crew coordinated through Movie Sicily. Locations included Villa Igiea (pool and lobby), the Mancuso puppet theatre, Teatro Massimo, Capo Market (featuring a split-screen VFX sequence where Marco meets his double across the tomatoes), a golden-hour dance sequence at Piazza Bellini, a Fiat 500 drive up Monte Pellegrino, and the hero scene at San Saverio church: Alexia produces a key, the door opens, and there is her father at the altar. Forty-three shots across the three Sicily days.',
