@@ -4,33 +4,42 @@ import Base from '../layouts/Base.astro';
 
 <Base title="Contact | Will Jarvis">
   <section class="contact-page">
-    <div class="container">
-      <div class="contact-content">
-        <p class="contact-label animate-in" style="--delay: 0.1s">Contact</p>
-        <h1 class="animate-in" style="--delay: 0.2s">Get in<br />touch</h1>
-        <p class="contact-intro animate-in" style="--delay: 0.35s">
+    <div class="contact-layout">
+      <div class="contact-left">
+        <p class="contact-tag animate-in" style="--delay: 0.1s">Get in touch</p>
+        <h1 class="contact-headline animate-in" style="--delay: 0.2s">
+          <span>Let's</span>
+          <span>work</span>
+          <span>together</span>
+        </h1>
+      </div>
+
+      <div class="contact-right">
+        <p class="contact-intro animate-in" style="--delay: 0.3s">
           Available for branded content production, creative direction,
           scripted development, and freelance writing.
         </p>
 
-        <div class="contact-methods animate-in" style="--delay: 0.5s">
-          <div class="contact-block">
-            <h3>Email</h3>
-            <a href="mailto:williamjarvis1996@gmail.com" class="contact-email">williamjarvis1996@gmail.com</a>
+        <div class="contact-details">
+          <div class="contact-row animate-in" style="--delay: 0.4s">
+            <span class="row-label">Email</span>
+            <a href="mailto:williamjarvis1996@gmail.com" class="row-value row-email">williamjarvis1996@gmail.com</a>
           </div>
-
-          <div class="contact-block">
-            <h3>Elsewhere</h3>
-            <ul>
-              <li><a href="https://www.imdb.com/name/nm15210832/" target="_blank" rel="noopener">IMDb</a></li>
-              <li><a href="https://www.linkedin.com/in/will-t-jarvis/" target="_blank" rel="noopener">LinkedIn</a></li>
-              <li><a href="https://www.instagram.com/willjarvis1996/" target="_blank" rel="noopener">Instagram</a></li>
-            </ul>
+          <div class="contact-row animate-in" style="--delay: 0.45s">
+            <span class="row-label">Based in</span>
+            <span class="row-value">Hackney, London</span>
           </div>
-
-          <div class="contact-block">
-            <h3>Based in</h3>
-            <p>Hackney, London</p>
+          <div class="contact-row animate-in" style="--delay: 0.5s">
+            <span class="row-label">IMDb</span>
+            <a href="https://www.imdb.com/name/nm15210832/" target="_blank" rel="noopener" class="row-value row-link">imdb.com/name/nm15210832 &rarr;</a>
+          </div>
+          <div class="contact-row animate-in" style="--delay: 0.55s">
+            <span class="row-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/will-t-jarvis/" target="_blank" rel="noopener" class="row-value row-link">linkedin.com/in/will-t-jarvis &rarr;</a>
+          </div>
+          <div class="contact-row animate-in" style="--delay: 0.6s">
+            <span class="row-label">Instagram</span>
+            <a href="https://www.instagram.com/willjarvis1996/" target="_blank" rel="noopener" class="row-value row-link">@willjarvis1996 &rarr;</a>
           </div>
         </div>
       </div>
@@ -41,27 +50,42 @@ import Base from '../layouts/Base.astro';
 <style>
   .contact-page {
     min-height: calc(100vh - var(--header-height));
+    padding-top: var(--header-height);
     display: flex;
     align-items: center;
-    padding-top: var(--header-height);
   }
 
-  .contact-content {
-    max-width: 520px;
-    padding: var(--space-xl) 0;
+  .contact-layout {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
   }
 
-  .contact-label {
+  .contact-tag {
     font-size: 0.6875rem;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.16em;
     color: var(--color-accent);
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-sm);
     font-weight: 600;
   }
 
-  .contact-content h1 {
-    margin-bottom: var(--space-sm);
+  .contact-headline {
+    line-height: 0.9;
+  }
+
+  .contact-headline span {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 7rem);
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    color: var(--color-fg);
   }
 
   .contact-intro {
@@ -69,32 +93,46 @@ import Base from '../layouts/Base.astro';
     color: var(--color-fg-muted);
     line-height: 1.7;
     margin-bottom: var(--space-lg);
+    max-width: 420px;
   }
 
-  .contact-methods {
+  .contact-details {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
   }
 
-  .contact-block h3 {
-    font-size: 0.6875rem;
+  .contact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .contact-row:first-child {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .row-label {
+    font-size: 0.5625rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
     color: var(--color-fg-muted);
-    margin-bottom: var(--space-xs);
     font-weight: 600;
   }
 
-  .contact-email {
-    font-size: 1rem;
-    font-weight: 500;
+  .row-value {
+    font-size: 0.875rem;
     color: var(--color-fg);
-    position: relative;
-    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 0.01em;
   }
 
-  .contact-email::after {
+  .row-email {
+    position: relative;
+  }
+
+  .row-email::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -107,33 +145,31 @@ import Base from '../layouts/Base.astro';
     transition: transform 0.3s ease;
   }
 
-  .contact-email:hover {
+  .row-email:hover {
     color: var(--color-accent);
   }
 
-  .contact-email:hover::after {
+  .row-email:hover::after {
     transform: scaleX(1);
   }
 
-  .contact-block p {
-    color: var(--color-fg);
-    font-size: 1rem;
-  }
-
-  .contact-block ul {
-    list-style: none;
-    display: flex;
-    gap: var(--space-sm);
-  }
-
-  .contact-block ul a {
-    font-size: 0.875rem;
-    color: var(--color-fg);
-    font-weight: 500;
+  .row-link {
     transition: color 0.2s ease;
   }
 
-  .contact-block ul a:hover {
+  .row-link:hover {
     color: var(--color-accent);
+  }
+
+  @media (max-width: 767px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+      padding: var(--space-lg) var(--space-sm);
+    }
+
+    .contact-headline span {
+      font-size: clamp(2.5rem, 12vw, 4rem);
+    }
   }
 </style>

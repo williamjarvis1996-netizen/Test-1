@@ -24,7 +24,10 @@ const grouped = categoryKeys.map((key) => ({
     {grouped.map((group, gi) => (
       <div class="work-category">
         <div class="container">
-          <h2 class="cat-label animate-in" style={`--delay: ${0.1 + gi * 0.05}s`}>{group.label}</h2>
+          <div class="cat-header animate-in" style={`--delay: ${0.1 + gi * 0.05}s`}>
+            <h2 class="cat-label">{group.label}</h2>
+            <span class="cat-count">{String(group.items.length).padStart(2, '0')} Projects</span>
+          </div>
         </div>
         <div class="container">
           <div class="project-grid">
@@ -32,11 +35,15 @@ const grouped = categoryKeys.map((key) => ({
               <a href={`/work/${project.slug}`} class={`project-card ${i === 0 && group.items.length > 2 ? 'card-wide' : ''}`}>
                 <div class="card-img">
                   <span class="card-num">{project.num}</span>
+                  <div class="card-overlay">
+                    <span class="overlay-role">{project.role}</span>
+                    <span class="overlay-arrow">&rarr;</span>
+                  </div>
                 </div>
-                <div class="card-info">
-                  <span class="card-client">{project.client || group.label}</span>
-                  <span class="card-title">{project.title}</span>
-                  <span class="card-meta">{project.role} / {project.year}</span>
+                <div class="card-caption">
+                  <span class="caption-client">{project.client || group.label}</span>
+                  <span class="caption-title">{project.title}</span>
+                  <span class="caption-year">{project.year}</span>
                 </div>
               </a>
             ))}
@@ -74,7 +81,16 @@ const grouped = categoryKeys.map((key) => ({
   }
 
   .work-category {
-    padding-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+  }
+
+  .cat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: var(--space-xs);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-md);
   }
 
   .cat-label {
@@ -82,17 +98,23 @@ const grouped = categoryKeys.map((key) => ({
     text-transform: uppercase;
     letter-spacing: 0.18em;
     color: var(--color-fg-muted);
-    margin-bottom: var(--space-md);
-    padding-bottom: var(--space-xs);
-    border-bottom: 1px solid var(--color-border);
     font-weight: 600;
     font-family: var(--font-body);
+    line-height: 1;
+  }
+
+  .cat-count {
+    font-size: 0.5625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-marker);
+    font-weight: 500;
   }
 
   .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
+    gap: var(--space-md);
   }
 
   .card-wide {
@@ -100,9 +122,7 @@ const grouped = categoryKeys.map((key) => ({
   }
 
   .project-card {
-    position: relative;
     display: block;
-    overflow: hidden;
     color: var(--color-fg);
   }
 
@@ -138,47 +158,73 @@ const grouped = categoryKeys.map((key) => ({
     transform: scale(1.1);
   }
 
-  .card-info {
+  .card-overlay {
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.375rem;
-    padding: var(--space-sm);
-    text-align: center;
+    gap: 0.5rem;
     opacity: 0;
     transition: opacity 0.4s ease;
   }
 
-  .project-card:hover .card-info {
+  .project-card:hover .card-overlay {
     opacity: 1;
   }
 
-  .card-client {
-    font-size: 0.5625rem;
+  .overlay-role {
+    font-size: 0.6875rem;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    color: var(--color-bg);
     font-weight: 600;
   }
 
-  .card-title {
-    font-family: var(--font-display);
-    font-size: clamp(0.875rem, 1.8vw, 1.25rem);
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+  .overlay-arrow {
+    font-size: 1.25rem;
     color: var(--color-bg);
-    line-height: 1.2;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .card-meta {
+  .project-card:hover .overlay-arrow {
+    transform: translateX(4px);
+  }
+
+  .card-caption {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+  }
+
+  .caption-client {
     font-size: 0.5625rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.5);
-    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--color-accent);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .caption-title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-fg);
+    letter-spacing: 0.01em;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .caption-year {
+    font-size: 0.6875rem;
+    color: var(--color-fg-muted);
+    margin-left: auto;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
   }
 
   @media (max-width: 1023px) {
@@ -194,6 +240,7 @@ const grouped = categoryKeys.map((key) => ({
   @media (max-width: 639px) {
     .project-grid {
       grid-template-columns: 1fr;
+      gap: var(--space-sm);
     }
 
     .card-wide {
@@ -202,17 +249,6 @@ const grouped = categoryKeys.map((key) => ({
 
     .card-wide .card-img {
       aspect-ratio: 4 / 3;
-    }
-
-    .card-info {
-      opacity: 1;
-      background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.7));
-      justify-content: flex-end;
-      padding-bottom: var(--space-md);
-    }
-
-    .card-num {
-      opacity: 0.3;
     }
   }
 </style>
