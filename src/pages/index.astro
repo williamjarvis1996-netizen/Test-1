@@ -70,20 +70,20 @@ while (hi < hamilton.length || oi < others.length) {
     <div class="container">
       <p class="clients-label">Brands I've collaborated with</p>
       <div class="clients-list">
-        <span class="reveal client-logo"><img src={`${base}/images/logos/formula1.svg`} alt="Formula 1" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/manchester-city.svg`} alt="Manchester City FC" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/bookingdotcom.svg`} alt="Booking.com" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/morgan-stanley.svg`} alt="Morgan Stanley" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/hamilton.svg`} alt="Hamilton Watches" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/aramco.svg`} alt="Aramco" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/damac.svg`} alt="DAMAC Properties" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/revolut.svg`} alt="Revolut" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/chelsea.svg`} alt="Chelsea FC" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/disney.svg`} alt="Walt Disney" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/hilton.svg`} alt="Hilton Hotels" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/lonely-planet.svg`} alt="Lonely Planet" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/netflix.svg`} alt="Netflix" /></span>
-        <span class="reveal client-logo"><img src={`${base}/images/logos/itv.svg`} alt="ITV" /></span>
+        <span class="reveal">Formula 1</span>
+        <span class="reveal">Manchester City FC</span>
+        <span class="reveal">Booking.com</span>
+        <span class="reveal">Morgan Stanley</span>
+        <span class="reveal">Hamilton Watches</span>
+        <span class="reveal">Aramco</span>
+        <span class="reveal">DAMAC Properties</span>
+        <span class="reveal">Revolut</span>
+        <span class="reveal">Chelsea FC</span>
+        <span class="reveal">Walt Disney</span>
+        <span class="reveal">Hilton Hotels</span>
+        <span class="reveal">Lonely Planet</span>
+        <span class="reveal">Netflix</span>
+        <span class="reveal">ITV</span>
       </div>
     </div>
   </section>
@@ -407,26 +407,22 @@ while (hi < hamilton.length || oi < others.length) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: var(--space-sm) var(--space-md);
+    align-items: baseline;
+    gap: 0;
   }
 
-  .client-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .clients-list span {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-fg);
+    opacity: 0.3;
+    padding: 0.5rem var(--space-sm);
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
-  .client-logo img {
-    height: 28px;
-    width: auto;
-    opacity: 0.35;
-    transition: opacity 0.3s ease;
-    filter: grayscale(1);
-  }
-
-  .client-logo:hover img {
+  .clients-list span:hover {
     opacity: 0.7;
   }
 
@@ -485,8 +481,8 @@ while (hi < hamilton.length || oi < others.length) {
       flex: 0 0 280px;
     }
 
-    .client-logo img {
-      height: 18px;
+    .clients-list span {
+      font-size: 0.6875rem;
     }
   }
 </style>
