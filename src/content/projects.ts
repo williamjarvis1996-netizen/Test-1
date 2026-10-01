@@ -161,6 +161,7 @@ export const projects: Project[] = [
     year: '2024',
     role: 'Writer / Co-Producer',
     num: '09',
+    image: '/images/aortic.webp',
     description: [
       'Short film. Nestled inside the broom closet of a quiet hospital, Jack musters the courage to leave a heartfelt voice note to an old friend. The film blurs the lines between past and present, moving between the comforting glow of nostalgia and the unyielding light of the here and now. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
       'Co-produced with Niamh Marie Smith. Shot in November 2023. Macauley Keeper plays Jack in the lead role.',
