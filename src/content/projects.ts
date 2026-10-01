@@ -113,6 +113,8 @@ export const projects: Project[] = [
     year: '2025',
     role: 'Producer',
     num: '06',
+    image: '/images/booking-traveller-review-awards.webp',
+    video: 'https://www.youtube.com/watch?v=A6IfbTf06PU',
     description: [
       'Hero film for Booking.com\'s annual Traveller Review Awards, a global campaign celebrating the accommodation partners recognised by millions of traveller reviews across the platform. The campaign, titled "Where Hospitality Begins," positions the partners themselves as the subject of the film: the people behind the properties, the hospitality that earns the reviews, the work that keeps guests coming back. Multi-day shoot with full post-production.',
     ],
