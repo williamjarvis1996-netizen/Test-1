@@ -44,6 +44,7 @@ export const projects: Project[] = [
     year: '2025',
     role: 'Producer',
     num: '02',
+    image: '/images/hamilton-into-the-wild.webp',
     description: [
       'Three-part branded content series for the Hamilton Khaki Field. The films follow the watch out of the city and into the Welsh countryside, leaning into the Khaki Field\'s military heritage and its identity as an outdoor watch built for rough terrain.',
       'Shot on location in Wales over two days with director Ron Mulvey and DOP Angus Steele. The series tracks the watch through landscapes that echo the Khaki Field\'s origins as a tool for soldiers and explorers, moving from urban environments into open country. Published as a three-part series across Hamilton\'s Instagram and YouTube channels.',
