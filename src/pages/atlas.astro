@@ -8,14 +8,14 @@ const base = import.meta.env.BASE_URL;
     <div class="atlas-bg" aria-hidden="true">
       <div class="compass-rose">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="compass-svg">
-          <circle cx="100" cy="100" r="95" fill="none" stroke="var(--color-atlas-line)" stroke-width="3"/>
-          <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-atlas-line)" stroke-width="2"/>
-          <circle cx="100" cy="100" r="60" fill="none" stroke="var(--color-atlas-line)" stroke-width="2"/>
-          <circle cx="100" cy="100" r="40" fill="none" stroke="var(--color-atlas-line)" stroke-width="2"/>
-          <line x1="5" y1="100" x2="195" y2="100" stroke="var(--color-atlas-line)" stroke-width="1.5"/>
-          <line x1="100" y1="5" x2="100" y2="195" stroke="var(--color-atlas-line)" stroke-width="1.5"/>
-          <line x1="17" y1="17" x2="183" y2="183" stroke="var(--color-atlas-line)" stroke-width="1"/>
-          <line x1="183" y1="17" x2="17" y2="183" stroke="var(--color-atlas-line)" stroke-width="1"/>
+          <circle cx="100" cy="100" r="95" fill="none" stroke="var(--color-atlas-line)" stroke-width="4"/>
+          <circle cx="100" cy="100" r="75" fill="none" stroke="var(--color-atlas-line)" stroke-width="3"/>
+          <circle cx="100" cy="100" r="55" fill="none" stroke="var(--color-atlas-line)" stroke-width="3"/>
+          <circle cx="100" cy="100" r="35" fill="none" stroke="var(--color-atlas-line)" stroke-width="3"/>
+          <line x1="5" y1="100" x2="195" y2="100" stroke="var(--color-atlas-line)" stroke-width="2"/>
+          <line x1="100" y1="5" x2="100" y2="195" stroke="var(--color-atlas-line)" stroke-width="2"/>
+          <line x1="17" y1="17" x2="183" y2="183" stroke="var(--color-atlas-line)" stroke-width="1.5"/>
+          <line x1="183" y1="17" x2="17" y2="183" stroke="var(--color-atlas-line)" stroke-width="1.5"/>
           <polygon points="100,8 103,30 100,25 97,30" fill="var(--color-atlas-blue)" opacity="0.8"/>
           <polygon points="100,192 103,170 100,175 97,170" fill="var(--color-atlas-line)" opacity="0.6"/>
           <polygon points="8,100 30,97 25,100 30,103" fill="var(--color-atlas-line)" opacity="0.6"/>
@@ -87,7 +87,7 @@ const base = import.meta.env.BASE_URL;
   .atlas-page {
     --color-atlas-blue: #2b6cb0;
     --color-atlas-pin: #d62828;
-    --color-atlas-line: #7a9bbd;
+    --color-atlas-line: #6889a8;
     --color-atlas-bg: #f0f4f8;
 
     min-height: 100vh;
@@ -102,16 +102,25 @@ const base = import.meta.env.BASE_URL;
 
   @media (prefers-color-scheme: dark) {
     .atlas-page:not([data-theme="light"]) {
-      --color-atlas-line: rgba(255, 255, 255, 0.2);
+      --color-atlas-line: rgba(255, 255, 255, 0.15);
       --color-atlas-blue: #5a9fe6;
+      --color-atlas-pin: #ff4444;
       --color-atlas-bg: var(--color-bg);
     }
   }
 
   :root[data-theme="dark"] .atlas-page {
-    --color-atlas-line: rgba(255, 255, 255, 0.2);
+    --color-atlas-line: rgba(255, 255, 255, 0.15);
     --color-atlas-blue: #5a9fe6;
+    --color-atlas-pin: #ff4444;
     --color-atlas-bg: var(--color-bg);
+  }
+
+  :root[data-theme="light"] .atlas-page {
+    --color-atlas-line: #6889a8;
+    --color-atlas-blue: #2b6cb0;
+    --color-atlas-pin: #d62828;
+    --color-atlas-bg: #f0f4f8;
   }
 
   .atlas-bg {
@@ -126,8 +135,8 @@ const base = import.meta.env.BASE_URL;
 
   .compass-rose {
     position: absolute;
-    width: 80%;
-    max-width: 550px;
+    width: 90%;
+    max-width: 750px;
     opacity: 1;
     animation: compass-drift 90s linear infinite;
   }
