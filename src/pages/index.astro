@@ -489,17 +489,18 @@ while (hi < hamilton.length || oi < others.length) {
 
     .hero-content {
       min-height: auto;
-      padding-top: var(--space-sm);
+      padding-top: var(--space-xs);
       padding-bottom: 0;
       gap: 0;
     }
 
     .hero-name {
       padding: 0 var(--space-sm);
+      line-height: 0.88;
     }
 
     .name-line {
-      font-size: clamp(3.25rem, 13vw, 4.5rem);
+      font-size: clamp(2.5rem, 10vw, 3.5rem);
     }
 
     .hero-bottom {
@@ -513,16 +514,20 @@ while (hi < hamilton.length || oi < others.length) {
     }
 
     .disc-line {
-      font-size: clamp(1.5rem, 6vw, 2.25rem);
+      font-size: clamp(1.25rem, 5.5vw, 2rem);
     }
 
     .hero-label-top {
-      top: calc(var(--header-height) + var(--space-sm));
+      top: calc(var(--header-height) + var(--space-xs));
       left: var(--space-sm);
     }
 
     .strip-item {
-      flex: 0 0 240px;
+      flex: 0 0 200px;
+    }
+
+    .strip-img {
+      aspect-ratio: 16 / 10;
     }
 
     .clients {
