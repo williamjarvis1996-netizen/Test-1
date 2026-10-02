@@ -2,11 +2,10 @@
 import Base from '../layouts/Base.astro';
 import { projects } from '../content/projects';
 
-const withImages = projects.filter(p => p.image);
-const hamilton = withImages.filter(p => p.client?.includes('Hamilton'));
-const others = withImages.filter(p => !p.client?.includes('Hamilton'));
+const hamilton = projects.filter(p => p.client?.includes('Hamilton'));
+const others = projects.filter(p => !p.client?.includes('Hamilton'));
 const base = import.meta.env.BASE_URL;
-const featured: typeof withImages = [];
+const featured: typeof projects = [];
 let hi = 0, oi = 0;
 while (hi < hamilton.length || oi < others.length) {
   if (oi < others.length) featured.push(others[oi++]);
@@ -43,7 +42,7 @@ while (hi < hamilton.length || oi < others.length) {
                 {p.image ? (
                   <img src={`${base}/${p.image}`} alt={p.title} class="strip-photo" loading="lazy" />
                 ) : (
-                  <span class="strip-num">{String((i % featured.length) + 1).padStart(2, '0')}</span>
+                  <span class="strip-num">{p.num}</span>
                 )}
                 <span class="strip-title"><span>{p.title}</span></span>
               </div>
@@ -72,6 +71,7 @@ while (hi < hamilton.length || oi < others.length) {
       <div class="clients-list">
         <span class="reveal">Formula 1</span>
         <span class="reveal">Manchester City FC</span>
+        <span class="reveal">Chelsea FC</span>
         <span class="reveal">Booking.com</span>
         <span class="reveal">Hamilton Watches</span>
         <span class="reveal">Fora Travel</span>
@@ -379,13 +379,13 @@ while (hi < hamilton.length || oi < others.length) {
   }
 
   .clients-label {
-    font-size: 0.625rem;
+    font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.16em;
     color: var(--color-fg-muted);
     margin-bottom: var(--space-md);
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   .clients-list {
