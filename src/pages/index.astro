@@ -51,17 +51,17 @@ while (hi < hamilton.length || oi < others.length) {
         </div>
       </div>
 
-      <div class="hero-discipline animate-in" style="--delay: 0.5s">
-        <span class="disc-line">Creative</span>
-        <span class="disc-line">Producer <span class="amp">&</span></span>
-        <span class="disc-line">Script Writer</span>
+      <div class="hero-bottom">
+        <div class="hero-foot animate-in" style="--delay: 0.7s">
+          <span class="foot-rule"></span>
+          <span class="foot-copy">&copy;2026</span>
+        </div>
+        <div class="hero-discipline animate-in" style="--delay: 0.5s">
+          <span class="disc-line">Creative</span>
+          <span class="disc-line">Producer <span class="amp">&</span></span>
+          <span class="disc-line">Script Writer</span>
+        </div>
       </div>
-    </div>
-
-
-    <div class="hero-foot animate-in" style="--delay: 0.7s">
-      <span class="foot-rule"></span>
-      <span class="foot-copy">&copy;2026</span>
     </div>
   </section>
 
@@ -328,11 +328,18 @@ while (hi < hamilton.length || oi < others.length) {
   }
 
 
+  /* ---- Bottom row: foot + discipline ---- */
+  .hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 var(--space-md);
+    padding-bottom: var(--space-lg);
+  }
+
   /* ---- Discipline text ---- */
   .hero-discipline {
     text-align: right;
-    padding: 0 var(--space-md);
-    padding-bottom: var(--space-lg);
     line-height: 0.9;
   }
 
@@ -352,13 +359,11 @@ while (hi < hamilton.length || oi < others.length) {
 
   /* ---- Bottom-left ---- */
   .hero-foot {
-    position: absolute;
-    bottom: var(--space-md);
-    left: var(--space-md);
     display: flex;
     align-items: center;
     gap: var(--space-sm);
     z-index: 2;
+    flex-shrink: 0;
   }
 
   .foot-rule {
@@ -476,16 +481,46 @@ while (hi < hamilton.length || oi < others.length) {
       display: none;
     }
 
-    .hero-foot {
-      bottom: var(--space-sm);
+    .hero-content {
+      min-height: auto;
+      padding-top: var(--space-md);
+      padding-bottom: var(--space-sm);
+      gap: 0.125rem;
+    }
+
+    .hero {
+      min-height: auto;
+    }
+
+    .hero-bottom {
+      flex-direction: column-reverse;
+      padding: 0 var(--space-sm);
+      padding-bottom: var(--space-sm);
+    }
+
+    .hero-discipline {
+      padding-bottom: var(--space-xs);
     }
 
     .strip-item {
       flex: 0 0 280px;
     }
 
+    .clients {
+      padding: var(--space-md) 0;
+    }
+
+    .clients-label {
+      margin-bottom: var(--space-sm);
+    }
+
     .clients-list span {
       font-size: 0.6875rem;
+      padding: 0.375rem 0.625rem;
+    }
+
+    .cta {
+      padding: var(--space-sm) 0;
     }
   }
 </style>
