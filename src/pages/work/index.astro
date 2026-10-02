@@ -80,12 +80,13 @@ const grouped = categoryKeys.map((key) => ({
   }
 
   .work-tag {
-    font-size: 0.6875rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.04em;
     color: var(--color-accent);
     margin-bottom: var(--space-sm);
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .work-intro {
@@ -264,6 +265,10 @@ const grouped = categoryKeys.map((key) => ({
   }
 
   @media (max-width: 639px) {
+    .work-header {
+      padding: var(--space-md) 0 var(--space-sm);
+    }
+
     .project-grid {
       grid-template-columns: 1fr;
       gap: var(--space-sm);
