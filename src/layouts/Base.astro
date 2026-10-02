@@ -35,18 +35,8 @@ const slugs = projects.map(p => p.slug);
         </ul>
         <div class="nav-actions">
           <a href={`${base}/atlas`} class="nav-btn nav-globe" aria-label="Atlas">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 100 100" class="globe-icon">
-              <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="4.5"/>
-              <clipPath id="gc"><circle cx="50" cy="50" r="45"/></clipPath>
-              <g clip-path="url(#gc)" fill="currentColor">
-                <path d="M25 12 C28 8, 32 10, 34 14 C36 18, 34 22, 30 24 C26 22, 22 16, 25 12Z"/>
-                <path d="M22 28 C26 24, 32 26, 35 32 C38 40, 36 48, 30 52 C24 50, 20 44, 18 38 C16 32, 18 28, 22 28Z"/>
-                <path d="M24 56 C28 52, 34 54, 36 60 C38 68, 34 76, 28 78 C22 74, 20 64, 24 56Z"/>
-                <path d="M56 10 C62 8, 70 12, 74 20 C78 28, 76 34, 70 36 C64 34, 58 28, 56 22 C54 16, 54 12, 56 10Z"/>
-                <path d="M72 24 C76 22, 80 24, 82 28 C84 32, 82 36, 78 36 C74 34, 72 28, 72 24Z"/>
-                <path d="M60 38 C66 36, 74 40, 78 50 C82 60, 78 72, 72 78 C66 82, 60 78, 58 70 C56 62, 56 52, 58 46 C58 42, 58 38, 60 38Z"/>
-                <path d="M80 56 C84 54, 88 58, 88 62 C88 66, 84 68, 80 66 C78 62, 78 58, 80 56Z"/>
-              </g>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" class="globe-icon">
+              <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
             </svg>
           </a>
           <button class="nav-btn nav-random" aria-label="Random project" data-random-project data-slugs={JSON.stringify(slugs)}>

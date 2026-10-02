@@ -239,10 +239,6 @@ while (hi < hamilton.length || oi < others.length) {
     animation: strip-scroll 45s linear infinite;
   }
 
-  .strip-track:hover {
-    animation-play-state: paused;
-  }
-
   @keyframes strip-scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -325,21 +321,8 @@ while (hi < hamilton.length || oi < others.length) {
     transform: translateY(0);
   }
 
-  .hero-strip.dragging .strip-track {
-    animation-play-state: paused;
-    cursor: grabbing;
-  }
-
   .hero-strip {
-    cursor: grab;
-  }
-
-  .hero-strip.dragging {
-    cursor: grabbing;
-  }
-
-  .hero-strip.dragging .strip-item {
-    pointer-events: none;
+    cursor: default;
   }
 
   /* ---- Discipline text ---- */
@@ -509,98 +492,15 @@ while (hi < hamilton.length || oi < others.length) {
   reveals.forEach((el) => observer.observe(el));
 
   const strip = document.querySelector('.hero-strip') as HTMLElement;
-  const track = document.querySelector('.strip-track') as HTMLElement;
-  if (strip && track) {
-    let dragging = false;
-    let startX = 0;
-    let scrollStart = 0;
-    let hasMoved = false;
-
-    function getTranslateX(): number {
-      const style = getComputedStyle(track);
-      const matrix = new DOMMatrix(style.transform);
-      return matrix.m41;
-    }
-
-    strip.addEventListener('mousedown', (e) => {
-      dragging = true;
-      hasMoved = false;
-      startX = e.clientX;
-      scrollStart = getTranslateX();
-      track.style.transform = `translateX(${scrollStart}px)`;
-      strip.classList.add('dragging');
-      e.preventDefault();
+  if (strip) {
+    strip.addEventListener('mouseenter', () => {
+      const track = strip.querySelector('.strip-track') as HTMLElement;
+      if (track) track.style.animationPlayState = 'paused';
     });
-
-    strip.addEventListener('touchstart', (e) => {
-      dragging = true;
-      hasMoved = false;
-      startX = e.touches[0].clientX;
-      scrollStart = getTranslateX();
-      track.style.transform = `translateX(${scrollStart}px)`;
-      strip.classList.add('dragging');
-    }, { passive: true });
-
-    function onMove(clientX: number) {
-      if (!dragging) return;
-      const dx = clientX - startX;
-      if (Math.abs(dx) > 10) hasMoved = true;
-      const half = track.scrollWidth / 2;
-      let pos = scrollStart + dx;
-      if (pos > 0) pos -= half;
-      if (pos < -half) pos += half;
-      track.style.transform = `translateX(${pos}px)`;
-    }
-
-    window.addEventListener('mousemove', (e) => onMove(e.clientX));
-    window.addEventListener('touchmove', (e) => onMove(e.touches[0].clientX));
-
-    function onEnd() {
-      if (!dragging) return;
-      dragging = false;
-      strip.classList.remove('dragging');
-      track.style.transform = '';
-    }
-
-    window.addEventListener('mouseup', onEnd);
-    window.addEventListener('touchend', onEnd);
-
-    strip.addEventListener('click', (e) => {
-      if (hasMoved) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    }, true);
-
-    let wheelOffset = 0;
-    let wheeling = false;
-    let wheelTimer: ReturnType<typeof setTimeout>;
-
-    strip.addEventListener('wheel', (e) => {
-      const dx = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-      if (Math.abs(dx) < 1) return;
-      e.preventDefault();
-
-      if (!wheeling) {
-        wheeling = true;
-        wheelOffset = getTranslateX();
-        track.style.transform = `translateX(${wheelOffset}px)`;
-        strip.classList.add('dragging');
-      }
-
-      const half = track.scrollWidth / 2;
-      wheelOffset -= dx;
-      if (wheelOffset > 0) wheelOffset -= half;
-      if (wheelOffset < -half) wheelOffset += half;
-      track.style.transform = `translateX(${wheelOffset}px)`;
-
-      clearTimeout(wheelTimer);
-      wheelTimer = setTimeout(() => {
-        wheeling = false;
-        strip.classList.remove('dragging');
-        track.style.transform = '';
-      }, 150);
-    }, { passive: false });
+    strip.addEventListener('mouseleave', () => {
+      const track = strip.querySelector('.strip-track') as HTMLElement;
+      if (track) track.style.animationPlayState = '';
+    });
   }
 
   // Scramble text effect on hero name
