@@ -164,6 +164,7 @@ export const projects: Project[] = [
     year: 'Autumn 2025',
     role: 'Script Consultant / Co-Writer',
     num: '09',
+    image: 'images/steaks.webp',
     description: [
       'Comedy short film directed by Ste Hinde. Will Jarvis served as script consultant and co-writer, collaborating with Hinde on the screenplay.',
       'Ste Hinde is a London-based director and writer whose work celebrates the awkward and humorous within the scope of human behaviour, grounded in a fascination with what he calls "Bleak Britain." His credits span commercials, documentaries, and branded content for Google, Apple, Pepsi, and Barclays, alongside original comedy shorts screened at the London Independent Film Festival and Barnes Film Festival. He won a National RTS Award for his documentary Confido.',
