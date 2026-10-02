@@ -483,15 +483,23 @@ while (hi < hamilton.length || oi < others.length) {
       display: none;
     }
 
-    .hero-content {
-      min-height: auto;
-      padding-top: var(--space-md);
-      padding-bottom: var(--space-sm);
-      gap: 0.125rem;
-    }
-
     .hero {
       min-height: auto;
+    }
+
+    .hero-content {
+      min-height: auto;
+      padding-top: var(--space-sm);
+      padding-bottom: 0;
+      gap: 0;
+    }
+
+    .hero-name {
+      padding: 0 var(--space-sm);
+    }
+
+    .name-line {
+      font-size: clamp(3.25rem, 13vw, 4.5rem);
     }
 
     .hero-bottom {
@@ -504,8 +512,17 @@ while (hi < hamilton.length || oi < others.length) {
       padding-bottom: var(--space-xs);
     }
 
+    .disc-line {
+      font-size: clamp(1.5rem, 6vw, 2.25rem);
+    }
+
+    .hero-label-top {
+      top: calc(var(--header-height) + var(--space-sm));
+      left: var(--space-sm);
+    }
+
     .strip-item {
-      flex: 0 0 280px;
+      flex: 0 0 240px;
     }
 
     .clients {
