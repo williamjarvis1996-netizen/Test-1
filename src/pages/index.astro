@@ -483,14 +483,10 @@ while (hi < hamilton.length || oi < others.length) {
       display: none;
     }
 
-    .hero {
-      min-height: auto;
-    }
-
     .hero-content {
-      min-height: auto;
+      min-height: 100dvh;
       padding-top: var(--space-xl);
-      padding-bottom: var(--space-lg);
+      padding-bottom: var(--space-sm);
       gap: var(--space-md);
     }
 
@@ -504,6 +500,7 @@ while (hi < hamilton.length || oi < others.length) {
     }
 
     .hero-bottom {
+      margin-top: auto;
       flex-direction: column-reverse;
       align-items: flex-start;
       padding: 0 var(--space-sm);
