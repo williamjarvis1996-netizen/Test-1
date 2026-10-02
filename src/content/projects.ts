@@ -158,12 +158,24 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: 'steaks',
+    title: 'Steaks',
+    category: 'film',
+    year: 'Summer 2026',
+    role: 'Script Consultant / Co-Writer',
+    num: '09',
+    description: [
+      'Comedy short film directed by Ste Hinde. Will Jarvis served as script consultant and co-writer, collaborating with Hinde on the screenplay.',
+      'Ste Hinde is a London-based director and writer whose work celebrates the awkward and humorous within the scope of human behaviour, grounded in a fascination with what he calls "Bleak Britain." His credits span commercials, documentaries, and branded content for Google, Apple, Pepsi, and Barclays, alongside original comedy shorts screened at the London Independent Film Festival and Barnes Film Festival. He won a National RTS Award for his documentary Confido.',
+    ],
+  },
+  {
     slug: 'aortic',
     title: 'Aortic',
     category: 'film',
     year: 'Summer 2025',
     role: 'Writer / Co-Producer',
-    num: '09',
+    num: '10',
     image: 'images/aortic.webp',
     description: [
       'Short film. Nestled inside the broom closet of a quiet hospital, Jack musters the courage to leave a heartfelt voice note to an old friend. The film blurs the lines between past and present, moving between the comforting glow of nostalgia and the unyielding light of the here and now. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
@@ -180,7 +192,7 @@ export const projects: Project[] = [
     category: 'tv',
     year: 'Summer 2026',
     role: 'Co-Creator / Writer',
-    num: '10',
+    num: '11',
     description: [
       'Dark comedy thriller. 6 x 30 minutes. Co-created with Moritz Matzmorr and Naala Vanslembrouck as part of the writing collective GGG (Gary Got Got), originally adapted from a German-language project.',
       'When a cheerful but struggling acting student accepts a job chopping up human corpses, her talent as an actor dramatically improves. Now in the spotlight, she must hide this dark secret from friends, foes, and the public, all while struggling with the morality of her actions.',
@@ -195,7 +207,7 @@ export const projects: Project[] = [
     category: 'tv',
     year: 'Spring 2023',
     role: 'Creator / Writer',
-    num: '11',
+    num: '12',
     description: [
       'Apocalyptic adventure comedy. 6 x 25 minutes. Created as part of the writing collective GGG (Gary Got Got) with Moritz Matzmorr and Naala Vanslembrouck.',
       'On the brink of a zombie apocalypse, an unusual trio of government interns must manoeuvre incompetent politicians, bureaucratic absurdities, and brain-controlling fungi to save the undead, and possibly the world. Set in Blackpool, Lancashire, in a decrepit Home Office branch on the seaside, where disaster moves faster than government ever could.',
@@ -210,7 +222,7 @@ export const projects: Project[] = [
     category: 'theatre',
     year: 'Autumn 2019',
     role: 'Writer / Director',
-    num: '12',
+    num: '13',
     description: [
       'Sold-out play. On her 25th birthday, Maya and her friends stumble into a pub they have never seen before, only to discover it travels through time. The Clockwork Arms pulls its inhabitants through five periods of London\'s history as they confront their dark past and uncertain future, forcing them to decide what to do with their own time.',
       'A time-travelling pub as a device for reckoning with the city\'s layered past, and with the characters\' own. The play moves between eras, each with its own London: its own language, its own violence, its own tenderness.',
@@ -223,7 +235,7 @@ export const projects: Project[] = [
     category: 'theatre',
     year: 'Summer 2021',
     role: 'Writer / Creative Producer',
-    num: '13',
+    num: '14',
     image: 'images/the-emoji-project.webp',
     description: [
       'Sold-out anthology of new writing at Camden Fringe, performed at the Hen and Chickens Theatre across three nights in August 2021. Produced by Distracted Rat Productions.',
@@ -237,7 +249,7 @@ export const projects: Project[] = [
     category: 'digital',
     year: 'Spring 2020',
     role: 'Writer / Producer / Performer',
-    num: '14',
+    num: '15',
     description: [
       'Two-season anthology of original radio plays produced remotely during lockdown under Distracted Rat Productions. Seventeen episodes across two seasons, built entirely over video calls and file transfers.',
       'Season 2, "The Thing with Feathers," brought together 11 international writers and a 35-person creative team spanning 16 time zones. The season explored the utility of hope and how we reconcile with the past while moving into the future.',
@@ -250,7 +262,7 @@ export const projects: Project[] = [
     category: 'digital',
     year: '2020-2024',
     role: 'Head of Content & Production',
-    num: '15',
+    num: '16',
     image: 'images/vidi-guides.webp',
     description: [
       'Four years leading content and production at Vidi Guides, a platform producing podcast-style self-guided audio walking tours triggered by GPS and available offline. Oversaw the creation of 100+ immersive travel podcasts and location-based audio tours across London (Brixton, Soho, Kew Gardens, Covent Garden, Westminster), Paris, Cambridge, Oxford, Edinburgh, Stonehenge, Stratford-upon-Avon, and Vimy Ridge.',
