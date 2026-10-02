@@ -544,7 +544,7 @@ while (hi < hamilton.length || oi < others.length) {
     function onMove(clientX: number) {
       if (!dragging) return;
       const dx = clientX - startX;
-      if (Math.abs(dx) > 3) hasMoved = true;
+      if (Math.abs(dx) > 10) hasMoved = true;
       const half = track.scrollWidth / 2;
       let pos = scrollStart + dx;
       if (pos > 0) pos -= half;
@@ -566,7 +566,10 @@ while (hi < hamilton.length || oi < others.length) {
     window.addEventListener('touchend', onEnd);
 
     strip.addEventListener('click', (e) => {
-      if (hasMoved) e.preventDefault();
+      if (hasMoved) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
     }, true);
 
     let wheelOffset = 0;
