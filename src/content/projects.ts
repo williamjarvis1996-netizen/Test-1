@@ -24,7 +24,7 @@ export const categories = {
 export const projects: Project[] = [
   {
     slug: 'hamilton-in-the-midst-of-it',
-    title: 'In The Midst Of It',
+    title: 'Hamilton Watches Festive Campaign',
     client: 'Hamilton Watches',
     category: 'branded',
     year: 'Autumn 2026',
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'hamilton-into-the-wild',
-    title: 'Into the Wild',
+    title: 'Hamilton Watches "Into the Wild"',
     client: 'Hamilton Watches',
     category: 'branded',
     year: 'Spring 2026',
@@ -56,7 +56,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'hamilton-power-up',
-    title: 'Power Up',
+    title: 'Hamilton Watches "Power Up"',
     client: 'Hamilton Watches',
     category: 'branded',
     year: 'Autumn 2025',
@@ -75,7 +75,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'fora-at-five',
-    title: 'Fora at Five',
+    title: 'Fora Travel',
     client: 'Fora Travel',
     category: 'branded',
     year: 'Summer 2026',
