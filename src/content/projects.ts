@@ -92,7 +92,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'chelsea-damac',
-    title: 'Chelsea x DAMAC',
+    title: 'Chelsea FC',
     client: 'Chelsea FC / DAMAC Properties',
     category: 'branded',
     year: 'Spring 2026',
@@ -107,7 +107,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'booking-traveller-review-awards',
-    title: 'Traveller Review Awards',
+    title: 'Booking.com',
     client: 'Booking.com',
     category: 'branded',
     year: 'Autumn 2025',
@@ -127,7 +127,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'mcfc-ohana',
-    title: 'MCFC Ohana Launch',
+    title: 'Manchester FC',
     client: 'Ohana Development / Manchester City FC',
     category: 'branded',
     year: 'Spring 2026',
