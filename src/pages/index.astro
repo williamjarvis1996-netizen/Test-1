@@ -489,9 +489,9 @@ while (hi < hamilton.length || oi < others.length) {
 
     .hero-content {
       min-height: auto;
-      padding-top: var(--space-xs);
+      padding-top: var(--space-md);
       padding-bottom: 0;
-      gap: 0;
+      gap: var(--space-sm);
     }
 
     .hero-name {
@@ -507,14 +507,15 @@ while (hi < hamilton.length || oi < others.length) {
       flex-direction: column-reverse;
       padding: 0 var(--space-sm);
       padding-bottom: var(--space-sm);
+      gap: var(--space-sm);
     }
 
     .hero-discipline {
-      padding-bottom: var(--space-xs);
+      padding-bottom: 0;
     }
 
     .disc-line {
-      font-size: clamp(1.25rem, 5.5vw, 2rem);
+      font-size: clamp(1.1rem, 4.5vw, 1.75rem);
     }
 
     .hero-label-top {
