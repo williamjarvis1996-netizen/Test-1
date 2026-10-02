@@ -94,6 +94,14 @@ while (hi < hamilton.length || oi < others.length) {
         <span>Let's work together</span>
         <span class="cta-arrow">&rarr;</span>
       </a>
+      <a href={`${base}/work`} class="cta-link cta-secondary animate-in" style="--delay: 0.1s">
+        <span>What I've been working on</span>
+        <span class="cta-arrow">&rarr;</span>
+      </a>
+      <a href={`${base}/about`} class="cta-link cta-secondary animate-in" style="--delay: 0.2s">
+        <span>A bit about me</span>
+        <span class="cta-arrow">&rarr;</span>
+      </a>
     </div>
   </section>
 </Base>
@@ -424,6 +432,12 @@ while (hi < hamilton.length || oi < others.length) {
     border-top: 1px solid var(--color-border);
   }
 
+  .cta .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
   .cta-link {
     display: inline-flex;
     align-items: center;
@@ -447,6 +461,15 @@ while (hi < hamilton.length || oi < others.length) {
 
   .cta-link:hover .cta-arrow {
     transform: translateX(12px);
+  }
+
+  .cta-secondary {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    color: var(--color-fg-muted);
+  }
+
+  .cta-secondary:hover {
+    color: var(--color-accent);
   }
 
   /* ---- Responsive ---- */
@@ -535,15 +558,23 @@ while (hi < hamilton.length || oi < others.length) {
     let paused = false;
     let resumeTimer: ReturnType<typeof setTimeout>;
 
-    function pauseScroll() {
+    strip.addEventListener('mouseenter', () => {
+      paused = true;
+      clearTimeout(resumeTimer);
+    });
+    strip.addEventListener('mouseleave', () => {
+      resumeTimer = setTimeout(() => { paused = false; }, 600);
+    });
+    strip.addEventListener('touchstart', () => {
+      paused = true;
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => { paused = false; }, 3000);
+    }, { passive: true });
+    strip.addEventListener('wheel', () => {
       paused = true;
       clearTimeout(resumeTimer);
       resumeTimer = setTimeout(() => { paused = false; }, 2000);
-    }
-
-    strip.addEventListener('mouseenter', pauseScroll);
-    strip.addEventListener('touchstart', pauseScroll, { passive: true });
-    strip.addEventListener('wheel', pauseScroll, { passive: true });
+    }, { passive: true });
 
     let prev = 0;
     function tick(ts: number) {
