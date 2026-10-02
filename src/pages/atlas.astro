@@ -16,23 +16,23 @@ const base = import.meta.env.BASE_URL;
           <line x1="100" y1="5" x2="100" y2="195" stroke="var(--color-atlas-line)" stroke-width="0.3"/>
           <line x1="17" y1="17" x2="183" y2="183" stroke="var(--color-atlas-line)" stroke-width="0.2"/>
           <line x1="183" y1="17" x2="17" y2="183" stroke="var(--color-atlas-line)" stroke-width="0.2"/>
-          <polygon points="100,8 103,30 100,25 97,30" fill="var(--color-atlas-blue)" opacity="0.6"/>
-          <polygon points="100,192 103,170 100,175 97,170" fill="var(--color-atlas-line)" opacity="0.3"/>
-          <polygon points="8,100 30,97 25,100 30,103" fill="var(--color-atlas-line)" opacity="0.3"/>
-          <polygon points="192,100 170,97 175,100 170,103" fill="var(--color-atlas-line)" opacity="0.3"/>
-          <text x="100" y="5" text-anchor="middle" font-size="5" fill="var(--color-atlas-blue)" font-family="var(--font-body)" letter-spacing="0.1em" opacity="0.5">N</text>
-          <text x="100" y="199" text-anchor="middle" font-size="5" fill="var(--color-atlas-line)" font-family="var(--font-body)" letter-spacing="0.1em" opacity="0.3">S</text>
-          <text x="3" y="101.5" text-anchor="middle" font-size="5" fill="var(--color-atlas-line)" font-family="var(--font-body)" letter-spacing="0.1em" opacity="0.3">W</text>
-          <text x="197" y="101.5" text-anchor="middle" font-size="5" fill="var(--color-atlas-line)" font-family="var(--font-body)" letter-spacing="0.1em" opacity="0.3">E</text>
+          <polygon points="100,8 103,30 100,25 97,30" fill="var(--color-atlas-blue)" opacity="0.8"/>
+          <polygon points="100,192 103,170 100,175 97,170" fill="var(--color-atlas-line)" opacity="0.6"/>
+          <polygon points="8,100 30,97 25,100 30,103" fill="var(--color-atlas-line)" opacity="0.6"/>
+          <polygon points="192,100 170,97 175,100 170,103" fill="var(--color-atlas-line)" opacity="0.6"/>
+          <text x="100" y="5" text-anchor="middle" font-size="5" fill="var(--color-atlas-blue)" font-family="var(--font-body)" letter-spacing="0.1em" opacity="0.8">N</text>
+          <text x="100" y="199" text-anchor="middle" font-size="5" fill="var(--color-atlas-line)" font-family="var(--font-body)" letter-spacing="0.1em" opacity="0.6">S</text>
+          <text x="3" y="101.5" text-anchor="middle" font-size="5" fill="var(--color-atlas-line)" font-family="var(--font-body)" letter-spacing="0.1em" opacity="0.6">W</text>
+          <text x="197" y="101.5" text-anchor="middle" font-size="5" fill="var(--color-atlas-line)" font-family="var(--font-body)" letter-spacing="0.1em" opacity="0.6">E</text>
         </svg>
       </div>
 
       <svg class="route-lines" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40,360 C90,310 140,220 200,190 S310,110 370,50" stroke="var(--color-atlas-blue)" stroke-width="1" stroke-dasharray="4 6" fill="none" opacity="0.2" class="route-path"/>
-        <path d="M360,370 C310,310 260,270 200,200 S110,130 40,40" stroke="var(--color-atlas-line)" stroke-width="0.5" stroke-dasharray="3 5" fill="none" opacity="0.15" class="route-path"/>
-        <circle cx="200" cy="190" r="3" fill="var(--color-atlas-blue)" opacity="0.3" class="route-dot"/>
-        <circle cx="310" cy="110" r="2" fill="var(--color-atlas-blue)" opacity="0.2" class="route-dot"/>
-        <circle cx="110" cy="130" r="2" fill="var(--color-atlas-blue)" opacity="0.2" class="route-dot"/>
+        <path d="M40,360 C90,310 140,220 200,190 S310,110 370,50" stroke="var(--color-atlas-blue)" stroke-width="1.5" stroke-dasharray="4 6" fill="none" opacity="0.5" class="route-path"/>
+        <path d="M360,370 C310,310 260,270 200,200 S110,130 40,40" stroke="var(--color-atlas-line)" stroke-width="1" stroke-dasharray="3 5" fill="none" opacity="0.4" class="route-path"/>
+        <circle cx="200" cy="190" r="3.5" fill="var(--color-atlas-blue)" opacity="0.5" class="route-dot"/>
+        <circle cx="310" cy="110" r="2.5" fill="var(--color-atlas-blue)" opacity="0.4" class="route-dot"/>
+        <circle cx="110" cy="130" r="2.5" fill="var(--color-atlas-blue)" opacity="0.4" class="route-dot"/>
       </svg>
 
       <div class="map-dots" aria-hidden="true">
@@ -85,9 +85,10 @@ const base = import.meta.env.BASE_URL;
 
 <style>
   .atlas-page {
-    --color-atlas-blue: #3b7dd8;
+    --color-atlas-blue: #2b6cb0;
     --color-atlas-pin: #d62828;
-    --color-atlas-line: rgba(0, 0, 0, 0.25);
+    --color-atlas-line: rgba(44, 82, 130, 0.35);
+    --color-atlas-bg: #f0f4f8;
 
     min-height: 100vh;
     display: flex;
@@ -96,18 +97,21 @@ const base = import.meta.env.BASE_URL;
     position: relative;
     overflow: hidden;
     padding: var(--header-height) var(--space-sm) var(--space-lg);
+    background: var(--color-atlas-bg);
   }
 
   @media (prefers-color-scheme: dark) {
     .atlas-page:not([data-theme="light"]) {
       --color-atlas-line: rgba(255, 255, 255, 0.2);
       --color-atlas-blue: #5a9fe6;
+      --color-atlas-bg: var(--color-bg);
     }
   }
 
   :root[data-theme="dark"] .atlas-page {
     --color-atlas-line: rgba(255, 255, 255, 0.2);
     --color-atlas-blue: #5a9fe6;
+    --color-atlas-bg: var(--color-bg);
   }
 
   .atlas-bg {
@@ -124,7 +128,7 @@ const base = import.meta.env.BASE_URL;
     position: absolute;
     width: 80%;
     max-width: 550px;
-    opacity: 0.25;
+    opacity: 0.45;
     animation: compass-drift 90s linear infinite;
   }
 
@@ -144,7 +148,7 @@ const base = import.meta.env.BASE_URL;
     width: 90%;
     max-width: 700px;
     height: auto;
-    opacity: 0.6;
+    opacity: 0.8;
   }
 
   .route-path {
@@ -161,8 +165,8 @@ const base = import.meta.env.BASE_URL;
   }
 
   @keyframes dot-pulse {
-    0%, 100% { opacity: 0.15; r: 2; }
-    50% { opacity: 0.4; r: 3.5; }
+    0%, 100% { opacity: 0.3; r: 2; }
+    50% { opacity: 0.6; r: 3.5; }
   }
 
   /* Map dots */
@@ -173,8 +177,8 @@ const base = import.meta.env.BASE_URL;
 
   .dot {
     position: absolute;
-    width: 3px;
-    height: 3px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: var(--color-atlas-blue);
     animation: dot-blink 4s ease-in-out infinite;
@@ -189,8 +193,8 @@ const base = import.meta.env.BASE_URL;
 
   @keyframes dot-blink {
     0%, 100% { opacity: 0; transform: scale(0.5); }
-    20% { opacity: 0.5; transform: scale(1); }
-    40% { opacity: 0.3; transform: scale(1); }
+    20% { opacity: 0.7; transform: scale(1); }
+    40% { opacity: 0.5; transform: scale(1); }
     60% { opacity: 0; transform: scale(0.5); }
   }
 
@@ -212,7 +216,7 @@ const base = import.meta.env.BASE_URL;
     content: '';
     position: absolute;
     background: var(--color-atlas-blue);
-    opacity: 0.35;
+    opacity: 0.6;
   }
 
   .corner::before {
@@ -245,7 +249,7 @@ const base = import.meta.env.BASE_URL;
   .coord-lines {
     position: absolute;
     inset: 0;
-    opacity: 0.3;
+    opacity: 0.55;
   }
 
   .coord {
@@ -341,7 +345,7 @@ const base = import.meta.env.BASE_URL;
     width: 48px;
     height: 1px;
     background: var(--color-atlas-blue);
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   .atlas-desc {
@@ -366,7 +370,7 @@ const base = import.meta.env.BASE_URL;
     letter-spacing: 0.12em;
     font-weight: 600;
     color: var(--color-atlas-blue);
-    opacity: 0.7;
+    opacity: 0.85;
   }
 
   .atlas-back {

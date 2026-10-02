@@ -36,11 +36,11 @@ while (hi < hamilton.length || oi < others.length) {
 
       <div class="hero-strip">
         <div class="strip-track">
-          {featured.map((p, i) => (
+          {[...featured, ...featured].map((p, i) => (
             <a href={`${base}/work/${p.slug}`} class="strip-item">
               <div class="strip-img">
                 {p.image ? (
-                  <img src={`${base}/${p.image}`} alt={p.title} class="strip-photo" loading="lazy" />
+                  <img src={`${base}/${p.image}`} alt={p.title} class="strip-photo" loading={i < featured.length ? 'eager' : 'lazy'} />
                 ) : (
                   <span class="strip-num">{p.num}</span>
                 )}
@@ -527,4 +527,37 @@ while (hi < hamilton.length || oi < others.length) {
       card.style.transform = '';
     });
   });
+
+  // Auto-scroll carousel with pause on interaction
+  const strip = document.querySelector<HTMLElement>('.hero-strip');
+  if (strip) {
+    const speed = 0.7;
+    let paused = false;
+    let resumeTimer: ReturnType<typeof setTimeout>;
+
+    function pauseScroll() {
+      paused = true;
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => { paused = false; }, 2000);
+    }
+
+    strip.addEventListener('mouseenter', pauseScroll);
+    strip.addEventListener('touchstart', pauseScroll, { passive: true });
+    strip.addEventListener('wheel', pauseScroll, { passive: true });
+
+    let prev = 0;
+    function tick(ts: number) {
+      if (!paused) {
+        const dt = prev ? ts - prev : 16;
+        strip!.scrollLeft += speed * (dt / 16);
+        const half = strip!.scrollWidth / 2;
+        if (strip!.scrollLeft >= half) {
+          strip!.scrollLeft -= half;
+        }
+      }
+      prev = ts;
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
 </script>
