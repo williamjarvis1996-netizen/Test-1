@@ -10,6 +10,7 @@ export interface Project {
   image?: string;
   video?: string;
   featured?: boolean;
+  wide?: boolean;
   num: string;
 }
 
@@ -30,6 +31,7 @@ export const projects: Project[] = [
     year: 'Autumn 2026',
     role: 'Producer',
     num: '01',
+    wide: true,
     image: 'images/hamilton-in-the-midst-of-it.webp',
     description: [
       'Festive campaign for Hamilton Watches built around the chaos of Christmas morning. The film uses a top-down, locked-on-the-watch POV to follow three characters through the mayhem of the day: Dan in the kitchen battling biscuit dough and flour clouds, Maya navigating a wrapping disaster at the dining table, and Frank holding court in the living room while his granddaughter Ellie tears through the house around him. Three Hamilton watches (the Khaki Field Mecca, the American Classic Cushion, and the Khaki Field Murph) anchor each storyline, always in frame, always on the wrist.',
@@ -113,6 +115,7 @@ export const projects: Project[] = [
     year: 'Autumn 2025',
     role: 'Producer',
     num: '06',
+    wide: true,
     image: 'images/booking-traveller-review-awards.webp',
     video: 'https://www.youtube.com/watch?v=A6IfbTf06PU',
     description: [

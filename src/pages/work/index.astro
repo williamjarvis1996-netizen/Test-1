@@ -4,10 +4,20 @@ import { projects, categories } from '../../content/projects';
 
 const base = import.meta.env.BASE_URL;
 const categoryKeys = Object.keys(categories) as (keyof typeof categories)[];
+
+const seasonVal: Record<string, number> = { Winter: 0, Spring: 1, Summer: 2, Autumn: 3 };
+function yearScore(y: string): number {
+  if (y.includes('-')) return parseInt(y.split('-')[1]) * 10 + 9;
+  const [s, yr] = y.split(' ');
+  return parseInt(yr) * 10 + (seasonVal[s] ?? 0);
+}
+
 const grouped = categoryKeys.map((key) => ({
   key,
   label: categories[key],
-  items: projects.filter((p) => p.category === key),
+  items: projects
+    .filter((p) => p.category === key)
+    .sort((a, b) => yearScore(b.year) - yearScore(a.year)),
 })).filter((g) => g.items.length > 0);
 ---
 
@@ -33,7 +43,7 @@ const grouped = categoryKeys.map((key) => ({
         <div class="container">
           <div class="project-grid">
             {group.items.map((project, i) => (
-              <a href={`${base}/work/${project.slug}`} class={`project-card ${i === 0 && group.items.length > 2 ? 'card-wide' : ''}`}>
+              <a href={`${base}/work/${project.slug}`} class={`project-card ${project.wide ? 'card-wide' : ''}`}>
                 <div class="card-img">
                   {project.image ? (
                     <img src={`${base}/${project.image}`} alt={project.title} class="card-photo" loading="lazy" />
