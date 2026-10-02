@@ -127,7 +127,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'mcfc-ohana',
-    title: 'Manchester FC',
+    title: 'Manchester City FC',
     client: 'Ohana Development / Manchester City FC',
     category: 'branded',
     year: 'Spring 2026',
