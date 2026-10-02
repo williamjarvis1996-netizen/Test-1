@@ -161,7 +161,7 @@ export const projects: Project[] = [
     slug: 'steaks',
     title: 'Steaks',
     category: 'film',
-    year: 'Summer 2026',
+    year: 'Autumn 2025',
     role: 'Script Consultant / Co-Writer',
     num: '09',
     description: [
@@ -173,7 +173,7 @@ export const projects: Project[] = [
     slug: 'aortic',
     title: 'Aortic',
     category: 'film',
-    year: 'Summer 2025',
+    year: 'Summer 2024',
     role: 'Writer / Co-Producer',
     num: '10',
     image: 'images/aortic.webp',
