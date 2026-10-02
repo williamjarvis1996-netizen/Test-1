@@ -129,6 +129,7 @@ const grouped = categoryKeys.map((key) => ({
   .project-card {
     display: block;
     color: var(--color-fg);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .card-img {
@@ -270,3 +271,17 @@ const grouped = categoryKeys.map((key) => ({
     }
   }
 </style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.project-card').forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${y * -6}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+</script>

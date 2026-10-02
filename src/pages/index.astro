@@ -31,8 +31,8 @@ while (hi < hamilton.length || oi < others.length) {
 
     <div class="hero-content">
       <div class="hero-name">
-        <span class="name-line animate-in" style="--delay: 0.2s">Will</span>
-        <span class="name-line animate-in" style="--delay: 0.35s">Jarvis</span>
+        <span class="name-line animate-in" style="--delay: 0.2s" data-scramble="Will">Will</span>
+        <span class="name-line animate-in" style="--delay: 0.35s" data-scramble="Jarvis">Jarvis</span>
       </div>
 
       <div class="hero-strip">
@@ -251,6 +251,7 @@ while (hi < hamilton.length || oi < others.length) {
   .strip-item {
     flex: 0 0 380px;
     cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .strip-img {
@@ -598,4 +599,44 @@ while (hi < hamilton.length || oi < others.length) {
       }, 150);
     }, { passive: false });
   }
+
+  // Scramble text effect on hero name
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  document.querySelectorAll<HTMLElement>('[data-scramble]').forEach((el) => {
+    const target = el.dataset.scramble!;
+    const delay = parseFloat(getComputedStyle(el).animationDelay) * 1000;
+    let frame = 0;
+    const duration = 20;
+
+    setTimeout(() => {
+      const interval = setInterval(() => {
+        el.textContent = target
+          .split('')
+          .map((ch, i) =>
+            i < (frame / duration) * target.length
+              ? target[i]
+              : chars[Math.floor(Math.random() * chars.length)]
+          )
+          .join('');
+        frame++;
+        if (frame > duration) {
+          el.textContent = target;
+          clearInterval(interval);
+        }
+      }, 30);
+    }, delay);
+  });
+
+  // Magnetic tilt on strip items
+  document.querySelectorAll<HTMLElement>('.strip-item').forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(600px) rotateY(${x * 8}deg) rotateX(${y * -8}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
 </script>
