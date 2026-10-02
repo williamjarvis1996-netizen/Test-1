@@ -36,7 +36,7 @@ while (hi < hamilton.length || oi < others.length) {
 
       <div class="hero-strip">
         <div class="strip-track">
-          {[...featured, ...featured].map((p, i) => (
+          {featured.map((p, i) => (
             <a href={`${base}/work/${p.slug}`} class="strip-item">
               <div class="strip-img">
                 {p.image ? (
@@ -227,21 +227,21 @@ while (hi < hamilton.length || oi < others.length) {
 
   /* ---- Image strip ---- */
   .hero-strip {
-    overflow: hidden;
+    overflow-x: auto;
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hero-strip::-webkit-scrollbar {
+    display: none;
   }
 
   .strip-track {
     display: flex;
     gap: 6px;
     min-width: max-content;
-    animation: strip-scroll 45s linear infinite;
-  }
-
-  @keyframes strip-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
   }
 
   .strip-item {
@@ -321,9 +321,6 @@ while (hi < hamilton.length || oi < others.length) {
     transform: translateY(0);
   }
 
-  .hero-strip {
-    cursor: default;
-  }
 
   /* ---- Discipline text ---- */
   .hero-discipline {
@@ -490,18 +487,6 @@ while (hi < hamilton.length || oi < others.length) {
     { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
   );
   reveals.forEach((el) => observer.observe(el));
-
-  const strip = document.querySelector('.hero-strip') as HTMLElement;
-  if (strip) {
-    strip.addEventListener('mouseenter', () => {
-      const track = strip.querySelector('.strip-track') as HTMLElement;
-      if (track) track.style.animationPlayState = 'paused';
-    });
-    strip.addEventListener('mouseleave', () => {
-      const track = strip.querySelector('.strip-track') as HTMLElement;
-      if (track) track.style.animationPlayState = '';
-    });
-  }
 
   // Scramble text effect on hero name
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
