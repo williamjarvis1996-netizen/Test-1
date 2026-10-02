@@ -1,4 +1,6 @@
 ---
+import { projects } from '../content/projects';
+
 interface Props {
   title: string;
   description?: string;
@@ -6,6 +8,7 @@ interface Props {
 
 const { title, description = 'Creative Producer & Script Writer. Branded content, film, TV development, theatre and immersive.' } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const slugs = projects.map(p => p.slug);
 ---
 
 <!doctype html>
@@ -57,6 +60,92 @@ const base = import.meta.env.BASE_URL;
         </div>
       </div>
     </footer>
+
+    <div class="fab-tray">
+      <button class="fab fab-map" aria-label="Filming locations" data-map-toggle>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </button>
+      <button class="fab fab-random" aria-label="Random project" data-random-project data-slugs={JSON.stringify(slugs)}>
+        <span class="fab-q">?</span>
+      </button>
+    </div>
+
+    <div class="map-overlay" data-map-overlay hidden>
+      <div class="map-panel">
+        <div class="map-header">
+          <h3 class="map-title">Where I've filmed</h3>
+          <button class="map-close" aria-label="Close map" data-map-close>&times;</button>
+        </div>
+        <div class="map-canvas">
+          <svg viewBox="0 0 800 450" class="map-svg" xmlns="http://www.w3.org/2000/svg">
+            <rect width="800" height="450" fill="var(--color-bg-muted)" rx="8"/>
+            <!-- Simplified world outline -->
+            <g fill="none" stroke="var(--color-border)" stroke-width="0.8" opacity="0.5">
+              <!-- Europe rough outline -->
+              <path d="M370,120 L380,110 L400,108 L420,105 L430,110 L440,108 L450,115 L445,125 L440,130 L430,135 L425,145 L420,155 L410,160 L405,170 L395,175 L385,170 L380,160 L375,155 L370,145 L365,135 Z"/>
+              <!-- UK -->
+              <path d="M355,100 L360,95 L365,100 L362,110 L358,115 L355,120 L352,115 L350,108 Z"/>
+              <!-- Africa rough -->
+              <path d="M380,180 L395,178 L410,180 L425,185 L440,195 L445,210 L450,230 L445,260 L435,280 L420,300 L405,310 L390,305 L380,290 L375,270 L370,250 L368,230 L370,210 L375,195 Z"/>
+              <!-- Middle East -->
+              <path d="M450,145 L470,140 L490,145 L500,155 L495,170 L485,180 L470,185 L455,180 L445,170 Z"/>
+              <!-- Asia rough -->
+              <path d="M500,100 L540,90 L580,85 L620,90 L660,100 L680,110 L700,120 L690,140 L670,160 L640,170 L600,175 L560,170 L530,160 L510,150 L500,140 Z"/>
+              <!-- Americas rough -->
+              <path d="M100,80 L140,70 L180,80 L200,100 L210,120 L215,140 L210,160 L200,180 L190,200 L185,220 L190,240 L200,260 L210,280 L215,300 L205,320 L190,330 L175,335 L165,320 L160,300 L155,280 L150,260 L148,240 L145,220 L140,200 L135,180 L130,160 L120,140 L110,120 L105,100 Z"/>
+            </g>
+            <!-- Location pins -->
+            <g class="map-pins">
+              <g class="map-pin" data-location="London, UK" data-projects="Hamilton, DDD, Clockwork Arms, Emoji Project, Vidi Guides, Aortic, Remote Radioplays">
+                <circle cx="358" cy="112" r="6" fill="var(--color-accent)"/>
+                <circle cx="358" cy="112" r="3" fill="var(--color-bg)"/>
+              </g>
+              <g class="map-pin" data-location="Wales, UK" data-projects="Hamilton Into the Wild">
+                <circle cx="348" cy="110" r="5" fill="var(--color-accent)"/>
+                <circle cx="348" cy="110" r="2.5" fill="var(--color-bg)"/>
+              </g>
+              <g class="map-pin" data-location="Hertfordshire, UK" data-projects="Hamilton In the Midst of It">
+                <circle cx="362" cy="108" r="5" fill="var(--color-accent)"/>
+                <circle cx="362" cy="108" r="2.5" fill="var(--color-bg)"/>
+              </g>
+              <g class="map-pin" data-location="Manchester, UK" data-projects="MCFC Ohana Launch">
+                <circle cx="354" cy="103" r="5" fill="var(--color-accent)"/>
+                <circle cx="354" cy="103" r="2.5" fill="var(--color-bg)"/>
+              </g>
+              <g class="map-pin" data-location="Palermo, Sicily" data-projects="Fora at Five">
+                <circle cx="400" cy="148" r="5" fill="var(--color-accent)"/>
+                <circle cx="400" cy="148" r="2.5" fill="var(--color-bg)"/>
+              </g>
+              <g class="map-pin" data-location="Dubai, UAE" data-projects="Chelsea x DAMAC">
+                <circle cx="478" cy="170" r="5" fill="var(--color-accent)"/>
+                <circle cx="478" cy="170" r="2.5" fill="var(--color-bg)"/>
+              </g>
+              <g class="map-pin" data-location="Abu Dhabi, UAE" data-projects="MCFC Ohana Launch">
+                <circle cx="475" cy="174" r="5" fill="var(--color-accent)"/>
+                <circle cx="475" cy="174" r="2.5" fill="var(--color-bg)"/>
+              </g>
+              <g class="map-pin" data-location="Paris, France" data-projects="Vidi Guides">
+                <circle cx="372" cy="120" r="5" fill="var(--color-accent)"/>
+                <circle cx="372" cy="120" r="2.5" fill="var(--color-bg)"/>
+              </g>
+              <g class="map-pin" data-location="Edinburgh, Scotland" data-projects="Vidi Guides">
+                <circle cx="352" cy="96" r="5" fill="var(--color-accent)"/>
+                <circle cx="352" cy="96" r="2.5" fill="var(--color-bg)"/>
+              </g>
+              <g class="map-pin" data-location="Vimy Ridge, France" data-projects="Vidi Guides">
+                <circle cx="376" cy="117" r="5" fill="var(--color-accent)"/>
+                <circle cx="376" cy="117" r="2.5" fill="var(--color-bg)"/>
+              </g>
+            </g>
+          </svg>
+          <div class="map-tooltip" data-map-tooltip hidden></div>
+        </div>
+        <div class="map-legend">
+          <span class="legend-dot"></span>
+          <span class="legend-text">Filming & production locations across 10+ cities</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
@@ -238,6 +327,261 @@ const base = import.meta.env.BASE_URL;
       text-align: center;
     }
   }
+
+  /* ---- Floating action buttons ---- */
+  .fab-tray {
+    position: fixed;
+    bottom: var(--space-md);
+    right: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 90;
+  }
+
+  .fab {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-fg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border-color: var(--color-accent);
+  }
+
+  .fab-random {
+    background: #e5a100;
+    border-color: #c88e00;
+    position: relative;
+  }
+
+  .fab-random::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.3);
+    pointer-events: none;
+  }
+
+  .fab-q {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+
+  .fab-random:hover {
+    border-color: #c88e00;
+    animation: block-bump 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .fab-random.hit {
+    animation: block-hit 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @keyframes block-bump {
+    0%, 100% { transform: translateY(-2px); }
+    40% { transform: translateY(-10px); }
+  }
+
+  @keyframes block-hit {
+    0% { transform: translateY(0) scale(1); }
+    15% { transform: translateY(-16px) scale(1.1); }
+    30% { transform: translateY(-16px) scale(1); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  .fab-map {
+    color: var(--color-fg-muted);
+  }
+
+  .fab-map:hover {
+    color: var(--color-accent);
+  }
+
+  /* ---- Map overlay ---- */
+  .map-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+    animation: overlay-in 0.3s ease;
+  }
+
+  .map-overlay[hidden] {
+    display: none;
+  }
+
+  @keyframes overlay-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .map-panel {
+    background: var(--color-bg);
+    border-radius: 16px;
+    max-width: 700px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+    animation: panel-in 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @keyframes panel-in {
+    from { opacity: 0; transform: translateY(20px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .map-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .map-title {
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-fg-muted);
+    font-weight: 600;
+    font-family: var(--font-body);
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .map-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-fg-muted);
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+    transition: color 0.2s ease;
+  }
+
+  .map-close:hover {
+    color: var(--color-accent);
+  }
+
+  .map-canvas {
+    position: relative;
+    padding: var(--space-sm);
+  }
+
+  .map-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .map-pin {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .map-pin:hover {
+    transform: scale(1.4);
+  }
+
+  .map-pin circle:first-child {
+    transition: r 0.2s ease;
+  }
+
+  .map-tooltip {
+    position: absolute;
+    background: var(--color-fg);
+    color: var(--color-bg);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    pointer-events: none;
+    z-index: 10;
+    max-width: 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .map-tooltip[hidden] {
+    display: none;
+  }
+
+  .map-tooltip-location {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.625rem;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--color-accent);
+  }
+
+  .map-tooltip-projects {
+    display: block;
+    opacity: 0.8;
+  }
+
+  .map-legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px var(--space-md);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  .legend-text {
+    font-size: 0.6875rem;
+    color: var(--color-fg-muted);
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 767px) {
+    .fab-tray {
+      bottom: var(--space-sm);
+      right: var(--space-sm);
+    }
+
+    .fab {
+      width: 42px;
+      height: 42px;
+    }
+
+    .fab-q {
+      font-size: 1.25rem;
+    }
+
+    .map-panel {
+      border-radius: 12px;
+    }
+  }
 </style>
 
 <script>
@@ -266,6 +610,68 @@ const base = import.meta.env.BASE_URL;
       const next = isDark ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch {}
+    });
+  }
+
+  // Random project button
+  const randomBtn = document.querySelector<HTMLElement>('[data-random-project]');
+  if (randomBtn) {
+    const slugs: string[] = JSON.parse(randomBtn.dataset.slugs || '[]');
+    const base = document.querySelector<HTMLLinkElement>('link[rel="icon"]')?.href.replace(/\/favicon\.svg$/, '') || '';
+    randomBtn.addEventListener('click', () => {
+      randomBtn.classList.add('hit');
+      const slug = slugs[Math.floor(Math.random() * slugs.length)];
+      setTimeout(() => {
+        window.location.href = `${base}/work/${slug}`;
+      }, 350);
+      setTimeout(() => randomBtn.classList.remove('hit'), 500);
+    });
+  }
+
+  // Map overlay
+  const mapToggle = document.querySelector('[data-map-toggle]');
+  const mapOverlay = document.querySelector('[data-map-overlay]') as HTMLElement;
+  const mapClose = document.querySelector('[data-map-close]');
+  const tooltip = document.querySelector('[data-map-tooltip]') as HTMLElement;
+
+  if (mapToggle && mapOverlay) {
+    mapToggle.addEventListener('click', () => {
+      mapOverlay.hidden = false;
+    });
+
+    mapClose?.addEventListener('click', () => {
+      mapOverlay.hidden = true;
+    });
+
+    mapOverlay.addEventListener('click', (e) => {
+      if (e.target === mapOverlay) mapOverlay.hidden = true;
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mapOverlay.hidden) mapOverlay.hidden = true;
+    });
+
+    // Pin tooltips
+    document.querySelectorAll<SVGGElement>('.map-pin').forEach((pin) => {
+      pin.addEventListener('mouseenter', (e) => {
+        const location = pin.dataset.location || '';
+        const projects = pin.dataset.projects || '';
+        tooltip.innerHTML = `<span class="map-tooltip-location">${location}</span><span class="map-tooltip-projects">${projects}</span>`;
+        tooltip.hidden = false;
+
+        const canvas = pin.closest('.map-canvas') as HTMLElement;
+        const canvasRect = canvas.getBoundingClientRect();
+        const pinRect = (pin.querySelector('circle') as SVGCircleElement).getBoundingClientRect();
+        const x = pinRect.left + pinRect.width / 2 - canvasRect.left;
+        const y = pinRect.top - canvasRect.top - 8;
+        tooltip.style.left = `${x}px`;
+        tooltip.style.top = `${y}px`;
+        tooltip.style.transform = 'translate(-50%, -100%)';
+      });
+
+      pin.addEventListener('mouseleave', () => {
+        tooltip.hidden = true;
+      });
     });
   }
 </script>
