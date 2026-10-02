@@ -346,9 +346,10 @@ const slugs = projects.map(p => p.slug);
     width: 26px;
     height: 26px;
     border-radius: 5px;
-    background: #e5a100;
+    background: transparent;
     padding: 0;
     position: relative;
+    transition: background 0.2s ease;
   }
 
   .nav-random::before {
@@ -356,20 +357,31 @@ const slugs = projects.map(p => p.slug);
     position: absolute;
     inset: 2px;
     border-radius: 3px;
-    border: 1.5px solid rgba(255,255,255,0.3);
+    border: 1.5px solid transparent;
     pointer-events: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .nav-random:hover {
+    background: #e5a100;
+    animation: block-bump 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-random:hover::before {
+    border-color: rgba(255,255,255,0.3);
   }
 
   .nav-q {
     font-family: var(--font-display);
     font-size: 0.9375rem;
-    color: #fff;
+    color: var(--color-fg-muted);
     line-height: 1;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    transition: color 0.2s ease, text-shadow 0.2s ease;
   }
 
-  .nav-random:hover {
-    animation: block-bump 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  .nav-random:hover .nav-q {
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
   }
 
   .nav-random.hit {
