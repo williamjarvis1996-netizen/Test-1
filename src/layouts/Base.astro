@@ -34,6 +34,12 @@ const slugs = projects.map(p => p.slug);
           <li><a href={`${base}/contact`} class="nav-link">Contact</a></li>
         </ul>
         <div class="nav-actions">
+          <button class="nav-btn" aria-label="Filming locations" data-map-toggle>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </button>
+          <button class="nav-btn nav-random" aria-label="Random project" data-random-project data-slugs={JSON.stringify(slugs)}>
+            <span class="nav-q">?</span>
+          </button>
           <button class="theme-toggle" aria-label="Toggle dark mode">
             <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
             <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -60,15 +66,6 @@ const slugs = projects.map(p => p.slug);
         </div>
       </div>
     </footer>
-
-    <div class="fab-tray">
-      <button class="fab fab-map" aria-label="Filming locations" data-map-toggle>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      </button>
-      <button class="fab fab-random" aria-label="Random project" data-random-project data-slugs={JSON.stringify(slugs)}>
-        <span class="fab-q">?</span>
-      </button>
-    </div>
 
     <div class="map-overlay" data-map-overlay hidden>
       <div class="map-panel">
@@ -209,7 +206,7 @@ const slugs = projects.map(p => p.slug);
   .nav-actions {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: 12px;
   }
 
   .theme-toggle {
@@ -328,88 +325,67 @@ const slugs = projects.map(p => p.slug);
     }
   }
 
-  /* ---- Floating action buttons ---- */
-  .fab-tray {
-    position: fixed;
-    bottom: var(--space-md);
-    right: var(--space-md);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 90;
-  }
-
-  .fab {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    border: 1px solid var(--color-border);
-    background: var(--color-bg);
-    color: var(--color-fg);
+  /* ---- Nav action buttons (map, random, theme) ---- */
+  .nav-btn {
+    background: none;
+    border: none;
     cursor: pointer;
+    padding: 4px;
+    color: var(--color-fg-muted);
+    transition: color 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
 
-  .fab:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    border-color: var(--color-accent);
+  .nav-btn:hover {
+    color: var(--color-accent);
   }
 
-  .fab-random {
+  .nav-random {
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
     background: #e5a100;
-    border-color: #c88e00;
+    padding: 0;
     position: relative;
   }
 
-  .fab-random::before {
+  .nav-random::before {
     content: '';
     position: absolute;
-    inset: 3px;
-    border-radius: 8px;
-    border: 2px solid rgba(255,255,255,0.3);
+    inset: 2px;
+    border-radius: 3px;
+    border: 1.5px solid rgba(255,255,255,0.3);
     pointer-events: none;
   }
 
-  .fab-q {
+  .nav-q {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 0.9375rem;
     color: #fff;
     line-height: 1;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
   }
 
-  .fab-random:hover {
-    border-color: #c88e00;
+  .nav-random:hover {
     animation: block-bump 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .fab-random.hit {
+  .nav-random.hit {
     animation: block-hit 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   @keyframes block-bump {
     0%, 100% { transform: translateY(-2px); }
-    40% { transform: translateY(-10px); }
+    40% { transform: translateY(-6px); }
   }
 
   @keyframes block-hit {
     0% { transform: translateY(0) scale(1); }
-    15% { transform: translateY(-16px) scale(1.1); }
-    30% { transform: translateY(-16px) scale(1); }
+    15% { transform: translateY(-8px) scale(1.1); }
+    30% { transform: translateY(-8px) scale(1); }
     100% { transform: translateY(0) scale(1); }
-  }
-
-  .fab-map {
-    color: var(--color-fg-muted);
-  }
-
-  .fab-map:hover {
-    color: var(--color-accent);
   }
 
   /* ---- Map overlay ---- */
@@ -564,20 +540,6 @@ const slugs = projects.map(p => p.slug);
   }
 
   @media (max-width: 767px) {
-    .fab-tray {
-      bottom: var(--space-sm);
-      right: var(--space-sm);
-    }
-
-    .fab {
-      width: 42px;
-      height: 42px;
-    }
-
-    .fab-q {
-      font-size: 1.25rem;
-    }
-
     .map-panel {
       border-radius: 12px;
     }
@@ -623,7 +585,7 @@ const slugs = projects.map(p => p.slug);
       const slug = slugs[Math.floor(Math.random() * slugs.length)];
       setTimeout(() => {
         window.location.href = `${base}/work/${slug}`;
-      }, 350);
+      }, 300);
       setTimeout(() => randomBtn.classList.remove('hit'), 500);
     });
   }
