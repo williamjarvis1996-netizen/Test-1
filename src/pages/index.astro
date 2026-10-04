@@ -488,9 +488,16 @@ const featured = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.ye
       min-height: auto;
     }
 
-    .hero-crosses {
-      display: none;
+    .cross {
+      width: 14px;
+      height: 14px;
+      opacity: 0.4;
     }
+
+    .cross-tl { top: 18%; left: 8%; }
+    .cross-tr { top: 18%; right: 8%; left: auto; }
+    .cross-bl { bottom: 18%; left: 8%; }
+    .cross-br { bottom: 18%; right: 8%; left: auto; }
 
     .hero-content {
       min-height: auto;
@@ -513,7 +520,7 @@ const featured = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.ye
       align-items: flex-start;
       padding: 0 var(--space-sm);
       padding-bottom: var(--space-sm);
-      gap: var(--space-sm);
+      gap: var(--space-md);
     }
 
     .hero-discipline {
