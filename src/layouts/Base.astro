@@ -1,6 +1,4 @@
 ---
-import { projects } from '../content/projects';
-
 interface Props {
   title: string;
   description?: string;
@@ -8,7 +6,6 @@ interface Props {
 
 const { title, description = 'Creative Producer & Script Writer. Branded content, film, TV development, theatre and immersive.' } = Astro.props;
 const base = import.meta.env.BASE_URL;
-const slugs = projects.map(p => p.slug);
 ---
 
 <!doctype html>
@@ -38,14 +35,6 @@ const slugs = projects.map(p => p.slug);
           <span></span>
         </button>
         <div class="nav-actions">
-          <a href={`${base}/atlas`} class="nav-btn nav-globe" aria-label="Atlas">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" class="globe-icon">
-              <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
-            </svg>
-          </a>
-          <button class="nav-btn nav-random" aria-label="Random project" data-random-project data-slugs={JSON.stringify(slugs)}>
-            <span class="nav-q">?</span>
-          </button>
           <button class="theme-toggle" aria-label="Toggle dark mode">
             <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
             <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -265,101 +254,6 @@ const slugs = projects.map(p => p.slug);
     }
   }
 
-  /* ---- Nav action buttons (map, random, theme) ---- */
-  .nav-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    color: var(--color-fg-muted);
-    transition: color 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav-btn:hover {
-    color: var(--color-accent);
-  }
-
-  .nav-globe {
-    perspective: 200px;
-  }
-
-  .globe-icon {
-    transition: color 0.2s ease, transform 0.4s ease;
-  }
-
-  .nav-globe:hover {
-    color: #2d8cf0;
-  }
-
-  .nav-globe:hover .globe-icon {
-    animation: globe-spin 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  }
-
-  @keyframes globe-spin {
-    0% { transform: rotateY(0deg); }
-    100% { transform: rotateY(360deg); }
-  }
-
-  .nav-random {
-    width: 26px;
-    height: 26px;
-    border-radius: 5px;
-    background: transparent;
-    padding: 0;
-    position: relative;
-    transition: background 0.2s ease;
-  }
-
-  .nav-random::before {
-    content: '';
-    position: absolute;
-    inset: 2px;
-    border-radius: 3px;
-    border: 1.5px solid transparent;
-    pointer-events: none;
-    transition: border-color 0.2s ease;
-  }
-
-  .nav-random:hover {
-    background: #e5a100;
-    animation: block-bump 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .nav-random:hover::before {
-    border-color: rgba(255,255,255,0.3);
-  }
-
-  .nav-q {
-    font-family: var(--font-display);
-    font-size: 0.9375rem;
-    color: var(--color-fg-muted);
-    line-height: 1;
-    transition: color 0.2s ease, text-shadow 0.2s ease;
-  }
-
-  .nav-random:hover .nav-q {
-    color: #fff;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
-  }
-
-  .nav-random.hit {
-    animation: block-hit 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  @keyframes block-bump {
-    0%, 100% { transform: translateY(-2px); }
-    40% { transform: translateY(-6px); }
-  }
-
-  @keyframes block-hit {
-    0% { transform: translateY(0) scale(1); }
-    15% { transform: translateY(-8px) scale(1.1); }
-    30% { transform: translateY(-8px) scale(1); }
-    100% { transform: translateY(0) scale(1); }
-  }
 
 </style>
 
@@ -392,19 +286,5 @@ const slugs = projects.map(p => p.slug);
     });
   }
 
-  // Random project button
-  const randomBtn = document.querySelector<HTMLElement>('[data-random-project]');
-  if (randomBtn) {
-    const slugs: string[] = JSON.parse(randomBtn.dataset.slugs || '[]');
-    const base = document.querySelector<HTMLLinkElement>('link[rel="icon"]')?.href.replace(/\/favicon\.svg$/, '') || '';
-    randomBtn.addEventListener('click', () => {
-      randomBtn.classList.add('hit');
-      const slug = slugs[Math.floor(Math.random() * slugs.length)];
-      setTimeout(() => {
-        window.location.href = `${base}/work/${slug}`;
-      }, 300);
-      setTimeout(() => randomBtn.classList.remove('hit'), 500);
-    });
-  }
 
 </script>

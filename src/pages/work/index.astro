@@ -213,16 +213,16 @@ const sorted = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.year
   }
 
   .caption-client {
-    font-size: 0.5625rem;
+    font-size: 0.625rem;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     color: var(--color-accent);
     font-weight: 600;
     flex-shrink: 0;
   }
 
   .caption-title {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: var(--color-fg);
     letter-spacing: 0.01em;
@@ -230,7 +230,7 @@ const sorted = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.year
   }
 
   .caption-year {
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     color: var(--color-fg-muted);
     margin-left: auto;
     flex-shrink: 0;
@@ -253,16 +253,39 @@ const sorted = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.year
     }
 
     .project-grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-sm);
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xs);
     }
 
     .card-wide {
-      grid-column: span 1;
+      grid-column: span 2;
     }
 
     .card-wide .card-img {
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 16 / 9;
+    }
+
+    .card-img {
+      aspect-ratio: 1 / 1;
+    }
+
+    .card-caption {
+      padding: 0.5rem 0 1rem;
+      flex-direction: column;
+      gap: 0.125rem;
+    }
+
+    .caption-client {
+      font-size: 0.5625rem;
+    }
+
+    .caption-title {
+      font-size: 0.8125rem;
+    }
+
+    .caption-year {
+      font-size: 0.6875rem;
+      margin-left: 0;
     }
   }
 </style>

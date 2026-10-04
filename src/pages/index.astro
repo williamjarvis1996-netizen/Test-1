@@ -389,13 +389,13 @@ while (hi < hamilton.length || oi < others.length) {
   }
 
   .clients-label {
-    font-size: 0.875rem;
+    font-size: 0.625rem;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     color: var(--color-fg-muted);
     margin-bottom: var(--space-md);
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .clients-list {
@@ -404,21 +404,23 @@ while (hi < hamilton.length || oi < others.length) {
     justify-content: center;
     align-items: baseline;
     gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .clients-list span {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     color: var(--color-fg);
-    opacity: 0.3;
-    padding: 0.5rem var(--space-sm);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.25;
+    padding: 0.625rem var(--space-sm);
+    transition: opacity 0.3s ease;
   }
 
   .clients-list span:hover {
-    opacity: 0.7;
+    opacity: 0.8;
   }
 
   .reveal {
@@ -440,19 +442,20 @@ while (hi < hamilton.length || oi < others.length) {
   .cta .container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: var(--space-xs);
   }
 
   .cta-link {
     display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
+    align-items: baseline;
+    gap: 0.3em;
     font-family: var(--font-display);
     font-size: clamp(2rem, 5vw, 3.5rem);
     text-transform: uppercase;
     color: var(--color-fg);
     transition: color 0.2s ease;
-    line-height: 1;
+    line-height: 1.1;
   }
 
   .cta-link:hover {
@@ -462,6 +465,7 @@ while (hi < hamilton.length || oi < others.length) {
   .cta-arrow {
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     font-size: 0.65em;
+    flex-shrink: 0;
   }
 
   .cta-link:hover .cta-arrow {
@@ -479,14 +483,18 @@ while (hi < hamilton.length || oi < others.length) {
 
   /* ---- Responsive ---- */
   @media (max-width: 767px) {
+    .hero {
+      min-height: auto;
+    }
+
     .hero-crosses {
       display: none;
     }
 
     .hero-content {
       min-height: auto;
-      padding-top: var(--space-xl);
-      padding-bottom: var(--space-lg);
+      padding-top: var(--space-lg);
+      padding-bottom: var(--space-sm);
       gap: var(--space-md);
     }
 
@@ -535,15 +543,44 @@ while (hi < hamilton.length || oi < others.length) {
 
     .clients-label {
       margin-bottom: var(--space-sm);
+      text-align: left;
+    }
+
+    .clients-list {
+      justify-content: flex-start;
+      gap: 0;
     }
 
     .clients-list span {
       font-size: 0.6875rem;
-      padding: 0.375rem 0.625rem;
+      padding: 0.375rem 0.5rem;
     }
 
     .cta {
       padding: var(--space-sm) 0;
+    }
+
+    .cta .container {
+      display: block;
+    }
+
+    .cta-link {
+      font-size: clamp(1.5rem, 7vw, 2rem);
+      display: block;
+      margin-bottom: var(--space-xs);
+    }
+
+    .cta-link > span,
+    .cta-arrow {
+      display: inline;
+    }
+
+    .cta-arrow {
+      margin-left: 0.15em;
+    }
+
+    .cta-secondary {
+      font-size: clamp(1rem, 4.5vw, 1.5rem);
     }
   }
 </style>

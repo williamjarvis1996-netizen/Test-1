@@ -33,34 +33,43 @@ const base = import.meta.env.BASE_URL;
           <h2>Biography</h2>
         </div>
         <div class="bio-text animate-in" style="--delay: 0.45s">
-          <p>
-            Creative Producer at RD Content, a global branded content agency and
-            Cannes Production Company of the Year. Leads end-to-end production
-            across Sport, Commercial, Gaming, and Finance, with budgets from
-            &#163;50k to &#163;500k and shoots across Europe, North America, the
-            Middle East, and Asia.
-          </p>
-          <p>
-            Previously Head of Content and Production at Vidi Guides, where he
-            spent four years building out 100+ immersive travel podcasts and audio
-            tours for clients including Walt Disney, Hilton Hotels, Lonely Planet,
-            and Culture Trip.
-          </p>
-          <p>
-            As a writer, co-created Break A Leg (dark comedy thriller, in
-            development with Netflix, ITV, and Hager Moss) and Brain Drain
-            (apocalyptic adventure comedy, optioned by Fandango Productions).
-          </p>
-          <p>
-            Wrote and directed short film Dinner, Diamonds and Death, targeting
-            Sundance London. Co-produced Aortic, winner of the Jury Award for Best
-            Performance at the Rob Knox London Film Festival 2025.
-          </p>
-          <p>
-            Co-founded Distracted Rat Productions in 2019. Wrote and directed the
-            sold-out play The Clockwork Arms, produced The Emoji Project at Camden
-            Fringe, and created Remote Radioplays during lockdown.
-          </p>
+          <div class="bio-block">
+            <h4 class="bio-subhead">Production</h4>
+            <p>
+              Creative Producer at RD Content, a global branded content agency and
+              Cannes Production Company of the Year. Leads end-to-end production
+              across Sport, Commercial, Gaming, and Finance, with budgets from
+              &#163;50k to &#163;500k and shoots across Europe, North America, the
+              Middle East, and Asia.
+            </p>
+            <p>
+              Previously Head of Content and Production at Vidi Guides, where he
+              spent four years building out 100+ immersive travel podcasts and audio
+              tours for clients including Walt Disney, Hilton Hotels, Lonely Planet,
+              and Culture Trip.
+            </p>
+          </div>
+          <div class="bio-block">
+            <h4 class="bio-subhead">Writing</h4>
+            <p>
+              Co-created Break A Leg (dark comedy thriller, in development with
+              Netflix, ITV, and Hager Moss) and Brain Drain (apocalyptic adventure
+              comedy, optioned by Fandango Productions).
+            </p>
+            <p>
+              Wrote and directed short film Dinner, Diamonds and Death, targeting
+              Sundance London. Co-produced Aortic, winner of the Jury Award for Best
+              Performance at the Rob Knox London Film Festival 2025.
+            </p>
+          </div>
+          <div class="bio-block">
+            <h4 class="bio-subhead">Theatre & Independent</h4>
+            <p>
+              Co-founded Distracted Rat Productions in 2019. Wrote and directed the
+              sold-out play The Clockwork Arms, produced The Emoji Project at Camden
+              Fringe, and created Remote Radioplays during lockdown.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -203,7 +212,7 @@ const base = import.meta.env.BASE_URL;
   }
 
   .about-bio {
-    padding: var(--space-xl) 0;
+    padding: var(--space-lg) 0;
     border-top: 1px solid var(--color-border);
   }
 
@@ -224,17 +233,32 @@ const base = import.meta.env.BASE_URL;
 
   .bio-text {
     max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .bio-block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .bio-subhead {
+    font-size: 0.5625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-family: var(--font-body);
+    padding-bottom: 0.375rem;
+    border-bottom: 1px solid var(--color-border);
   }
 
   .bio-text p {
     font-size: 0.9375rem;
     line-height: 1.8;
     color: var(--color-fg);
-    margin-bottom: var(--space-sm);
-  }
-
-  .bio-text p:last-child {
-    margin-bottom: 0;
   }
 
   .about-details {
