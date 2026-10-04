@@ -2,15 +2,16 @@
 import Base from '../layouts/Base.astro';
 import { projects } from '../content/projects';
 
-const hamilton = projects.filter(p => p.client?.includes('Hamilton'));
-const others = projects.filter(p => !p.client?.includes('Hamilton'));
 const base = import.meta.env.BASE_URL;
-const featured: typeof projects = [];
-let hi = 0, oi = 0;
-while (hi < hamilton.length || oi < others.length) {
-  if (oi < others.length) featured.push(others[oi++]);
-  if (hi < hamilton.length) featured.push(hamilton[hi++]);
+
+const seasonVal: Record<string, number> = { Winter: 0, Spring: 1, Summer: 2, Autumn: 3 };
+function yearScore(y: string): number {
+  if (y.includes('-')) return parseInt(y.split('-')[1]) * 10 + 9;
+  const [s, yr] = y.split(' ');
+  return parseInt(yr) * 10 + (seasonVal[s] ?? 0);
 }
+
+const featured = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.year));
 ---
 
 <Base title="Will Jarvis | Creative Producer & Script Writer">
