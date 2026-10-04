@@ -11,7 +11,14 @@ function yearScore(y: string): number {
   return parseInt(yr) * 10 + (seasonVal[s] ?? 0);
 }
 
-const sorted = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.year));
+const categoryOrder = ['branded', 'film', 'tv', 'theatre', 'digital'] as const;
+const grouped = categoryOrder.map(cat => ({
+  key: cat,
+  label: categories[cat],
+  items: projects
+    .filter(p => p.category === cat)
+    .sort((a, b) => yearScore(b.year) - yearScore(a.year)),
+})).filter(g => g.items.length > 0);
 ---
 
 <Base title="Projects | Will Jarvis">
@@ -26,32 +33,36 @@ const sorted = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.year
     </div>
 
     <div class="container">
-      <div class="cat-header animate-in" style="--delay: 0.15s">
-        <span class="cat-label">All Projects</span>
-        <span class="cat-count">{String(sorted.length).padStart(2, '0')} Projects</span>
-      </div>
-      <div class="project-grid">
-        {sorted.map((project) => (
-          <a href={`${base}/work/${project.slug}`} class={`project-card ${project.wide ? 'card-wide' : ''}`}>
-            <div class="card-img">
-              {project.image ? (
-                <img src={`${base}/${project.image}`} alt={project.title} class="card-photo" loading="lazy" />
-              ) : (
-                <span class="card-num">{project.num}</span>
-              )}
-              <div class="card-overlay">
-                <span class="overlay-role">{project.role}</span>
-                <span class="overlay-arrow">&rarr;</span>
-              </div>
-            </div>
-            <div class="card-caption">
-              <span class="caption-client">{project.client || categories[project.category]}</span>
-              <span class="caption-title">{project.title}</span>
-              <span class="caption-year">{project.year}</span>
-            </div>
-          </a>
-        ))}
-      </div>
+      {grouped.map((group) => (
+        <div class="cat-section">
+          <div class="cat-header animate-in" style="--delay: 0.15s">
+            <span class="cat-label">{group.label}</span>
+            <span class="cat-count">{String(group.items.length).padStart(2, '0')} Projects</span>
+          </div>
+          <div class="project-grid">
+            {group.items.map((project) => (
+              <a href={`${base}/work/${project.slug}`} class={`project-card ${project.wide ? 'card-wide' : ''}`}>
+                <div class="card-img">
+                  {project.image ? (
+                    <img src={`${base}/${project.image}`} alt={project.title} class="card-photo" loading="lazy" />
+                  ) : (
+                    <span class="card-num">{project.num}</span>
+                  )}
+                  <div class="card-overlay">
+                    <span class="overlay-role">{project.role}</span>
+                    <span class="overlay-arrow">&rarr;</span>
+                  </div>
+                </div>
+                <div class="card-caption">
+                  <span class="caption-client">{project.client || group.label}</span>
+                  <span class="caption-title">{project.title}</span>
+                  <span class="caption-year">{project.year}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 </Base>
@@ -81,6 +92,10 @@ const sorted = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.year
     color: var(--color-fg-muted);
     max-width: 480px;
     line-height: 1.6;
+  }
+
+  .cat-section + .cat-section {
+    margin-top: var(--space-lg);
   }
 
   .cat-header {
