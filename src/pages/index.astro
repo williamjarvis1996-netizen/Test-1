@@ -44,10 +44,10 @@ const featured = [...projects].sort((a, b) =>
     </div>
 
     <div class="hero-content">
-      <div class="hero-name">
+      <h1 class="hero-name">
         <span class="name-line animate-in" style="--delay: 0.2s" data-scramble="Will">Will</span>
         <span class="name-line animate-in" style="--delay: 0.35s" data-scramble="Jarvis">Jarvis</span>
-      </div>
+      </h1>
 
       <div class="hero-strip">
         <div class="strip-track">
@@ -243,6 +243,8 @@ const featured = [...projects].sort((a, b) =>
     text-align: right;
     padding: 0 var(--space-md);
     line-height: 0.85;
+    font-size: inherit;
+    margin: 0;
   }
 
   .name-line {
