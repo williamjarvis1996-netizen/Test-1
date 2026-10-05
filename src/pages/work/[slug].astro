@@ -83,22 +83,29 @@ const breadcrumbs = [
         </header>
 
         <div class="detail-meta animate-in" style="--delay: 0.3s">
+          <div class="meta-ref" aria-hidden="true">
+            <span>REF: {project.slug.split('-').map((w: string) => w[0]).join('').toUpperCase().slice(0, 4)}-{String(idx + 1).padStart(3, '0')}</span>
+          </div>
           {project.client && (
             <div class="meta-row">
               <span class="meta-key">Client</span>
+              <span class="meta-sep" aria-hidden="true"></span>
               <span class="meta-value">{project.client}</span>
             </div>
           )}
           <div class="meta-row">
             <span class="meta-key">Role</span>
+            <span class="meta-sep" aria-hidden="true"></span>
             <span class="meta-value">{project.role}</span>
           </div>
           <div class="meta-row">
             <span class="meta-key">Year</span>
+            <span class="meta-sep" aria-hidden="true"></span>
             <span class="meta-value">{project.year}</span>
           </div>
           <div class="meta-row">
             <span class="meta-key">Category</span>
+            <span class="meta-sep" aria-hidden="true"></span>
             <span class="meta-value">{categories[project.category]}</span>
           </div>
         </div>
@@ -243,12 +250,21 @@ const breadcrumbs = [
     border-top: 1px solid var(--color-border);
   }
 
+  .meta-ref {
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+    color: var(--color-marker);
+    padding: 0.5rem 0 0.25rem;
+    text-transform: uppercase;
+  }
+
   .meta-row {
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
     padding: 0.625rem 0;
     border-bottom: 1px solid var(--color-border);
+    gap: 0.75rem;
   }
 
   .meta-key {
@@ -257,13 +273,24 @@ const breadcrumbs = [
     letter-spacing: 0.14em;
     color: var(--color-fg-muted);
     font-weight: 600;
+    flex-shrink: 0;
+    min-width: 4.5rem;
+  }
+
+  .meta-sep {
+    flex: 1;
+    height: 1px;
+    border-bottom: 1px dotted var(--color-border);
+    min-width: 1rem;
   }
 
   .meta-value {
-    font-size: 0.8125rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
     color: var(--color-fg);
-    font-weight: 500;
-    letter-spacing: 0.01em;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
   }
 
   .detail-body p {

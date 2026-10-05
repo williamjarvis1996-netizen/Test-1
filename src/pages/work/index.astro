@@ -12,8 +12,10 @@ function yearScore(y: string): number {
 }
 
 const categoryOrder = ['branded', 'film', 'tv', 'theatre', 'digital'] as const;
+const categoryCodes: Record<string, string> = { branded: 'BRD', film: 'FLM', tv: 'TVD', theatre: 'THR', digital: 'DIG' };
 const grouped = categoryOrder.map(cat => ({
   key: cat,
+  code: categoryCodes[cat],
   label: categories[cat],
   items: projects
     .filter(p => p.category === cat)
@@ -60,7 +62,10 @@ const breadcrumbs = [
       {grouped.map((group) => (
         <div class="cat-section">
           <div class="cat-header animate-in" style="--delay: 0.15s">
-            <span class="cat-label">{group.label}</span>
+            <div class="cat-left">
+              <span class="cat-code" aria-hidden="true">{group.code}</span>
+              <span class="cat-label">{group.label}</span>
+            </div>
             <span class="cat-count">{String(group.items.length).padStart(2, '0')} Projects</span>
           </div>
           <div class="project-grid">
@@ -131,6 +136,21 @@ const breadcrumbs = [
     margin-bottom: var(--space-md);
   }
 
+  .cat-left {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+
+  .cat-code {
+    font-family: var(--font-mono);
+    font-size: 0.5625rem;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    font-weight: 700;
+    opacity: 0.7;
+  }
+
   .cat-label {
     font-size: 0.625rem;
     text-transform: uppercase;
@@ -142,11 +162,12 @@ const breadcrumbs = [
   }
 
   .cat-count {
-    font-size: 0.5625rem;
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
     color: var(--color-marker);
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .project-grid {

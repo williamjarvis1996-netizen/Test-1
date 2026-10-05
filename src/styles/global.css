@@ -9,6 +9,7 @@
 
   --font-display: 'Archivo Black', 'Arial Black', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Space Mono', 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;

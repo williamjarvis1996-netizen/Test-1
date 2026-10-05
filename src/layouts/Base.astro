@@ -75,7 +75,7 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
 
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -130,7 +130,10 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p class="footer-text">&copy; {new Date().getFullYear()} Will Jarvis</p>
+        <div class="footer-left">
+          <p class="footer-text">&copy; {new Date().getFullYear()} Will Jarvis</p>
+          <span class="footer-coord" aria-hidden="true">51.5074° N // 0.1278° W</span>
+        </div>
         <div class="footer-links">
           <a href="https://www.imdb.com/name/nm15210832/" target="_blank" rel="noopener" aria-label="IMDb">
             <svg width="24" height="14" viewBox="0 0 64 32" fill="currentColor"><rect width="64" height="32" rx="4"/><text x="32" y="23" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="18" fill="var(--color-bg, #0a0a0a)">IMDb</text></svg>
@@ -268,11 +271,24 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
     justify-content: space-between;
   }
 
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
   .footer-text {
     font-size: 0.6875rem;
     color: var(--color-fg-muted);
     text-transform: uppercase;
     letter-spacing: 0.06em;
+  }
+
+  .footer-coord {
+    font-family: var(--font-mono);
+    font-size: 0.5625rem;
+    color: var(--color-marker);
+    letter-spacing: 0.04em;
   }
 
   .footer-links {
@@ -332,6 +348,11 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
       flex-direction: column;
       gap: var(--space-xs);
       text-align: center;
+    }
+
+    .footer-left {
+      flex-direction: column;
+      gap: 0.25rem;
     }
   }
 
