@@ -1,4 +1,5 @@
 ---
+import { getThumb } from '../content/projects';
 import type { Project } from '../content/projects';
 
 interface Props {
@@ -12,7 +13,7 @@ const base = import.meta.env.BASE_URL;
 <a href={`${base}/work/${project.slug}`} class="project-card">
   <div class="card-image">
     {project.image ? (
-      <img src={`${base}/${project.image}`} alt={project.title} loading="lazy" />
+      <img src={`${base}/${getThumb(project.image) || project.image}`} alt={project.title} loading="lazy" {...(getThumb(project.image) ? { 'data-gif': `${base}/${project.image}` } : {})} />
     ) : (
       <div class="card-placeholder">
         <span class="card-category-badge">{project.category}</span>
