@@ -32,7 +32,7 @@ export const projects: Project[] = [
     role: 'Producer',
     num: '01',
     wide: true,
-    image: 'images/hamilton-in-the-midst-of-it.webp',
+    image: 'images/hamilton-in-the-midst-of-it.gif',
     description: [
       'Festive campaign for Hamilton Watches built around the chaos of Christmas morning. The film uses a top-down, locked-on-the-watch POV to follow three characters through the mayhem of the day: Dan in the kitchen battling biscuit dough and flour clouds, Maya navigating a wrapping disaster at the dining table, and Frank holding court in the living room while his granddaughter Ellie tears through the house around him. Three Hamilton watches (the Khaki Field Mecca, the American Classic Cushion, and the Khaki Field Murph) anchor each storyline, always in frame, always on the wrist.',
       'Shot over three days at a manor house in Hertfordshire. The production ran a Sony FX3 with Cooke SP3 primes as the main camera package, alongside a VMI Ember high-speed camera for slow-motion hero moments: flour erupting from a bowl, a catch in mid-air. Match-cut transitions stitch the three worlds together (whisk to volume peak, dough to wrapping paper, TV cut-to-black to icing grab), keeping the film moving at the frantic, playful pace of Christmas itself. One of the 15-second social cuts was shot natively on iPhone, mounted alongside the main camera for its rawer texture.',
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     year: 'Winter 2025',
     role: 'Producer',
     num: '02',
-    image: 'images/hamilton-into-the-wild.webp',
+    image: 'images/hamilton-into-the-wild.gif',
     video: 'https://www.youtube.com/watch?v=Rl0pLkaWXs4',
     description: [
       'Three-part branded content series for the Hamilton Khaki Field. The films follow the watch out of the city and into the Welsh countryside, leaning into the Khaki Field\'s military heritage and its identity as an outdoor watch built for rough terrain.',
