@@ -34,9 +34,8 @@ export const projects: Project[] = [
     wide: true,
     image: 'images/hamilton-in-the-midst-of-it.gif',
     description: [
-      'Festive campaign for Hamilton Watches built around the chaos of Christmas morning. The film uses a top-down, locked-on-the-watch POV to follow three characters through the mayhem of the day: Dan in the kitchen battling biscuit dough and flour clouds, Maya navigating a wrapping disaster at the dining table, and Frank holding court in the living room while his granddaughter Ellie tears through the house around him. Three Hamilton watches (the Khaki Field Mecca, the American Classic Cushion, and the Khaki Field Murph) anchor each storyline, always in frame, always on the wrist.',
-      'Shot over three days at a manor house in Hertfordshire. The production ran a Sony FX3 with Cooke SP3 primes as the main camera package, alongside a VMI Ember high-speed camera for slow-motion hero moments: flour erupting from a bowl, a catch in mid-air. Match-cut transitions stitch the three worlds together (whisk to volume peak, dough to wrapping paper, TV cut-to-black to icing grab), keeping the film moving at the frantic, playful pace of Christmas itself. One of the 15-second social cuts was shot natively on iPhone, mounted alongside the main camera for its rawer texture.',
-      'A three-day shoot with a cast of four (including a child performer working under UK under-9 regulations), a team of extras for a chaotic hallway entrance, and a dedicated stills unit running in parallel. Delivered as five films: a 45-60 second hero cut, a 30-second cutdown, and three 15-second social cuts (one per watch), each output in four aspect ratios with full motion graphics, sound design, and colour grade.',
+      'Festive campaign for Hamilton Watches built around the chaos of Christmas morning. The film uses a top-down, locked-on-the-watch POV to follow three characters through the mayhem of the day: Dan in the kitchen battling biscuit dough and flour clouds, Maya navigating a wrapping disaster at the dining table, and Frank holding court in the living room while his granddaughter Ellie tears through the house around him. Three Hamilton watches anchor each storyline, always in frame, always on the wrist.',
+      'Shot over three days at a manor house in Hertfordshire with a high-speed camera capturing slow-motion hero moments. Match-cut transitions stitch the three worlds together, keeping the film moving at the frantic, playful pace of Christmas itself. Delivered as five films: a hero cut, a 30-second cutdown, and three 15-second social cuts (one per watch), each output in four aspect ratios with full motion graphics, sound design, and colour grade.',
     ],
     featured: true,
   },
@@ -52,7 +51,7 @@ export const projects: Project[] = [
     video: 'https://www.youtube.com/watch?v=Rl0pLkaWXs4',
     description: [
       'Three-part branded content series for the Hamilton Khaki Field. The films follow the watch out of the city and into the Welsh countryside, leaning into the Khaki Field\'s military heritage and its identity as an outdoor watch built for rough terrain.',
-      'Shot on location in Wales over two days with director Ron Mulvey and DOP Angus Steele. The series tracks the watch through landscapes that echo the Khaki Field\'s origins as a tool for soldiers and explorers, moving from urban environments into open country. Published as a three-part series across Hamilton\'s Instagram and YouTube channels.',
+      'Shot on location in Wales over two days with director Ron Mulvey and DOP Angus Steele. The series tracks the watch through landscapes that echo the Khaki Field\'s origins as a tool for soldiers and explorers, moving from urban environments into open country.',
     ],
     featured: true,
   },
@@ -87,8 +86,8 @@ export const projects: Project[] = [
     video: 'https://www.youtube.com/watch?v=DxAVfx8Igeo',
     description: [
       'Hero brand film marking Fora Travel\'s fifth anniversary. The film tells the story of Alexia, an Italian-American woman who brings her elderly parents Rosa and Marco back to Palermo for their 50th wedding anniversary. Their Fora travel advisor Tess curates the trip from her desk in London, pulling strings to arrange a private vow renewal in the church where Rosa and Marco were married half a century earlier. The story builds from the advisor\'s first video call with Alexia, through a week of discovery across Sicily, to the final scene: Marco waiting at the altar in his wedding suit as Alexia produces a key to a locked church door.',
-      'Production spanned two countries. The London shoot (7 May) captured the advisor sequences with Sakira Vel as Tess. The Sicily shoot ran three days across Palermo (12-14 May) with a local crew coordinated through Movie Sicily. Locations included Villa Igiea (pool and lobby), the Mancuso puppet theatre, Teatro Massimo, Capo Market (featuring a split-screen VFX sequence where Marco meets his double across the tomatoes), a golden-hour dance sequence at Piazza Bellini, a Fiat 500 drive up Monte Pellegrino, and the hero scene at San Saverio church: Alexia produces a key, the door opens, and there is her father at the altar. Forty-three shots across the three Sicily days.',
-      'Directed by Sam McMullen. Shot by James Parsons. Edited by Ravi Chauhan with post-production by Najeeb Khalid. Delivered August 2026.',
+      'Production spanned two countries: London for the advisor sequences, then three days across Palermo with a local crew. Key locations included Villa Igiea, Teatro Massimo, Capo Market (featuring a split-screen VFX sequence), a golden-hour dance at Piazza Bellini, and the hero scene at San Saverio church.',
+      'Directed by Sam McMullen. Shot by James Parsons. Edited by Ravi Chauhan.',
     ],
     featured: true,
   },
@@ -103,8 +102,8 @@ export const projects: Project[] = [
     image: 'images/chelsea-damac.gif',
     video: 'https://www.youtube.com/watch?v=5o_azlXU-xc',
     description: [
-      'Partnership campaign for Chelsea Residences by DAMAC Properties, a Chelsea FC-branded residential development in Dubai. The second shoot in a two-part production, delivering three ads: "Matchday in the Sky," a concept built around a floating football pitch suspended above the clouds by hot air balloon, where players pass the ball before it rolls off the edge and they skydive toward the residences below; and two "Metaverse" comedy spots, green-screen films in which players wearing VR headsets experience the development\'s amenities from their locker room.',
-      'Shot at Brooklands Studio over two days (pre-light and build on Day 1, main shoot on Day 2). The production ran two units simultaneously: Unit A (director Elliot Simpson, DOP James Parsons) handling the platform build for the Matchday concept with football-talented body doubles, and Unit B (director Sam McMullen, DOP Akilan Shiyyali) shooting the green-screen Metaverse films. Chelsea FC players Robert Sanchez, Cole Palmer, and Jamie Gittens each had 15-minute windows on shoot day, with all three appearing together in each Metaverse spot. VFX by FocusFrame.',
+      'Partnership campaign for Chelsea Residences by DAMAC Properties, a Chelsea FC-branded residential development in Dubai. Three ads: "Matchday in the Sky," a concept built around a floating football pitch suspended above the clouds by hot air balloon, where players pass the ball before it rolls off the edge and they skydive toward the residences below; and two "Metaverse" comedy spots in which players wearing VR headsets experience the development\'s amenities from their locker room.',
+      'Two-day studio shoot running two units simultaneously: one for the Matchday platform build with football-talented body doubles, the other for the green-screen Metaverse films. Chelsea FC players Robert Sanchez, Cole Palmer, and Jamie Gittens each had 15-minute windows on shoot day. VFX by FocusFrame.',
     ],
   },
   {
@@ -119,7 +118,8 @@ export const projects: Project[] = [
     image: 'images/booking-traveller-review-awards.gif',
     video: 'https://www.youtube.com/watch?v=A6IfbTf06PU',
     description: [
-      'Hero film for Booking.com\'s annual Traveller Review Awards, a global campaign celebrating the accommodation partners recognised by millions of traveller reviews across the platform. The campaign, titled "Where Hospitality Begins," positions the partners themselves as the subject of the film: the people behind the properties, the hospitality that earns the reviews, the work that keeps guests coming back. Multi-day shoot with full post-production.',
+      'Integrated campaign for Booking.com\'s 14th annual Traveller Review Awards, celebrating 1.81 million partners across 221 countries. The hero film, "Where Hospitality Begins," moved the campaign toward human storytelling, exploring what motivates exceptional hospitality: local roots, life experience, and everyday moments. Featured real award-winning partners, including Dave, whose lifelong connection to Joshua Tree shaped hosting into a chance for guests to reconnect with a place through his eyes.',
+      'The campaign delivered a hero film, social-native content amplifying partner stories across platforms, a stills campaign, and email and owned-channel creative driving partners to the awards hub. The channel strategy evolved from the previous year, with social moving to platform-native celebratory content and locally relevant partner stories unlocking growth in key markets.',
     ],
     awards: [
       'Winner at the Cannes Corporate Media & TV Awards 2026',
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     video: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw',
     description: [
       'Launch film for Ohana Development\'s Manchester City-branded residential project in Abu Dhabi. The film features Manchester City players and blends live-action footage with 3D-rendered architectural environments and virtual production sequences, positioning the development within the global Manchester City brand.',
-      'The production combined three distinct shoot phases: location work at Manchester City\'s training facilities in Manchester, live-action sequences on the ground in Abu Dhabi, and a virtual production day on an LED volume stage. 3D animated renders of the development were supplied by the client and composited into the final film alongside the live-action footage, building a seamless bridge between real and virtual environments. The result is a film that moves between the energy of the football club and the ambition of the development, connecting the two brands through the players who link them.',
+      'The production combined three distinct phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and a virtual production day on an LED volume stage. 3D renders of the development were composited into the final film, building a seamless bridge between real and virtual environments.',
     ],
   },
   {
@@ -272,7 +272,7 @@ export const projects: Project[] = [
     image: 'images/vidi-guides.webp',
     description: [
       'Four years leading content and production at Vidi Guides, a platform producing podcast-style self-guided audio walking tours triggered by GPS and available offline. Oversaw the creation of 100+ immersive travel podcasts and location-based audio tours across London (Brixton, Soho, Kew Gardens, Covent Garden, Westminster), Paris, Cambridge, Oxford, Edinburgh, Stonehenge, Stratford-upon-Avon, and Vimy Ridge.',
-      'Clients included Walt Disney, Hilton Hotels, Lonely Planet, and Culture Trip. The role spanned scripting, voice casting, location research, and production management across dozens of simultaneous tours in multiple cities. A flagship production was the immersive audio guide to Walt Disney World\'s Magic Kingdom, a GPS-triggered tour produced directly for Disney\'s parks division with location-aware narration that responds to where you are rather than what you tap. Vidi Guides was founded by Marius Nigond in 2019 and has since evolved into iWander, an AI-powered travel companion named a PhocusWire Hot 25 Travel Startup for 2025.',
+      'Clients included Walt Disney, Hilton Hotels, Lonely Planet, and Culture Trip. The role spanned scripting, voice casting, location research, and production management across dozens of simultaneous tours in multiple cities. A flagship production was the immersive audio guide to Walt Disney World\'s Magic Kingdom, a GPS-triggered tour produced directly for Disney\'s parks division with location-aware narration that responds to where you are rather than what you tap.',
     ],
   },
 ];
