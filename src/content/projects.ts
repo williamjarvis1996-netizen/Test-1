@@ -210,6 +210,7 @@ export const projects: Project[] = [
     year: 'Spring 2023',
     role: 'Creator / Writer',
     num: '12',
+    image: 'images/brain-drain.png',
     description: [
       'Apocalyptic adventure comedy. 6 x 25 minutes. Created as part of the writing collective GGG (Gary Got Got) with Moritz Matzmorr and Naala Vanslembrouck.',
       'On the brink of a zombie apocalypse, an unusual trio of government interns must manoeuvre incompetent politicians, bureaucratic absurdities, and brain-controlling fungi to save the undead, and possibly the world. Set in Blackpool, Lancashire, in a decrepit Home Office branch on the seaside, where disaster moves faster than government ever could.',
