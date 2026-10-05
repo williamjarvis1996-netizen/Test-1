@@ -227,6 +227,7 @@ export const projects: Project[] = [
     year: 'Autumn 2019',
     role: 'Writer / Director',
     num: '13',
+    image: 'images/clockwork-arms.gif',
     description: [
       'Sold-out play. On her 25th birthday, Maya and her friends stumble into a pub they have never seen before, only to discover it travels through time. The Clockwork Arms pulls its inhabitants through five periods of London\'s history as they confront their dark past and uncertain future, forcing them to decide what to do with their own time.',
       'A time-travelling pub as a device for reckoning with the city\'s layered past, and with the characters\' own. The play moves between eras, each with its own London: its own language, its own violence, its own tenderness.',
