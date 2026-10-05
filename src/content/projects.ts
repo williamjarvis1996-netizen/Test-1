@@ -64,7 +64,7 @@ export const projects: Project[] = [
     year: 'Spring 2025',
     role: 'Producer',
     num: '03',
-    image: 'images/hamilton-power-up.webp',
+    image: 'images/hamilton-power-up.gif',
     video: 'https://www.youtube.com/watch?v=aKi2dFwtTxo',
     description: [
       'Launch film for the Hamilton Khaki Field Power Reserve, the first model in the Khaki Field line to feature a power reserve indicator on the dial. The film introduced the top-down, locked-on-the-wrist visual language that became the creative foundation for the later "In The Midst Of It" festive campaign.',
