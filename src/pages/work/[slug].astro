@@ -75,12 +75,14 @@ const next = projects[(idx + 1) % projects.length];
           ))}
         </div>
 
-        {project.video && (
-          <div class="detail-video animate-in" style="--delay: 0.45s">
-            <a href={project.video} target="_blank" rel="noopener" class="video-link">
-              <span class="video-icon">&#9654;</span>
-              <span>{project.videoLabel || 'Watch'}</span>
-            </a>
+        {project.links && project.links.length > 0 && (
+          <div class="detail-links animate-in" style="--delay: 0.45s">
+            {project.links.map((link) => (
+              <a href={link.url} target="_blank" rel="noopener" class="video-link">
+                <span class="video-icon">&#9654;</span>
+                <span>{link.label}</span>
+              </a>
+            ))}
           </div>
         )}
 
@@ -241,8 +243,11 @@ const next = projects[(idx + 1) % projects.length];
     margin-bottom: 0;
   }
 
-  .detail-video {
+  .detail-links {
     padding-top: var(--space-xs);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
   }
 
   .video-link {

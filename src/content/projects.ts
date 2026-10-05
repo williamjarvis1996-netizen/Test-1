@@ -1,3 +1,8 @@
+export interface ProjectLink {
+  url: string;
+  label: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -8,8 +13,7 @@ export interface Project {
   description: string[];
   awards?: string[];
   image?: string;
-  video?: string;
-  videoLabel?: string;
+  links?: ProjectLink[];
   featured?: boolean;
   wide?: boolean;
   num: string;
@@ -49,7 +53,7 @@ export const projects: Project[] = [
     role: 'Producer',
     num: '02',
     image: 'images/hamilton-into-the-wild.gif',
-    video: 'https://www.youtube.com/watch?v=Rl0pLkaWXs4',
+    links: [{ url: 'https://www.youtube.com/watch?v=Rl0pLkaWXs4', label: 'Watch' }],
     description: [
       'Three-part branded content series for the Hamilton Khaki Field. The films follow the watch out of the city and into the Welsh countryside, leaning into the Khaki Field\'s military heritage and its identity as an outdoor watch built for rough terrain.',
       'Shot on location in Wales over two days with director Ron Mulvey and DOP Angus Steele. The series tracks the watch through landscapes that echo the Khaki Field\'s origins as a tool for soldiers and explorers, moving from urban environments into open country.',
@@ -65,7 +69,7 @@ export const projects: Project[] = [
     role: 'Post-Production Producer',
     num: '03',
     image: 'images/hamilton-power-up.gif',
-    video: 'https://www.youtube.com/watch?v=aKi2dFwtTxo',
+    links: [{ url: 'https://www.youtube.com/watch?v=aKi2dFwtTxo', label: 'Watch' }],
     description: [
       'Launch film for the Hamilton Khaki Field Power Reserve, the first model in the Khaki Field line to feature a power reserve indicator on the dial. The film introduced the top-down, locked-on-the-wrist visual language that became the creative foundation for the later "In The Midst Of It" festive campaign.',
     ],
@@ -84,7 +88,7 @@ export const projects: Project[] = [
     role: 'Producer',
     num: '04',
     image: 'images/fora-at-five.gif',
-    video: 'https://www.youtube.com/watch?v=DxAVfx8Igeo',
+    links: [{ url: 'https://www.youtube.com/watch?v=DxAVfx8Igeo', label: 'Watch' }],
     description: [
       'Hero brand film marking Fora Travel\'s fifth anniversary. The film tells the story of Alexia, an Italian-American woman who brings her elderly parents Rosa and Marco back to Palermo for their 50th wedding anniversary. Their Fora travel advisor Tess curates the trip from her desk in London, pulling strings to arrange a private vow renewal in the church where Rosa and Marco were married half a century earlier. The story builds from the advisor\'s first video call with Alexia, through a week of discovery across Sicily, to the final scene: Marco waiting at the altar in his wedding suit as Alexia produces a key to a locked church door.',
       'Production spanned two countries: London for the advisor sequences, then three days across Palermo with a local crew. Key locations included Villa Igiea, Teatro Massimo, Capo Market (featuring a split-screen VFX sequence), a golden-hour dance at Piazza Bellini, and the hero scene at San Saverio church.',
@@ -101,7 +105,7 @@ export const projects: Project[] = [
     role: 'Producer',
     num: '05',
     image: 'images/chelsea-damac.gif',
-    video: 'https://www.youtube.com/watch?v=5o_azlXU-xc',
+    links: [{ url: 'https://www.youtube.com/watch?v=5o_azlXU-xc', label: 'Watch' }],
     description: [
       'Partnership campaign for Chelsea Residences by DAMAC Properties, a Chelsea FC-branded residential development in Dubai. Three ads: "Matchday in the Sky," a concept built around a floating football pitch suspended above the clouds by hot air balloon, where players pass the ball before it rolls off the edge and they skydive toward the residences below; and two "Metaverse" comedy spots in which players wearing VR headsets experience the development\'s amenities from their locker room.',
       'Two-day studio shoot running two units simultaneously: one for the Matchday platform build with football-talented body doubles, the other for the green-screen Metaverse films. Chelsea FC players Robert Sanchez, Cole Palmer, and Jamie Gittens each had 15-minute windows on shoot day. VFX by FocusFrame.',
@@ -117,7 +121,7 @@ export const projects: Project[] = [
     num: '06',
     wide: true,
     image: 'images/booking-traveller-review-awards.gif',
-    video: 'https://www.youtube.com/watch?v=A6IfbTf06PU',
+    links: [{ url: 'https://www.youtube.com/watch?v=A6IfbTf06PU', label: 'Watch' }],
     description: [
       'Integrated campaign for Booking.com\'s 14th annual Traveller Review Awards, celebrating 1.81 million partners across 221 countries. The hero film, "Where Hospitality Begins," moved the campaign toward human storytelling, exploring what motivates exceptional hospitality: local roots, life experience, and everyday moments. Featured real award-winning partners, including Dave, whose lifelong connection to Joshua Tree shaped hosting into a chance for guests to reconnect with a place through his eyes.',
       'The campaign delivered a hero film, social-native content amplifying partner stories across platforms, a stills campaign, and email and owned-channel creative driving partners to the awards hub. The channel strategy evolved from the previous year, with social moving to platform-native celebratory content and locally relevant partner stories unlocking growth in key markets.',
@@ -138,7 +142,7 @@ export const projects: Project[] = [
     role: 'Producer',
     num: '07',
     image: 'images/mcfc-ohana.gif',
-    video: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw',
+    links: [{ url: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw', label: 'Watch' }],
     description: [
       'Launch film for Ohana Development\'s Manchester City-branded residential project in Abu Dhabi. The film features Manchester City players and blends live-action footage with 3D-rendered architectural environments and virtual production sequences, positioning the development within the global Manchester City brand.',
       'The production combined three distinct phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and a virtual production day on an LED volume stage. 3D renders of the development were composited into the final film, building a seamless bridge between real and virtual environments.',
@@ -257,8 +261,7 @@ export const projects: Project[] = [
     role: 'Writer / Producer / Performer',
     num: '15',
     image: 'images/remote-radioplays.webp',
-    video: 'https://soundcloud.com/distracted-rat',
-    videoLabel: 'Listen',
+    links: [{ url: 'https://soundcloud.com/distracted-rat', label: 'Listen' }],
     description: [
       'Two-season anthology of original radio plays produced remotely during lockdown under Distracted Rat Productions. Seventeen episodes across two seasons, built entirely over video calls and file transfers.',
       'Season 2, "The Thing with Feathers," brought together 11 international writers and a 35-person creative team spanning 16 time zones. The season explored the utility of hope and how we reconcile with the past while moving into the future.',
