@@ -4,14 +4,28 @@ import { projects } from '../content/projects';
 
 const base = import.meta.env.BASE_URL;
 
-const seasonVal: Record<string, number> = { Spring: 0, Summer: 1, Autumn: 2, Winter: 3 };
-function yearScore(y: string): number {
-  if (y.includes('-')) return parseInt(y.split('-')[1]) * 10 + 9;
-  const [s, yr] = y.split(' ');
-  return parseInt(yr) * 10 + (seasonVal[s] ?? 0);
-}
-
-const featured = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.year));
+const carouselOrder = [
+  'hamilton-in-the-midst-of-it',
+  'mcfc-ohana',
+  'fora-at-five',
+  'chelsea-damac',
+  'steaks',
+  'booking-traveller-review-awards',
+  'dinner-diamonds-and-death',
+  'hamilton-into-the-wild',
+  'aortic',
+  'hamilton-power-up',
+  'vidi-guides',
+  'break-a-leg',
+  'brain-drain',
+  'the-clockwork-arms',
+  'the-emoji-project',
+  'remote-radioplays',
+];
+const slugIndex = new Map(carouselOrder.map((s, i) => [s, i]));
+const featured = [...projects].sort((a, b) =>
+  (slugIndex.get(a.slug) ?? 999) - (slugIndex.get(b.slug) ?? 999)
+);
 ---
 
 <Base title="Will Jarvis | Creative Producer & Script Writer">
