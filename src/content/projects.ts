@@ -71,7 +71,7 @@ export const projects: Project[] = [
     image: 'images/hamilton-power-up.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=aKi2dFwtTxo', label: 'Watch' }],
     description: [
-      'Launch film for the Hamilton Khaki Field Power Reserve, the first model in the Khaki Field line to feature a power reserve indicator on the dial. The film introduced the top-down, locked-on-the-wrist visual language that became the creative foundation for the later "In The Midst Of It" festive campaign.',
+      'Launch film for the Hamilton Khaki Field Titanium Auto, the first Khaki Field model to feature a power reserve indicator on the dial. Built around the H-23 caliber with an 80-hour power reserve displayed by the fuel-gauge complication at 9 o\'clock. The 40mm titanium case and the energy metaphor drove the film\'s concept: a top-down, locked-on-the-wrist visual language that became the creative foundation for the later "In The Midst Of It" festive campaign.',
     ],
     awards: [
       'Winner at the Cannes Corporate Media & TV Awards 2026',
@@ -107,8 +107,8 @@ export const projects: Project[] = [
     image: 'images/chelsea-damac.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=5o_azlXU-xc', label: 'Watch' }],
     description: [
-      'Partnership campaign for Chelsea Residences by DAMAC Properties, a Chelsea FC-branded residential development in Dubai. Three ads: "Matchday in the Sky," a concept built around a floating football pitch suspended above the clouds by hot air balloon, where players pass the ball before it rolls off the edge and they skydive toward the residences below; and two "Metaverse" comedy spots in which players wearing VR headsets experience the development\'s amenities from their locker room.',
-      'Two-day studio shoot running two units simultaneously: one for the Matchday platform build with football-talented body doubles, the other for the green-screen Metaverse films. Chelsea FC players Robert Sanchez, Cole Palmer, and Jamie Gittens each had 15-minute windows on shoot day. VFX by FocusFrame.',
+      'Partnership campaign for Chelsea Residences by DAMAC Properties, a Chelsea FC-branded residential development at Dubai Maritime City featuring over 1,400 units and a rooftop football pitch. Three ads: "Matchday in the Sky," a concept built around a floating football pitch suspended above the clouds by hot air balloon, where players pass the ball before it rolls off the edge and they skydive toward the residences below; and two "Metaverse" comedy spots in which players wearing VR headsets experience the development\'s amenities from their locker room.',
+      'Two-day studio shoot running two units simultaneously: one for the Matchday platform build with football-talented body doubles, the other for the green-screen Metaverse films. Chelsea FC players each had 15-minute windows on shoot day. VFX by FocusFrame.',
     ],
   },
   {
@@ -144,8 +144,8 @@ export const projects: Project[] = [
     image: 'images/mcfc-ohana.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw', label: 'Watch' }],
     description: [
-      'Launch film for Ohana Development\'s Manchester City-branded residential project in Abu Dhabi. The film features Manchester City players and blends live-action footage with 3D-rendered architectural environments and virtual production sequences, positioning the development within the global Manchester City brand.',
-      'The production combined three distinct phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and a virtual production day on an LED volume stage. 3D renders of the development were composited into the final film, building a seamless bridge between real and virtual environments.',
+      'Launch film for Manchester City Yas Residences by Ohana, a $4.1 billion waterfront development on Yas Canal in Abu Dhabi featuring over 2,000 residential units and a Manchester City Football Academy at its core. The film features Manchester City players and blends live-action footage with 3D-rendered architectural environments and virtual production sequences, positioning the development within the global Manchester City brand.',
+      'The production combined three distinct phases: location work at Manchester City\'s training facilities in Manchester, live-action sequences in Abu Dhabi, and a virtual production day on an LED volume stage. 3D renders of the development were composited into the final film, building a seamless bridge between real and virtual environments.',
     ],
   },
   {
@@ -186,11 +186,10 @@ export const projects: Project[] = [
     image: 'images/aortic.gif',
     description: [
       'Short film. Nestled inside the broom closet of a quiet hospital, Jack musters the courage to leave a heartfelt voice note to an old friend. The film blurs the lines between past and present, moving between the comforting glow of nostalgia and the unyielding light of the here and now. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
-      'Co-produced with Niamh Marie Smith. Shot in November 2023. Macauley Keeper plays Jack in the lead role.',
+      'Directed by Niamh Marie Smith. Shot in November 2023. Macauley Keeper plays Jack in the lead role. World premiere at Picturehouse Central.',
     ],
     awards: [
-      'Jury Award for Best Performance (Macauley Keeper) at the Rob Knox London Film Festival 2025',
-      'Currently on the festival circuit',
+      'Jury Award for Best Performance (Macauley Keeper) at the Rob Knox International Film Festival 2025',
     ],
   },
   {
@@ -249,7 +248,7 @@ export const projects: Project[] = [
     image: 'images/the-emoji-project.webp',
     description: [
       'Sold-out anthology of new writing at Camden Fringe, performed at the Hen and Chickens Theatre across three nights in August 2021. Produced by Distracted Rat Productions.',
-      'An intergenerational collection of short plays and scenes, each written in response to a single emoji. Writers ranged in age from 11 to 75. The show covered the absurd, the political, and everything between. Reviewers described it as making "you giggle and think in the same breath."',
+      'An intergenerational collection of short plays and scenes, each written in response to a single emoji. Writers ranged in age from 11 to 75, with pieces by sean wai keung, Tilney Brune, James Aldred, Jalice Corral, and Alastair Gibbons among others. The show covered the absurd, the political, and everything between. Reviewers described it as making "you giggle and think in the same breath."',
       'Directed by Susie MacDonald, Gabriel Harris, and Annys Whyatt.',
     ],
   },
@@ -264,7 +263,7 @@ export const projects: Project[] = [
     links: [{ url: 'https://soundcloud.com/distracted-rat', label: 'Listen' }],
     description: [
       'Two-season anthology of original radio plays produced remotely during lockdown under Distracted Rat Productions. Seventeen episodes across two seasons, built entirely over video calls and file transfers.',
-      'Season 2, "The Thing with Feathers," brought together 11 international writers and a 35-person creative team spanning 16 time zones. The season explored the utility of hope and how we reconcile with the past while moving into the future.',
+      'Season 2, "The Thing with Feathers," brought together 11 international writers and a 35-person creative team spanning 16 time zones. Episodes included "End of the World, rsvp by the 20th" by Isa Martinez, "Four Walls/One Night" by Cris Eli Blak, "These Things Are Sent to Try Us" by Emma Bentley, "3, 2, 1..." by Emily Steck and Misha Graham-Patel, "Any Given Time" by Gemma Murray, "Frizzy Izzy" by Jalice Corral, "Goosed" by Jacqueline Graham, and "Living Well Is The Best Revenge" by Max Chase. The season explored the utility of hope and how we reconcile with the past while moving into the future.',
       'Will wrote and performed in "The Fjordic Typhoon." Available on SoundCloud.',
     ],
   },
@@ -277,8 +276,8 @@ export const projects: Project[] = [
     num: '16',
     image: 'images/vidi-guides.webp',
     description: [
-      'Four years leading content and production at Vidi Guides, a platform producing podcast-style self-guided audio walking tours triggered by GPS and available offline. Oversaw the creation of 100+ immersive travel podcasts and location-based audio tours across London (Brixton, Soho, Kew Gardens, Covent Garden, Westminster), Paris, Cambridge, Oxford, Edinburgh, Stonehenge, Stratford-upon-Avon, and Vimy Ridge.',
-      'Clients included Walt Disney, Hilton Hotels, Lonely Planet, and Culture Trip. The role spanned scripting, voice casting, location research, and production management across dozens of simultaneous tours in multiple cities. A flagship production was the immersive audio guide to Walt Disney World\'s Magic Kingdom, a GPS-triggered tour produced directly for Disney\'s parks division with location-aware narration that responds to where you are rather than what you tap.',
+      'Four years leading content and production at Vidi Guides, a platform producing podcast-style self-guided audio walking tours triggered by GPS and available offline. Oversaw the creation of 100+ immersive travel podcasts and location-based audio tours spanning 50 tours across 17 cities and 7 countries, including London (Brixton, Soho, Kew Gardens, Covent Garden, Westminster), Paris, Cambridge, Oxford, Edinburgh, Stonehenge, Stratford-upon-Avon, Vimy Ridge, New York, Singapore, Bath, Rome, and Venice.',
+      'Clients included Walt Disney, Hilton Hotels, Lonely Planet, and Culture Trip. The role spanned scripting, voice casting, location research, and production management across dozens of simultaneous tours in multiple cities.',
     ],
   },
 ];
