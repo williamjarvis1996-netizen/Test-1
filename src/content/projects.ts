@@ -113,7 +113,7 @@ export const projects: Project[] = [
     client: 'Booking.com',
     category: 'branded',
     year: 'Autumn 2025',
-    role: 'Producer',
+    role: 'Co-Producer / 1st AD',
     num: '06',
     wide: true,
     image: 'images/booking-traveller-review-awards.gif',
