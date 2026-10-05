@@ -2,7 +2,7 @@
 
 ## Overview
 
-Personal portfolio website for Will Jarvis, a Creative Producer and Script Writer. Built with Astro 5.x, deployed to GitHub Pages at https://williamjarvis1996-netizen.github.io/Test-1/.
+Personal portfolio website for Will Jarvis, a Creative Producer and Scriptwriter. Built with Astro 5.x, deployed to GitHub Pages at https://williamjarvis1996-netizen.github.io/Test-1/.
 
 ## Tech Stack
 
@@ -56,7 +56,7 @@ public/
 
 1. **Hero**: Full-viewport with "Will Jarvis" right-aligned, decorative cross marks
 2. **Image strip carousel**: Horizontally scrolling project thumbnails (380px wide, 16:9 aspect ratio). CSS animation with duplicated items for infinite scroll. Supports drag-to-scroll and wheel-to-scroll.
-3. **Discipline text**: "Creative Producer & Script Writer" right-aligned below the strip
+3. **Discipline text**: "Creative Producer & Scriptwriter" right-aligned below the strip
 4. **Clients bar**: "Brands I've collaborated with" label above a flex-wrapped list of 14 brand names, styled as uppercase grey text that brightens on hover. Scroll-triggered reveal animation.
 5. **CTA**: "Let's make something" link
 
