@@ -256,10 +256,11 @@ export const projects: Project[] = [
     role: 'Writer / Producer / Performer',
     num: '15',
     image: 'images/remote-radioplays.webp',
+    video: 'https://soundcloud.com/distracted-rat',
     description: [
       'Two-season anthology of original radio plays produced remotely during lockdown under Distracted Rat Productions. Seventeen episodes across two seasons, built entirely over video calls and file transfers.',
       'Season 2, "The Thing with Feathers," brought together 11 international writers and a 35-person creative team spanning 16 time zones. The season explored the utility of hope and how we reconcile with the past while moving into the future.',
-      'Will wrote and performed in "The Fjordic Typhoon." Available on Spotify.',
+      'Will wrote and performed in "The Fjordic Typhoon." Available on SoundCloud.',
     ],
   },
   {
