@@ -17,8 +17,8 @@ const defaultDescription = 'Will Jarvis is a Creative Producer and Scriptwriter 
 const { title, description: rawDescription = defaultDescription, image, type = 'website', jsonLd, breadcrumbs } = Astro.props;
 const description = rawDescription.length > 160 ? rawDescription.slice(0, 157).replace(/\s+\S*$/, '') + '...' : rawDescription;
 const base = import.meta.env.BASE_URL;
-const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
-const canonicalUrl = new URL(Astro.url.pathname, 'https://williamjarvis1996-netizen.github.io').href;
+const siteUrl = 'https://willjarvis.co';
+const canonicalUrl = new URL(Astro.url.pathname, 'https://willjarvis.co').href;
 
 function resolveOgImage(img?: string): string {
   if (!img) return `${siteUrl}/images/portrait.webp`;
