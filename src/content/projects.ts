@@ -195,6 +195,7 @@ export const projects: Project[] = [
     year: 'Summer 2026',
     role: 'Co-Creator / Writer',
     num: '11',
+    image: 'images/break-a-leg.gif',
     description: [
       'Dark comedy thriller. 6 x 30 minutes. Co-created with Moritz Matzmorr and Naala Vanslembrouck as part of the writing collective GGG (Gary Got Got), originally adapted from a German-language project.',
       'When a cheerful but struggling acting student accepts a job chopping up human corpses, her talent as an actor dramatically improves. Now in the spotlight, she must hide this dark secret from friends, foes, and the public, all while struggling with the morality of her actions.',
