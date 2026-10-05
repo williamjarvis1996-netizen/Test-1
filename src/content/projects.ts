@@ -290,3 +290,8 @@ export function getProjectsByCategory(category: Project['category']): Project[] 
 export function getFeaturedProjects(): Project[] {
   return projects.filter((p) => p.featured);
 }
+
+export function getThumb(image: string): string | null {
+  if (!image.endsWith('.gif')) return null;
+  return 'images/thumbs/' + image.replace('images/', '').replace('.gif', '.webp');
+}

@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { projects } from '../content/projects';
+import { projects, getThumb } from '../content/projects';
 
 const base = import.meta.env.BASE_URL;
 
@@ -55,7 +55,13 @@ const featured = [...projects].sort((a, b) =>
             <a href={`${base}/work/${p.slug}`} class="strip-item">
               <div class="strip-img">
                 {p.image ? (
-                  <img src={`${base}/${p.image}`} alt={p.title} class="strip-photo" loading={i < featured.length ? 'eager' : 'lazy'} />
+                  <img
+                    src={`${base}/${getThumb(p.image) || p.image}`}
+                    alt={p.title}
+                    class="strip-photo"
+                    loading={i < featured.length ? 'eager' : 'lazy'}
+                    {...(getThumb(p.image) ? { 'data-gif': `${base}/${p.image}` } : {})}
+                  />
                 ) : (
                   <span class="strip-num">{p.num}</span>
                 )}

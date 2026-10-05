@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { projects, categories } from '../../content/projects';
+import { projects, categories, getThumb } from '../../content/projects';
 import type { Project } from '../../content/projects';
 
 export function getStaticPaths() {
@@ -26,7 +26,7 @@ const next = projects[(idx + 1) % projects.length];
       <div class="detail-media">
         <div class="media-placeholder animate-in" style="--delay: 0.2s">
           {project.image ? (
-            <img src={`${base}/${project.image}`} alt={project.title} class="media-photo" />
+            <img src={`${base}/${getThumb(project.image) || project.image}`} alt={project.title} class="media-photo" {...(getThumb(project.image) ? { 'data-gif': `${base}/${project.image}` } : {})} />
           ) : (
             <span class="media-num">{project.num}</span>
           )}

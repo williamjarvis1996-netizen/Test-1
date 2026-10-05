@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { projects, categories } from '../../content/projects';
+import { projects, categories, getThumb } from '../../content/projects';
 
 const base = import.meta.env.BASE_URL;
 
@@ -44,7 +44,7 @@ const grouped = categoryOrder.map(cat => ({
               <a href={`${base}/work/${project.slug}`} class={`project-card ${project.wide ? 'card-wide' : ''}`}>
                 <div class="card-img">
                   {project.image ? (
-                    <img src={`${base}/${project.image}`} alt={project.title} class="card-photo" loading="lazy" />
+                    <img src={`${base}/${getThumb(project.image) || project.image}`} alt={project.title} class="card-photo" loading="lazy" {...(getThumb(project.image) ? { 'data-gif': `${base}/${project.image}` } : {})} />
                   ) : (
                     <span class="card-num">{project.num}</span>
                   )}
