@@ -9,6 +9,7 @@ export interface Project {
   awards?: string[];
   image?: string;
   video?: string;
+  videoLabel?: string;
   featured?: boolean;
   wide?: boolean;
   num: string;
@@ -257,6 +258,7 @@ export const projects: Project[] = [
     num: '15',
     image: 'images/remote-radioplays.webp',
     video: 'https://soundcloud.com/distracted-rat',
+    videoLabel: 'Listen',
     description: [
       'Two-season anthology of original radio plays produced remotely during lockdown under Distracted Rat Productions. Seventeen episodes across two seasons, built entirely over video calls and file transfers.',
       'Season 2, "The Thing with Feathers," brought together 11 international writers and a 35-person creative team spanning 16 time zones. The season explored the utility of hope and how we reconcile with the past while moving into the future.',

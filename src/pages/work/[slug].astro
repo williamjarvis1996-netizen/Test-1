@@ -79,7 +79,7 @@ const next = projects[(idx + 1) % projects.length];
           <div class="detail-video animate-in" style="--delay: 0.45s">
             <a href={project.video} target="_blank" rel="noopener" class="video-link">
               <span class="video-icon">&#9654;</span>
-              <span>{project.video.includes('soundcloud') ? 'Listen' : 'Watch'}</span>
+              <span>{project.videoLabel || 'Watch'}</span>
             </a>
           </div>
         )}
