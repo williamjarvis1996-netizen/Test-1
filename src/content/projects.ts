@@ -100,7 +100,7 @@ export const projects: Project[] = [
     year: 'Spring 2026',
     role: 'Producer',
     num: '05',
-    image: 'images/chelsea-damac.webp',
+    image: 'images/chelsea-damac.gif',
     video: 'https://www.youtube.com/watch?v=5o_azlXU-xc',
     description: [
       'Partnership campaign for Chelsea Residences by DAMAC Properties, a Chelsea FC-branded residential development in Dubai. The second shoot in a two-part production, delivering three ads: "Matchday in the Sky," a concept built around a floating football pitch suspended above the clouds by hot air balloon, where players pass the ball before it rolls off the edge and they skydive toward the residences below; and two "Metaverse" comedy spots, green-screen films in which players wearing VR headsets experience the development\'s amenities from their locker room.',
