@@ -83,7 +83,7 @@ export const projects: Project[] = [
     year: 'Summer 2026',
     role: 'Producer',
     num: '04',
-    image: 'images/fora-at-five.webp',
+    image: 'images/fora-at-five.gif',
     video: 'https://www.youtube.com/watch?v=DxAVfx8Igeo',
     description: [
       'Hero brand film marking Fora Travel\'s fifth anniversary. The film tells the story of Alexia, an Italian-American woman who brings her elderly parents Rosa and Marco back to Palermo for their 50th wedding anniversary. Their Fora travel advisor Tess curates the trip from her desk in London, pulling strings to arrange a private vow renewal in the church where Rosa and Marco were married half a century earlier. The story builds from the advisor\'s first video call with Alexia, through a week of discovery across Sicily, to the final scene: Marco waiting at the altar in his wedding suit as Alexia produces a key to a locked church door.',
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     role: 'Producer',
     num: '06',
     wide: true,
-    image: 'images/booking-traveller-review-awards.webp',
+    image: 'images/booking-traveller-review-awards.gif',
     video: 'https://www.youtube.com/watch?v=A6IfbTf06PU',
     description: [
       'Hero film for Booking.com\'s annual Traveller Review Awards, a global campaign celebrating the accommodation partners recognised by millions of traveller reviews across the platform. The campaign, titled "Where Hospitality Begins," positions the partners themselves as the subject of the film: the people behind the properties, the hospitality that earns the reviews, the work that keeps guests coming back. Multi-day shoot with full post-production.',
@@ -136,7 +136,7 @@ export const projects: Project[] = [
     year: 'Spring 2026',
     role: 'Producer',
     num: '07',
-    image: 'images/mcfc-ohana.webp',
+    image: 'images/mcfc-ohana.gif',
     video: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw',
     description: [
       'Launch film for Ohana Development\'s Manchester City-branded residential project in Abu Dhabi. The film features Manchester City players and blends live-action footage with 3D-rendered architectural environments and virtual production sequences, positioning the development within the global Manchester City brand.',
@@ -150,6 +150,7 @@ export const projects: Project[] = [
     year: 'Winter 2026',
     role: 'Writer / Director',
     num: '08',
+    image: 'images/dinner-diamonds-and-death.gif',
     description: [
       'Non-linear psychological thriller set in London\'s criminal underworld. Alexis receives a mysterious envelope that pulls her into a web of deceit involving Gary, a volatile criminal; Yvonne, his conflicted accomplice; and Hans, the criminal mastermind who also happens to be Alexis\'s mentor. The film\'s structure is intentionally fractured: the audience pieces together the puzzle alongside the characters, moving between timelines as alliances shift and betrayals surface.',
       'Shot across London, Gravesend, and Chadwell Heath. Co-directed with Marc. The film was conceived as a deliberate departure from the typical London skyline crime aesthetic. The story unfolds behind closed doors, in characters\' homes, where the danger follows you inside. Cinematic touchstones include the taut ensemble work of Sexy Beast and the kinetic energy of Lock, Stock and Two Smoking Barrels, filtered through something more intimate and claustrophobic.',
@@ -177,7 +178,7 @@ export const projects: Project[] = [
     year: 'Summer 2024',
     role: 'Writer / Co-Producer',
     num: '10',
-    image: 'images/aortic.webp',
+    image: 'images/aortic.gif',
     description: [
       'Short film. Nestled inside the broom closet of a quiet hospital, Jack musters the courage to leave a heartfelt voice note to an old friend. The film blurs the lines between past and present, moving between the comforting glow of nostalgia and the unyielding light of the here and now. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
       'Co-produced with Niamh Marie Smith. Shot in November 2023. Macauley Keeper plays Jack in the lead role.',
