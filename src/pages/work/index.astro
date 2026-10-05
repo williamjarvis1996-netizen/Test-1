@@ -38,9 +38,14 @@ const workListJsonLd: Record<string, unknown> = {
     })),
   },
 };
+
+const breadcrumbs = [
+  { name: 'Home', url: siteUrl },
+  { name: 'Projects', url: `${siteUrl}/work` },
+];
 ---
 
-<Base title="Projects | Will Jarvis" description="Selected projects by Will Jarvis spanning branded content for Hamilton Watches, Booking.com, Chelsea FC, and Manchester City FC, alongside short films, TV development, theatre, and digital media." jsonLd={workListJsonLd}>
+<Base title="Projects | Will Jarvis" description="Selected projects by Will Jarvis spanning branded content for Hamilton Watches, Booking.com, Chelsea FC, and Manchester City FC, alongside short films, TV development, theatre, and digital media." jsonLd={workListJsonLd} breadcrumbs={breadcrumbs}>
   <section class="work-page">
     <div class="work-header">
       <div class="container">

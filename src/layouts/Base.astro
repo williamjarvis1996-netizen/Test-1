@@ -1,14 +1,20 @@
 ---
+interface Breadcrumb {
+  name: string;
+  url: string;
+}
+
 interface Props {
   title: string;
   description?: string;
   image?: string;
   type?: 'website' | 'article';
   jsonLd?: Record<string, unknown>;
+  breadcrumbs?: Breadcrumb[];
 }
 
 const defaultDescription = 'Will Jarvis is a Creative Producer and Scriptwriter based in London. Branded content, film, TV development, theatre and immersive.';
-const { title, description: rawDescription = defaultDescription, image, type = 'website', jsonLd } = Astro.props;
+const { title, description: rawDescription = defaultDescription, image, type = 'website', jsonLd, breadcrumbs } = Astro.props;
 const description = rawDescription.length > 160 ? rawDescription.slice(0, 157).replace(/\s+\S*$/, '') + '...' : rawDescription;
 const base = import.meta.env.BASE_URL;
 const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
@@ -23,6 +29,18 @@ function resolveOgImage(img?: string): string {
   return new URL(img, siteUrl + '/').href;
 }
 const ogImage = resolveOgImage(image);
+const ogImageAlt = image ? title : 'Will Jarvis, Creative Producer and Scriptwriter';
+
+const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((crumb, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": crumb.name,
+    "item": crumb.url,
+  })),
+} : null;
 ---
 
 <!doctype html>
@@ -33,6 +51,8 @@ const ogImage = resolveOgImage(image);
     <meta name="description" content={description} />
     <meta name="author" content="Will Jarvis" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
     <title>{title}</title>
     <link rel="canonical" href={canonicalUrl} />
 
@@ -42,6 +62,7 @@ const ogImage = resolveOgImage(image);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta property="og:site_name" content="Will Jarvis" />
     <meta property="og:locale" content="en_GB" />
 
@@ -50,6 +71,7 @@ const ogImage = resolveOgImage(image);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -72,6 +94,10 @@ const ogImage = resolveOgImage(image);
 
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+
+    {breadcrumbJsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
     )}
 
     <script is:inline>try{const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch{}</script>

@@ -46,9 +46,15 @@ const projectJsonLd: Record<string, unknown> = {
     "award": project.awards,
   }),
 };
+
+const breadcrumbs = [
+  { name: 'Home', url: siteUrl },
+  { name: 'Projects', url: `${siteUrl}/work` },
+  { name: project.title, url: `${siteUrl}/work/${project.slug}` },
+];
 ---
 
-<Base title={`${project.title} | Will Jarvis`} description={project.description[0]} image={project.image} type="article" jsonLd={projectJsonLd}>
+<Base title={`${project.title} | Will Jarvis`} description={project.description[0]} image={project.image} type="article" jsonLd={projectJsonLd} breadcrumbs={breadcrumbs}>
   <article class="project-detail">
     <div class="detail-layout">
       <div class="detail-media">

@@ -26,9 +26,29 @@ const slugIndex = new Map(carouselOrder.map((s, i) => [s, i]));
 const featured = [...projects].sort((a, b) =>
   (slugIndex.get(a.slug) ?? 999) - (slugIndex.get(b.slug) ?? 999)
 );
+
+const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
+
+const homepageJsonLd: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Will Jarvis",
+  "url": siteUrl,
+  "description": "Will Jarvis is a London-based Creative Producer and Scriptwriter working across branded content, film, TV development, and theatre.",
+  "author": {
+    "@type": "Person",
+    "name": "Will Jarvis",
+    "jobTitle": "Creative Producer & Scriptwriter",
+    "url": siteUrl,
+  },
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: siteUrl },
+];
 ---
 
-<Base title="Will Jarvis | Creative Producer & Scriptwriter" description="Will Jarvis is a London-based Creative Producer and Scriptwriter working across branded content for Hamilton Watches, Booking.com, and Manchester City FC, alongside film, TV development, and theatre.">
+<Base title="Will Jarvis | Creative Producer & Scriptwriter" description="Will Jarvis is a London-based Creative Producer and Scriptwriter working across branded content for Hamilton Watches, Booking.com, and Manchester City FC, alongside film, TV development, and theatre." jsonLd={homepageJsonLd} breadcrumbs={breadcrumbs}>
   <section class="hero">
     <div class="hero-label hero-label-top animate-in" style="--delay: 0.1s">
       <span class="label-text">Based in London</span>

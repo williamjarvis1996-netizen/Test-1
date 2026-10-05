@@ -1,8 +1,32 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
+const contactJsonLd: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Will Jarvis",
+  "description": "Get in touch with Will Jarvis for branded content production, creative direction, scripted development, and freelance writing.",
+  "url": `${siteUrl}/contact`,
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Will Jarvis",
+    "email": "williamjarvis1996@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hackney, London",
+      "addressCountry": "GB",
+    },
+  },
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: siteUrl },
+  { name: 'Contact', url: `${siteUrl}/contact` },
+];
 ---
 
-<Base title="Contact | Will Jarvis" description="Get in touch with Will Jarvis for branded content production, creative direction, scripted development, and freelance writing. Based in Hackney, London.">
+<Base title="Contact | Will Jarvis" description="Get in touch with Will Jarvis for branded content production, creative direction, scripted development, and freelance writing. Based in Hackney, London." jsonLd={contactJsonLd} breadcrumbs={breadcrumbs}>
   <section class="contact-page">
     <div class="contact-layout">
       <div class="contact-left">

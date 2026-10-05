@@ -39,9 +39,14 @@ const aboutJsonLd: Record<string, unknown> = {
     ],
   },
 };
+
+const breadcrumbs = [
+  { name: 'Home', url: siteUrl },
+  { name: 'About', url: `${siteUrl}/about` },
+];
 ---
 
-<Base title="About | Will Jarvis" description="Creative Producer at RD Content and scriptwriter with projects in development with Netflix, ITV, and Fandango Productions. MA from Royal Central School of Speech and Drama." jsonLd={aboutJsonLd}>
+<Base title="About | Will Jarvis" description="Creative Producer at RD Content and scriptwriter with projects in development with Netflix, ITV, and Fandango Productions. MA from Royal Central School of Speech and Drama." jsonLd={aboutJsonLd} breadcrumbs={breadcrumbs}>
   <section class="about-hero">
     <div class="hero-name-bg" aria-hidden="true">
       <span>Will</span>
