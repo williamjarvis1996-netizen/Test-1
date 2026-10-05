@@ -77,11 +77,11 @@ const featured = [...projects].sort((a, b) =>
           <span class="foot-rule"></span>
           <span class="foot-copy">&copy;2026</span>
         </div>
-        <div class="hero-discipline animate-in" style="--delay: 0.5s">
+        <h2 class="hero-discipline animate-in" style="--delay: 0.5s">
           <span class="disc-line">Creative</span>
-          <span class="disc-line">Producer <span class="amp">&</span></span>
+          <span class="disc-line">Producer <span class="amp">&amp;</span></span>
           <span class="disc-line">Scriptwriter</span>
-        </div>
+        </h2>
       </div>
     </div>
   </section>
@@ -105,24 +105,24 @@ const featured = [...projects].sort((a, b) =>
 
   <section class="clients">
     <div class="container">
-      <p class="clients-label">Brands I've worked with</p>
-      <div class="clients-list">
-        <span class="reveal">Formula 1</span>
-        <span class="reveal">Manchester City FC</span>
-        <span class="reveal">Chelsea FC</span>
-        <span class="reveal">Booking.com</span>
-        <span class="reveal">Hamilton Watches</span>
-        <span class="reveal">Fora Travel</span>
-        <span class="reveal">DAMAC Properties</span>
-        <span class="reveal">Walt Disney</span>
-        <span class="reveal">Hilton Hotels</span>
-        <span class="reveal">Lonely Planet</span>
-        <span class="reveal">Netflix</span>
-        <span class="reveal">Culture Trip</span>
-        <span class="reveal">Amazon</span>
-        <span class="reveal">Cognizant</span>
-        <span class="reveal">Ares Management</span>
-      </div>
+      <h2 class="clients-label">Brands I've worked with</h2>
+      <ul class="clients-list" role="list">
+        <li class="reveal">Formula 1</li>
+        <li class="reveal">Manchester City FC</li>
+        <li class="reveal">Chelsea FC</li>
+        <li class="reveal">Booking.com</li>
+        <li class="reveal">Hamilton Watches</li>
+        <li class="reveal">Fora Travel</li>
+        <li class="reveal">DAMAC Properties</li>
+        <li class="reveal">Walt Disney</li>
+        <li class="reveal">Hilton Hotels</li>
+        <li class="reveal">Lonely Planet</li>
+        <li class="reveal">Netflix</li>
+        <li class="reveal">Culture Trip</li>
+        <li class="reveal">Amazon</li>
+        <li class="reveal">Cognizant</li>
+        <li class="reveal">Ares Management</li>
+      </ul>
     </div>
   </section>
 </Base>
@@ -364,6 +364,7 @@ const featured = [...projects].sort((a, b) =>
   .hero-discipline {
     text-align: right;
     line-height: 0.9;
+    margin: 0;
   }
 
   .disc-line {
@@ -419,6 +420,7 @@ const featured = [...projects].sort((a, b) =>
     margin-bottom: var(--space-md);
     text-align: center;
     font-weight: 600;
+    font-family: var(--font-body);
   }
 
   .clients-list {
@@ -429,9 +431,10 @@ const featured = [...projects].sort((a, b) =>
     gap: 0;
     max-width: 900px;
     margin: 0 auto;
+    list-style: none;
   }
 
-  .clients-list span {
+  .clients-list li {
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -442,7 +445,7 @@ const featured = [...projects].sort((a, b) =>
     transition: opacity 0.3s ease;
   }
 
-  .clients-list span:hover {
+  .clients-list li:hover {
     opacity: 0.8;
   }
 
@@ -581,7 +584,7 @@ const featured = [...projects].sort((a, b) =>
       gap: 0;
     }
 
-    .clients-list span {
+    .clients-list li {
       font-size: 0.6875rem;
       padding: 0.375rem 0.5rem;
     }

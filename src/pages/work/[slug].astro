@@ -116,7 +116,7 @@ const projectJsonLd: Record<string, unknown> = {
 
         {project.awards && project.awards.length > 0 && (
           <div class="detail-awards animate-in" style="--delay: 0.5s">
-            <h3>Recognition</h3>
+            <h2>Recognition</h2>
             <ul>
               {project.awards.map((award) => <li>{award}</li>)}
             </ul>
@@ -304,13 +304,14 @@ const projectJsonLd: Record<string, unknown> = {
     padding-top: var(--space-sm);
   }
 
-  .detail-awards h3 {
+  .detail-awards h2 {
     font-size: 0.5625rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     color: var(--color-fg-muted);
     margin-bottom: var(--space-xs);
     font-weight: 600;
+    font-family: var(--font-body);
   }
 
   .detail-awards ul {

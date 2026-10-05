@@ -19,9 +19,28 @@ const grouped = categoryOrder.map(cat => ({
     .filter(p => p.category === cat)
     .sort((a, b) => yearScore(b.year) - yearScore(a.year)),
 })).filter(g => g.items.length > 0);
+
+const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
+const workListJsonLd: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Projects by Will Jarvis",
+  "description": "Selected projects by Will Jarvis spanning branded content, short films, TV development, theatre, and digital media.",
+  "url": `${siteUrl}/work`,
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": projects.length,
+    "itemListElement": projects.map((p, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `${siteUrl}/work/${p.slug}`,
+      "name": p.title,
+    })),
+  },
+};
 ---
 
-<Base title="Projects | Will Jarvis" description="Selected projects by Will Jarvis spanning branded content for Hamilton Watches, Booking.com, Chelsea FC, and Manchester City FC, alongside short films, TV development, theatre, and digital media.">
+<Base title="Projects | Will Jarvis" description="Selected projects by Will Jarvis spanning branded content for Hamilton Watches, Booking.com, Chelsea FC, and Manchester City FC, alongside short films, TV development, theatre, and digital media." jsonLd={workListJsonLd}>
   <section class="work-page">
     <div class="work-header">
       <div class="container">

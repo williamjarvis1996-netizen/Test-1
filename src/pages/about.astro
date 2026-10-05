@@ -1,9 +1,47 @@
 ---
 import Base from '../layouts/Base.astro';
 const base = import.meta.env.BASE_URL;
+
+const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
+const aboutJsonLd: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Will Jarvis",
+    "url": siteUrl,
+    "image": `${siteUrl}/images/portrait.webp`,
+    "jobTitle": "Creative Producer & Scriptwriter",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "RD Content",
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "London",
+      "addressCountry": "GB",
+    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Royal Central School of Speech and Drama",
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "University of Exeter",
+      },
+    ],
+    "knowsAbout": ["Branded Content", "Film Production", "Scriptwriting", "TV Development", "Theatre"],
+    "sameAs": [
+      "https://www.imdb.com/name/nm15210832/",
+      "https://www.linkedin.com/in/will-t-jarvis/",
+      "https://www.instagram.com/willjarvis1996/",
+    ],
+  },
+};
 ---
 
-<Base title="About | Will Jarvis" description="Creative Producer at RD Content and scriptwriter with projects in development with Netflix, ITV, and Fandango Productions. MA from Royal Central School of Speech and Drama.">
+<Base title="About | Will Jarvis" description="Creative Producer at RD Content and scriptwriter with projects in development with Netflix, ITV, and Fandango Productions. MA from Royal Central School of Speech and Drama." jsonLd={aboutJsonLd}>
   <section class="about-hero">
     <div class="hero-name-bg" aria-hidden="true">
       <span>Will</span>
@@ -12,11 +50,11 @@ const base = import.meta.env.BASE_URL;
 
     <div class="hero-content">
       <div class="hero-photo animate-in" style="--delay: 0.2s">
-        <img src={`${base}/images/portrait.webp`} alt="Will Jarvis" class="portrait" />
+        <img src={`${base}/images/portrait.webp`} alt="Will Jarvis, Creative Producer and Scriptwriter based in London" class="portrait" />
       </div>
 
       <div class="hero-intro animate-in" style="--delay: 0.35s">
-        <p class="intro-headline">Creative Producer & Scriptwriter</p>
+        <h1 class="intro-headline">Creative Producer & Scriptwriter</h1>
         <p class="intro-location">Hackney, London</p>
         <p class="intro-tagline">
           Story-first producer and writer, working across branded content,
@@ -34,7 +72,7 @@ const base = import.meta.env.BASE_URL;
         </div>
         <div class="bio-text animate-in" style="--delay: 0.45s">
           <div class="bio-block">
-            <h4 class="bio-subhead">Production</h4>
+            <h3 class="bio-subhead">Production</h3>
             <p>
               Creative Producer at RD Content, a global branded content agency and
               Cannes Production Company of the Year. Leads end-to-end production
@@ -50,7 +88,7 @@ const base = import.meta.env.BASE_URL;
             </p>
           </div>
           <div class="bio-block">
-            <h4 class="bio-subhead">Writing</h4>
+            <h3 class="bio-subhead">Writing</h3>
             <p>
               Co-created Break A Leg (dark comedy thriller, in development with
               Netflix, ITV, and Hager Moss) and Brain Drain (apocalyptic adventure
@@ -63,7 +101,7 @@ const base = import.meta.env.BASE_URL;
             </p>
           </div>
           <div class="bio-block">
-            <h4 class="bio-subhead">Theatre & Independent</h4>
+            <h3 class="bio-subhead">Theatre & Independent</h3>
             <p>
               Co-founded Distracted Rat Productions in 2019. Wrote and directed the
               sold-out play The Clockwork Arms, produced The Emoji Project at Camden
@@ -79,7 +117,7 @@ const base = import.meta.env.BASE_URL;
     <div class="container">
       <div class="details-grid">
         <div class="detail-col animate-in" style="--delay: 0.5s">
-          <h3>Education</h3>
+          <h2>Education</h2>
           <div class="detail-item">
             <strong>Royal Central School of Speech & Drama</strong>
             <span>MA Writing for Stage & Broadcast Media, High Merit</span>
@@ -92,7 +130,7 @@ const base = import.meta.env.BASE_URL;
         </div>
 
         <div class="detail-col animate-in" style="--delay: 0.55s">
-          <h3>Recognition</h3>
+          <h2>Recognition</h2>
           <ul class="recognition-list">
             <li>Cannes Corporate Media & TV Awards 2026 (Hamilton Power Up, Booking.com TRA)</li>
             <li>MUSE Awards 2026: three Platinum, one Gold (Booking.com TRA)</li>
@@ -102,7 +140,7 @@ const base = import.meta.env.BASE_URL;
         </div>
 
         <div class="detail-col animate-in" style="--delay: 0.6s">
-          <h3>Links</h3>
+          <h2>Links</h2>
           <ul class="links-list">
             <li><a href="https://www.imdb.com/name/nm15210832/" target="_blank" rel="noopener">IMDb &rarr;</a></li>
             <li><a href="https://www.linkedin.com/in/will-t-jarvis/" target="_blank" rel="noopener">LinkedIn &rarr;</a></li>
@@ -192,6 +230,7 @@ const base = import.meta.env.BASE_URL;
     line-height: 1;
     letter-spacing: -0.02em;
     color: var(--color-fg);
+    margin: 0;
   }
 
   .intro-location {
@@ -270,7 +309,7 @@ const base = import.meta.env.BASE_URL;
     gap: var(--space-lg);
   }
 
-  .detail-col h3 {
+  .detail-col h2 {
     font-size: 0.625rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
