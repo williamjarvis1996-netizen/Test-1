@@ -20,7 +20,7 @@ const idx = projects.findIndex((p) => p.slug === project.slug);
 const next = projects[(idx + 1) % projects.length];
 ---
 
-<Base title={`${project.title} | Will Jarvis`} description={project.description[0]}>
+<Base title={`${project.title} | Will Jarvis`} description={project.description[0]} image={project.image} type="article">
   <article class="project-detail">
     <div class="detail-layout">
       <div class="detail-media">

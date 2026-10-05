@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://williamjarvis1996-netizen.github.io/Test-1/sitemap-index.xml
