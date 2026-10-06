@@ -47,7 +47,7 @@ const projectJsonLd: Record<string, unknown> = {
     "award": project.awards,
   }),
   ...(project.keywords && project.keywords.length > 0 && {
-    "keywords": project.keywords.join(', '),
+    "keywords": allKeywords.join(', '),
   }),
   ...(project.details && project.details.length > 0 && {
     "additionalProperty": project.details.map(d => ({
