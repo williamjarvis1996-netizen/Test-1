@@ -1,6 +1,5 @@
 ---
 import Base from '../layouts/Base.astro';
-const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="Atlas | Will Jarvis" description="An interactive map charting the locations behind Will Jarvis's production work, from London to Abu Dhabi. Coming soon.">
@@ -77,7 +76,7 @@ const base = import.meta.env.BASE_URL;
       <div class="atlas-desc animate-in" style="--delay: 0.45s">
         <p>An interactive map to chart everywhere you've been.</p>
       </div>
-      <a href={base} class="atlas-back animate-in" style="--delay: 0.55s">&larr; Back to portfolio</a>
+      <a href="/" class="atlas-back animate-in" style="--delay: 0.55s">&larr; Back to portfolio</a>
     </div>
   </section>
 </Base>

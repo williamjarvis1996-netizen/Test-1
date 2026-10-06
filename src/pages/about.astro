@@ -1,8 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-const base = import.meta.env.BASE_URL;
-
-const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
+const siteUrl = 'https://willjarvis.co';
 const aboutJsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
@@ -55,7 +53,7 @@ const breadcrumbs = [
 
     <div class="hero-content">
       <div class="hero-photo animate-in" style="--delay: 0.2s">
-        <img src={`${base}/images/portrait.webp`} alt="Will Jarvis, Creative Producer and Scriptwriter based in London" class="portrait" />
+        <img src="/images/portrait.webp" alt="Will Jarvis, Creative Producer and Scriptwriter based in London" class="portrait" />
       </div>
 
       <div class="hero-intro animate-in" style="--delay: 0.35s">
@@ -170,7 +168,7 @@ const breadcrumbs = [
 
   <section class="cta">
     <div class="container">
-      <a href={`${base}/contact`} class="cta-link animate-in" style="--delay: 0s">
+      <a href="/contact" class="cta-link animate-in" style="--delay: 0s">
         <span>Let's work together</span>
         <span class="cta-arrow">&rarr;</span>
       </a>

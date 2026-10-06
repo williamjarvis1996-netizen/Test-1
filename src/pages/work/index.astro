@@ -2,8 +2,6 @@
 import Base from '../../layouts/Base.astro';
 import { projects, categories } from '../../content/projects';
 
-const base = import.meta.env.BASE_URL;
-
 const seasonVal: Record<string, number> = { Spring: 0, Summer: 1, Autumn: 2, Winter: 3 };
 function yearScore(y: string): number {
   if (y.includes('-')) return parseInt(y.split('-')[1]) * 10 + 9;
@@ -20,7 +18,7 @@ const grouped = categoryOrder.map(cat => ({
     .sort((a, b) => yearScore(b.year) - yearScore(a.year)),
 })).filter(g => g.items.length > 0);
 
-const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
+const siteUrl = 'https://willjarvis.co';
 const workListJsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -65,10 +63,10 @@ const breadcrumbs = [
           </div>
           <div class="project-grid">
             {group.items.map((project) => (
-              <a href={`${base}/work/${project.slug}`} class={`project-card ${project.wide ? 'card-wide' : ''}`}>
+              <a href={`/work/${project.slug}`} class={`project-card ${project.wide ? 'card-wide' : ''}`}>
                 <div class="card-img">
                   {project.image ? (
-                    <img src={`${base}/${project.image}`} alt={project.title} class="card-photo" loading="lazy" />
+                    <img src={`/${project.image}`} alt={project.title} class="card-photo" loading="lazy" />
                   ) : (
                     <span class="card-num">{project.num}</span>
                   )}

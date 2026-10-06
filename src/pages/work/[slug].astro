@@ -14,8 +14,7 @@ interface Props {
   project: Project;
 }
 
-const base = import.meta.env.BASE_URL;
-const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
+const siteUrl = 'https://willjarvis.co';
 const { project } = Astro.props;
 
 const seasonVal: Record<string, number> = { Spring: 0, Summer: 1, Autumn: 2, Winter: 3 };
@@ -81,7 +80,7 @@ const breadcrumbs = [
       <div class="detail-media">
         <div class="media-placeholder animate-in" style="--delay: 0.2s">
           {project.image ? (
-            <img src={`${base}/${project.image}`} alt={project.title} class="media-photo" />
+            <img src={`/${project.image}`} alt={project.title} class="media-photo" />
           ) : (
             <span class="media-num">{project.num}</span>
           )}
@@ -94,7 +93,7 @@ const breadcrumbs = [
       </div>
 
       <div class="detail-content">
-        <a href={`${base}/work`} class="back-btn animate-in" style="--delay: 0.1s">
+        <a href="/work" class="back-btn animate-in" style="--delay: 0.1s">
           <span class="back-arrow">&larr;</span>
           <span>Back</span>
         </a>
@@ -154,7 +153,7 @@ const breadcrumbs = [
         )}
 
         <nav class="detail-next animate-in" style="--delay: 0.55s">
-          <a href={`${base}/work/${next.slug}`} class="next-link">
+          <a href={`/work/${next.slug}`} class="next-link">
             <span class="next-label">Next</span>
             <span class="next-title">{next.title} &rarr;</span>
           </a>
