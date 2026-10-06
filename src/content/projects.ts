@@ -151,13 +151,13 @@ export const projects: Project[] = [
       { url: 'https://www.youtube.com/watch?v=DmxP4WeiiHs', label: 'Watch Skydiving' },
     ],
     details: [
-      { key: 'Players', value: 'Cole Palmer, Moises Caicedo, Wesley Fofana, Trevoh Chalobah, Jorrel Hato, Filip Jorgensen' },
+      { key: 'Players', value: 'Cole Palmer, Enzo Fernandez, Moises Caicedo, Wesley Fofana, Trevoh Chalobah' },
       { key: 'VFX', value: 'FocusFrame' },
       { key: 'Location', value: 'Studio shoot, London' },
     ],
-    keywords: ['Chelsea FC', 'DAMAC Properties', 'Chelsea Residences', 'Matchday in the Sky', 'Metaverse', 'Cole Palmer', 'Moises Caicedo', 'Wesley Fofana', 'Trevoh Chalobah', 'Jorrel Hato', 'Filip Jorgensen', 'branded content', 'football', 'Premier League', 'FocusFrame', 'VFX', 'green screen', 'skydiving', 'VR', 'Dubai', 'RD Content', 'Will Jarvis'],
+    keywords: ['Chelsea FC', 'DAMAC Properties', 'Chelsea Residences', 'Matchday in the Sky', 'Metaverse', 'Cole Palmer', 'Enzo Fernandez', 'Moises Caicedo', 'Wesley Fofana', 'Trevoh Chalobah', 'branded content', 'football', 'Premier League', 'FocusFrame', 'VFX', 'green screen', 'skydiving', 'VR', 'Dubai', 'RD Content', 'Will Jarvis'],
     description: [
-      'Three ads for Chelsea Residences by DAMAC Properties: the hero spot "Matchday in the Sky" and two "Metaverse" comedy films featuring Chelsea FC players Cole Palmer, Moises Caicedo, Wesley Fofana, Trevoh Chalobah, Jorrel Hato, and Filip Jorgensen. A campaign built around a floating pitch concept, skydiving sequences, and VR locker room comedy.',
+      'Three ads for Chelsea Residences by DAMAC Properties: the hero spot "Matchday in the Sky" and two "Metaverse" comedy films featuring Chelsea FC players Cole Palmer, Enzo Fernandez, Moises Caicedo, Wesley Fofana, and Trevoh Chalobah. A campaign built around a floating pitch concept, skydiving sequences, and VR locker room comedy.',
       'Producing at RD Content, Will ran a two-day studio shoot with two units operating simultaneously. One built the Matchday platform sequences with football-talented body doubles while the other shot green-screen for the Metaverse films. He managed tight talent windows, with Chelsea FC players available for just 15 minutes each.',
       'VFX coordinated with FocusFrame. Final campaign delivered to DAMAC across multiple formats.',
     ],
