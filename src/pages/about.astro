@@ -31,7 +31,7 @@ const aboutJsonLd: Record<string, unknown> = {
         "name": "University of Exeter",
       },
     ],
-    "knowsAbout": ["Branded Content", "Film Production", "Scriptwriting", "TV Development", "Theatre"],
+    "knowsAbout": ["Branded Content", "Film Production", "Scriptwriting", "TV Development", "Theatre", "Creative Writing"],
     "sameAs": [
       "https://www.imdb.com/name/nm15210832/",
       "https://www.linkedin.com/in/will-t-jarvis/",
@@ -96,9 +96,16 @@ const breadcrumbs = [
           <div class="bio-block">
             <h3 class="bio-subhead">Writing</h3>
             <p>
-              Co-created Break A Leg (dark comedy thriller, in development with
-              Netflix, ITV, and Hager Moss) and Brain Drain (apocalyptic adventure
-              comedy, optioned by Fandango Productions).
+              Trained at the Royal Central School of Speech and Drama (MA Writing
+              for Stage & Broadcast Media) and selected for the
+              <a href="https://www.londonlibrary.co.uk/explore-library/emerging-writers-programme" target="_blank" rel="noopener" class="bio-link">London Library Emerging Writers Programme 2025</a>,
+              one of 40 writers chosen from nearly 2,000 applicants.
+            </p>
+            <p>
+              Created Break A Leg (dark comedy thriller, in development with
+              Netflix, ITV, and Hager Moss) and wrote Brain Drain (apocalyptic
+              adventure comedy, optioned by Fandango Productions), both with the
+              writing collective GGG.
             </p>
             <p>
               Wrote and directed short film Dinner, Diamonds and Death, targeting
@@ -110,8 +117,8 @@ const breadcrumbs = [
             <h3 class="bio-subhead">Theatre & Independent</h3>
             <p>
               Co-founded Distracted Rat Productions in 2019. Wrote and directed the
-              sold-out play The Clockwork Arms, produced The Emoji Project at Camden
-              Fringe, and created Remote Radioplays during lockdown.
+              sold-out play The Clockwork Arms and produced The Emoji Project at
+              Camden Fringe.
             </p>
           </div>
         </div>
@@ -141,7 +148,7 @@ const breadcrumbs = [
             <li>MUSE Awards 2026: three Platinum, one Gold (Booking.com Traveller Review Awards)</li>
             <li>Cannes Corporate Media & TV Awards 2026 (Hamilton Power Up, Booking.com TRA)</li>
             <li>Jury Award for Best Performance, Rob Knox London Film Festival 2025 (Aortic)</li>
-            <li>London Library Emerging Writer</li>
+            <li><a href="https://www.londonlibrary.co.uk/explore-library/emerging-writers-programme" target="_blank" rel="noopener" class="recognition-link">London Library Emerging Writers Programme 2025</a></li>
           </ul>
         </div>
 
@@ -302,6 +309,20 @@ const breadcrumbs = [
     font-size: 0.9375rem;
     line-height: 1.8;
     color: var(--color-fg);
+  }
+
+  .bio-link {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  .recognition-link {
+    color: var(--color-fg);
+    font-weight: 500;
+  }
+
+  .recognition-link:hover {
+    color: var(--color-accent);
   }
 
   .about-details {
