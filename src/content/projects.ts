@@ -46,10 +46,10 @@ export const projects: Project[] = [
       { key: 'DOP', value: 'James Parsons' },
       { key: 'Location', value: 'Hertfordshire' },
     ],
-    keywords: ['Hamilton Watches', 'festive campaign', 'Christmas', 'branded content', 'watch film', 'slow motion', 'match-cut transitions', 'Hertfordshire', 'high-speed cameras', 'luxury watches', 'Bailey Smith', 'James Parsons', 'Will Jarvis'],
+    keywords: ['Hamilton Watches', 'festive campaign', 'Christmas', 'branded content', 'watch film', 'slow motion', 'match-cut transitions', 'Hertfordshire', 'high-speed cameras', 'luxury watches', 'Bailey Smith', 'James Parsons', 'RD Content', 'Will Jarvis'],
     description: [
       'Festive campaign for Hamilton Watches built around the chaos of Christmas Eve. Three overlapping storylines, each anchored by a different watch, stitched together with match-cut transitions and shot on high-speed cameras for slow-motion hero moments.',
-      'Will produced from concept through delivery, collaborating with director Bailey Smith and DOP James Parsons. He ran a three-day shoot at a manor house in Hertfordshire with two camera units plus a social unit operating simultaneously, managing talent, locations, and the client relationship across multiple approval rounds.',
+      'Producing at RD Content, Will led the project from concept through delivery, collaborating with director Bailey Smith and DOP James Parsons. He ran a three-day shoot at a manor house in Hertfordshire with two camera units plus a social unit operating simultaneously, managing talent, locations, and the client relationship across multiple approval rounds.',
       'Delivered five films with full motion graphics, sound design, and colour grade. The top-down, locked-on-the-wrist visual language established here became the foundation for Hamilton\'s branded content direction.',
     ],
     featured: true,
@@ -73,10 +73,10 @@ export const projects: Project[] = [
       { key: 'Director', value: 'Ron Mulvey' },
       { key: 'DOP', value: 'Angus Steele' },
     ],
-    keywords: ['Hamilton Watches', 'Khaki Field Bronze', 'Khaki Field King', 'Khaki Field Power Reserve', 'Into the Wild', 'Ron Mulvey', 'Angus Steele', 'Wales', 'branded content', 'watch film', 'outdoor', 'adventure', 'Will Jarvis'],
+    keywords: ['Hamilton Watches', 'Khaki Field Bronze', 'Khaki Field King', 'Khaki Field Power Reserve', 'Into the Wild', 'Ron Mulvey', 'Angus Steele', 'Wales', 'branded content', 'watch film', 'outdoor', 'adventure', 'RD Content', 'Will Jarvis'],
     description: [
       'Three-part branded series for three different Hamilton Watches, leaning into the company\'s adventurous heritage and their identity as an outdoor tool built for rough terrain. Shot across rural Wales with a visual language rooted in natural light and rugged countryside.',
-      'Will produced the series alongside director Ron Mulvey, managing a three-day location shoot across remote Welsh countryside. He worked closely with DOP Angus Steele to shape a visual approach that matched the Khaki Field\'s character.',
+      'Producing at RD Content, Will led the series alongside director Ron Mulvey, managing a three-day location shoot across remote Welsh countryside. He worked closely with DOP Angus Steele to shape a visual approach that matched the Khaki Field\'s character.',
       'Delivered as a three-film series to Hamilton with full post-production managed through to sign-off.',
     ],
     featured: true,
@@ -96,10 +96,10 @@ export const projects: Project[] = [
       { key: 'Director', value: 'Ron Mulvey' },
       { key: 'Shooting Producer', value: 'Will Newton' },
     ],
-    keywords: ['Hamilton Watches', 'Power Reserve Mechanical 40mm', 'Khaki Field Titanium', 'Ron Mulvey', 'Will Newton', 'Cannes Corporate Media Awards', 'Lens Awards', 'branded content', 'watch film', 'power reserve', 'Will Jarvis'],
+    keywords: ['Hamilton Watches', 'Power Reserve Mechanical 40mm', 'Khaki Field Titanium', 'Ron Mulvey', 'Will Newton', 'Cannes Corporate Media Awards', 'Lens Awards', 'branded content', 'watch film', 'power reserve', 'RD Content', 'Will Jarvis'],
     description: [
       'Launch film for the Hamilton Power Reserve Mechanical 40mm, built around the watch\'s power reserve indicator shown directly on the dial. Introduced the top-down, locked-on-the-wrist visual language that became a signature of Hamilton Watches\' branded content.',
-      'Will managed post-production, overseeing the edit, colour grade, sound design, and motion graphics pipeline. He worked with the director to build the film\'s energy metaphor around the power reserve concept. Worked with shooting producer Will Newton alongside the director Ron Mulvey.',
+      'Working as Creative Producer at RD Content, Will managed post-production, overseeing the edit, colour grade, sound design, and motion graphics pipeline. He worked with shooting producer Will Newton and director Ron Mulvey to build the film\'s energy metaphor around the power reserve concept.',
       'Winner at the Cannes Corporate Media & TV Awards 2026. Submitted for the Lens Awards under Best Creative Execution. The visual language established here carried directly into the later festive campaign.',
     ],
     awards: [
@@ -128,10 +128,10 @@ export const projects: Project[] = [
       { key: 'Editor', value: 'Ravi Chauhan' },
       { key: 'Locations', value: 'London, Palermo (Villa Igiea, Teatro Massimo, Capo Market, Piazza Bellini, San Saverio)' },
     ],
-    keywords: ['Fora Travel', 'Fora at Five', 'fifth anniversary', 'Sam McMullen', 'Ewan Thomas', 'James Parsons', 'Ravi Chauhan', 'Palermo', 'Villa Igiea', 'Teatro Massimo', 'Capo Market', 'travel advisor', 'branded content', 'London', 'Will Jarvis'],
+    keywords: ['Fora Travel', 'Fora at Five', 'fifth anniversary', 'Sam McMullen', 'Ewan Thomas', 'James Parsons', 'Ravi Chauhan', 'Palermo', 'Sicily', 'Villa Igiea', 'Teatro Massimo', 'Capo Market', 'travel advisor', 'branded content', 'London', 'RD Content', 'Will Jarvis'],
     description: [
       'Hero brand film marking Fora Travel\'s fifth anniversary, telling the story of a family returning to Palermo for a 50th wedding anniversary curated by their Fora travel advisor. Shot across two countries at locations including Villa Igiea, Teatro Massimo, Capo Market, Piazza Bellini, and San Saverio church.',
-      'Will produced the film end to end, coordinating London studio shoots for the advisor sequences and three days of location work across Palermo in Sicily with a London and local crew. He worked with director Sam McMullen and DOP James Parsons.',
+      'Producing at RD Content, Will led the film end to end, coordinating London studio shoots for the advisor sequences and three days of location work across Palermo in Sicily with a London and local crew. He worked with director Sam McMullen and DOP James Parsons.',
       'Delivered to Fora as their hero brand film, with full post-production including a split-screen VFX sequence managed through to final delivery. Will has since produced further work for Fora, including their UK introductory film for new Fora advisors entering the British market.',
     ],
     featured: true,
@@ -148,7 +148,7 @@ export const projects: Project[] = [
     links: [{ url: 'https://www.youtube.com/watch?v=5o_azlXU-xc', label: 'Watch' }],
     description: [
       'Three ads for Chelsea Residences by DAMAC Properties: the hero spot "Matchday in the Sky" and two "Metaverse" comedy films featuring Chelsea FC players. A campaign built around a floating pitch concept, skydiving sequences, and VR locker room comedy.',
-      'Will produced a two-day studio shoot with two units operating simultaneously. One built the Matchday platform sequences with football-talented body doubles while the other shot green-screen for the Metaverse films. He managed tight talent windows, with Chelsea FC players available for just 15 minutes each.',
+      'Producing at RD Content, Will ran a two-day studio shoot with two units operating simultaneously. One built the Matchday platform sequences with football-talented body doubles while the other shot green-screen for the Metaverse films. He managed tight talent windows, with Chelsea FC players available for just 15 minutes each.',
       'VFX coordinated with FocusFrame. Final campaign delivered to DAMAC across multiple formats.',
     ],
   },
@@ -165,7 +165,7 @@ export const projects: Project[] = [
     links: [{ url: 'https://www.youtube.com/watch?v=A6IfbTf06PU', label: 'Watch' }],
     description: [
       'Booking.com\'s 14th annual Traveller Review Awards campaign, celebrating 1.81 million partners across 221 countries. The hero film, "Where Hospitality Begins," moved the campaign toward human storytelling with real award-winning partners rather than professional talent.',
-      'Will co-produced and served as 1st AD, managing the shoot schedule and floor on set across multiple locations with real contributors. He helped shape the campaign\'s channel strategy and deliverables.',
+      'Working at RD Content, Will co-produced and served as 1st AD, managing the shoot schedule and floor on set across multiple locations with real contributors. He helped shape the campaign\'s channel strategy and deliverables.',
       'Delivered a hero film, social-native content, a stills campaign, and owned-channel creative. Winner at the Cannes Corporate Media & TV Awards 2026 and four MUSE Awards including three Platinum. Submitted for the Lens Awards 2026 under Hospitality.',
     ],
     awards: [
@@ -187,7 +187,7 @@ export const projects: Project[] = [
     links: [{ url: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw', label: 'Watch' }],
     description: [
       'Launch film for Manchester City Yas Residences by Ohana, a $4.1 billion waterfront development in Abu Dhabi. Blends live-action footage of Manchester City players with 3D-rendered architectural environments to sell a residential project that hadn\'t yet been built.',
-      'Will produced across three phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and a virtual production day on an LED volume stage. He coordinated player availability, crew across two countries, and the compositing of 3D renders into the final film.',
+      'Producing at RD Content, Will led the project across three phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and a virtual production day on an LED volume stage. He coordinated player availability, crew across two countries, and the compositing of 3D renders into the final film.',
       'The finished film positioned the development within the global Manchester City brand, bridging real and virtual environments for the launch campaign.',
     ],
   },
