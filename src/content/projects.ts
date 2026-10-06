@@ -363,6 +363,13 @@ export const projects: Project[] = [
     role: 'Head of Content & Production',
     num: '16',
     image: 'images/vidi-guides.webp',
+    links: [{ url: 'https://www.vidiguides.com/', label: 'Visit Vidi Guides' }],
+    details: [
+      { key: 'Scale', value: '100+ tours across 17 cities in 7 countries' },
+      { key: 'Clients', value: 'Walt Disney, Hilton Hotels, Lonely Planet, Culture Trip' },
+      { key: 'Cities', value: 'London, Paris, Cambridge, Oxford, Edinburgh, New York, Singapore, Rome, Venice' },
+      { key: 'Format', value: 'GPS-triggered audio walking tours' },
+    ],
     keywords: ['Vidi Guides', 'audio tours', 'walking tours', 'GPS', 'Walt Disney', 'Hilton Hotels', 'Lonely Planet', 'Culture Trip', 'London', 'Paris', 'New York', 'travel', 'content production', 'digital media'],
     description: [
       '100+ GPS-triggered audio walking tours across 17 cities and 7 countries, produced over four years at Vidi Guides. Cities included London, Paris, Cambridge, Oxford, Edinburgh, New York, Singapore, Rome, and Venice.',
