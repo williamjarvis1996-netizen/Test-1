@@ -17,8 +17,16 @@ interface Props {
 const base = import.meta.env.BASE_URL;
 const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
 const { project } = Astro.props;
-const idx = projects.findIndex((p) => p.slug === project.slug);
-const next = projects[(idx + 1) % projects.length];
+
+const seasonVal: Record<string, number> = { Spring: 0, Summer: 1, Autumn: 2, Winter: 3 };
+function yearScore(y: string): number {
+  if (y.includes('-')) return parseInt(y.split('-')[1]) * 10 + 9;
+  const [s, yr] = y.split(' ');
+  return parseInt(yr) * 10 + (seasonVal[s] ?? 0);
+}
+const sorted = [...projects].sort((a, b) => yearScore(b.year) - yearScore(a.year));
+const idx = sorted.findIndex((p) => p.slug === project.slug);
+const next = sorted[(idx + 1) % sorted.length];
 
 const categoryToGenre: Record<string, string> = {
   branded: 'Branded Content',
