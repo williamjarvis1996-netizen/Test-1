@@ -112,12 +112,6 @@ const breadcrumbs = [
             <span class="meta-key">Category</span>
             <span class="meta-value">{categories[project.category]}</span>
           </div>
-          {project.details && project.details.map((d) => (
-            <div class="meta-row">
-              <span class="meta-key">{d.key}</span>
-              <span class="meta-value">{d.value}</span>
-            </div>
-          ))}
         </div>
 
         <div class="detail-body animate-in" style="--delay: 0.4s">
