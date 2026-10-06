@@ -58,6 +58,9 @@ const projectJsonLd: Record<string, unknown> = {
   }),
 };
 
+const baseKeywords = ['Will Jarvis', 'William Jarvis', 'Creative Producer', 'Creative Producer London', 'Scriptwriter', 'Film Producer London', 'Branded Content Producer', 'Commercial Producer London', 'TV', 'film', 'branded content'];
+const allKeywords = [...(project.keywords || []), ...baseKeywords.filter(k => !(project.keywords || []).includes(k))];
+
 const breadcrumbs = [
   { name: 'Home', url: siteUrl },
   { name: 'Work', url: `${siteUrl}/work` },
@@ -65,7 +68,7 @@ const breadcrumbs = [
 ];
 ---
 
-<Base title={`${project.title} | Will Jarvis`} description={project.description[0]} image={project.image} type="article" jsonLd={projectJsonLd} breadcrumbs={breadcrumbs} keywords={project.keywords}>
+<Base title={`${project.title} | Will Jarvis`} description={project.description[0]} image={project.image} type="article" jsonLd={projectJsonLd} breadcrumbs={breadcrumbs} keywords={allKeywords}>
   <article class="project-detail">
     <div class="detail-layout">
       <div class="detail-media">

@@ -206,6 +206,7 @@ export const projects: Project[] = [
     num: '07',
     image: 'images/mcfc-ohana.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw', label: 'Watch' }],
+    keywords: ['Manchester City FC', 'Ohana', 'Yas Residences', 'Yas Island', 'Abu Dhabi', 'MCFC', 'branded content', '3D render', 'live action', 'football', 'Premier League', 'RD Content'],
     description: [
       'Launch film for Manchester City Yas Residences by Ohana, a $4.1 billion waterfront development in Abu Dhabi. Blends live-action footage of Manchester City players with 3D-rendered environments, inviting viewers to explore Ohana\'s new waterfront residences on Yas Island.',
       'Producing at RD Content, Will led the project across three phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and oversight of 3D-rendered assets. He coordinated player availability, crew across two countries, and the compositing of 3D renders into the final film.',
@@ -250,6 +251,7 @@ export const projects: Project[] = [
     role: 'Script Editor & Script Supervisor',
     num: '09',
     image: 'images/steaks.gif',
+    keywords: ['Steaks', 'comedy short', 'short film', 'Abi Clark', 'Jake Bhardwaj', 'Ste Hinde', 'script editor', 'script supervisor', 'London', 'British film'],
     description: [
       'Comedy short starring Abi Clark and Jake Bhardwaj, directed by Ste Hinde, whose credits span branded content for Google, Apple, Pepsi, and Barclays, with comedy shorts screened at London Independent Film Festival and Barnes Film Festival.',
       'Will served as script editor and script supervisor. He worked with Ste to tighten the comedy and sharpen the story structure, then tracked continuity on set across dialogue, props, and blocking.',
@@ -265,6 +267,7 @@ export const projects: Project[] = [
     num: '10',
     image: 'images/aortic.gif',
     links: [{ url: 'https://www.imdb.com/title/tt28815002/', label: 'View on IMDb' }],
+    keywords: ['Aortic', 'short film', 'Macauley Keeper', 'Niamh Marie Smith', 'Rob Knox Film Festival', 'Best Performance', 'drama', 'British film', 'London', 'screenwriter'],
     description: [
       'Short film about a man who retreats to a hospital broom closet to leave a voice note to an old friend. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
       'Will wrote the screenplay and co-produced, bringing it to director Niamh Marie Smith. Shot in November 2023 with Macauley Keeper in the lead role as Jack.',
@@ -282,6 +285,7 @@ export const projects: Project[] = [
     role: 'Co-Creator / Writer',
     num: '11',
     image: 'images/break-a-leg.gif',
+    keywords: ['Break A Leg', 'dark comedy', 'thriller', 'TV series', 'TV development', 'Netflix', 'ITV', 'Hager Moss', 'GGG', 'Gary Got Got', 'SERIENCAMP', 'Soho', 'London', 'screenwriter', 'pilot script'],
     description: [
       '6 x 30 minute dark comedy thriller. When a struggling acting student takes a job chopping up corpses, her talent dramatically improves. The series follows Riley across Soho, Tower Hamlets, and Docklands as she rises through drama school while sinking deeper into her aunt\'s criminal operation.',
       'Will co-created the series with Moritz Matzmorr and Naala Vanslembrouck as part of the writing collective GGG (Gary Got Got). He adapted it from a German-language project into an English-language original, wrote the full pilot script, outlined all six episodes, and built the pitch deck.',
@@ -297,6 +301,7 @@ export const projects: Project[] = [
     role: 'Creator / Writer',
     num: '12',
     image: 'images/brain-drain.webp',
+    keywords: ['Brain Drain', 'apocalyptic comedy', 'adventure comedy', 'TV series', 'TV development', 'Fandango Productions', 'GGG', 'Gary Got Got', 'Blackpool', 'political satire', 'screenwriter', 'optioned'],
     description: [
       '6 x 25 minute apocalyptic adventure comedy. Three government interns must navigate incompetent politicians and brain-controlling fungi to save the undead, and possibly the world. Set in a decrepit Home Office branch on the Blackpool seaside where disaster moves faster than government ever could.',
       'Will created the series with Moritz Matzmorr and Naala Vanslembrouck as part of GGG (Gary Got Got). He built the world from scratch, blending political satire, workplace absurdism, and surreal institutional logic described in development as "Terry Gilliam\'s Brazil vibes."',
@@ -312,6 +317,7 @@ export const projects: Project[] = [
     role: 'Writer / Director',
     num: '13',
     image: 'images/clockwork-arms.webp',
+    keywords: ['The Clockwork Arms', 'theatre', 'immersive', 'time travel', 'London history', 'sold out', 'playwright', 'Distracted Rat Productions', 'new writing', 'fringe theatre'],
     description: [
       'A group of friends stumble into a pub that travels through time. The Clockwork Arms pulls its inhabitants through five periods of London\'s history, forcing them to confront their past and decide what to do with their own time.',
       'Will wrote and directed, guiding the cast through five distinct eras, each with its own London, its own language, and its own stakes. He used the time-travelling pub as a device for reckoning with the city\'s layered history, and with the characters\' own.',
@@ -326,6 +332,7 @@ export const projects: Project[] = [
     role: 'Writer / Creative Producer',
     num: '14',
     image: 'images/the-emoji-project.webp',
+    keywords: ['The Emoji Project', 'Camden Fringe', 'anthology', 'new writing', 'theatre', 'sold out', 'Hen and Chickens Theatre', 'Distracted Rat Productions', 'intergenerational', 'short plays'],
     description: [
       'Anthology of new writing for Camden Fringe under Distracted Rat Productions. An intergenerational collection of short plays, each written in response to a single emoji, with contributors ranging in age from 11 to 75.',
       'Will created the format and produced the run, commissioning writers including sean wai keung, Tilney Brune, James Aldred, Jalice Corral, and Alastair Gibbons. He managed production across three nights at the Hen and Chickens Theatre in August 2021.',
@@ -341,6 +348,7 @@ export const projects: Project[] = [
     num: '15',
     image: 'images/remote-radioplays.webp',
     links: [{ url: 'https://soundcloud.com/distracted-rat', label: 'Listen' }],
+    keywords: ['Remote Radioplays', 'radio play', 'audio drama', 'lockdown', 'Distracted Rat Productions', 'anthology', 'The Thing with Feathers', 'SoundCloud', 'remote production', 'international writers'],
     description: [
       'Two-season anthology of original radio plays created during lockdown under Distracted Rat Productions. Seventeen episodes built entirely over video calls and file transfers, with Season 2 spanning a 35-person creative team across 16 time zones.',
       'Will produced both seasons, managing scripting, casting, recording, and post-production remotely. For Season 2, "The Thing with Feathers," he brought together 11 international writers and coordinated the full creative team. He also wrote and performed in "The Fjordic Typhoon."',
@@ -355,6 +363,7 @@ export const projects: Project[] = [
     role: 'Head of Content & Production',
     num: '16',
     image: 'images/vidi-guides.webp',
+    keywords: ['Vidi Guides', 'audio tours', 'walking tours', 'GPS', 'Walt Disney', 'Hilton Hotels', 'Lonely Planet', 'Culture Trip', 'London', 'Paris', 'New York', 'travel', 'content production', 'digital media'],
     description: [
       '100+ GPS-triggered audio walking tours across 17 cities and 7 countries, produced over four years at Vidi Guides. Cities included London, Paris, Cambridge, Oxford, Edinburgh, New York, Singapore, Rome, and Venice.',
       'Will led content and production, managing the full pipeline from scripting and voice casting to location research and production management across dozens of simultaneous tours.',
