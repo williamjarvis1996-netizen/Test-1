@@ -186,8 +186,8 @@ export const projects: Project[] = [
     image: 'images/mcfc-ohana.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw', label: 'Watch' }],
     description: [
-      'Launch film for Manchester City Yas Residences by Ohana, a $4.1 billion waterfront development in Abu Dhabi. Blends live-action footage of Manchester City players with 3D-rendered architectural environments to sell a residential project that hadn\'t yet been built.',
-      'Producing at RD Content, Will led the project across three phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and a virtual production day on an LED volume stage. He coordinated player availability, crew across two countries, and the compositing of 3D renders into the final film.',
+      'Launch film for Manchester City Yas Residences by Ohana, a $4.1 billion waterfront development in Abu Dhabi. Blends live-action footage of Manchester City players with 3D-rendered environments, inviting viewers to explore Ohana\'s new waterfront residences on Yas Island.',
+      'Producing at RD Content, Will led the project across three phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and oversight of 3D-rendered assets. He coordinated player availability, crew across two countries, and the compositing of 3D renders into the final film.',
       'The finished film positioned the development within the global Manchester City brand, bridging real and virtual environments for the launch campaign.',
     ],
   },
