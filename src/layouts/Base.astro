@@ -11,10 +11,11 @@ interface Props {
   type?: 'website' | 'article';
   jsonLd?: Record<string, unknown>;
   breadcrumbs?: Breadcrumb[];
+  keywords?: string[];
 }
 
 const defaultDescription = 'Will Jarvis is a Creative Producer and Scriptwriter based in London. Branded content, film, TV development, theatre and immersive.';
-const { title, description: rawDescription = defaultDescription, image, type = 'website', jsonLd, breadcrumbs } = Astro.props;
+const { title, description: rawDescription = defaultDescription, image, type = 'website', jsonLd, breadcrumbs, keywords } = Astro.props;
 const description = rawDescription.length > 160 ? rawDescription.slice(0, 157).replace(/\s+\S*$/, '') + '...' : rawDescription;
 const base = import.meta.env.BASE_URL;
 const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
@@ -50,6 +51,7 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="author" content="Will Jarvis" />
+    {keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />

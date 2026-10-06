@@ -32,7 +32,7 @@ const projectJsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": project.title,
-  "description": project.description[0],
+  "description": project.description.join(' '),
   "genre": categoryToGenre[project.category] || project.category,
   "url": `${siteUrl}/work/${project.slug}`,
   ...(project.image && { "image": `${siteUrl}/${project.image}` }),
@@ -40,10 +40,21 @@ const projectJsonLd: Record<string, unknown> = {
     "@type": "Person",
     "name": "Will Jarvis",
     "url": siteUrl,
+    "jobTitle": project.role,
   },
   ...(project.client && { "producer": { "@type": "Organization", "name": project.client } }),
   ...(project.awards && project.awards.length > 0 && {
     "award": project.awards,
+  }),
+  ...(project.keywords && project.keywords.length > 0 && {
+    "keywords": project.keywords.join(', '),
+  }),
+  ...(project.details && project.details.length > 0 && {
+    "additionalProperty": project.details.map(d => ({
+      "@type": "PropertyValue",
+      "name": d.key,
+      "value": d.value,
+    })),
   }),
 };
 
@@ -54,7 +65,7 @@ const breadcrumbs = [
 ];
 ---
 
-<Base title={`${project.title} | Will Jarvis`} description={project.description[0]} image={project.image} type="article" jsonLd={projectJsonLd} breadcrumbs={breadcrumbs}>
+<Base title={`${project.title} | Will Jarvis`} description={project.description[0]} image={project.image} type="article" jsonLd={projectJsonLd} breadcrumbs={breadcrumbs} keywords={project.keywords}>
   <article class="project-detail">
     <div class="detail-layout">
       <div class="detail-media">

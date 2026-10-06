@@ -13,6 +13,7 @@ export interface Project {
   description: string[];
   awards?: string[];
   details?: { key: string; value: string }[];
+  keywords?: string[];
   image?: string;
   links?: ProjectLink[];
   featured?: boolean;
@@ -40,6 +41,7 @@ export const projects: Project[] = [
     wide: true,
     image: 'images/hamilton-in-the-midst-of-it.gif',
     links: [{ url: 'https://www.instagram.com/hamiltonwatch/?hl=en', label: 'Releasing Winter 2026' }],
+    keywords: ['Hamilton Watches', 'festive campaign', 'Christmas', 'branded content', 'watch film', 'slow motion', 'match-cut transitions', 'Hertfordshire', 'high-speed cameras', 'luxury watches', 'Will Jarvis'],
     description: [
       'Festive campaign for Hamilton Watches built around the chaos of Christmas Eve. Three overlapping storylines, each anchored by a different watch, stitched together with match-cut transitions and shot on high-speed cameras for slow-motion hero moments.',
       'Will produced from concept through delivery, running a three-day shoot at a manor house in Hertfordshire with two camera units plus a social unit operating simultaneously. He managed talent, locations, and the client relationship across multiple approval rounds.',
@@ -63,7 +65,10 @@ export const projects: Project[] = [
     ],
     details: [
       { key: 'Watches', value: 'Khaki Field Bronze, Khaki Field King, Khaki Field Power Reserve' },
+      { key: 'Director', value: 'Ron Mulvey' },
+      { key: 'DOP', value: 'Angus Steele' },
     ],
+    keywords: ['Hamilton Watches', 'Khaki Field Bronze', 'Khaki Field King', 'Khaki Field Power Reserve', 'Into the Wild', 'Ron Mulvey', 'Angus Steele', 'Wales', 'branded content', 'watch film', 'outdoor', 'adventure', 'Will Jarvis'],
     description: [
       'Three-part branded series for three different Hamilton Watches, leaning into the company\'s adventurous heritage and their identity as an outdoor tool built for rough terrain. Shot across rural Wales with a visual language rooted in natural light and rugged countryside.',
       'Will produced the series alongside director Ron Mulvey, managing a three-day location shoot across remote Welsh countryside. He worked closely with DOP Angus Steele to shape a visual approach that matched the Khaki Field\'s character.',
@@ -83,7 +88,10 @@ export const projects: Project[] = [
     links: [{ url: 'https://www.youtube.com/watch?v=aKi2dFwtTxo', label: 'Watch' }],
     details: [
       { key: 'Watch', value: 'Power Reserve Mechanical 40mm' },
+      { key: 'Director', value: 'Ron Mulvey' },
+      { key: 'Shooting Producer', value: 'Will Newton' },
     ],
+    keywords: ['Hamilton Watches', 'Power Reserve Mechanical 40mm', 'Khaki Field Titanium', 'Ron Mulvey', 'Will Newton', 'Cannes Corporate Media Awards', 'Lens Awards', 'branded content', 'watch film', 'power reserve', 'Will Jarvis'],
     description: [
       'Launch film for the Hamilton Power Reserve Mechanical 40mm, built around the watch\'s power reserve indicator shown directly on the dial. Introduced the top-down, locked-on-the-wrist visual language that became a signature of Hamilton Watches\' branded content.',
       'Will managed post-production, overseeing the edit, colour grade, sound design, and motion graphics pipeline. He worked with the director to build the film\'s energy metaphor around the power reserve concept. Worked with shooting producer Will Newton alongside the director Ron Mulvey.',
@@ -108,6 +116,14 @@ export const projects: Project[] = [
       { url: 'https://www.youtube.com/watch?v=DxAVfx8Igeo', label: 'Watch Fora at Five' },
       { url: 'https://www.instagram.com/p/DeHbSe8twp9/?hl=en', label: 'Watch Fora UK' },
     ],
+    details: [
+      { key: 'Director (Fora at Five)', value: 'Sam McMullen' },
+      { key: 'Director (Fora UK)', value: 'Ewan Thomas' },
+      { key: 'DOP', value: 'James Parsons' },
+      { key: 'Editor', value: 'Ravi Chauhan' },
+      { key: 'Locations', value: 'London, Palermo (Villa Igiea, Teatro Massimo, Capo Market, Piazza Bellini, San Saverio)' },
+    ],
+    keywords: ['Fora Travel', 'Fora at Five', 'fifth anniversary', 'Sam McMullen', 'Ewan Thomas', 'James Parsons', 'Ravi Chauhan', 'Palermo', 'Villa Igiea', 'Teatro Massimo', 'Capo Market', 'travel advisor', 'branded content', 'London', 'Will Jarvis'],
     description: [
       'Hero brand film marking Fora Travel\'s fifth anniversary, telling the story of a family returning to Palermo for a 50th wedding anniversary curated by their Fora travel advisor. Shot across two countries at locations including Villa Igiea, Teatro Massimo, Capo Market, Piazza Bellini, and San Saverio church.',
       'Will produced the film end to end, coordinating London studio shoots for the advisor sequences and three days of location work across Palermo with a local crew. He assembled the creative team: director Sam McMullen, DOP James Parsons, and editor Ravi Chauhan.',
