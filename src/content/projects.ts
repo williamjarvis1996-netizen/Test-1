@@ -220,6 +220,7 @@ export const projects: Project[] = [
     role: 'Writer / Director',
     num: '08',
     image: 'images/dinner-diamonds-and-death.gif',
+    links: [{ url: 'https://www.instagram.com/dinnerdiamondsdeathfilm/', label: 'Follow Here' }],
     description: [
       'Non-linear psychological thriller set in London\'s criminal underworld. A fractured structure moves between timelines as the audience pieces together the puzzle alongside the characters, set behind closed doors where the danger follows you inside.',
       'Will wrote the script and co-directed with Marc, shooting across London, Gravesend, and Chadwell Heath. He conceived the film as a departure from the typical London skyline crime aesthetic, grounding the story in interiors rather than cityscapes.',
