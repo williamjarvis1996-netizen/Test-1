@@ -56,29 +56,11 @@ const breadcrumbs = [
     </div>
 
 
-    <div class="hero-hud" aria-hidden="true">
+    <div class="hero-crosses" aria-hidden="true">
       <span class="cross cross-tl"></span>
       <span class="cross cross-tr"></span>
       <span class="cross cross-bl"></span>
       <span class="cross cross-br"></span>
-
-      <div class="hud-readout hud-readout-tr animate-in" style="--delay: 0.6s">
-        <span class="hud-dot"></span>
-        <span class="hud-data">51.5074° N</span>
-        <span class="hud-sep">//</span>
-        <span class="hud-data">0.1278° W</span>
-      </div>
-
-      <div class="hud-status hud-status-bl animate-in" style="--delay: 0.65s">
-        <span class="hud-pulse"></span>
-        <span class="hud-data">SIGNAL: ACTIVE</span>
-      </div>
-
-      <div class="hud-dots hud-dots-br">
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span>
-      </div>
     </div>
 
     <div class="hero-content">
@@ -206,8 +188,8 @@ const breadcrumbs = [
   }
 
 
-  /* ---- HUD overlay ---- */
-  .hero-hud {
+  /* ---- Cross marks ---- */
+  .hero-crosses {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -263,89 +245,6 @@ const breadcrumbs = [
     bottom: 22%;
     left: 33%;
     opacity: 0.75;
-  }
-
-  .hud-readout {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.5625rem;
-    letter-spacing: 0.06em;
-  }
-
-  .hud-readout-tr {
-    top: calc(var(--header-height) + var(--space-md));
-    right: var(--space-md);
-    color: var(--color-marker);
-  }
-
-  .hud-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--color-accent);
-    flex-shrink: 0;
-  }
-
-  .hud-data {
-    white-space: nowrap;
-  }
-
-  .hud-sep {
-    opacity: 0.4;
-  }
-
-  .hud-status {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.5rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .hud-status-bl {
-    bottom: calc(var(--space-md) + 2rem);
-    left: var(--space-md);
-    color: var(--color-marker);
-  }
-
-  .hud-pulse {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--color-accent);
-    flex-shrink: 0;
-    animation: pulse 2.5s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
-
-  .hud-dots {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(3, 4px);
-    gap: 4px;
-    opacity: 0.15;
-  }
-
-  .hud-dots-br {
-    bottom: 30%;
-    right: var(--space-md);
-  }
-
-  .hud-dots span {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: var(--color-fg);
   }
 
   /* ---- Main content flow ---- */
@@ -644,20 +543,6 @@ const breadcrumbs = [
     .cross-tr { top: 18%; right: 8%; left: auto; }
     .cross-bl { bottom: 18%; left: 8%; }
     .cross-br { bottom: 18%; right: 8%; left: auto; }
-
-    .hud-readout-tr {
-      top: calc(var(--header-height) + var(--space-xs));
-      right: var(--space-sm);
-      font-size: 0.5rem;
-    }
-
-    .hud-status-bl {
-      display: none;
-    }
-
-    .hud-dots-br {
-      display: none;
-    }
 
     .hero-content {
       min-height: auto;
