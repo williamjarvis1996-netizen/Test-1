@@ -118,23 +118,6 @@ h3 {
   padding: 0 var(--space-sm);
 }
 
-.section {
-  padding: var(--space-xl) 0;
-}
-
-.accent {
-  color: var(--color-accent);
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-}
-
 @media (min-width: 768px) {
   .container {
     padding: 0 var(--space-md);

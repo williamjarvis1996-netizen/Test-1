@@ -1,8 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-const base = import.meta.env.BASE_URL;
-
-const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
+const siteUrl = 'https://willjarvis.co';
 const aboutJsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
@@ -31,7 +29,7 @@ const aboutJsonLd: Record<string, unknown> = {
         "name": "University of Exeter",
       },
     ],
-    "knowsAbout": ["Branded Content", "Film Production", "Scriptwriting", "TV Development", "Theatre"],
+    "knowsAbout": ["Branded Content", "Film Production", "Scriptwriting", "TV Development", "Theatre", "Creative Writing"],
     "sameAs": [
       "https://www.imdb.com/name/nm15210832/",
       "https://www.linkedin.com/in/will-t-jarvis/",
@@ -46,7 +44,7 @@ const breadcrumbs = [
 ];
 ---
 
-<Base title="About | Will Jarvis" description="Creative Producer at RD Content and scriptwriter with projects in development with Netflix, ITV, and Fandango Productions. MA from Royal Central School of Speech and Drama." jsonLd={aboutJsonLd} breadcrumbs={breadcrumbs}>
+<Base title="About | Will Jarvis" description="Creative Producer at RD Content and scriptwriter based in London. Credits for Hamilton Watches, Chelsea FC, Manchester City, Booking.com, and Fora. Projects in development with Netflix, ITV, and Fandango." keywords={['Will Jarvis', 'William Jarvis', 'Creative Producer', 'Creative Producer London', 'Branded Content Producer', 'Scriptwriter London', 'RD Content', 'Hamilton Watches', 'Chelsea FC', 'Manchester City', 'Booking.com', 'Fora', 'Netflix', 'Film Producer London']} jsonLd={aboutJsonLd} breadcrumbs={breadcrumbs}>
   <section class="about-hero">
     <div class="hero-name-bg" aria-hidden="true">
       <span>Will</span>
@@ -55,14 +53,14 @@ const breadcrumbs = [
 
     <div class="hero-content">
       <div class="hero-photo animate-in" style="--delay: 0.2s">
-        <img src={`${base}/images/portrait.webp`} alt="Will Jarvis, Creative Producer and Scriptwriter based in London" class="portrait" />
+        <img src="/images/portrait.webp" alt="Will Jarvis, Creative Producer and Scriptwriter based in London" class="portrait" />
       </div>
 
       <div class="hero-intro animate-in" style="--delay: 0.35s">
         <h1 class="intro-headline">Creative Producer & Scriptwriter</h1>
         <p class="intro-location">Hackney, London</p>
         <p class="intro-tagline">
-          Story-first producer and writer, working across branded content,
+          Story-first producer and writer working across branded content,
           film, and scripted television.
         </p>
       </div>
@@ -79,38 +77,50 @@ const breadcrumbs = [
           <div class="bio-block">
             <h3 class="bio-subhead">Production</h3>
             <p>
-              Creative Producer at RD Content, a global branded content agency and
-              Cannes Production Company of the Year. Leads end-to-end production
-              across Sport, Commercial, Gaming, and Finance, with budgets from
-              &#163;50k to &#163;500k and shoots across Europe, North America, the
-              Middle East, and Asia.
+              Will is a Creative Producer at
+              <a href="https://www.rdcontent.com/" target="_blank" rel="noopener" class="bio-link">RD Content</a>,
+              named Cannes Production Company of the Year, where he leads branded
+              campaigns from pitch to delivery for Hamilton Watches, Chelsea FC,
+              Manchester City, Booking.com, and Fora Travel. He works across Sport, Commercial,
+              Gaming, and Finance, with budgets up to &#163;500k and shoots
+              spanning Europe, North America, the Middle East, and Asia.
             </p>
             <p>
-              Previously Head of Content and Production at Vidi Guides, where he
-              spent four years building out 100+ immersive travel podcasts and audio
-              tours for clients including Walt Disney, Hilton Hotels, Lonely Planet,
-              and Culture Trip.
+              Before RD Content, he spent four years at
+              <a href="https://www.vidiguides.com/" target="_blank" rel="noopener" class="bio-link">Vidi Guides</a>
+              as Head of Content and Production, building 100+ GPS-triggered
+              audio tours across 17 cities for Walt Disney, Hilton Hotels,
+              Lonely Planet, and Culture Trip.
             </p>
           </div>
           <div class="bio-block">
             <h3 class="bio-subhead">Writing</h3>
             <p>
-              Co-created Break A Leg (dark comedy thriller, in development with
-              Netflix, ITV, and Hager Moss) and Brain Drain (apocalyptic adventure
-              comedy, optioned by Fandango Productions).
+              Holds an MA in Writing for Stage & Broadcast Media from the Royal
+              Central School of Speech and Drama. In 2025, he was selected for the
+              <a href="https://www.londonlibrary.co.uk/explore-library/emerging-writers-programme" target="_blank" rel="noopener" class="bio-link">London Library Emerging Writers Programme</a>,
+              one of 40 writers chosen from nearly 2,000 applicants.
             </p>
             <p>
-              Wrote and directed short film Dinner, Diamonds and Death, targeting
-              Sundance London. Co-produced Aortic, winner of the Jury Award for Best
+              He created Break A Leg, a dark comedy thriller in development with
+              Netflix, ITV, and Hager Moss, and wrote Brain Drain, an apocalyptic
+              adventure comedy optioned by Fandango Productions. Both series were
+              developed through the writing collective GGG.
+            </p>
+            <p>
+              His short film Dinner, Diamonds and Death, which he co-wrote and
+              directed, is in post-production targeting Sundance London. He also
+              wrote and co-produced Aortic, winner of the Jury Award for Best
               Performance at the Rob Knox London Film Festival 2025.
             </p>
           </div>
           <div class="bio-block">
             <h3 class="bio-subhead">Theatre & Independent</h3>
             <p>
-              Co-founded Distracted Rat Productions in 2019. Wrote and directed the
-              sold-out play The Clockwork Arms, produced The Emoji Project at Camden
-              Fringe, and created Remote Radioplays during lockdown.
+              Co-founded Distracted Rat Productions in 2019. Wrote and directed
+              The Clockwork Arms, a time-travelling pub play that sold out its
+              run, and produced The Emoji Project, an intergenerational anthology
+              of new writing for Camden Fringe.
             </p>
           </div>
         </div>
@@ -137,10 +147,10 @@ const breadcrumbs = [
         <div class="detail-col animate-in" style="--delay: 0.55s">
           <h2>Recognition</h2>
           <ul class="recognition-list">
+            <li>MUSE Awards 2026: three Platinum, one Gold (Booking.com Traveller Review Awards)</li>
             <li>Cannes Corporate Media & TV Awards 2026 (Hamilton Power Up, Booking.com TRA)</li>
-            <li>MUSE Awards 2026: three Platinum, one Gold (Booking.com TRA)</li>
-            <li>London Library Emerging Writer</li>
             <li>Jury Award for Best Performance, Rob Knox London Film Festival 2025 (Aortic)</li>
+            <li><a href="https://www.londonlibrary.co.uk/explore-library/emerging-writers-programme" target="_blank" rel="noopener" class="recognition-link">London Library Emerging Writers Programme 2025</a></li>
           </ul>
         </div>
 
@@ -158,7 +168,7 @@ const breadcrumbs = [
 
   <section class="cta">
     <div class="container">
-      <a href={`${base}/contact`} class="cta-link animate-in" style="--delay: 0s">
+      <a href="/contact" class="cta-link animate-in" style="--delay: 0s">
         <span>Let's work together</span>
         <span class="cta-arrow">&rarr;</span>
       </a>
@@ -301,6 +311,20 @@ const breadcrumbs = [
     font-size: 0.9375rem;
     line-height: 1.8;
     color: var(--color-fg);
+  }
+
+  .bio-link {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  .recognition-link {
+    color: var(--color-fg);
+    font-weight: 500;
+  }
+
+  .recognition-link:hover {
+    color: var(--color-accent);
   }
 
   .about-details {

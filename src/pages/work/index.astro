@@ -1,8 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { projects, categories, getThumb } from '../../content/projects';
-
-const base = import.meta.env.BASE_URL;
+import { projects, categories } from '../../content/projects';
 
 const seasonVal: Record<string, number> = { Spring: 0, Summer: 1, Autumn: 2, Winter: 3 };
 function yearScore(y: string): number {
@@ -11,7 +9,7 @@ function yearScore(y: string): number {
   return parseInt(yr) * 10 + (seasonVal[s] ?? 0);
 }
 
-const categoryOrder = ['branded', 'film', 'tv', 'theatre', 'digital'] as const;
+const categoryOrder = ['branded', 'film', 'tv', 'other'] as const;
 const grouped = categoryOrder.map(cat => ({
   key: cat,
   label: categories[cat],
@@ -20,12 +18,12 @@ const grouped = categoryOrder.map(cat => ({
     .sort((a, b) => yearScore(b.year) - yearScore(a.year)),
 })).filter(g => g.items.length > 0);
 
-const siteUrl = 'https://williamjarvis1996-netizen.github.io/Test-1';
+const siteUrl = 'https://willjarvis.co';
 const workListJsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Projects by Will Jarvis",
-  "description": "Selected projects by Will Jarvis spanning branded content, short films, TV development, theatre, and digital media.",
+  "name": "Work by Will Jarvis",
+  "description": "Selected work by Will Jarvis spanning branded content, short films, TV development, theatre, and digital media.",
   "url": `${siteUrl}/work`,
   "mainEntity": {
     "@type": "ItemList",
@@ -41,15 +39,15 @@ const workListJsonLd: Record<string, unknown> = {
 
 const breadcrumbs = [
   { name: 'Home', url: siteUrl },
-  { name: 'Projects', url: `${siteUrl}/work` },
+  { name: 'Work', url: `${siteUrl}/work` },
 ];
 ---
 
-<Base title="Projects | Will Jarvis" description="Selected projects by Will Jarvis spanning branded content for Hamilton Watches, Booking.com, Chelsea FC, and Manchester City FC, alongside short films, TV development, theatre, and digital media." jsonLd={workListJsonLd} breadcrumbs={breadcrumbs}>
+<Base title="Work | Will Jarvis" description="Selected work by Will Jarvis spanning branded content for Hamilton Watches, Booking.com, Chelsea FC, and Manchester City FC, alongside short films, TV development, theatre, and digital media." keywords={['Will Jarvis', 'William Jarvis', 'Creative Producer', 'Branded Content Producer', 'Commercial Producer London', 'Hamilton Watches', 'Chelsea FC', 'Manchester City', 'Booking.com', 'Fora', 'Formula 1', 'Film Producer London']} jsonLd={workListJsonLd} breadcrumbs={breadcrumbs}>
   <section class="work-page">
     <div class="work-header">
       <div class="container">
-        <h1 class="work-tag animate-in" style="--delay: 0.1s">Selected Projects</h1>
+        <h1 class="work-tag animate-in" style="--delay: 0.1s">Selected Work</h1>
         <p class="work-intro animate-in" style="--delay: 0.2s">
           Branded content, short film, scripted television, theatre, immersive and digital media.
         </p>
@@ -65,10 +63,10 @@ const breadcrumbs = [
           </div>
           <div class="project-grid">
             {group.items.map((project) => (
-              <a href={`${base}/work/${project.slug}`} class={`project-card ${project.wide ? 'card-wide' : ''}`}>
+              <a href={`/work/${project.slug}`} class={`project-card ${project.wide ? 'card-wide' : ''}`}>
                 <div class="card-img">
                   {project.image ? (
-                    <img src={`${base}/${getThumb(project.image) || project.image}`} alt={project.title} class="card-photo" loading="lazy" />
+                    <img src={`/${project.image}`} alt={project.title} class="card-photo" loading="lazy" />
                   ) : (
                     <span class="card-num">{project.num}</span>
                   )}
