@@ -12,6 +12,7 @@ export interface Project {
   role: string;
   description: string[];
   awards?: string[];
+  details?: { key: string; value: string }[];
   image?: string;
   links?: ProjectLink[];
   featured?: boolean;
@@ -55,10 +56,17 @@ export const projects: Project[] = [
     role: 'Producer',
     num: '02',
     image: 'images/hamilton-into-the-wild.gif',
-    links: [{ url: 'https://www.youtube.com/watch?v=Rl0pLkaWXs4', label: 'Watch' }],
+    links: [
+      { url: 'https://www.youtube.com/watch?v=Rl0pLkaWXs4', label: 'Watch Episode 1' },
+      { url: 'https://www.youtube.com/watch?v=EWpCx7rLcSk', label: 'Watch Episode 2' },
+      { url: 'https://www.youtube.com/watch?v=dhcNE25wCg4', label: 'Watch Episode 3' },
+    ],
+    details: [
+      { key: 'Watches', value: 'Khaki Field Bronze, Khaki Field King, Khaki Field Power Reserve' },
+    ],
     description: [
-      'Three-part branded series for the Hamilton Khaki Field, leaning into the watch\'s military heritage and its identity as an outdoor tool built for rough terrain. Shot across rural Wales with a visual language rooted in natural light and rugged countryside.',
-      'Will produced the series alongside director Ron Mulvey, managing a two-day location shoot across remote Welsh countryside. He worked closely with DOP Angus Steele to shape a visual approach that matched the Khaki Field\'s character.',
+      'Three-part branded series for three different Hamilton Watches, leaning into the company\'s adventurous heritage and their identity as an outdoor tool built for rough terrain. Shot across rural Wales with a visual language rooted in natural light and rugged countryside.',
+      'Will produced the series alongside director Ron Mulvey, managing a three-day location shoot across remote Welsh countryside. He worked closely with DOP Angus Steele to shape a visual approach that matched the Khaki Field\'s character.',
       'Delivered as a three-film series to Hamilton with full post-production managed through to sign-off.',
     ],
     featured: true,
