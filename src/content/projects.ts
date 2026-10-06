@@ -172,7 +172,18 @@ export const projects: Project[] = [
     num: '06',
     wide: true,
     image: 'images/booking-traveller-review-awards.gif',
-    links: [{ url: 'https://www.youtube.com/watch?v=A6IfbTf06PU', label: 'Watch' }],
+    links: [
+      { url: 'https://www.youtube.com/watch?v=A6IfbTf06PU', label: 'Watch Hero Film' },
+      { url: 'https://www.youtube.com/watch?v=RVkZrQ3n7Jw', label: 'Watch Hoxton Spotlight' },
+      { url: 'https://awards.booking.com/en-gb/accommodations', label: 'Read More Here' },
+    ],
+    details: [
+      { key: 'Campaign', value: 'Traveller Review Awards 2026 (14th Annual)' },
+      { key: 'Hero Film', value: 'Where Hospitality Begins' },
+      { key: 'Partners Recognised', value: '1.81 million across 221 countries' },
+      { key: 'Production Company', value: 'RD Content' },
+    ],
+    keywords: ['Booking.com', 'Traveller Review Awards', 'TRA 2026', 'Where Hospitality Begins', 'Hoxton', 'hospitality', 'travel', 'branded content', 'real partners', 'hero film', 'spotlight film', 'social content', 'MUSE Awards', 'Cannes Corporate Media & TV Awards', 'Lens Awards', '1st AD', 'co-producer', 'RD Content', 'Will Jarvis'],
     description: [
       'Booking.com\'s 14th annual Traveller Review Awards campaign, celebrating 1.81 million partners across 221 countries. The hero film, "Where Hospitality Begins," moved the campaign toward human storytelling with real award-winning partners rather than professional talent.',
       'Working at RD Content, Will co-produced and served as 1st AD, managing the shoot schedule and floor on set across multiple locations with real contributors. He helped shape the campaign\'s channel strategy and deliverables.',
