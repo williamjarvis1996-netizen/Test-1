@@ -108,7 +108,7 @@ export const projects: Project[] = [
     description: [
       'Hero brand film marking Fora Travel\'s fifth anniversary, telling the story of a family returning to Palermo for a 50th wedding anniversary curated by their Fora travel advisor. Shot across two countries at locations including Villa Igiea, Teatro Massimo, Capo Market, Piazza Bellini, and San Saverio church.',
       'Will produced the film end to end, coordinating London studio shoots for the advisor sequences and three days of location work across Palermo with a local crew. He assembled the creative team: director Sam McMullen, DOP James Parsons, and editor Ravi Chauhan.',
-      'Delivered to Fora as their hero brand film, with full post-production including a split-screen VFX sequence managed through to final delivery.',
+      'Delivered to Fora as their hero brand film, with full post-production including a split-screen VFX sequence managed through to final delivery. Will has since produced further work for Fora, including their UK introductory film for new Fora advisors entering the British market.',
     ],
     featured: true,
   },
