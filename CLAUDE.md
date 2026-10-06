@@ -27,7 +27,6 @@ src/
   styles/global.css               # CSS custom properties, resets, typography
 public/
   images/                         # Project photos (.webp), portrait, favicon
-  images/logos/                   # SVG brand logos (currently unused, could be cleaned up)
 ```
 
 ## Design System
@@ -81,12 +80,10 @@ Projects still needing images: DDD, Break A Leg, Brain Drain, Clockwork Arms, Re
 
 - Site uses root-relative paths (e.g. `/work`, `/images/...`). No base path prefix needed.
 - The strip carousel duplicates all items in the track for seamless infinite scrolling via CSS `translateX(-50%)`.
-- SVG logos in `public/images/logos/` use hardcoded `fill="#0a0a0a"` because `fill="currentColor"` does not work inside `<img>` tags. These are currently unused (clients section uses styled text spans instead).
 - Nav links turn red on hover using `color: var(--color-accent)`.
 - The site has both light and dark theme support via `prefers-color-scheme` and `data-theme` attributes.
 - Deploy workflow triggers on push to `main` or the feature branch.
 
 ## Cleanup Opportunities
 
-- `public/images/logos/` contains 14 SVG files no longer referenced in the HTML. These can be removed.
-- Some logos reference brands no longer in the client list (Aramco, Revolut, Chelsea FC, ITV, Morgan Stanley).
+- None currently outstanding.
