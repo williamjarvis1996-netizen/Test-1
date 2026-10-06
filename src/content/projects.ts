@@ -250,6 +250,7 @@ export const projects: Project[] = [
     role: 'Writer / Co-Producer',
     num: '10',
     image: 'images/aortic.gif',
+    links: [{ url: 'https://www.imdb.com/title/tt28815002/', label: 'View on IMDb' }],
     description: [
       'Short film about a man who retreats to a hospital broom closet to leave a voice note to an old friend. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
       'Will wrote the screenplay and co-produced, bringing it to director Niamh Marie Smith. Shot in November 2023 with Macauley Keeper in the lead role as Jack.',
