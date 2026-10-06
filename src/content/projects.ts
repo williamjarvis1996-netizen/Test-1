@@ -7,7 +7,7 @@ export interface Project {
   slug: string;
   title: string;
   client?: string;
-  category: 'branded' | 'film' | 'tv' | 'theatre' | 'digital' | 'other';
+  category: 'branded' | 'film' | 'tv' | 'other';
   year: string;
   role: string;
   description: string[];
@@ -25,8 +25,6 @@ export const categories = {
   branded: 'Branded Content',
   film: 'Film',
   tv: 'TV Development',
-  theatre: 'Theatre & Immersive',
-  digital: 'Digital Media',
   other: 'Other Work',
 } as const;
 
@@ -377,14 +375,6 @@ export const projects: Project[] = [
     ],
   },
 ];
-
-export function getProjectsByCategory(category: Project['category']): Project[] {
-  return projects.filter((p) => p.category === category);
-}
-
-export function getFeaturedProjects(): Project[] {
-  return projects.filter((p) => p.featured);
-}
 
 export function getThumb(image: string): string | null {
   if (!image.endsWith('.gif')) return null;

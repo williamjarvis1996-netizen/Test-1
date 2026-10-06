@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { projects, categories, getThumb } from '../../content/projects';
+import { projects, categories } from '../../content/projects';
 import type { Project } from '../../content/projects';
 
 export function getStaticPaths() {
@@ -24,8 +24,6 @@ const categoryToGenre: Record<string, string> = {
   branded: 'Branded Content',
   film: 'Short Film',
   tv: 'Television',
-  theatre: 'Theatre',
-  digital: 'Digital Media',
   other: 'Other Work',
 };
 
