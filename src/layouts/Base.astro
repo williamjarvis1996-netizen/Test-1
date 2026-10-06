@@ -82,10 +82,30 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": `${siteUrl}/#person`,
       "name": "Will Jarvis",
+      "alternateName": "William Jarvis",
       "url": siteUrl,
+      "image": `${siteUrl}/images/portrait.webp`,
+      "description": "Creative Producer and Scriptwriter based in London, producing branded content for global brands including Hamilton Watches, Chelsea FC, Manchester City, Booking.com, and Formula 1.",
+      "disambiguatingDescription": "London-based Creative Producer and Scriptwriter at RD Content, producing branded content, short films, and TV development.",
       "jobTitle": "Creative Producer & Scriptwriter",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "RD Content",
+        "url": "https://www.rdcontent.com"
+      },
       "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+      "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "Royal Central School of Speech and Drama" },
+        { "@type": "EducationalOrganization", "name": "University of Exeter" }
+      ],
+      "knowsAbout": ["Branded Content Production", "Film Production", "Scriptwriting", "TV Development", "Commercial Production", "Creative Direction", "Theatre"],
+      "award": [
+        "Winner, Cannes Corporate Media & TV Awards 2026",
+        "Three Platinum and one Gold MUSE Award",
+        "Jury Award for Best Performance, Rob Knox International Film Festival 2025"
+      ],
       "sameAs": [
         "https://www.imdb.com/name/nm15210832/",
         "https://www.linkedin.com/in/will-t-jarvis/",

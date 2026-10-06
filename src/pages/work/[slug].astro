@@ -47,6 +47,7 @@ const projectJsonLd: Record<string, unknown> = {
   ...(project.image && { "image": `${siteUrl}/${project.image}` }),
   "creator": {
     "@type": "Person",
+    "@id": `${siteUrl}/#person`,
     "name": "Will Jarvis",
     "url": siteUrl,
     "jobTitle": project.role,

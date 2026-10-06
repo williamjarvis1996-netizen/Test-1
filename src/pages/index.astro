@@ -34,10 +34,12 @@ const homepageJsonLd: Record<string, unknown> = {
   "url": siteUrl,
   "description": "Will Jarvis is a Creative Producer and Scriptwriter based in London, producing branded content for Hamilton Watches, Chelsea FC, Manchester City, Booking.com, Fora, and Formula 1.",
   "author": {
-    "@type": "Person",
-    "name": "Will Jarvis",
-    "jobTitle": "Creative Producer & Scriptwriter",
-    "url": siteUrl,
+    "@id": `${siteUrl}/#person`,
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${siteUrl}/work`,
+    "query-input": "required name=search_term_string",
   },
 };
 
