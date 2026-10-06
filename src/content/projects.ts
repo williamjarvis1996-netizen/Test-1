@@ -85,7 +85,7 @@ export const projects: Project[] = [
       { key: 'Watch', value: 'Power Reserve Mechanical 40mm' },
     ],
     description: [
-      'Launch film for the Power Reserve Mechanical 40mm, built around the watch\'s power reserve indicator shown directly on the dial. Introduced the top-down, locked-on-the-wrist visual language that became a signature of Hamilton\'s branded content.',
+      'Launch film for the Hamilton Power Reserve Mechanical 40mm, built around the watch\'s power reserve indicator shown directly on the dial. Introduced the top-down, locked-on-the-wrist visual language that became a signature of Hamilton Watches\' branded content.',
       'Will managed post-production, overseeing the edit, colour grade, sound design, and motion graphics pipeline. He worked with the director to build the film\'s energy metaphor around the power reserve concept. Worked with shooting producer Will Newton alongside the director Ron Mulvey.',
       'Winner at the Cannes Corporate Media & TV Awards 2026. Submitted for the Lens Awards under Best Creative Execution. The visual language established here carried directly into the later festive campaign.',
     ],
