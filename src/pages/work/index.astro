@@ -11,7 +11,7 @@ function yearScore(y: string): number {
   return parseInt(yr) * 10 + (seasonVal[s] ?? 0);
 }
 
-const categoryOrder = ['branded', 'film', 'tv', 'theatre', 'digital'] as const;
+const categoryOrder = ['branded', 'film', 'tv', 'other'] as const;
 const grouped = categoryOrder.map(cat => ({
   key: cat,
   label: categories[cat],

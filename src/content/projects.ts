@@ -7,7 +7,7 @@ export interface Project {
   slug: string;
   title: string;
   client?: string;
-  category: 'branded' | 'film' | 'tv' | 'theatre' | 'digital';
+  category: 'branded' | 'film' | 'tv' | 'theatre' | 'digital' | 'other';
   year: string;
   role: string;
   description: string[];
@@ -27,6 +27,7 @@ export const categories = {
   tv: 'TV Development',
   theatre: 'Theatre & Immersive',
   digital: 'Digital Media',
+  other: 'Other Work',
 } as const;
 
 export const projects: Project[] = [
@@ -312,7 +313,7 @@ export const projects: Project[] = [
   {
     slug: 'the-clockwork-arms',
     title: 'The Clockwork Arms',
-    category: 'theatre',
+    category: 'other',
     year: 'Autumn 2019',
     role: 'Writer / Director',
     num: '13',
@@ -327,7 +328,7 @@ export const projects: Project[] = [
   {
     slug: 'the-emoji-project',
     title: 'The Emoji Project',
-    category: 'theatre',
+    category: 'other',
     year: 'Summer 2021',
     role: 'Writer / Creative Producer',
     num: '14',
@@ -340,25 +341,23 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'remote-radioplays',
-    title: 'Remote Radioplays',
-    category: 'digital',
-    year: 'Spring 2020',
-    role: 'Writer / Producer / Performer',
+    slug: 'chuggington',
+    title: 'Chuggington',
+    client: 'Ludorum',
+    category: 'other',
+    year: 'Spring 2018',
+    role: 'Sales & Marketing Assistant',
     num: '15',
-    image: 'images/remote-radioplays.webp',
-    links: [{ url: 'https://soundcloud.com/distracted-rat', label: 'Listen' }],
-    keywords: ['Remote Radioplays', 'radio play', 'audio drama', 'lockdown', 'Distracted Rat Productions', 'anthology', 'The Thing with Feathers', 'SoundCloud', 'remote production', 'international writers'],
+    keywords: ['Chuggington', 'Ludorum', "children's TV", 'animation', 'marketing', 'CBeebies', 'BBC', 'sales', 'London'],
     description: [
-      'Two-season anthology of original radio plays created during lockdown under Distracted Rat Productions. Seventeen episodes built entirely over video calls and file transfers, with Season 2 spanning a 35-person creative team across 16 time zones.',
-      'Will produced both seasons, managing scripting, casting, recording, and post-production remotely. For Season 2, "The Thing with Feathers," he brought together 11 international writers and coordinated the full creative team. He also wrote and performed in "The Fjordic Typhoon."',
-      'Available on SoundCloud.',
+      "Sales and marketing assistant at Ludorum on the animated children's TV show Chuggington, reporting to the Managing Director.",
+      'Will supported the creation of sales materials and collation of data from multiple departments, maintained social media activity, and assisted the Head of Marketing with localised marketing plans and presentations.',
     ],
   },
   {
     slug: 'vidi-guides',
     title: 'Vidi Guides',
-    category: 'digital',
+    category: 'other',
     year: '2020-2024',
     role: 'Head of Content & Production',
     num: '16',

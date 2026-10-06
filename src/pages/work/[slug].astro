@@ -26,7 +26,11 @@ const categoryToGenre: Record<string, string> = {
   tv: 'Television',
   theatre: 'Theatre',
   digital: 'Digital Media',
+  other: 'Other Work',
 };
+
+const baseKeywords = ['Will Jarvis', 'William Jarvis', 'Creative Producer', 'Creative Producer London', 'Scriptwriter', 'Film Producer London', 'Branded Content Producer', 'Commercial Producer London', 'TV', 'film', 'branded content'];
+const allKeywords = [...(project.keywords || []), ...baseKeywords.filter(k => !(project.keywords || []).includes(k))];
 
 const projectJsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
@@ -46,7 +50,7 @@ const projectJsonLd: Record<string, unknown> = {
   ...(project.awards && project.awards.length > 0 && {
     "award": project.awards,
   }),
-  ...(project.keywords && project.keywords.length > 0 && {
+  ...(allKeywords.length > 0 && {
     "keywords": allKeywords.join(', '),
   }),
   ...(project.details && project.details.length > 0 && {
@@ -57,9 +61,6 @@ const projectJsonLd: Record<string, unknown> = {
     })),
   }),
 };
-
-const baseKeywords = ['Will Jarvis', 'William Jarvis', 'Creative Producer', 'Creative Producer London', 'Scriptwriter', 'Film Producer London', 'Branded Content Producer', 'Commercial Producer London', 'TV', 'film', 'branded content'];
-const allKeywords = [...(project.keywords || []), ...baseKeywords.filter(k => !(project.keywords || []).includes(k))];
 
 const breadcrumbs = [
   { name: 'Home', url: siteUrl },
