@@ -160,7 +160,8 @@ const breadcrumbs = [
   }
 
   .project-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     color: var(--color-fg);
     transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -177,7 +178,9 @@ const breadcrumbs = [
   }
 
   .card-wide .card-img {
-    aspect-ratio: 8 / 3;
+    aspect-ratio: auto;
+    flex: 1;
+    min-height: 0;
   }
 
   .project-card:hover .card-img {
@@ -219,6 +222,7 @@ const breadcrumbs = [
     justify-content: center;
     gap: 0.5rem;
     opacity: 0;
+    background: rgba(0, 0, 0, 0.55);
     transition: opacity 0.4s ease;
   }
 
@@ -230,13 +234,13 @@ const breadcrumbs = [
     font-size: 0.6875rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-bg);
+    color: #ffffff;
     font-weight: 600;
   }
 
   .overlay-arrow {
     font-size: 1.25rem;
-    color: var(--color-bg);
+    color: #ffffff;
     transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
@@ -298,10 +302,6 @@ const breadcrumbs = [
 
     .card-wide {
       grid-column: span 2;
-    }
-
-    .card-wide .card-img {
-      aspect-ratio: 16 / 9;
     }
 
     .card-img {

@@ -60,7 +60,7 @@ const breadcrumbs = [
       <div class="detail-media">
         <div class="media-placeholder animate-in" style="--delay: 0.2s">
           {project.image ? (
-            <img src={`${base}/${getThumb(project.image) || project.image}`} alt={project.title} class="media-photo" {...(getThumb(project.image) ? { 'data-gif': `${base}/${project.image}` } : {})} />
+            <img src={`${base}/${project.image}`} alt={project.title} class="media-photo" />
           ) : (
             <span class="media-num">{project.num}</span>
           )}
