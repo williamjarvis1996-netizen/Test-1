@@ -37,7 +37,7 @@ export const projects: Project[] = [
     client: 'Hamilton Watches',
     category: 'branded',
     year: 'Autumn 2026',
-    role: 'Lead Producer',
+    role: 'Lead Producer / Writer',
     num: '01',
     wide: true,
     image: 'images/hamilton-in-the-midst-of-it.gif',
