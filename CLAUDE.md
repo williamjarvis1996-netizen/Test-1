@@ -2,14 +2,14 @@
 
 ## Overview
 
-Personal portfolio website for Will Jarvis, a Creative Producer and Scriptwriter. Built with Astro 5.x, deployed to GitHub Pages at https://williamjarvis1996-netizen.github.io/Test-1/.
+Personal portfolio website for Will Jarvis, a Creative Producer and Scriptwriter. Built with Astro 5.x, deployed to GitHub Pages at https://willjarvis.co.
 
 ## Tech Stack
 
 - **Framework**: Astro 5.x (static site generation)
 - **Deployment**: GitHub Pages via Actions (`.github/workflows/deploy.yml`)
 - **Fonts**: Archivo Black (display/headings) + Inter (body), loaded from Google Fonts
-- **Base path**: `/Test-1` (subdirectory deploy, accessed via `import.meta.env.BASE_URL`)
+- **Domain**: willjarvis.co (custom domain via CNAME, root-relative paths)
 
 ## Project Structure
 
@@ -65,8 +65,7 @@ public/
 - `branded`: Branded Content
 - `film`: Film
 - `tv`: TV Development
-- `theatre`: Theatre & Immersive (Clockwork Arms, The Emoji Project)
-- `digital`: Digital Media (Vidi Guides, Remote Radioplays)
+- `other`: Other Work (Theatre, Digital Media, etc.)
 
 ## Current Client List
 
@@ -80,7 +79,7 @@ Projects still needing images: DDD, Break A Leg, Brain Drain, Clockwork Arms, Re
 
 ## Key Implementation Details
 
-- `import.meta.env.BASE_URL` returns `/Test-1` (no trailing slash). All asset paths must be prefixed with this.
+- Site uses root-relative paths (e.g. `/work`, `/images/...`). No base path prefix needed.
 - The strip carousel duplicates all items in the track for seamless infinite scrolling via CSS `translateX(-50%)`.
 - SVG logos in `public/images/logos/` use hardcoded `fill="#0a0a0a"` because `fill="currentColor"` does not work inside `<img>` tags. These are currently unused (clients section uses styled text spans instead).
 - Nav links turn red on hover using `color: var(--color-accent)`.
