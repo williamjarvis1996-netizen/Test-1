@@ -41,10 +41,15 @@ export const projects: Project[] = [
     wide: true,
     image: 'images/hamilton-in-the-midst-of-it.gif',
     links: [{ url: 'https://www.instagram.com/hamiltonwatch/?hl=en', label: 'Releasing Winter 2026' }],
-    keywords: ['Hamilton Watches', 'festive campaign', 'Christmas', 'branded content', 'watch film', 'slow motion', 'match-cut transitions', 'Hertfordshire', 'high-speed cameras', 'luxury watches', 'Will Jarvis'],
+    details: [
+      { key: 'Director', value: 'Bailey Smith' },
+      { key: 'DOP', value: 'James Parsons' },
+      { key: 'Location', value: 'Hertfordshire' },
+    ],
+    keywords: ['Hamilton Watches', 'festive campaign', 'Christmas', 'branded content', 'watch film', 'slow motion', 'match-cut transitions', 'Hertfordshire', 'high-speed cameras', 'luxury watches', 'Bailey Smith', 'James Parsons', 'Will Jarvis'],
     description: [
       'Festive campaign for Hamilton Watches built around the chaos of Christmas Eve. Three overlapping storylines, each anchored by a different watch, stitched together with match-cut transitions and shot on high-speed cameras for slow-motion hero moments.',
-      'Will produced from concept through delivery, running a three-day shoot at a manor house in Hertfordshire with two camera units plus a social unit operating simultaneously. He managed talent, locations, and the client relationship across multiple approval rounds.',
+      'Will produced from concept through delivery, collaborating with director Bailey Smith and DOP James Parsons. He ran a three-day shoot at a manor house in Hertfordshire with two camera units plus a social unit operating simultaneously, managing talent, locations, and the client relationship across multiple approval rounds.',
       'Delivered five films with full motion graphics, sound design, and colour grade. The top-down, locked-on-the-wrist visual language established here became the foundation for Hamilton\'s branded content direction.',
     ],
     featured: true,
