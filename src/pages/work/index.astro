@@ -68,7 +68,7 @@ const breadcrumbs = [
               <a href={`${base}/work/${project.slug}`} class={`project-card ${project.wide ? 'card-wide' : ''}`}>
                 <div class="card-img">
                   {project.image ? (
-                    <img src={`${base}/${project.image}`} alt={project.title} class="card-photo" loading="lazy" />
+                    <img src={`${base}/${getThumb(project.image) || project.image}`} alt={project.title} class="card-photo" loading="lazy" />
                   ) : (
                     <span class="card-num">{project.num}</span>
                   )}
