@@ -104,7 +104,10 @@ export const projects: Project[] = [
     role: 'Producer',
     num: '04',
     image: 'images/fora-at-five.gif',
-    links: [{ url: 'https://www.youtube.com/watch?v=DxAVfx8Igeo', label: 'Watch' }],
+    links: [
+      { url: 'https://www.youtube.com/watch?v=DxAVfx8Igeo', label: 'Watch Fora at Five' },
+      { url: 'https://www.instagram.com/p/DeHbSe8twp9/?hl=en', label: 'Watch Fora UK' },
+    ],
     description: [
       'Hero brand film marking Fora Travel\'s fifth anniversary, telling the story of a family returning to Palermo for a 50th wedding anniversary curated by their Fora travel advisor. Shot across two countries at locations including Villa Igiea, Teatro Massimo, Capo Market, Piazza Bellini, and San Saverio church.',
       'Will produced the film end to end, coordinating London studio shoots for the advisor sequences and three days of location work across Palermo with a local crew. He assembled the creative team: director Sam McMullen, DOP James Parsons, and editor Ravi Chauhan.',
