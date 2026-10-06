@@ -237,7 +237,7 @@ export const projects: Project[] = [
     num: '09',
     image: 'images/steaks.gif',
     description: [
-      'Comedy short directed by Ste Hinde, whose credits span branded content for Google, Apple, Pepsi, and Barclays, with comedy shorts screened at London Independent Film Festival and Barnes Film Festival.',
+      'Comedy short starring Abi Clark and Jake Bhardwaj, directed by Ste Hinde, whose credits span branded content for Google, Apple, Pepsi, and Barclays, with comedy shorts screened at London Independent Film Festival and Barnes Film Festival.',
       'Will served as script editor and script supervisor. He worked with Ste to tighten the comedy and sharpen the story structure, then tracked continuity on set across dialogue, props, and blocking.',
       'Directed by Ste Hinde, winner of a National RTS Award for his documentary Confido.',
     ],
