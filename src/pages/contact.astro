@@ -6,7 +6,7 @@ const contactJsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "Contact Will Jarvis",
-  "description": "Get in touch with Will Jarvis for branded content production, creative direction, scripted development, and freelance writing.",
+  "description": "Contact Will Jarvis for enquiries about branded content production, creative direction, scripted development, and freelance writing.",
   "url": `${siteUrl}/contact`,
   "mainEntity": {
     "@type": "Person",
@@ -26,7 +26,7 @@ const breadcrumbs = [
 ];
 ---
 
-<Base title="Contact | Will Jarvis" description="Get in touch with Will Jarvis for branded content production, creative direction, scripted development, and freelance writing. Based in Hackney, London." jsonLd={contactJsonLd} breadcrumbs={breadcrumbs}>
+<Base title="Contact | Will Jarvis" description="Contact Will Jarvis for enquiries about branded content production, creative direction, scripted development, and freelance writing. Based in Hackney, London." jsonLd={contactJsonLd} breadcrumbs={breadcrumbs}>
   <section class="contact-page">
     <div class="contact-layout">
       <div class="contact-left">
@@ -40,32 +40,31 @@ const breadcrumbs = [
 
       <div class="contact-right">
         <p class="contact-intro animate-in" style="--delay: 0.3s">
-          Available for branded content production, creative direction,
+          For enquiries about branded content production, creative direction,
           scripted development, and freelance writing.
         </p>
 
-        <div class="contact-details">
-          <div class="contact-row animate-in" style="--delay: 0.4s">
-            <span class="row-label">Email</span>
-            <a href="mailto:williamjarvis1996@gmail.com" class="row-value row-email">williamjarvis1996@gmail.com</a>
-          </div>
-          <div class="contact-row animate-in" style="--delay: 0.45s">
-            <span class="row-label">Based in</span>
-            <span class="row-value">Hackney, London</span>
-          </div>
-          <div class="contact-row animate-in" style="--delay: 0.5s">
-            <span class="row-label">IMDb</span>
-            <a href="https://www.imdb.com/name/nm15210832/" target="_blank" rel="noopener" class="row-value row-link">imdb.com/name/nm15210832 &rarr;</a>
-          </div>
-          <div class="contact-row animate-in" style="--delay: 0.55s">
-            <span class="row-label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/will-t-jarvis/" target="_blank" rel="noopener" class="row-value row-link">linkedin.com/in/will-t-jarvis &rarr;</a>
-          </div>
-          <div class="contact-row animate-in" style="--delay: 0.6s">
-            <span class="row-label">Instagram</span>
-            <a href="https://www.instagram.com/willjarvis.1996/" target="_blank" rel="noopener" class="row-value row-link">@willjarvis.1996 &rarr;</a>
-          </div>
+        <div class="contact-email animate-in" style="--delay: 0.4s">
+          <a href="mailto:williamjarvis1996@gmail.com" class="email-btn">Email me</a>
+          <a href="mailto:williamjarvis1996@gmail.com" class="email-address">williamjarvis1996@gmail.com</a>
         </div>
+
+        <div class="contact-socials animate-in" style="--delay: 0.5s">
+          <a href="https://www.instagram.com/willjarvis.1996/" target="_blank" rel="noopener" class="social-link">
+            <span class="social-name">Instagram</span>
+            <span class="social-arrow">&rarr;</span>
+          </a>
+          <a href="https://www.linkedin.com/in/will-t-jarvis/" target="_blank" rel="noopener" class="social-link">
+            <span class="social-name">LinkedIn</span>
+            <span class="social-arrow">&rarr;</span>
+          </a>
+          <a href="https://www.imdb.com/name/nm15210832/" target="_blank" rel="noopener" class="social-link">
+            <span class="social-name">IMDb</span>
+            <span class="social-arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <p class="contact-location animate-in" style="--delay: 0.6s">Based in Hackney, London</p>
       </div>
     </div>
   </section>
@@ -120,69 +119,99 @@ const breadcrumbs = [
     max-width: 420px;
   }
 
-  .contact-details {
+  /* Tier 1: Email */
+  .contact-email {
     display: flex;
     flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: var(--space-lg);
   }
 
-  .contact-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .contact-row:first-child {
-    border-top: 1px solid var(--color-border);
-  }
-
-  .row-label {
-    font-size: 0.5625rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--color-fg-muted);
-    font-weight: 600;
-  }
-
-  .row-value {
-    font-size: 0.875rem;
-    color: var(--color-fg);
-    font-weight: 500;
-    letter-spacing: 0.01em;
-  }
-
-  .row-email {
-    position: relative;
-  }
-
-  .row-email::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 1px;
+  .email-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: var(--color-accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 1rem 2.5rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+    align-self: flex-start;
   }
 
-  .row-email:hover {
-    color: var(--color-accent);
+  .email-btn:hover {
+    background: #a51f1f;
+    transform: translateY(-1px);
   }
 
-  .row-email:hover::after {
-    transform: scaleX(1);
-  }
-
-  .row-link {
+  .email-address {
+    font-size: 0.8125rem;
+    color: var(--color-fg-muted);
+    letter-spacing: 0.02em;
     transition: color 0.2s ease;
   }
 
-  .row-link:hover {
+  .email-address:hover {
     color: var(--color-accent);
+  }
+
+  /* Tier 2: Socials */
+  .contact-socials {
+    display: flex;
+    gap: 1px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .social-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1rem;
+    border: 1px solid var(--color-border);
+    margin-left: -1px;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    color: var(--color-fg);
+  }
+
+  .social-link:first-child {
+    margin-left: 0;
+  }
+
+  .social-link:hover {
+    background: var(--color-bg-muted);
+    border-color: var(--color-fg-muted);
+    color: var(--color-accent);
+    z-index: 1;
+  }
+
+  .social-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .social-arrow {
+    font-size: 0.875rem;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .social-link:hover .social-arrow {
+    transform: translateX(3px);
+  }
+
+  /* Tier 3: Location */
+  .contact-location {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-fg-muted);
+    font-weight: 500;
+    opacity: 0.6;
   }
 
   @media (max-width: 767px) {
@@ -194,6 +223,24 @@ const breadcrumbs = [
 
     .contact-headline span {
       font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .email-btn {
+      width: 100%;
+    }
+
+    .contact-socials {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .social-link {
+      margin-left: 0;
+      margin-top: -1px;
+    }
+
+    .social-link:first-child {
+      margin-top: 0;
     }
   }
 </style>
