@@ -81,9 +81,12 @@ export const projects: Project[] = [
     num: '03',
     image: 'images/hamilton-power-up.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=aKi2dFwtTxo', label: 'Watch' }],
+    details: [
+      { key: 'Watch', value: 'Power Reserve Mechanical 40mm' },
+    ],
     description: [
-      'Launch film for the Hamilton Khaki Field Titanium Auto, built around the watch\'s 80-hour power reserve and fuel-gauge complication. Introduced the top-down, locked-on-the-wrist visual language that became the signature of Hamilton\'s branded content.',
-      'Will managed post-production, overseeing the edit, colour grade, sound design, and motion graphics pipeline. He worked with the director to build the film\'s energy metaphor around the power reserve concept.',
+      'Launch film for the Power Reserve Mechanical 40mm, built around the watch\'s power reserve indicator shown directly on the dial. Introduced the top-down, locked-on-the-wrist visual language that became a signature of Hamilton\'s branded content.',
+      'Will managed post-production, overseeing the edit, colour grade, sound design, and motion graphics pipeline. He worked with the director to build the film\'s energy metaphor around the power reserve concept. Worked with shooting producer Will Newton alongside the director Ron Mulvey.',
       'Winner at the Cannes Corporate Media & TV Awards 2026. Submitted for the Lens Awards under Best Creative Execution. The visual language established here carried directly into the later festive campaign.',
     ],
     awards: [
