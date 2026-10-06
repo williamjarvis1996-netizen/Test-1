@@ -39,9 +39,9 @@ export const projects: Project[] = [
     wide: true,
     image: 'images/hamilton-in-the-midst-of-it.gif',
     description: [
-      'Will produced Hamilton\'s festive campaign from concept through final delivery. He developed the creative treatment around three overlapping Christmas morning storylines, each anchored by a different Hamilton watch, and managed the client relationship across multiple approval rounds.',
-      'He ran a three-day shoot at a manor house in Hertfordshire, coordinating a high-speed camera unit alongside the main unit. On set he managed talent, locations, and a schedule built around match-cut transitions that stitched the three storylines together.',
-      'Delivered five films: a hero cut, a 30-second cutdown, and three 15-second social edits, each in four aspect ratios with full motion graphics, sound design, and colour grade. The top-down, locked-on-the-wrist visual language established here became the creative foundation for Hamilton\'s branded content direction.',
+      'Festive campaign for Hamilton Watches built around the chaos of Christmas morning. Three overlapping storylines, each anchored by a different watch, stitched together with match-cut transitions and shot on high-speed cameras for slow-motion hero moments.',
+      'Will produced from concept through delivery, running a three-day shoot at a manor house in Hertfordshire with two camera units operating simultaneously. He managed talent, locations, and the client relationship across multiple approval rounds.',
+      'Delivered five films in four aspect ratios with full motion graphics, sound design, and colour grade. The top-down, locked-on-the-wrist visual language established here became the foundation for Hamilton\'s branded content direction.',
     ],
     featured: true,
   },
@@ -56,9 +56,9 @@ export const projects: Project[] = [
     image: 'images/hamilton-into-the-wild.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=Rl0pLkaWXs4', label: 'Watch' }],
     description: [
-      'Will produced this three-part branded series for the Hamilton Khaki Field, leaning into the watch\'s military heritage and its identity as an outdoor tool built for rough terrain. He shaped the creative alongside director Ron Mulvey.',
-      'He managed a two-day location shoot across rural Wales, handling logistics for remote countryside locations and working closely with DOP Angus Steele to build a visual language that matched the Khaki Field\'s rugged character.',
-      'Will ran the post-production pipeline and delivered the final three-film series to Hamilton, managing edits, grade, and sound through to sign-off.',
+      'Three-part branded series for the Hamilton Khaki Field, leaning into the watch\'s military heritage and its identity as an outdoor tool built for rough terrain. Shot across rural Wales with a visual language rooted in natural light and rugged countryside.',
+      'Will produced the series alongside director Ron Mulvey, managing a two-day location shoot across remote Welsh countryside. He worked closely with DOP Angus Steele to shape a visual approach that matched the Khaki Field\'s character.',
+      'Delivered as a three-film series to Hamilton with full post-production managed through to sign-off.',
     ],
     featured: true,
   },
@@ -73,9 +73,9 @@ export const projects: Project[] = [
     image: 'images/hamilton-power-up.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=aKi2dFwtTxo', label: 'Watch' }],
     description: [
-      'Will managed post-production on this launch film for the Hamilton Khaki Field Titanium Auto. The film introduced the top-down, locked-on-the-wrist visual language that became the signature of Hamilton\'s branded content.',
-      'He oversaw the edit, colour grade, sound design, and motion graphics pipeline, working with the director to build the film\'s energy metaphor around the watch\'s 80-hour power reserve and fuel-gauge complication.',
-      'Winner at the Cannes Corporate Media & TV Awards 2026 and submitted for the Lens Awards under Best Creative Execution. The visual language Will helped establish here carried directly into the later festive campaign.',
+      'Launch film for the Hamilton Khaki Field Titanium Auto, built around the watch\'s 80-hour power reserve and fuel-gauge complication. Introduced the top-down, locked-on-the-wrist visual language that became the signature of Hamilton\'s branded content.',
+      'Will managed post-production, overseeing the edit, colour grade, sound design, and motion graphics pipeline. He worked with the director to build the film\'s energy metaphor around the power reserve concept.',
+      'Winner at the Cannes Corporate Media & TV Awards 2026. Submitted for the Lens Awards under Best Creative Execution. The visual language established here carried directly into the later festive campaign.',
     ],
     awards: [
       'Winner at the Cannes Corporate Media & TV Awards 2026',
@@ -94,9 +94,9 @@ export const projects: Project[] = [
     image: 'images/fora-at-five.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=DxAVfx8Igeo', label: 'Watch' }],
     description: [
-      'Will produced this hero brand film marking Fora Travel\'s fifth anniversary. He oversaw production across two countries, building the story of a family returning to Palermo for a 50th wedding anniversary, curated by their Fora travel advisor.',
-      'He coordinated London studio shoots for the advisor sequences, then managed three days of location work across Palermo with a local crew. Key locations included Villa Igiea, Teatro Massimo, Capo Market, Piazza Bellini, and San Saverio church.',
-      'Will assembled the creative team: director Sam McMullen, DOP James Parsons, and editor Ravi Chauhan. He managed the full post pipeline including a split-screen VFX sequence and delivered the final film to Fora.',
+      'Hero brand film marking Fora Travel\'s fifth anniversary, telling the story of a family returning to Palermo for a 50th wedding anniversary curated by their Fora travel advisor. Shot across two countries at locations including Villa Igiea, Teatro Massimo, Capo Market, Piazza Bellini, and San Saverio church.',
+      'Will produced the film end to end, coordinating London studio shoots for the advisor sequences and three days of location work across Palermo with a local crew. He assembled the creative team: director Sam McMullen, DOP James Parsons, and editor Ravi Chauhan.',
+      'Delivered to Fora as their hero brand film, with full post-production including a split-screen VFX sequence managed through to final delivery.',
     ],
     featured: true,
   },
@@ -111,9 +111,9 @@ export const projects: Project[] = [
     image: 'images/chelsea-damac.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=5o_azlXU-xc', label: 'Watch' }],
     description: [
-      'Will produced three ads for Chelsea Residences by DAMAC Properties: the hero spot "Matchday in the Sky" and two "Metaverse" comedy films featuring Chelsea FC players.',
-      'He ran a two-day studio shoot with two units operating simultaneously. One unit built the Matchday platform sequences with football-talented body doubles while the other shot green-screen for the Metaverse films. Will managed tight talent windows, with Chelsea FC players available for just 15 minutes each on shoot day.',
-      'He coordinated VFX with FocusFrame and delivered the final campaign to DAMAC, covering a floating pitch concept, skydiving sequences, and VR locker room comedy across multiple formats.',
+      'Three ads for Chelsea Residences by DAMAC Properties: the hero spot "Matchday in the Sky" and two "Metaverse" comedy films featuring Chelsea FC players. A campaign built around a floating pitch concept, skydiving sequences, and VR locker room comedy.',
+      'Will produced a two-day studio shoot with two units operating simultaneously. One built the Matchday platform sequences with football-talented body doubles while the other shot green-screen for the Metaverse films. He managed tight talent windows, with Chelsea FC players available for just 15 minutes each.',
+      'VFX coordinated with FocusFrame. Final campaign delivered to DAMAC across multiple formats.',
     ],
   },
   {
@@ -128,9 +128,9 @@ export const projects: Project[] = [
     image: 'images/booking-traveller-review-awards.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=A6IfbTf06PU', label: 'Watch' }],
     description: [
-      'Will co-produced and served as 1st AD on Booking.com\'s 14th annual Traveller Review Awards campaign, celebrating 1.81 million partners across 221 countries. The hero film, "Where Hospitality Begins," moved the campaign toward human storytelling with real award-winning partners.',
-      'As 1st AD, Will managed the shoot schedule and floor on set, keeping the production on track across multiple locations and real contributors who weren\'t professional talent. As co-producer he helped shape the campaign\'s channel strategy and deliverables.',
-      'The campaign delivered a hero film, social-native content, a stills campaign, and owned-channel creative. It won at the Cannes Corporate Media & TV Awards and took four MUSE Awards including three Platinum.',
+      'Booking.com\'s 14th annual Traveller Review Awards campaign, celebrating 1.81 million partners across 221 countries. The hero film, "Where Hospitality Begins," moved the campaign toward human storytelling with real award-winning partners rather than professional talent.',
+      'Will co-produced and served as 1st AD, managing the shoot schedule and floor on set across multiple locations with real contributors. He helped shape the campaign\'s channel strategy and deliverables.',
+      'Delivered a hero film, social-native content, a stills campaign, and owned-channel creative. Winner at the Cannes Corporate Media & TV Awards 2026 and four MUSE Awards including three Platinum. Submitted for the Lens Awards 2026 under Hospitality.',
     ],
     awards: [
       'Winner at the Cannes Corporate Media & TV Awards 2026',
@@ -150,9 +150,9 @@ export const projects: Project[] = [
     image: 'images/mcfc-ohana.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw', label: 'Watch' }],
     description: [
-      'Will produced the launch film for Manchester City Yas Residences by Ohana, a $4.1 billion waterfront development in Abu Dhabi. The film features Manchester City players and blends live-action with 3D-rendered architectural environments.',
-      'He managed a production spanning three phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and a virtual production day on an LED volume stage. Will coordinated player availability, crew across two countries, and the compositing of 3D renders into the final film.',
-      'The finished film positioned the development within the global Manchester City brand, bridging real and virtual environments to sell a residential project that hadn\'t yet been built.',
+      'Launch film for Manchester City Yas Residences by Ohana, a $4.1 billion waterfront development in Abu Dhabi. Blends live-action footage of Manchester City players with 3D-rendered architectural environments to sell a residential project that hadn\'t yet been built.',
+      'Will produced across three phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and a virtual production day on an LED volume stage. He coordinated player availability, crew across two countries, and the compositing of 3D renders into the final film.',
+      'The finished film positioned the development within the global Manchester City brand, bridging real and virtual environments for the launch campaign.',
     ],
   },
   {
@@ -164,8 +164,8 @@ export const projects: Project[] = [
     num: '08',
     image: 'images/dinner-diamonds-and-death.gif',
     description: [
-      'Will wrote and co-directed this non-linear psychological thriller set in London\'s criminal underworld. He built the film\'s fractured structure, moving between timelines as the audience pieces together the puzzle alongside the characters.',
-      'He shot across London, Gravesend, and Chadwell Heath, co-directing with Marc. Will conceived the film as a departure from the typical London skyline crime aesthetic, setting the story behind closed doors where the danger follows you inside.',
+      'Non-linear psychological thriller set in London\'s criminal underworld. A fractured structure moves between timelines as the audience pieces together the puzzle alongside the characters, set behind closed doors where the danger follows you inside.',
+      'Will wrote the script and co-directed with Marc, shooting across London, Gravesend, and Chadwell Heath. He conceived the film as a departure from the typical London skyline crime aesthetic, grounding the story in interiors rather than cityscapes.',
       'Currently in post-production with picture lock complete. Targeting Sundance London.',
     ],
     featured: true,
@@ -179,9 +179,9 @@ export const projects: Project[] = [
     num: '09',
     image: 'images/steaks.gif',
     description: [
-      'Will served as script editor and script supervisor on this comedy short directed by Ste Hinde. He shaped the script through development and maintained continuity on set.',
-      'As script editor, Will worked with Ste to tighten the comedy and sharpen the story structure. On set he tracked continuity across takes, keeping dialogue, props, and blocking consistent throughout the shoot.',
-      'Ste Hinde\'s credits span branded content for Google, Apple, Pepsi, and Barclays, with comedy shorts screened at London Independent Film Festival and Barnes Film Festival. He won a National RTS Award for his documentary Confido.',
+      'Comedy short directed by Ste Hinde, whose credits span branded content for Google, Apple, Pepsi, and Barclays, with comedy shorts screened at London Independent Film Festival and Barnes Film Festival.',
+      'Will served as script editor and script supervisor. He worked with Ste to tighten the comedy and sharpen the story structure, then tracked continuity on set across dialogue, props, and blocking.',
+      'Directed by Ste Hinde, winner of a National RTS Award for his documentary Confido.',
     ],
   },
   {
@@ -193,8 +193,8 @@ export const projects: Project[] = [
     num: '10',
     image: 'images/aortic.gif',
     description: [
-      'Will wrote the script and co-produced this short film about a man who retreats to a hospital broom closet to leave a voice note to an old friend. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
-      'He developed the screenplay and brought it to director Niamh Marie Smith. Will co-produced the shoot in November 2023, with Macauley Keeper in the lead role as Jack.',
+      'Short film about a man who retreats to a hospital broom closet to leave a voice note to an old friend. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
+      'Will wrote the screenplay and co-produced, bringing it to director Niamh Marie Smith. Shot in November 2023 with Macauley Keeper in the lead role as Jack.',
       'World premiere at Picturehouse Central. Macauley Keeper won the Jury Award for Best Performance at the Rob Knox International Film Festival 2025.',
     ],
     awards: [
@@ -210,8 +210,8 @@ export const projects: Project[] = [
     num: '11',
     image: 'images/break-a-leg.gif',
     description: [
-      'Will co-created and writes this 6 x 30 minute dark comedy thriller with Moritz Matzmorr and Naala Vanslembrouck as part of the writing collective GGG (Gary Got Got). When a struggling acting student takes a job chopping up corpses, her talent dramatically improves.',
-      'Will adapted the series from a German-language project into an English-language original. He wrote the full pilot script, outlined all six episodes, and built the pitch deck. The series follows Riley across Soho, Tower Hamlets, and Docklands as she rises through drama school while sinking deeper into her aunt\'s criminal operation.',
+      '6 x 30 minute dark comedy thriller. When a struggling acting student takes a job chopping up corpses, her talent dramatically improves. The series follows Riley across Soho, Tower Hamlets, and Docklands as she rises through drama school while sinking deeper into her aunt\'s criminal operation.',
+      'Will co-created the series with Moritz Matzmorr and Naala Vanslembrouck as part of the writing collective GGG (Gary Got Got). He adapted it from a German-language project into an English-language original, wrote the full pilot script, outlined all six episodes, and built the pitch deck.',
       'Presented at SERIENCAMP UK in January 2024. Currently in development.',
     ],
     featured: true,
@@ -225,8 +225,8 @@ export const projects: Project[] = [
     num: '12',
     image: 'images/brain-drain.webp',
     description: [
-      'Will created and writes this 6 x 25 minute apocalyptic adventure comedy with Moritz Matzmorr and Naala Vanslembrouck as part of GGG (Gary Got Got). Three government interns must navigate incompetent politicians and brain-controlling fungi to save the undead, and possibly the world.',
-      'Will built the series world from scratch: a decrepit Home Office branch on the Blackpool seaside where disaster moves faster than government ever could. Political satire, workplace absurdism, and surreal institutional logic described in development as "Terry Gilliam\'s Brazil vibes."',
+      '6 x 25 minute apocalyptic adventure comedy. Three government interns must navigate incompetent politicians and brain-controlling fungi to save the undead, and possibly the world. Set in a decrepit Home Office branch on the Blackpool seaside where disaster moves faster than government ever could.',
+      'Will created the series with Moritz Matzmorr and Naala Vanslembrouck as part of GGG (Gary Got Got). He built the world from scratch, blending political satire, workplace absurdism, and surreal institutional logic described in development as "Terry Gilliam\'s Brazil vibes."',
       'Optioned by Fandango Productions.',
     ],
     featured: true,
@@ -240,8 +240,8 @@ export const projects: Project[] = [
     num: '13',
     image: 'images/clockwork-arms.webp',
     description: [
-      'Will wrote and directed this play about a group of friends who stumble into a pub that travels through time. The Clockwork Arms pulls its inhabitants through five periods of London\'s history, forcing them to confront their past and decide what to do with their own time.',
-      'Will used the time-travelling pub as a device for reckoning with the city\'s layered history, and with the characters\' own. He directed the cast through five distinct eras, each with its own London, its own language, and its own stakes.',
+      'A group of friends stumble into a pub that travels through time. The Clockwork Arms pulls its inhabitants through five periods of London\'s history, forcing them to confront their past and decide what to do with their own time.',
+      'Will wrote and directed, guiding the cast through five distinct eras, each with its own London, its own language, and its own stakes. He used the time-travelling pub as a device for reckoning with the city\'s layered history, and with the characters\' own.',
       'Sold out its run. Hana Jarrah as Maya, Joel Coussins as The Bartender. Produced by Laura Aiton and Adam Porrett.',
     ],
   },
@@ -254,8 +254,8 @@ export const projects: Project[] = [
     num: '14',
     image: 'images/the-emoji-project.webp',
     description: [
-      'Will created and produced this anthology of new writing for Camden Fringe under Distracted Rat Productions. He conceived the format: an intergenerational collection of short plays, each written in response to a single emoji.',
-      'He commissioned writers ranging in age from 11 to 75, curating pieces by sean wai keung, Tilney Brune, James Aldred, Jalice Corral, and Alastair Gibbons among others. Will managed the production across three nights at the Hen and Chickens Theatre in August 2021.',
+      'Anthology of new writing for Camden Fringe under Distracted Rat Productions. An intergenerational collection of short plays, each written in response to a single emoji, with contributors ranging in age from 11 to 75.',
+      'Will created the format and produced the run, commissioning writers including sean wai keung, Tilney Brune, James Aldred, Jalice Corral, and Alastair Gibbons. He managed production across three nights at the Hen and Chickens Theatre in August 2021.',
       'Sold out its run. Reviewers described it as making "you giggle and think in the same breath." Directed by Susie MacDonald, Gabriel Harris, and Annys Whyatt.',
     ],
   },
@@ -269,9 +269,9 @@ export const projects: Project[] = [
     image: 'images/remote-radioplays.webp',
     links: [{ url: 'https://soundcloud.com/distracted-rat', label: 'Listen' }],
     description: [
-      'Will produced this two-season anthology of original radio plays during lockdown under Distracted Rat Productions. He built seventeen episodes across two seasons entirely over video calls and file transfers.',
-      'For Season 2, "The Thing with Feathers," Will brought together 11 international writers and coordinated a 35-person creative team spanning 16 time zones. He managed scripting, casting, recording, and post-production remotely across every episode.',
-      'Will also wrote and performed in "The Fjordic Typhoon." Available on SoundCloud.',
+      'Two-season anthology of original radio plays created during lockdown under Distracted Rat Productions. Seventeen episodes built entirely over video calls and file transfers, with Season 2 spanning a 35-person creative team across 16 time zones.',
+      'Will produced both seasons, managing scripting, casting, recording, and post-production remotely. For Season 2, "The Thing with Feathers," he brought together 11 international writers and coordinated the full creative team. He also wrote and performed in "The Fjordic Typhoon."',
+      'Available on SoundCloud.',
     ],
   },
   {
@@ -283,8 +283,8 @@ export const projects: Project[] = [
     num: '16',
     image: 'images/vidi-guides.webp',
     description: [
-      'Will led content and production at Vidi Guides for four years, overseeing the creation of 100+ GPS-triggered audio walking tours across 17 cities and 7 countries.',
-      'He managed the full production pipeline: scripting, voice casting, location research, and production management across dozens of simultaneous tours. Cities included London, Paris, Cambridge, Oxford, Edinburgh, New York, Singapore, Rome, and Venice.',
+      '100+ GPS-triggered audio walking tours across 17 cities and 7 countries, produced over four years at Vidi Guides. Cities included London, Paris, Cambridge, Oxford, Edinburgh, New York, Singapore, Rome, and Venice.',
+      'Will led content and production, managing the full pipeline from scripting and voice casting to location research and production management across dozens of simultaneous tours.',
       'Clients included Walt Disney, Hilton Hotels, Lonely Planet, and Culture Trip.',
     ],
   },
