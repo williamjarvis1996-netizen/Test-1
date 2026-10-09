@@ -363,7 +363,7 @@ export const projects: Project[] = [
     year: '2020-2024',
     role: 'Head of Content & Production',
     num: '16',
-    image: 'images/vidi-guides.webp',
+    image: 'images/vidi-guides.gif',
     links: [{ url: 'https://www.vidiguides.com/', label: 'Visit Vidi Guides' }],
     details: [
       { key: 'Scale', value: '100+ tours across 17 cities in 7 countries' },
