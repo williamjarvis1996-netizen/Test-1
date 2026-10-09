@@ -265,15 +265,19 @@ export const projects: Project[] = [
     role: 'Writer / Co-Producer',
     num: '10',
     image: 'images/aortic.gif',
-    links: [{ url: 'https://www.imdb.com/title/tt28815002/', label: 'View on IMDb' }],
-    keywords: ['Aortic', 'short film', 'Macauley Keeper', 'Niamh Marie Smith', 'Rob Knox Film Festival', 'Best Performance', 'drama', 'British film', 'London', 'screenwriter'],
+    links: [
+      { url: 'https://www.imdb.com/title/tt28815002/', label: 'View on IMDb' },
+      { url: 'https://www.amazon.co.uk/Silence-Stacks-New-Voices-Rise-ebook/dp/B0G2M56CNY/', label: 'Read the Script' },
+    ],
+    keywords: ['Aortic', 'short film', 'Macauley Keeper', 'Niamh Marie Smith', 'Rob Knox Film Festival', 'Best Performance', 'drama', 'British film', 'London', 'screenwriter', 'London Library', 'Emerging Writers Programme', 'From the Silence of the Stacks'],
     description: [
       'Short film about a man who retreats to a hospital broom closet to leave a voice note to an old friend. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
       'Will wrote the screenplay and co-produced, bringing it to director Niamh Marie Smith. Shot in November 2023 with Macauley Keeper in the lead role as Jack.',
-      'World premiere at Picturehouse Central. Macauley Keeper won the Jury Award for Best Performance at the Rob Knox International Film Festival 2025.',
+      'World premiere at Picturehouse Central. Macauley Keeper won the Jury Award for Best Performance at the Rob Knox International Film Festival 2025. The screenplay is published in From the Silence of the Stacks, New Voices Rise, the London Library Emerging Writers Programme anthology.',
     ],
     awards: [
       'Jury Award for Best Performance (Macauley Keeper) at the Rob Knox International Film Festival 2025',
+      'Screenplay published in From the Silence of the Stacks, New Voices Rise (London Library)',
     ],
   },
   {
