@@ -14,6 +14,7 @@ export interface Project {
   awards?: string[];
   details?: { key: string; value: string }[];
   keywords?: string[];
+  metaDescription?: string;
   image?: string;
   links?: ProjectLink[];
   featured?: boolean;
@@ -46,6 +47,7 @@ export const projects: Project[] = [
       { key: 'Location', value: 'Hertfordshire' },
     ],
     keywords: ['Hamilton Watches', 'festive campaign', 'Christmas', 'branded content', 'watch film', 'slow motion', 'match-cut transitions', 'Hertfordshire', 'high-speed cameras', 'luxury watches', 'Bailey Smith', 'James Parsons', 'RD Content', 'Will Jarvis'],
+    metaDescription: 'Festive branded campaign for Hamilton Watches. Three Christmas Eve storylines shot on high-speed cameras. Produced by Will Jarvis at RD Content.',
     description: [
       'Festive campaign for Hamilton Watches built around the chaos of Christmas Eve. Three overlapping storylines, each anchored by a different watch, stitched together with match-cut transitions and shot on high-speed cameras for slow-motion hero moments.',
       'Producing at RD Content, Will led the project from concept through delivery, collaborating with director Bailey Smith and DOP James Parsons. He ran a three-day shoot at a manor house in Hertfordshire with two camera units plus a social unit operating simultaneously, managing talent, locations, and the client relationship across multiple approval rounds.',
@@ -69,6 +71,7 @@ export const projects: Project[] = [
       { key: 'Shooting Producer', value: 'Will Newton' },
     ],
     keywords: ['Hamilton Watches', 'Power Reserve Mechanical 40mm', 'Khaki Field Titanium', 'Ron Mulvey', 'Will Newton', 'Cannes Corporate Media Awards', 'Lens Awards', 'branded content', 'watch film', 'power reserve', 'RD Content', 'Will Jarvis'],
+    metaDescription: 'Launch film for the Hamilton Power Reserve Mechanical 40mm. Winner at the Cannes Corporate Media & TV Awards. Produced at RD Content.',
     description: [
       'Launch film for the Hamilton Power Reserve Mechanical 40mm, built around the watch\'s power reserve indicator shown directly on the dial. Introduced the top-down, locked-on-the-wrist visual language that became a signature of Hamilton Watches\' branded content.',
       'Working as Creative Producer at RD Content, Will managed post-production, overseeing the edit, colour grade, sound design, and motion graphics pipeline. He worked with shooting producer Will Newton and director Ron Mulvey to build the film\'s energy metaphor around the power reserve concept.',
@@ -100,6 +103,7 @@ export const projects: Project[] = [
       { key: 'DOP', value: 'Angus Steele' },
     ],
     keywords: ['Hamilton Watches', 'Khaki Field Bronze', 'Khaki Field King', 'Khaki Field Power Reserve', 'Into the Wild', 'Ron Mulvey', 'Angus Steele', 'Wales', 'branded content', 'watch film', 'outdoor', 'adventure', 'RD Content', 'Will Jarvis'],
+    metaDescription: 'Three-part branded series for Hamilton Watches Khaki Field collection. Shot across rural Wales. Produced by Will Jarvis at RD Content.',
     description: [
       'Three-part branded series for three different Hamilton Watches, leaning into the company\'s adventurous heritage and their identity as an outdoor tool built for rough terrain. Shot across rural Wales with a visual language rooted in natural light and rugged countryside.',
       'Producing at RD Content, Will led the series alongside director Ron Mulvey, managing a three-day location shoot across remote Welsh countryside. He worked closely with DOP Angus Steele to shape a visual approach that matched the Khaki Field\'s character.',
@@ -129,6 +133,7 @@ export const projects: Project[] = [
       { key: 'Production Company', value: 'RD Content' },
     ],
     keywords: ['Booking.com', 'Traveller Review Awards', 'TRA 2026', 'Where Hospitality Begins', 'Hoxton', 'hospitality', 'travel', 'branded content', 'real partners', 'hero film', 'spotlight film', 'social content', 'MUSE Awards', 'Cannes Corporate Media & TV Awards', 'Lens Awards', '1st AD', 'co-producer', 'RD Content', 'Will Jarvis'],
+    metaDescription: 'Booking.com Traveller Review Awards 2026 campaign. Winner at Cannes Corporate Media & TV Awards and four MUSE Awards. Produced at RD Content.',
     description: [
       'Booking.com\'s 14th annual Traveller Review Awards campaign, celebrating 1.81 million partners across 221 countries. The hero film, "Where Hospitality Begins," moved the campaign toward human storytelling with real award-winning partners rather than professional talent.',
       'Working at RD Content, Will co-produced and served as 1st AD, managing the shoot schedule and floor on set across multiple locations with real contributors. He helped shape the campaign\'s channel strategy and deliverables.',
@@ -161,6 +166,7 @@ export const projects: Project[] = [
       { key: 'Location', value: 'Studio shoot, London' },
     ],
     keywords: ['Chelsea FC', 'DAMAC Properties', 'Chelsea Residences', 'Matchday in the Sky', 'Metaverse', 'Cole Palmer', 'Enzo Fernandez', 'Moises Caicedo', 'Wesley Fofana', 'Trevoh Chalobah', 'branded content', 'football', 'Premier League', 'FocusFrame', 'VFX', 'green screen', 'skydiving', 'VR', 'Dubai', 'RD Content', 'Will Jarvis'],
+    metaDescription: 'Three branded films for Chelsea FC x DAMAC Properties featuring Cole Palmer, Enzo Fernandez, and Moises Caicedo. Produced at RD Content.',
     description: [
       'Three ads for Chelsea Residences by DAMAC Properties: the hero spot "Matchday in the Sky" and two "Metaverse" comedy films featuring Chelsea FC players Cole Palmer, Enzo Fernandez, Moises Caicedo, Wesley Fofana, and Trevoh Chalobah. A campaign built around a floating pitch concept, skydiving sequences, and VR locker room comedy.',
       'Producing at RD Content, Will ran a two-day studio shoot with two units operating simultaneously. One built the Matchday platform sequences with football-talented body doubles while the other shot green-screen for the Metaverse films. He managed tight talent windows, with Chelsea FC players available for just 15 minutes each.',
@@ -188,6 +194,7 @@ export const projects: Project[] = [
       { key: 'Locations', value: 'London, Palermo (Villa Igiea, Teatro Massimo, Capo Market, Piazza Bellini, San Saverio)' },
     ],
     keywords: ['Fora Travel', 'Fora at Five', 'fifth anniversary', 'Sam McMullen', 'Ewan Thomas', 'James Parsons', 'Ravi Chauhan', 'Palermo', 'Sicily', 'Villa Igiea', 'Teatro Massimo', 'Capo Market', 'travel advisor', 'branded content', 'London', 'RD Content', 'Will Jarvis'],
+    metaDescription: 'Hero brand film for Fora Travel\'s fifth anniversary. Shot across London and Palermo, Sicily. Produced by Will Jarvis at RD Content.',
     description: [
       'Hero brand film marking Fora Travel\'s fifth anniversary, telling the story of a family returning to Palermo for a 50th wedding anniversary curated by their Fora travel advisor. Shot across two countries at locations including Villa Igiea, Teatro Massimo, Capo Market, Piazza Bellini, and San Saverio church.',
       'Producing at RD Content, Will led the film end to end, coordinating London studio shoots for the advisor sequences and three days of location work across Palermo in Sicily with a London and local crew. He worked with director Sam McMullen and DOP James Parsons.',
@@ -206,6 +213,7 @@ export const projects: Project[] = [
     image: 'images/mcfc-ohana.gif',
     links: [{ url: 'https://www.youtube.com/watch?v=WKEuRSS-1Mw', label: 'Watch' }],
     keywords: ['Manchester City FC', 'Ohana', 'Yas Residences', 'Yas Island', 'Abu Dhabi', 'MCFC', 'branded content', '3D render', 'live action', 'football', 'Premier League', 'RD Content'],
+    metaDescription: 'Launch film for Manchester City Yas Residences by Ohana. Live-action and 3D renders shot in Manchester and Abu Dhabi. Produced at RD Content.',
     description: [
       'Launch film for Manchester City Yas Residences by Ohana, a $4.1 billion waterfront development in Abu Dhabi. Blends live-action footage of Manchester City players with 3D-rendered environments, inviting viewers to explore Ohana\'s new waterfront residences on Yas Island.',
       'Producing at RD Content, Will led the project across three phases: location work at Manchester City\'s training facilities, live-action sequences in Abu Dhabi, and oversight of 3D-rendered assets. He coordinated player availability, crew across two countries, and the compositing of 3D renders into the final film.',
@@ -225,6 +233,7 @@ export const projects: Project[] = [
       { url: 'https://www.amazon.co.uk/Silence-Stacks-New-Voices-Rise-ebook/dp/B0G2M56CNY/', label: 'Read the Script' },
     ],
     keywords: ['Aortic', 'short film', 'Macauley Keeper', 'Niamh Marie Smith', 'Rob Knox Film Festival', 'Best Performance', 'drama', 'British film', 'London', 'screenwriter', 'London Library', 'Emerging Writers Programme', 'From the Silence of the Stacks'],
+    metaDescription: 'Award-winning short film written by Will Jarvis. Winner of Best Performance at the Rob Knox Film Festival 2025. Starring Macauley Keeper.',
     description: [
       'Short film about a man who retreats to a hospital broom closet to leave a voice note to an old friend. A story about self-acceptance, the weight of time, and the courage to keep moving forwards.',
       'Will wrote the screenplay and co-produced, bringing it to director Niamh Marie Smith. Shot in November 2023 with Macauley Keeper in the lead role as Jack.',
@@ -244,6 +253,7 @@ export const projects: Project[] = [
     num: '09',
     image: 'images/steaks.gif',
     keywords: ['Steaks', 'comedy short', 'short film', 'Abi Clark', 'Jake Bhardwaj', 'Ste Hinde', 'script editor', 'script supervisor', 'London', 'British film'],
+    metaDescription: 'Comedy short film directed by Ste Hinde, starring Abi Clark and Jake Bhardwaj. Will Jarvis served as script editor and script supervisor.',
     description: [
       'Comedy short starring Abi Clark and Jake Bhardwaj, directed by Ste Hinde, whose credits span branded content for Google, Apple, Pepsi, and Barclays, with comedy shorts screened at London Independent Film Festival and Barnes Film Festival.',
       'Will served as script editor and script supervisor. He worked with Ste to tighten the comedy and sharpen the story structure, then tracked continuity on set across dialogue, props, and blocking.',
@@ -273,6 +283,7 @@ export const projects: Project[] = [
       { key: 'Locations', value: 'London, Gravesend, Chadwell Heath' },
     ],
     keywords: ['Dinner Diamonds and Death', 'short film', 'psychological thriller', 'non-linear', 'London', 'crime', 'criminal underworld', 'Will Jarvis', 'Sean Nwachukwu', 'Adam Sorrell', 'Nina Agathou', 'Alice Motta', 'Duane C Tucker', 'Sam Mazlow', 'Harry Clarke', 'Helen Laurens', 'Christina Boleat', 'Zayd Choudhry', 'Gravesend', 'Chadwell Heath', 'Sundance London', 'British film'],
+    metaDescription: 'Non-linear psychological thriller directed by Will Jarvis, starring Nina Agathou and Alice Motta. In post-production, targeting Sundance London.',
     description: [
       'Non-linear psychological thriller set in London\'s criminal underworld, starring Nina Agathou, Alice Motta, Duane C Tucker, Sam Mazlow, Harry Clarke, Helen Laurens, and Benjy Abu. A fractured structure moves between timelines as the audience pieces together the puzzle alongside the characters, set behind closed doors where the danger follows you inside.',
       'Will wrote the script with Sean Nwachukwu and Adam Sorrell, and directed, shooting across London, Gravesend, and Chadwell Heath. He conceived the film as a departure from the typical London skyline crime aesthetic, grounding the story in interiors rather than cityscapes. Produced by Sean Nwachukwu with Christina Boleat as executive producer and production designer.',
@@ -289,6 +300,7 @@ export const projects: Project[] = [
     num: '11',
     image: 'images/break-a-leg.gif',
     keywords: ['Break A Leg', 'dark comedy', 'thriller', 'TV series', 'TV development', 'Netflix', 'ITV', 'Hager Moss', 'GGG', 'Gary Got Got', 'SERIENCAMP', 'Soho', 'London', 'screenwriter', 'pilot script'],
+    metaDescription: 'Dark comedy thriller TV series created by Will Jarvis. 6 x 30 min. In development with Netflix, ITV, and Hager Moss.',
     description: [
       '6 x 30 minute dark comedy thriller. When a struggling acting student takes a job chopping up corpses, her talent dramatically improves. The series follows Riley across Soho, Tower Hamlets, and Docklands as she rises through drama school while sinking deeper into her aunt\'s criminal operation.',
       'Will co-created the series with Moritz Matzmorr and Naala Vanslembrouck as part of the writing collective GGG (Gary Got Got). He adapted it from a German-language project into an English-language original, wrote the full pilot script, outlined all six episodes, and built the pitch deck.',
@@ -305,6 +317,7 @@ export const projects: Project[] = [
     num: '12',
     image: 'images/brain-drain.webp',
     keywords: ['Brain Drain', 'apocalyptic comedy', 'adventure comedy', 'TV series', 'TV development', 'Fandango Productions', 'GGG', 'Gary Got Got', 'Blackpool', 'political satire', 'screenwriter', 'optioned'],
+    metaDescription: 'Apocalyptic adventure comedy TV series created by Will Jarvis. 6 x 25 min. Optioned by Fandango Productions.',
     description: [
       '6 x 25 minute apocalyptic adventure comedy. Three government interns must navigate incompetent politicians and brain-controlling fungi to save the undead, and possibly the world. Set in a decrepit Home Office branch on the Blackpool seaside where disaster moves faster than government ever could.',
       'Will created the series with Moritz Matzmorr and Naala Vanslembrouck as part of GGG (Gary Got Got). He built the world from scratch, blending political satire, workplace absurdism, and surreal institutional logic described in development as "Terry Gilliam\'s Brazil vibes."',
@@ -321,6 +334,7 @@ export const projects: Project[] = [
     num: '13',
     image: 'images/clockwork-arms.webp',
     keywords: ['The Clockwork Arms', 'theatre', 'immersive', 'time travel', 'London history', 'sold out', 'playwright', 'Distracted Rat Productions', 'new writing', 'fringe theatre'],
+    metaDescription: 'Time-travelling pub play written and directed by Will Jarvis. Sold out its run. Produced by Distracted Rat Productions.',
     description: [
       'A group of friends stumble into a pub that travels through time. The Clockwork Arms pulls its inhabitants through five periods of London\'s history, forcing them to confront their past and decide what to do with their own time.',
       'Will wrote and directed, guiding the cast through five distinct eras, each with its own London, its own language, and its own stakes. He used the time-travelling pub as a device for reckoning with the city\'s layered history, and with the characters\' own.',
@@ -336,6 +350,7 @@ export const projects: Project[] = [
     num: '14',
     image: 'images/the-emoji-project.webp',
     keywords: ['The Emoji Project', 'Camden Fringe', 'anthology', 'new writing', 'theatre', 'sold out', 'Hen and Chickens Theatre', 'Distracted Rat Productions', 'intergenerational', 'short plays'],
+    metaDescription: 'Intergenerational anthology of new writing for Camden Fringe. Sold out its run. Created and produced by Will Jarvis.',
     description: [
       'Anthology of new writing for Camden Fringe under Distracted Rat Productions. An intergenerational collection of short plays, each written in response to a single emoji, with contributors ranging in age from 11 to 75.',
       'Will created the format and produced the run, commissioning writers including sean wai keung, Tilney Brune, James Aldred, Jalice Corral, and Alastair Gibbons. He managed production across three nights at the Hen and Chickens Theatre in August 2021.',
@@ -359,6 +374,7 @@ export const projects: Project[] = [
       { key: 'Duration', value: 'Feb 2018 to Oct 2018' },
     ],
     keywords: ['Chuggington', 'Ludorum', "children's TV", 'animation', 'marketing', 'CBeebies', 'BBC', 'Disney Channel', 'sales', 'London', 'Sarah Ball'],
+    metaDescription: "Sales and marketing at Ludorum, the studio behind Chuggington. 174 episodes across CBeebies, Disney Channel, and international broadcasters.",
     description: [
       "Sales and marketing assistant at Ludorum plc, the British studio behind Chuggington, an animated children's TV series created by Sarah Ball. First broadcast on CBeebies in 2008, the show ran for six series and 174 episodes, airing internationally on Disney Channel, Super RTL, TF1, ABC Australia, and Fuji TV.",
       "Will joined Ludorum straight out of university as his first industry role, reporting to the Managing Director. He supported the creation of sales materials and collation of data from multiple departments, maintained social media activity, and assisted the Head of Marketing with localised marketing plans and presentations for international broadcast partners.",
@@ -381,6 +397,7 @@ export const projects: Project[] = [
       { key: 'Format', value: 'GPS-triggered audio walking tours' },
     ],
     keywords: ['Vidi Guides', 'audio tours', 'walking tours', 'GPS', 'Walt Disney', 'Hilton Hotels', 'Lonely Planet', 'Culture Trip', 'London', 'Paris', 'New York', 'travel', 'content production', 'digital media'],
+    metaDescription: '100+ GPS-triggered audio tours across 17 cities. Clients included Walt Disney, Hilton Hotels, and Lonely Planet. Led by Will Jarvis.',
     description: [
       '100+ GPS-triggered audio walking tours across 17 cities and 7 countries, produced over four years at Vidi Guides. Cities included London, Paris, Cambridge, Oxford, Edinburgh, New York, Singapore, Rome, and Venice.',
       'Will led content and production, managing the full pipeline from scripting and voice casting to location research and production management across dozens of simultaneous tours.',
