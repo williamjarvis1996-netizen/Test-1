@@ -12,10 +12,11 @@ interface Props {
   jsonLd?: Record<string, unknown>;
   breadcrumbs?: Breadcrumb[];
   keywords?: string[];
+  noindex?: boolean;
 }
 
 const defaultDescription = 'Will Jarvis is a Creative Producer and Scriptwriter based in London. Branded content, film, TV development, theatre and immersive.';
-const { title, description: rawDescription = defaultDescription, image, type = 'website', jsonLd, breadcrumbs, keywords } = Astro.props;
+const { title, description: rawDescription = defaultDescription, image, type = 'website', jsonLd, breadcrumbs, keywords, noindex = false } = Astro.props;
 const description = rawDescription.length > 160 ? rawDescription.slice(0, 157).replace(/\s+\S*$/, '') + '...' : rawDescription;
 const siteUrl = 'https://willjarvis.co';
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
@@ -57,6 +58,7 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
       gtag('config', 'G-CBEFPXH6LV');
     </script>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="author" content="Will Jarvis" />
     {keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
     <meta name="generator" content={Astro.generator} />
@@ -72,6 +74,8 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Will Jarvis" />
     <meta property="og:locale" content="en_GB" />
 

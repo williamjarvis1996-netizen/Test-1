@@ -1,8 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+const siteUrl = 'https://willjarvis.co';
+const breadcrumbs = [
+  { name: 'Home', url: siteUrl },
+  { name: 'Atlas', url: `${siteUrl}/atlas` },
+];
 ---
 
-<Base title="Atlas | Will Jarvis" description="An interactive map charting the locations behind Will Jarvis's production work, from London to Abu Dhabi. Coming soon.">
+<Base title="Atlas | Will Jarvis" description="An interactive map charting the locations behind Will Jarvis's production work, from London to Abu Dhabi. Coming soon." keywords={['Will Jarvis', 'production locations', 'London', 'Abu Dhabi', 'travel', 'filming locations']} breadcrumbs={breadcrumbs} noindex>
   <section class="atlas-page">
     <div class="atlas-bg" aria-hidden="true">
       <div class="compass-circles">
