@@ -708,16 +708,24 @@ const breadcrumbs = [
   const strip = document.querySelector<HTMLElement>('.hero-strip');
   const track = document.querySelector<HTMLElement>('.strip-track');
   if (strip && track) {
-    const speed = 0.7;
+    const autoSpeed = 0.7;
     let paused = false;
     let offset = 0;
+    let velocity = 0;
     let resumeTimer: ReturnType<typeof setTimeout>;
-    let touchStartX = 0;
-    let touchOffsetAtStart = 0;
     let isDragging = false;
+    let lastTouchX = 0;
+    let lastTouchTime = 0;
+
+    function wrapOffset() {
+      const half = track!.scrollWidth / 2;
+      while (offset < 0) offset += half;
+      while (offset >= half) offset -= half;
+    }
 
     strip.addEventListener('mouseenter', () => {
       paused = true;
+      velocity = 0;
       clearTimeout(resumeTimer);
     });
     strip.addEventListener('mouseleave', () => {
@@ -727,39 +735,40 @@ const breadcrumbs = [
     strip.addEventListener('touchstart', (e) => {
       paused = true;
       isDragging = true;
+      velocity = 0;
       clearTimeout(resumeTimer);
-      touchStartX = e.touches[0].clientX;
-      touchOffsetAtStart = offset;
+      lastTouchX = e.touches[0].clientX;
+      lastTouchTime = Date.now();
     }, { passive: true });
 
     strip.addEventListener('touchmove', (e) => {
       if (!isDragging) return;
-      const dx = touchStartX - e.touches[0].clientX;
-      offset = touchOffsetAtStart + dx;
-      const half = track!.scrollWidth / 2;
-      while (offset < 0) offset += half;
-      while (offset >= half) offset -= half;
+      const x = e.touches[0].clientX;
+      const now = Date.now();
+      const dt = now - lastTouchTime || 1;
+      const dx = lastTouchX - x;
+      velocity = dx / dt * 16;
+      offset += dx;
+      wrapOffset();
       track!.style.transform = `translateX(${-offset}px)`;
+      lastTouchX = x;
+      lastTouchTime = now;
     }, { passive: true });
 
-    strip.addEventListener('touchend', () => {
+    function endDrag() {
       isDragging = false;
       clearTimeout(resumeTimer);
-      resumeTimer = setTimeout(() => { paused = false; }, 2000);
-    }, { passive: true });
-    strip.addEventListener('touchcancel', () => {
-      isDragging = false;
-      clearTimeout(resumeTimer);
-      resumeTimer = setTimeout(() => { paused = false; }, 2000);
-    }, { passive: true });
+    }
+
+    strip.addEventListener('touchend', endDrag, { passive: true });
+    strip.addEventListener('touchcancel', () => { velocity = 0; endDrag(); }, { passive: true });
 
     strip.addEventListener('wheel', (e) => {
       paused = true;
+      velocity = 0;
       clearTimeout(resumeTimer);
       offset += e.deltaX || e.deltaY;
-      const half = track!.scrollWidth / 2;
-      while (offset < 0) offset += half;
-      while (offset >= half) offset -= half;
+      wrapOffset();
       track!.style.transform = `translateX(${-offset}px)`;
       resumeTimer = setTimeout(() => { paused = false; }, 2000);
     }, { passive: true });
@@ -767,13 +776,30 @@ const breadcrumbs = [
     const half = track.scrollWidth / 2;
     let prev = 0;
     function tick(ts: number) {
-      if (!paused) {
-        const dt = prev ? ts - prev : 16;
-        offset += speed * (dt / 16);
+      const dt = prev ? ts - prev : 16;
+      prev = ts;
+
+      if (isDragging) {
+        requestAnimationFrame(tick);
+        return;
+      }
+
+      if (Math.abs(velocity) > 0.15) {
+        velocity *= 0.95;
+        offset += velocity * (dt / 16);
+        wrapOffset();
+        track!.style.transform = `translateX(${-offset}px)`;
+      } else if (velocity !== 0) {
+        velocity = 0;
+        resumeTimer = setTimeout(() => { paused = false; }, 1200);
+      }
+
+      if (!paused && velocity === 0) {
+        offset += autoSpeed * (dt / 16);
         if (offset >= half) offset -= half;
         track!.style.transform = `translateX(${-offset}px)`;
       }
-      prev = ts;
+
       requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
