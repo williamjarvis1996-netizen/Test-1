@@ -273,19 +273,14 @@ const breadcrumbs = [
 
   /* ---- Image strip ---- */
   .hero-strip {
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .hero-strip::-webkit-scrollbar {
-    display: none;
+    overflow: hidden;
   }
 
   .strip-track {
     display: flex;
     gap: 6px;
     min-width: max-content;
+    will-change: transform;
   }
 
   .strip-item {
@@ -709,12 +704,13 @@ const breadcrumbs = [
     });
   });
 
-  // Auto-scroll carousel with pause on interaction
+  // Auto-scroll carousel using CSS transform (works on iOS Safari)
   const strip = document.querySelector<HTMLElement>('.hero-strip');
-  if (strip) {
+  const track = document.querySelector<HTMLElement>('.strip-track');
+  if (strip && track) {
     const speed = 0.7;
     let paused = false;
-    let visible = false;
+    let offset = 0;
     let resumeTimer: ReturnType<typeof setTimeout>;
 
     strip.addEventListener('mouseenter', () => {
@@ -742,20 +738,14 @@ const breadcrumbs = [
       resumeTimer = setTimeout(() => { paused = false; }, 2000);
     }, { passive: true });
 
-    const io = new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting;
-    }, { threshold: 0 });
-    io.observe(strip);
-
+    const half = track.scrollWidth / 2;
     let prev = 0;
     function tick(ts: number) {
-      if (visible && !paused) {
+      if (!paused) {
         const dt = prev ? ts - prev : 16;
-        strip!.scrollLeft += speed * (dt / 16);
-        const half = strip!.scrollWidth / 2;
-        if (strip!.scrollLeft >= half) {
-          strip!.scrollLeft -= half;
-        }
+        offset += speed * (dt / 16);
+        if (offset >= half) offset -= half;
+        track!.style.transform = `translateX(${-offset}px)`;
       }
       prev = ts;
       requestAnimationFrame(tick);
