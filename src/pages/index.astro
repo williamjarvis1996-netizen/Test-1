@@ -712,6 +712,9 @@ const breadcrumbs = [
     let paused = false;
     let offset = 0;
     let resumeTimer: ReturnType<typeof setTimeout>;
+    let touchStartX = 0;
+    let touchOffsetAtStart = 0;
+    let isDragging = false;
 
     strip.addEventListener('mouseenter', () => {
       paused = true;
@@ -720,21 +723,44 @@ const breadcrumbs = [
     strip.addEventListener('mouseleave', () => {
       resumeTimer = setTimeout(() => { paused = false; }, 600);
     });
-    strip.addEventListener('touchstart', () => {
+
+    strip.addEventListener('touchstart', (e) => {
       paused = true;
+      isDragging = true;
       clearTimeout(resumeTimer);
+      touchStartX = e.touches[0].clientX;
+      touchOffsetAtStart = offset;
     }, { passive: true });
+
+    strip.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      const dx = touchStartX - e.touches[0].clientX;
+      offset = touchOffsetAtStart + dx;
+      const half = track!.scrollWidth / 2;
+      while (offset < 0) offset += half;
+      while (offset >= half) offset -= half;
+      track!.style.transform = `translateX(${-offset}px)`;
+    }, { passive: true });
+
     strip.addEventListener('touchend', () => {
+      isDragging = false;
       clearTimeout(resumeTimer);
       resumeTimer = setTimeout(() => { paused = false; }, 2000);
     }, { passive: true });
     strip.addEventListener('touchcancel', () => {
+      isDragging = false;
       clearTimeout(resumeTimer);
       resumeTimer = setTimeout(() => { paused = false; }, 2000);
     }, { passive: true });
-    strip.addEventListener('wheel', () => {
+
+    strip.addEventListener('wheel', (e) => {
       paused = true;
       clearTimeout(resumeTimer);
+      offset += e.deltaX || e.deltaY;
+      const half = track!.scrollWidth / 2;
+      while (offset < 0) offset += half;
+      while (offset >= half) offset -= half;
+      track!.style.transform = `translateX(${-offset}px)`;
       resumeTimer = setTimeout(() => { paused = false; }, 2000);
     }, { passive: true });
 
