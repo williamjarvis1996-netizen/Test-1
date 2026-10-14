@@ -714,6 +714,7 @@ const breadcrumbs = [
   if (strip) {
     const speed = 0.7;
     let paused = false;
+    let visible = false;
     let resumeTimer: ReturnType<typeof setTimeout>;
 
     strip.addEventListener('mouseenter', () => {
@@ -726,7 +727,14 @@ const breadcrumbs = [
     strip.addEventListener('touchstart', () => {
       paused = true;
       clearTimeout(resumeTimer);
-      resumeTimer = setTimeout(() => { paused = false; }, 3000);
+    }, { passive: true });
+    strip.addEventListener('touchend', () => {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => { paused = false; }, 2000);
+    }, { passive: true });
+    strip.addEventListener('touchcancel', () => {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => { paused = false; }, 2000);
     }, { passive: true });
     strip.addEventListener('wheel', () => {
       paused = true;
@@ -734,9 +742,14 @@ const breadcrumbs = [
       resumeTimer = setTimeout(() => { paused = false; }, 2000);
     }, { passive: true });
 
+    const io = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+    }, { threshold: 0 });
+    io.observe(strip);
+
     let prev = 0;
     function tick(ts: number) {
-      if (!paused) {
+      if (visible && !paused) {
         const dt = prev ? ts - prev : 16;
         strip!.scrollLeft += speed * (dt / 16);
         const half = strip!.scrollWidth / 2;
