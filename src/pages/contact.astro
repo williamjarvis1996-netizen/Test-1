@@ -10,13 +10,26 @@ const contactJsonLd: Record<string, unknown> = {
   "url": `${siteUrl}/contact`,
   "mainEntity": {
     "@type": "Person",
+    "@id": `${siteUrl}/#person`,
     "name": "Will Jarvis",
     "email": "williamjarvis1996@gmail.com",
+    "url": siteUrl,
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "williamjarvis1996@gmail.com",
+      "contactType": "professional enquiries",
+      "availableLanguage": "English",
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Hackney, London",
       "addressCountry": "GB",
     },
+    "sameAs": [
+      "https://www.imdb.com/name/nm15210832/",
+      "https://www.linkedin.com/in/will-t-jarvis/",
+      "https://www.instagram.com/willjarvis.1996/",
+    ],
   },
 };
 
