@@ -31,6 +31,7 @@ function resolveOgImage(img?: string): string {
 }
 const ogImage = resolveOgImage(image);
 const ogImageAlt = image ? title : 'Will Jarvis, Creative Producer and Scriptwriter';
+const ogImageIsPortrait = !image;
 
 const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
   "@context": "https://schema.org",
@@ -50,13 +51,6 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="6jp6jyMTZRgg_rX8xJa9CQjIlT4lMh7X9IkthYCGLxI" />
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-CBEFPXH6LV"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CBEFPXH6LV');
-    </script>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="author" content="Will Jarvis" />
@@ -74,8 +68,8 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:alt" content={ogImageAlt} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content={ogImageIsPortrait ? "554" : "1200"} />
+    <meta property="og:image:height" content={ogImageIsPortrait ? "552" : "630"} />
     <meta property="og:site_name" content="Will Jarvis" />
     <meta property="og:locale" content="en_GB" />
 
@@ -88,8 +82,10 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -138,6 +134,14 @@ const breadcrumbJsonLd = breadcrumbs && breadcrumbs.length > 0 ? {
     )}
 
     <script is:inline>try{const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch{}</script>
+
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-CBEFPXH6LV"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CBEFPXH6LV');
+    </script>
   </head>
   <body>
     <header class="site-header">

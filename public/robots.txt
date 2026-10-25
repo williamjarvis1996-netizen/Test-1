@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /atlas/
+Disallow: /_astro/
 
 Sitemap: https://willjarvis.co/sitemap-index.xml
