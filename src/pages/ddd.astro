@@ -1,0 +1,628 @@
+---
+// This page is not linked from the site navigation.
+// Access it directly at willjarvis.co/ddd
+---
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>DDD Colour Deck</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap">
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap">
+
+<style>
+:root {
+  --bg: #0a0908;
+  --bg-card: #13110e;
+  --bg-elevated: #1c1a16;
+  --fg: #e8e4de;
+  --fg-secondary: #a09888;
+  --fg-muted: #605848;
+  --accent: #c41e1e;
+  --accent-dim: rgba(196, 30, 30, 0.15);
+  --gold: #c4a35a;
+  --green: #3a7d44;
+  --blue: #6a8fa8;
+  --border: rgba(232, 228, 222, 0.06);
+  --border-accent: rgba(196, 30, 30, 0.3);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+.wrap { max-width: 1100px; margin: 0 auto; }
+
+h1, h2, .display { font-family: 'Bebas Neue', 'Impact', sans-serif; font-weight: 400; }
+h2 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.05; letter-spacing: 0.03em; text-wrap: balance; }
+h3 { font-family: 'Source Sans 3', sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-muted); margin-bottom: 0.75rem; }
+
+.lead { font-size: clamp(1rem, 1.8vw, 1.15rem); line-height: 1.75; color: var(--fg-secondary); max-width: 62ch; }
+
+/* Hero */
+.hero { min-height: 70vh; display: flex; align-items: flex-end; padding-block: 2rem 4rem; }
+.hero h1 { font-size: clamp(4.5rem, 13vw, 11rem); line-height: 0.9; letter-spacing: 0.01em; }
+.hero .amp { color: var(--accent); }
+.hero-label {
+  font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.25em; color: var(--fg-muted); margin-bottom: 2.5rem;
+}
+.hero-meta { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+.hero-meta p { font-size: 0.82rem; color: var(--fg-secondary); }
+.hero-meta .draft { color: var(--fg-muted); font-style: italic; }
+
+/* Sections */
+.section { padding-block: 3rem; border-top: 1px solid var(--border); }
+
+/* Location blocks */
+.location { padding-block: 4rem 3rem; border-top: 1px solid var(--border); }
+.location-num { font-family: 'Bebas Neue', sans-serif; font-size: 0.8rem; letter-spacing: 0.18em; color: var(--fg-muted); }
+.location-tag { font-size: 0.95rem; color: var(--fg-muted); font-style: italic; margin-top: 0.4rem; }
+
+.loc-body { display: flex; flex-direction: column; gap: 2.5rem; margin-top: 2rem; }
+
+.direction { min-width: 0; }
+.direction p { font-size: 0.9rem; color: var(--fg-secondary); line-height: 1.7; margin-bottom: 0.75rem; }
+
+.dir-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem; }
+.dir-list li {
+  font-size: 0.85rem; color: var(--fg-secondary); padding-left: 1rem; position: relative;
+}
+.dir-list li::before {
+  content: ''; position: absolute; left: 0; top: 0.55em;
+  width: 4px; height: 4px; border-radius: 50%; background: var(--accent);
+}
+
+/* Swatches */
+.swatches { display: flex; gap: 2rem; margin: 1.25rem 0; flex-wrap: wrap; }
+.sw-group { display: flex; flex-direction: column; gap: 0.35rem; }
+.sw-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-muted); font-weight: 600; }
+.sw-row { display: flex; gap: 5px; }
+.sw { width: 26px; height: 26px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.07); }
+
+/* Film reference with image */
+.ref { margin-top: 1.5rem; background: var(--bg-card); border-left: 2px solid var(--gold); overflow: hidden; }
+.ref + .ref { margin-top: 0.75rem; }
+.ref-text { padding: 1rem 1.25rem; }
+.ref-tag { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--gold); font-weight: 600; margin-bottom: 0.3rem; }
+.ref p { font-size: 0.85rem; color: var(--fg-secondary); line-height: 1.55; font-style: italic; }
+.ref img { width: 100%; aspect-ratio: 16/9; object-fit: cover; opacity: 0.85; }
+
+/* Shot grids */
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 6px; min-width: 0; }
+.shot { position: relative; overflow: hidden; background: var(--bg-card); }
+.shot img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+.shot-cap {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 2rem 0.5rem 0.4rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  font-size: 0.65rem; color: rgba(255,255,255,0.75); letter-spacing: 0.02em;
+}
+.shot-tc { color: var(--fg-muted); }
+
+/* Colorist notes */
+.c-notes { padding-top: 1.25rem; border-top: 1px solid var(--border); }
+.c-note { display: flex; gap: 0.75rem; align-items: baseline; font-size: 0.82rem; color: var(--fg-secondary); margin-bottom: 0.4rem; }
+.c-note strong { font-family: 'Bebas Neue', sans-serif; font-size: 0.65rem; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; font-weight: 400; }
+
+
+
+/* Transition callout */
+.transition {
+  padding: 1.5rem; background: var(--accent-dim);
+  border: 1px solid var(--border-accent); margin-top: 1rem;
+}
+.transition h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.04em; color: var(--accent); margin-bottom: 0.3rem; }
+.transition p { font-size: 0.85rem; color: var(--fg-secondary); line-height: 1.55; }
+
+/* Location accent variants */
+.location.green-accent .location-num { color: var(--green); }
+.location.green-accent .dir-list li::before { background: var(--green); }
+.location.blue-accent .location-num { color: var(--blue); }
+.location.blue-accent .dir-list li::before { background: var(--blue); }
+.location.gold-accent .location-num { color: var(--gold); }
+.location.gold-accent .dir-list li::before { background: var(--gold); }
+
+
+
+.footer { padding-block: 3rem; border-top: 1px solid var(--border); text-align: center; }
+.footer p { font-size: 0.7rem; color: var(--fg-muted); letter-spacing: 0.08em; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+</style>
+
+<div class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <p class="hero-label">Colour Grading Deck</p>
+    <h1>Dinner,<br>Diamonds<br><span class="amp">&amp;</span> Death</h1>
+    <div class="hero-meta">
+      <p>Directed &amp; Script Edited by Will Jarvis</p>
+      <p>Written by Sean Nwachukwu &amp; Adam Sorrell</p>
+      <p class="draft">Draft 16 &middot; ~18 minutes &middot; 35 scenes</p>
+    </div>
+  </div>
+</section>
+
+<!-- OVERALL DIRECTION -->
+<section class="section">
+  <h2>Overall Direction</h2>
+  <p class="lead">Every location in the film has its own colour world. The audience should feel the temperature change each time we cut somewhere new. The grade is grounded and naturalistic in the wides, then gets more expressionistic in the close-ups as things escalate. Red starts as a background accent and ends up flooding the entire frame by the final shot. Each location wants its own identity, so you can tell where you are from the palette before anyone speaks.</p>
+</section>
+
+<!-- 01 — GARY'S FLAT -->
+<section class="location" id="garys-flat">
+  <span class="location-num">01</span>
+  <h2>Gary's Flat</h2>
+  <p class="location-tag">Olive-amber, sickly, not cosy</p>
+
+  <div class="loc-body">
+    <div class="direction">
+      <h3>Grading Direction</h3>
+      <p>The footage already has a murky olive-brown undertone, which is great. Lean into it. This flat needs to feel unhealthy. Like a low-grade fever, not a fireplace. There's nothing warm or inviting about this place.</p>
+      <ul class="dir-list">
+        <li>Shadows pushed toward muddy olive-green</li>
+        <li>Highlights slightly amber but muted, desaturated</li>
+        <li>Skin tones subtly off, not horror-green, just a bit unwell</li>
+        <li>The red chair in Shot 18 is the only vivid element in the space</li>
+      </ul>
+
+      <div class="swatches">
+        <div class="sw-group">
+          <span class="sw-label">Push Toward</span>
+          <div class="sw-row">
+            <div class="sw" style="background:#7a7040"></div>
+            <div class="sw" style="background:#545030"></div>
+            <div class="sw" style="background:#8a7a50"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref">
+        <img src="/images/ddd/ref-barton-fink.webp" alt="Barton Fink — Hotel Earle">
+        <div class="ref-text">
+          <div class="ref-tag">Reference — Barton Fink (1991)</div>
+          <p>The Hotel Earle. Wallpaper sweating, everything the colour of old amber and old sweat. Claustrophobia expressed through palette.</p>
+        </div>
+      </div>
+      <div class="ref">
+        <img src="/images/ddd/ref-trainspotting.webp" alt="Trainspotting — flat interior">
+        <div class="ref-text">
+          <div class="ref-tag">Reference — Trainspotting (1996)</div>
+          <p>The grimy interiors. Sickly greens and yellows making everyday spaces feel unpleasant and run-down. That cheap, slightly nauseating domestic atmosphere.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="shots">
+      <div class="shot">
+        <img src="/images/ddd/2.webp" alt="Gary on sofa with Venetian mask">
+        <span class="shot-cap">Shot 02 <span class="shot-tc">00:00:40</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/7.webp" alt="Yvonne and Gary, spatial tension">
+        <span class="shot-cap">Shot 07 <span class="shot-tc">00:04:09</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/18.webp" alt="Gary distressed in kitchenette">
+        <span class="shot-cap">Shot 18 <span class="shot-tc">00:08:37</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — ANGELO'S RESTAURANT -->
+<section class="location gold-accent" id="angelos">
+  <span class="location-num">02</span>
+  <h2>Angelo's Restaurant</h2>
+  <p class="location-tag">Two levels, two colour worlds</p>
+
+  <div class="loc-body">
+    <div class="direction">
+      <h3>Upstairs: Warm Amber-Gold</h3>
+      <p>The restaurant's legitimate face. Clean amber-gold, refined, relatively bright. Angelo's white shirt is the brightest element in the room, which feels right for a man trying to stay clean in a dirty business.</p>
+      <ul class="dir-list">
+        <li>Clean amber-gold throughout, not greenish</li>
+        <li>Angelo's white shirt glows</li>
+        <li>Graffiti murals slightly desaturated so they sit in the background</li>
+      </ul>
+
+      <h3 style="margin-top:1.5rem">Downstairs: Green Neon</h3>
+      <p>The descent into the basement is immediately felt in the grade. The "BASEMENT LIQUOR" neon is the dominant light source, and it washes everything. The idea is that everything above ground looks better than what's below.</p>
+      <ul class="dir-list">
+        <li>Green neon as the dominant colour cast</li>
+        <li>Angelo's white shirt glows almost radioactive against the green</li>
+        <li>Deeper shadows than upstairs, pools of black between the green</li>
+      </ul>
+
+      <div class="swatches">
+        <div class="sw-group">
+          <span class="sw-label">Upstairs</span>
+          <div class="sw-row">
+            <div class="sw" style="background:#c4a060"></div>
+            <div class="sw" style="background:#8a6a30"></div>
+            <div class="sw" style="background:#e8dcc0"></div>
+          </div>
+        </div>
+        <div class="sw-group">
+          <span class="sw-label">Downstairs</span>
+          <div class="sw-row">
+            <div class="sw" style="background:#3a7d44"></div>
+            <div class="sw" style="background:#1a2a18"></div>
+            <div class="sw" style="background:#0a0f08"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref">
+        <img src="/images/ddd/ref-moonlight.webp" alt="Moonlight — the diner scene">
+        <div class="ref-text">
+          <div class="ref-tag">Reference — Moonlight (2016)</div>
+          <p>The diner scene. Warm amber-gold, intimate. The light on skin feels like the room is holding them. This is the warmth we're going for upstairs.</p>
+        </div>
+      </div>
+      <div class="ref">
+        <img src="/images/ddd/ref-chungking-express.webp" alt="Chungking Express — green kitchen">
+        <div class="ref-text">
+          <div class="ref-tag">Reference — Chungking Express (1994)</div>
+          <p>Green fluorescent light contaminating a cramped, tiled kitchen. Intimate, lived-in, slightly grubby. The green spills across everything, including the skin tones.</p>
+        </div>
+      </div>
+      <div class="ref">
+        <img src="/images/ddd/ref-oldboy.webp" alt="Oldboy — green corridor">
+        <div class="ref-text">
+          <div class="ref-tag">Reference — Oldboy (2003)</div>
+          <p>Industrial corridors, dirty green tones, worn surfaces and pockets of near-black. Harsher and more oppressive, but the treatment of the shadows and practical lights is useful for the basement.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="shots">
+      <div class="shot">
+        <img src="/images/ddd/3.webp" alt="Angelo with associate, warm interior">
+        <span class="shot-cap">Shot 03 <span class="shot-tc">00:01:21</span> · Upstairs</span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/4.webp" alt="BASEMENT LIQUOR neon, wide shot">
+        <span class="shot-cap">Shot 04 <span class="shot-tc">00:01:51</span> · Downstairs</span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/8.webp" alt="Angelo alone, green-lit close-up">
+        <span class="shot-cap">Shot 08 <span class="shot-tc">00:04:42</span> · Downstairs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 — HANS'S BASEMENT -->
+<section class="location" id="hans-basement">
+  <span class="location-num">03</span>
+  <h2>Hans's Basement</h2>
+  <p class="location-tag">Grey to amber to deep crimson</p>
+
+  <div class="loc-body">
+    <div class="direction">
+      <h3>Grading Direction</h3>
+      <p>This is the most important colour arc in the film. The basement starts harsh, flat, and grey, then progressively fills with red until the final scene is drenched in crimson. The red isn't motivated by a light source. It comes from the grade itself, representing the violence seeping into the frame.</p>
+
+      <h3 style="margin-top:1.5rem">Early (Shots 10, 11, 13, 15)</h3>
+      <ul class="dir-list">
+        <li>Desaturated and ugly. Grey concrete, harsh bare-bulb light</li>
+        <li>Skin tones washed out, unflattering. Hard deep shadows</li>
+      </ul>
+
+      <h3 style="margin-top:1.5rem">Mid: The Chess Game (Shot 24)</h3>
+      <ul class="dir-list">
+        <li>Amber warmth enters, then tips into red</li>
+        <li>Shadows shift from grey to deep crimson</li>
+      </ul>
+
+      <h3 style="margin-top:1.5rem">Late: Reunion &amp; Checkmate (Shots 27, 28, 30)</h3>
+      <ul class="dir-list">
+        <li>Full red wash, the entire frame tinted crimson</li>
+        <li>Shot 30 is the maximum. Alexis at camera, shotgun raised. The last colour you see</li>
+      </ul>
+
+      <div class="swatches">
+        <div class="sw-group">
+          <span class="sw-label">Early</span>
+          <div class="sw-row">
+            <div class="sw" style="background:#8a8578"></div>
+            <div class="sw" style="background:#605848"></div>
+          </div>
+        </div>
+        <div class="sw-group">
+          <span class="sw-label">Mid</span>
+          <div class="sw-row">
+            <div class="sw" style="background:#b89850"></div>
+            <div class="sw" style="background:#a06830"></div>
+          </div>
+        </div>
+        <div class="sw-group">
+          <span class="sw-label">Late</span>
+          <div class="sw-row">
+            <div class="sw" style="background:#c41e1e"></div>
+            <div class="sw" style="background:#6a1010"></div>
+            <div class="sw" style="background:#2a0808"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref">
+        <img src="/images/ddd/ref-only-god-forgives.png" alt="Only God Forgives — corridor">
+        <div class="ref-text">
+          <div class="ref-tag">Reference — Only God Forgives (2013)</div>
+          <p>The corridor. Amber-red, oppressive, a single colour colonising the frame. This is the transition, the warmth before the red takes over completely.</p>
+        </div>
+      </div>
+      <div class="ref">
+        <img src="/images/ddd/ref-the-batman.png" alt="The Batman — Iceberg Lounge">
+        <div class="ref-text">
+          <div class="ref-tag">Reference — The Batman (2022)</div>
+          <p>The Iceberg Lounge. Deep red, haze, bodies in silhouette. This is the destination, where the basement ends up by checkmate.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="shots" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+      <div class="shot">
+        <img src="/images/ddd/10.webp" alt="Clarence close-up, harsh light">
+        <span class="shot-cap">Shot 10 <span class="shot-tc">00:05:36</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/13.webp" alt="Wide three-shot, bare bulb">
+        <span class="shot-cap">Shot 13 <span class="shot-tc">00:06:40</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/24.webp" alt="Chess board, red wash">
+        <span class="shot-cap">Shot 24 <span class="shot-tc">00:11:46</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/27.webp" alt="Twins embrace, deep red">
+        <span class="shot-cap">Shot 27 <span class="shot-tc">00:15:26</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/28.webp" alt="Hans and Alexis face off">
+        <span class="shot-cap">Shot 28 <span class="shot-tc">00:16:15</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/30.webp" alt="Checkmate — Alexis with shotgun">
+        <span class="shot-cap">Shot 30 <span class="shot-tc">00:17:44</span></span>
+      </div>
+    </div>
+
+    <div class="transition">
+      <h4>Red Progression</h4>
+      <p>The red builds gradually. The audience should only realise the frame has filled with crimson when it's already overwhelming. It starts as an accent and ends as a flood.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — THE APARTMENT -->
+<section class="location blue-accent" id="apartment">
+  <span class="location-num">04</span>
+  <h2>The Apartment</h2>
+  <p class="location-tag">Cold blue-grey, clinical, a glass cage</p>
+
+  <div class="loc-body">
+    <div class="direction">
+      <h3>Grading Direction</h3>
+      <p>Cold, clinical, sterile. White walls, minimal furniture, floor-to-ceiling windows. The Docklands skyline through the glass provides warm amber dots, but they're distant and unreachable. Violence looks wrong in this space, which is the point.</p>
+      <ul class="dir-list">
+        <li>Strong blue-grey push throughout</li>
+        <li>White walls read cold, not warm. No yellow creep</li>
+        <li>City lights through windows: amber-gold but distant, not colouring the interior</li>
+        <li>Skin tones cooler than natural. The apartment drains warmth</li>
+        <li>Blood in Shot 21 is vivid red against the cold grey floor. Keep it vivid</li>
+      </ul>
+
+      <h3 style="margin-top:1.5rem">The Balcony (Shots 22, 23)</h3>
+      <p>Part of the apartment world. The grade is consistent between both angles. Night, high-rise, the Docklands skyline behind.</p>
+
+      <div class="swatches">
+        <div class="sw-group">
+          <span class="sw-label">Night</span>
+          <div class="sw-row">
+            <div class="sw" style="background:#5a7a90"></div>
+            <div class="sw" style="background:#c8c4b8"></div>
+            <div class="sw" style="background:#1a2530"></div>
+            <div class="sw" style="background:#c4a060"></div>
+          </div>
+        </div>
+        <div class="sw-group">
+          <span class="sw-label">Day (Shot 25)</span>
+          <div class="sw-row">
+            <div class="sw" style="background:#90908a"></div>
+            <div class="sw" style="background:#c0beb4"></div>
+            <div class="sw" style="background:#606058"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref">
+        <img src="/images/ddd/ref-skyfall.webp" alt="Skyfall — Shanghai skyscraper fight">
+        <div class="ref-text">
+          <div class="ref-tag">Reference — Skyfall (2012)</div>
+          <p>The Shanghai skyscraper fight. Silhouettes against neon through floor-to-ceiling glass. Cold blue, the city as abstract backdrop. Beautiful and lifeless.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="shots" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+      <div class="shot">
+        <img src="/images/ddd/9.webp" alt="Yvonne silhouette, skyline">
+        <span class="shot-cap">Shot 09 <span class="shot-tc">00:05:14</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/14.webp" alt="Masked figures, phone torch">
+        <span class="shot-cap">Shot 14 <span class="shot-tc">00:07:03</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/16.webp" alt="Yvonne restrained by masked figure">
+        <span class="shot-cap">Shot 16 <span class="shot-tc">00:08:21</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/19.webp" alt="Invasion — wide shot with skyline">
+        <span class="shot-cap">Shot 19 <span class="shot-tc">00:09:35</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/20.webp" alt="Yvonne in skull mask, ECU">
+        <span class="shot-cap">Shot 20 <span class="shot-tc">00:09:46</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/21.webp" alt="Gary dead on apartment floor">
+        <span class="shot-cap">Shot 21 <span class="shot-tc">00:09:51</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/22.webp" alt="Alexis on balcony, gun raised">
+        <span class="shot-cap">Shot 22 <span class="shot-tc">00:10:09</span> · Balcony</span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/23.webp" alt="Yvonne on balcony">
+        <span class="shot-cap">Shot 23 <span class="shot-tc">00:10:12</span> · Balcony</span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/25.webp" alt="Angelo silhouette at window, day">
+        <span class="shot-cap">Shot 25 <span class="shot-tc">00:14:11</span> · Daytime</span>
+      </div>
+    </div>
+
+    <div class="c-notes">
+      <div class="c-note"><strong>NOTE</strong> Shot 01 (00:00:11) is in Alexis's own apartment, a separate location from the Canary Wharf flat. It appears only in Scene 1. Same cold, clinical feel but it's a different space.</div>
+      <div class="c-note"><strong>NOTE</strong> The daytime scene (Shot 25, Angelo at the window) stays cold. Daylight doesn't make this place feel alive.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — LONDON STREETS -->
+<section class="location" id="streets">
+  <span class="location-num">05</span>
+  <h2>London Streets</h2>
+  <p class="location-tag">Desaturated, sodium, naturalistic</p>
+
+  <div class="loc-body">
+    <div class="direction">
+      <h3>Grading Direction</h3>
+      <p>The ordinary world. Suburban streets at night with sodium streetlights burning hot orange against crushed darkness. Flat, documentary, unforgiving. Characters feel small against the dark.</p>
+      <ul class="dir-list">
+        <li>Crush the shadows. Pools of black between streetlights</li>
+        <li>Sodium orange burns hot but the rest stays cold and dark</li>
+        <li>Desaturated overall. Mute the greens of hedges and gardens</li>
+        <li>Almost CCTV quality: flat, surveillance-like</li>
+      </ul>
+
+      <div class="swatches">
+        <div class="sw-group">
+          <span class="sw-label">Push Toward</span>
+          <div class="sw-row">
+            <div class="sw" style="background:#907030"></div>
+            <div class="sw" style="background:#282820"></div>
+            <div class="sw" style="background:#3a3828"></div>
+            <div class="sw" style="background:#0a0a08"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref">
+        <img src="/images/ddd/ref-nightcrawler.png" alt="Nightcrawler — night driving">
+        <div class="ref-text">
+          <div class="ref-tag">Reference — Nightcrawler (2014)</div>
+          <p>Night driving through Los Angeles. Cold, clean, sodium streetlights on a windscreen. The city as a predator's hunting ground.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="shots">
+      <div class="shot">
+        <img src="/images/ddd/5.webp" alt="Yvonne walking suburban street">
+        <span class="shot-cap">Shot 05 <span class="shot-tc">00:02:38</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/6.webp" alt="Alexis outside Davina's house">
+        <span class="shot-cap">Shot 06 <span class="shot-tc">00:03:39</span></span>
+      </div>
+      <div class="shot">
+        <img src="/images/ddd/26.webp" alt="Davina walking home alone">
+        <span class="shot-cap">Shot 26 <span class="shot-tc">00:14:52</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 — DAVINA'S HOUSE -->
+<section class="location" id="davinas-house">
+  <span class="location-num">06</span>
+  <h2>Davina's House</h2>
+  <p class="location-tag">Near-monochrome, domestic, uneasy</p>
+
+  <div class="loc-body">
+    <div class="direction">
+      <h3>Grading Direction</h3>
+      <p>Davina's house is her domestic world, and it feels emptied of life. Nearly monochrome. The key image is the bathroom with its black-and-white chequered tile floor, which echoes the chess motif from the basement. The chess game escapes Hans's world and infects Davina's.</p>
+      <ul class="dir-list">
+        <li>Drain nearly all colour. Push toward monochrome</li>
+        <li>Cool daylight through frosted glass, flat and unforgiving</li>
+        <li>Black-and-white tiles dominate the frame graphically</li>
+        <li>Just enough colour left that you sense warmth in the skin but can't quite see it. The ghost of colour, not the absence</li>
+      </ul>
+
+      <div class="swatches">
+        <div class="sw-group">
+          <span class="sw-label">Push Toward</span>
+          <div class="sw-row">
+            <div class="sw" style="background:#e0e0da"></div>
+            <div class="sw" style="background:#181818"></div>
+            <div class="sw" style="background:#808078"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref">
+        <img src="/images/ddd/ref-hereditary.webp" alt="Hereditary — domestic interior">
+        <div class="ref-text">
+          <div class="ref-tag">Reference — Hereditary (2018)</div>
+          <p>The house interiors. Uneasy, muted, domestic spaces that feel wrong without anything obviously wrong in the frame. Ordinary rooms with the warmth pulled out.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="shots">
+      <div class="shot">
+        <img src="/images/ddd/29.webp" alt="Figure on chequered floor">
+        <span class="shot-cap">Shot 29 <span class="shot-tc">00:17:06</span></span>
+      </div>
+    </div>
+
+    <div class="c-notes">
+      <div class="c-note"><strong>NOTE</strong> The desaturation here is deliberate and thematic, not a technical error. The chess motif in the tiles connects this domestic space back to the basement.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Dinner, Diamonds &amp; Death &middot; Colour Grading Deck &middot; Prepared for the Colourist</p>
+  <p style="margin-top:0.3rem;">Will Jarvis / RD Content</p>
+</div>
+
+</div></body>
+</html>
