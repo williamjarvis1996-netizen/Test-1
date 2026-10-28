@@ -34,9 +34,9 @@
 
 ### Shot 01
 - **Timecode**: 00:00:11
-- **Scene**: Scene 1 — INT. CANARY WHARF APARTMENT - NIGHT (Opening)
+- **Scene**: Scene 1 — INT. ALEXIS'S APARTMENT - NIGHT (Opening)
 - **Character(s)**: Alexis
-- **Location**: Canary Wharf apartment — hallway/entrance area
+- **Location**: Alexis's own apartment — hallway/entrance area (NOT the Canary Wharf flat)
 - **Framing**: Medium close-up, slightly off-centre. Alexis fills the right half of frame, the apartment corridor recedes behind her left shoulder.
 - **Lighting**: Cool, desaturated grey-blue. Flat overhead lighting from the apartment's ceiling fixtures creates minimal shadows. The white walls glow faintly.
 - **Colour palette**: Steel grey, muted white, the faintest warmth on her skin.
@@ -179,9 +179,9 @@
 
 ### Shot 14
 - **Timecode**: 00:07:03
-- **Scene**: Scene 14 — INT. DAVINA'S HOUSE - NIGHT (The Burglary)
+- **Scene**: Scene 14 — INT. CANARY WHARF APARTMENT - NIGHT (The Burglary)
 - **Character(s)**: Two masked figures (Gary and a bodyguard)
-- **Location**: Inside Davina's house — kitchen or hallway
+- **Location**: Inside the Canary Wharf apartment (NOT Davina's house)
 - **Framing**: Medium two-shot. Both figures wear skull masks with painted blood details. The figure on the left holds a phone with its torch on, the light flaring directly into the lens. The figure on the right is slightly closer to camera, adjusting their mask or necklace. Blue-tinted moonlight or ambient light fills the space behind them. Domestic details visible: tiled floor, counter edge.
 - **Lighting**: The phone torch provides a harsh, directional white light that blows out the centre of the frame. The surrounding space is lit in cold blue.
 - **Colour palette**: Ice blue, white (masks and torch), black (clothing).
