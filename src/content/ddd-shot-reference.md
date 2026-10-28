@@ -13,7 +13,7 @@
 - **Angelo's Restaurant Basement**: Underground dining space with bold graffiti-covered walls (cartoon characters, eyes, geometric patterns), a green neon "BASEMENT LIQUOR" sign, mismatched wooden furniture, shisha pipes on shelves. Warm amber/green tones.
 - **Hans's Basement**: Raw, oppressive space — exposed brick, bare hanging lightbulb, concrete floor, exposed pipes and wiring on the ceiling. A chess set and a wooden easel or frame are positioned centrally. Desaturated, occasionally washed in deep red.
 - **Gary's Flat**: Cramped, cluttered bedsit with a dark sofa, posters on the walls, a kitchenette visible through doorways. Warm, dingy amber lighting. Feels lived-in and chaotic.
-- **Davina's House (Exterior)**: Suburban residential street at night — hedgerows, parked cars, terraced/semi-detached houses, sodium streetlights. Desaturated, naturalistic.
+- **Davina's House/Flat**: Suburban residential street (exterior) at night — hedgerows, parked cars, terraced/semi-detached houses, sodium streetlights. Davina is out during the burglary — no hostage situation occurs here. Interior includes a bathroom with black-and-white chequered tile floor (the chess motif made architectural). Desaturated, naturalistic.
 - **Balcony (Canary Wharf)**: Open-air high-rise balcony with the Docklands skyline spread behind. Night. Used for the confrontation between Alexis and Yvonne.
 - **Bathroom**: Black-and-white chequered tile floor, white panelled cabinets, a frosted window — classic British bathroom. The chequered floor mirrors the chess motif.
 
@@ -201,14 +201,15 @@
 
 ### Shot 16
 - **Timecode**: 00:08:21
-- **Scene**: Scene 16 — INT. DAVINA'S HOUSE - NIGHT (The Burglary escalates)
-- **Character(s)**: Davina (left, hostage), masked figure (right, skull mask)
-- **Location**: Inside Davina's house — doorway
-- **Framing**: Medium two-shot in a doorway. Davina is on the left, her mouth covered with a surgical mask or tape, one hand raised in surrender. The masked figure behind/beside her wears the skull mask and has an arm around her — controlling her, steering her. They've just entered or are moving through a room.
-- **Lighting**: Cold blue-grey domestic light. A light switch or intercom panel is visible on the wall left.
+- **Scene**: INT. CANARY WHARF APARTMENT - NIGHT (The Invasion)
+- **Character(s)**: Yvonne (left, restrained), masked figure (right, skull mask)
+- **Location**: Canary Wharf apartment — doorway
+- **Framing**: Medium two-shot in a doorway. Yvonne is on the left, her mouth covered, one hand raised in surrender. The masked figure behind/beside her wears the skull mask and has an arm around her — controlling her, steering her. They are moving through the apartment.
+- **Lighting**: Cold blue-grey light. A light switch or intercom panel is visible on the wall left.
 - **Colour palette**: Steel blue, white (mask, wall), black (clothing).
-- **Action**: The burglary has become a home invasion. Davina has been found and restrained. The skull mask makes the masked figure nightmarish — a death's-head in a suburban hallway. Davina's raised hand and covered mouth convey terror and helplessness.
-- **Narrative significance**: The moment the burglary crosses a line. Finding someone home turns theft into something worse. For the audience who already knows Davina is Alexis's ill sister, the dread is doubled — we know what this will trigger when Alexis finds out. The surgical mask on Davina may also reference her illness.
+- **Action**: The apartment invasion is underway. Yvonne has been caught and restrained by one of the masked attackers. The skull mask makes the figure nightmarish — a death's-head in a pristine hallway. Yvonne's raised hand and covered mouth convey terror.
+- **Narrative significance**: Part of the apartment invasion sequence. The clean, cold apartment makes the skull mask even more alien — a figure of death in a space designed for comfort. The intercom panel on the wall is a reminder of the building's security, now thoroughly breached.
+- **Correction**: Previously misidentified as Davina's house. Davina's house is burgled while she is out — no hostage situation occurs there.
 
 ### Shot 17
 - **Timecode**: 00:08:27
@@ -283,7 +284,7 @@
 - **Framing**: Low-angle close-up. Yvonne is shot from below, her face filling the upper portion of the frame. Red-tinged light washes across her. The edges of buildings are visible behind her.
 - **Lighting**: A warm red cast — possibly from a building sign, emergency light, or colour grading — bathes the entire frame. It feels like a different world from the cool apartment interior.
 - **Colour palette**: Deep red, black, warm amber.
-- **Action**: Yvonne looks down — at Alexis, at the ground, at her fate. Her expression is raw, emotional. Three seconds after the previous shot. The shift from cool blue (Alexis) to hot red (Yvonne) signals a change in perspective and emotional register.
+- **Action**: Yvonne looks down — at Alexis, at the ground, at her fate. Her expression is raw, emotional. Three seconds after the previous shot.
 - **Narrative significance**: The red wash transforms this from thriller into something almost operatic. Yvonne is bathed in the colour of blood, danger, emotion. The low angle puts the audience in Alexis's position — looking up at the person she might kill, seeing a human being, not a target.
 
 ### Shot 24
@@ -344,12 +345,12 @@
 - **Timecode**: 00:17:06
 - **Scene**: Scene 34 — INT. BATHROOM
 - **Character(s)**: Gary (or a character in distress)
-- **Location**: Bathroom — black-and-white chequered floor
+- **Location**: Davina's flat — bathroom with black-and-white chequered floor
 - **Framing**: Wide shot through a doorway. A figure kneels on the chequered tile floor, hunched over the toilet, head down. White panelled cabinets, a frosted window, and the door handle are visible in the frame edges. The composition is symmetrical — the doorway frames the suffering like a proscenium arch.
 - **Lighting**: Cool, flat daylight from the frosted window. Desaturated, almost monochrome. A faint warmth on the door frame.
 - **Colour palette**: Black and white (floor tiles), grey, cream. The chess motif made architectural.
 - **Action**: Someone is on their knees, being sick or collapsed in despair. The chequered floor turns the bathroom into a chessboard. The figure is a piece that's been knocked over.
-- **Narrative significance**: The chess motif escapes the basement and infects the domestic world. Whether this is Gary in withdrawal, a flashback, or a coda, the visual message is the same: everyone in this story ends up on their knees. The bathroom — a place of privacy, vulnerability, bodily reality — is the opposite of Hans's theatrical basement, but the black-and-white grid says it's the same game.
+- **Narrative significance**: The chess motif escapes the basement and infects Davina's domestic world. Whether this is Gary in withdrawal, a flashback, or a coda, the visual message is the same: everyone in this story ends up on their knees. The bathroom — a place of privacy, vulnerability, bodily reality — is the opposite of Hans's theatrical basement, but the black-and-white grid says it's the same game.
 
 ### Shot 30
 - **Timecode**: 00:17:44
@@ -382,6 +383,7 @@
 | Canary Wharf Apartment | Cool blue-grey | Clinical, sterile — violence looks wrong here |
 | Angelo's Restaurant Basement | Warm amber-green | Underground, illicit, the neon sign as character |
 | Hans's Basement | Harsh white → deep red | Starts neutral, grades into blood red as the stakes rise |
-| Gary's Flat | Warm amber | Domestic, dingy, comfortable before it becomes a cage |
+| Gary's Flat | Olive-amber | Domestic, dingy, sickly — the warmth is cloying, not cosy |
 | Exterior (suburban streets) | Desaturated, sodium | Naturalistic, documentary, the ordinary world |
-| Balcony | Night blue + city amber | Liminal space — between inside and outside, life and death |
+| Balcony | Consistent with apartment grade | Part of the apartment sequence — grade should match between angles |
+| Davina's Flat (Bathroom) | Near-monochrome | The chess motif made architectural — almost black and white |
