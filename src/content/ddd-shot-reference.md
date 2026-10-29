@@ -129,7 +129,7 @@
 - **Location**: Canary Wharf apartment — hallway looking into the living space
 - **Framing**: Medium shot from behind. Yvonne is in silhouette on the left side of frame, her arm extended, holding what appears to be a phone or small object. Through the doorway, the apartment's living area opens up: white furniture, a small table, and the floor-to-ceiling window revealing the Docklands skyline at night.
 - **Lighting**: The apartment interior provides a cool blue-white backlight. Yvonne is almost entirely in shadow — a dark shape against the illuminated space.
-- **Colour palette**: Midnight blue, silver, the warm amber dots of the distant city lights.
+- **Colour palette**: Midnight blue, silver, the red dots of the distant crane lights.
 - **Action**: Yvonne enters or surveys the apartment, arm raised as if checking something or bracing herself. She's a trespasser in this clean, expensive world.
 - **Narrative significance**: The contrast between Yvonne's dark silhouette and the pristine apartment is the film's class divide in a single image. The Docklands skyline through the window is London's wealth, glittering and unreachable. She's standing at the threshold.
 
@@ -407,7 +407,7 @@ The colour grading deck at willjarvis.co/ddd organises the film into six colour 
 - **Note**: Shot 03 is upstairs in the restaurant. Shots 04 and 08 are in the basement.
 
 ### Location 03 — Hans's Basement
-- **Palette direction**: The most important colour arc in the film. Starts harsh, flat, grey — progressively fills with red until drenched in crimson. The red isn't motivated by a light source; it comes from the grade itself.
+- **Palette direction**: The most important colour arc in the film. Starts harsh, flat, grey — progressively fills with red until drenched in crimson. The red is motivated by a heater in the space; the grade pushes that practical source further as the scenes escalate.
 - **Three phases**:
   - Early (Shots 10, 11, 13, 15): Desaturated, ugly, grey concrete, harsh bare-bulb light.
   - Mid / Chess Game (Shot 24): Amber warmth enters, tips into red.
@@ -416,7 +416,7 @@ The colour grading deck at willjarvis.co/ddd organises the film into six colour 
 - **Shots shown**: 10, 13, 24, 27, 28, 30.
 
 ### Location 04 — The Apartment (Canary Wharf)
-- **Palette direction**: Cold blue-grey, clinical, sterile. White walls read cold, no yellow creep. City lights through windows are amber-gold but distant, not colouring the interior. Skin tones cooler than natural. Blood in Shot 21 is vivid red against the cold grey floor.
+- **Palette direction**: Cold blue-grey, clinical, sterile. White walls read cold, no yellow creep. Crane lights through windows are red but distant, not colouring the interior. Skin tones cooler than natural. Blood in Shot 21 is vivid red against the cold grey floor.
 - **The Balcony** (Shots 22, 23): Part of the apartment world. Grade consistent between both angles.
 - **Day (Shot 25)**: Angelo at the window. Stays cold — daylight doesn't make this place feel alive.
 - **Reference**: Skyfall (2012) — Shanghai skyscraper fight, silhouettes against glass, cold blue.
