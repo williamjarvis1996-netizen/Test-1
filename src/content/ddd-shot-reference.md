@@ -387,3 +387,84 @@
 | Exterior (suburban streets) | Desaturated, sodium | Naturalistic, documentary, the ordinary world |
 | Balcony | Consistent with apartment grade | Part of the apartment sequence — grade should match between angles |
 | Davina's Flat (Bathroom) | Near-monochrome | The chess motif made architectural — almost black and white |
+
+## Colour Deck — Location Structure
+
+The colour grading deck at willjarvis.co/ddd organises the film into six colour worlds. Each location has its own grading direction, colour swatches, reference stills, and representative shots from the film.
+
+### Location 01 — Gary's Flat
+- **Palette direction**: Olive-amber, sickly, not cosy. Shadows pushed toward muddy olive-green, highlights slightly amber but desaturated. Skin tones subtly off — unwell, not horror-green.
+- **Key detail**: The red chair in Shot 18 is the only vivid element in the space.
+- **References**: Barton Fink (1991) — Hotel Earle interiors; Trainspotting (1996) — grimy domestic interiors.
+- **Shots shown**: 02, 07, 18.
+
+### Location 02 — Angelo's Restaurant
+- **Two levels, two colour worlds.**
+- **Upstairs** (warm amber-gold): The restaurant's legitimate face. Clean, refined. Angelo's white shirt is the brightest element. Graffiti murals slightly desaturated.
+- **Downstairs** (green neon): The "BASEMENT LIQUOR" neon washes everything. Angelo's white shirt glows radioactive against the green. Deeper shadows, pools of black.
+- **References**: Moonlight (2016) — diner scene, warm amber-gold (upstairs); Chungking Express (1994) — green fluorescent kitchen (downstairs); Oldboy (2003) — green corridors, oppressive shadows (downstairs).
+- **Shots shown**: 03 (upstairs), 04 (downstairs), 08 (downstairs).
+- **Note**: Shot 03 is upstairs in the restaurant. Shots 04 and 08 are in the basement.
+
+### Location 03 — Hans's Basement
+- **Palette direction**: The most important colour arc in the film. Starts harsh, flat, grey — progressively fills with red until drenched in crimson. The red isn't motivated by a light source; it comes from the grade itself.
+- **Three phases**:
+  - Early (Shots 10, 11, 13, 15): Desaturated, ugly, grey concrete, harsh bare-bulb light.
+  - Mid / Chess Game (Shot 24): Amber warmth enters, tips into red.
+  - Late / Reunion & Checkmate (Shots 27, 28, 30): Full red wash, entire frame crimson. Shot 30 is the maximum.
+- **References**: Only God Forgives (2013) — amber-red corridor, single colour colonising the frame (transition phase); The Batman (2022) — deep red, haze, silhouettes (destination phase).
+- **Shots shown**: 10, 13, 24, 27, 28, 30.
+
+### Location 04 — The Apartment (Canary Wharf)
+- **Palette direction**: Cold blue-grey, clinical, sterile. White walls read cold, no yellow creep. City lights through windows are amber-gold but distant, not colouring the interior. Skin tones cooler than natural. Blood in Shot 21 is vivid red against the cold grey floor.
+- **The Balcony** (Shots 22, 23): Part of the apartment world. Grade consistent between both angles.
+- **Day (Shot 25)**: Angelo at the window. Stays cold — daylight doesn't make this place feel alive.
+- **Reference**: Skyfall (2012) — Shanghai skyscraper fight, silhouettes against glass, cold blue.
+- **Shots shown**: 09, 14, 16, 19, 20, 21, 22 (balcony), 23 (balcony), 25 (daytime).
+- **Note**: Shot 01 is in Alexis's own apartment, a separate location. Same cold feel but a different space.
+
+### Location 05 — London Streets
+- **Palette direction**: Desaturated, sodium, naturalistic. Suburban streets at night. Sodium streetlights burn hot orange against crushed darkness. Almost CCTV quality — flat, surveillance-like.
+- **Reference**: Nightcrawler (2014) — sodium-lit night driving, cold and predatory.
+- **Shots shown**: 05, 06, 26.
+
+### Location 06 — Davina's House
+- **Palette direction**: Near-monochrome, domestic, uneasy. Drain nearly all colour. Cool daylight through frosted glass. The key image is the bathroom with black-and-white chequered tile floor, echoing the chess motif from the basement. Just enough colour left that you sense warmth in the skin but can't quite see it.
+- **Reference**: Hereditary (2018) — uneasy domestic interiors, muted, wrong without being obviously wrong.
+- **Shots shown**: 29.
+- **Note**: The desaturation is deliberate and thematic. The chess motif in the tiles connects this space back to the basement.
+
+## Reference Stills — Full Mapping
+
+| Reference Film | Year | Location | What to Take From It |
+|---------------|------|----------|---------------------|
+| Barton Fink | 1991 | Gary's Flat | Hotel Earle — amber, claustrophobic, sweating wallpaper |
+| Trainspotting | 1996 | Gary's Flat | Grimy domestic interiors — sickly greens and yellows |
+| Moonlight | 2016 | Angelo's (Upstairs) | Diner scene — warm amber-gold on skin, intimate |
+| Chungking Express | 1994 | Angelo's (Downstairs) | Green fluorescent light contaminating a cramped space |
+| Oldboy | 2003 | Angelo's (Downstairs) | Green corridors, worn surfaces, pockets of near-black |
+| Only God Forgives | 2013 | Hans's Basement (Mid) | Amber-red corridor — the transition before red takes over |
+| The Batman | 2022 | Hans's Basement (Late) | Deep red, haze, silhouettes — the destination |
+| Skyfall | 2012 | The Apartment | Shanghai skyscraper — silhouettes against glass, cold blue |
+| Nightcrawler | 2014 | London Streets | Sodium-lit night, cold, surveillance-like |
+| Hereditary | 2018 | Davina's House | Uneasy domestic interiors, warmth pulled out |
+
+## Shots Not Displayed in the Deck
+
+The deck shows representative shots per location, not all 30. Shots not shown:
+- **Shot 01**: Alexis's own apartment (mentioned in a note under The Apartment section)
+- **Shot 11**: Hans's basement, early phase (mentioned in direction text)
+- **Shot 12**: Canary Wharf apartment — skull mask close-up, shallow depth of field
+- **Shot 15**: Hans's basement, early phase (mentioned in direction text)
+- **Shot 17**: Not displayed — check vault for details
+
+## Colour Deck Audit (October 2024)
+
+All copy verified against the shot vault. Confirmed accurate:
+- All 10 reference film years correct
+- All shot numbers and timecodes match
+- All location assignments correct
+- Shot 03 confirmed as upstairs at Angelo's (not the basement)
+- Shot 01 note correctly distinguishes Alexis's apartment from the Canary Wharf flat
+- No em dashes in visible text
+- Tone is conversational — director to colourist, not prescriptive
